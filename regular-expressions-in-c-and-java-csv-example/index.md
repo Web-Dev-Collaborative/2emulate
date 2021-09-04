@@ -7,7 +7,7 @@
 Regular Expressions in C\# and Java - CSV Example
 =================================================
 
-<span title="Last time this post was updated"> Last updated November 10th 2011 </span> <span class="m-x-2" title="Pageviews"> 3.1k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://adrianmejia.com/regular-expressions-in-c-and-java-csv-example/">0</span>](#disqus_thread) </span>
+<span title="Last time this post was updated"> Last updated November 10th 2011 </span> <span class="m-x-2" title="Pageviews"> 3.1k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/regular-expressions-in-c-and-java-csv-example/">0</span>](#disqus_thread) </span>
 
 -   <a href="/tags/regex/" class="tag-list-link">regex</a><span class="tag-list-count">1</span>
 

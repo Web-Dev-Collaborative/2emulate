@@ -7,7 +7,7 @@
 How can developers reduce stress
 ================================
 
-<span title="Last time this post was updated"> Last updated April 30th 2019 </span> <span class="m-x-2" title="Pageviews"> 2.6k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://adrianmejia.com/How-can-developers-reduce-stress/">0</span>](#disqus_thread) </span>
+<span title="Last time this post was updated"> Last updated April 30th 2019 </span> <span class="m-x-2" title="Pageviews"> 2.6k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/How-can-developers-reduce-stress/">0</span>](#disqus_thread) </span>
 
 -   <a href="/tags/productivity/" class="tag-list-link">productivity</a><span class="tag-list-count">4</span>
 

@@ -7,7 +7,7 @@
 Blog migration explained: Drupal 7 to Jekyll
 ============================================
 
-<span title="Last time this post was updated"> Last updated April 27th 2012 </span> <span class="m-x-2" title="Pageviews"> 0.5k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://adrianmejia.com/blog-migration-explained-drupal-7-to-jekyll/">0</span>](#disqus_thread) </span>
+<span title="Last time this post was updated"> Last updated April 27th 2012 </span> <span class="m-x-2" title="Pageviews"> 0.5k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/blog-migration-explained-drupal-7-to-jekyll/">0</span>](#disqus_thread) </span>
 
 -   <a href="/tags/drupal/" class="tag-list-link">drupal</a><span class="tag-list-count">1</span>
 -   <a href="/tags/php/" class="tag-list-link">php</a><span class="tag-list-count">2</span>

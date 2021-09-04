@@ -7,7 +7,7 @@
 Creating RESTful APIs with NodeJS and MongoDB Tutorial (Part II)
 ================================================================
 
-<span title="Last time this post was updated"> Last updated October 14th 2016 </span> <span class="m-x-2" title="Pageviews"> 574.4k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://adrianmejia.com/creating-a-restful-api-tutorial-with-nodejs-and-mongodb/">0</span>](#disqus_thread) </span>
+<span title="Last time this post was updated"> Last updated October 14th 2016 </span> <span class="m-x-2" title="Pageviews"> 574.4k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/creating-a-restful-api-tutorial-with-nodejs-and-mongodb/">0</span>](#disqus_thread) </span>
 
 -   <a href="/tags/express/" class="tag-list-link">express</a><span class="tag-list-count">2</span>
 -   <a href="/tags/mongodb/" class="tag-list-link">mongodb</a><span class="tag-list-count">3</span>

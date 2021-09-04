@@ -7,7 +7,7 @@
 Learning Algorithms from Scratch / Algorithms for Dummies
 =========================================================
 
-<span title="Last time this post was updated"> Last updated December 22nd 2011 </span> <span class="m-x-2" title="Pageviews"> 43.3k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://adrianmejia.com/learning-algorithms-from-scratch-algorithms-for-dummies/">0</span>](#disqus_thread) </span>
+<span title="Last time this post was updated"> Last updated December 22nd 2011 </span> <span class="m-x-2" title="Pageviews"> 43.3k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/learning-algorithms-from-scratch-algorithms-for-dummies/">0</span>](#disqus_thread) </span>
 
 -   <a href="/tags/algorithms/" class="tag-list-link">algorithms</a><span class="tag-list-count">12</span>
 

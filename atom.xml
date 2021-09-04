@@ -4,9 +4,9 @@
   <subtitle>var life = [&#39;work_smart&#39;, &#39;have_fun&#39;, &#39;make_history&#39;];</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://adrianmejia.com/"/>
+  <link href="https://master--bgoonz-blog.netlify.app/"/>
   <updated>2021-07-05T22:29:39.000Z</updated>
-  <id>https://adrianmejia.com/</id>
+  <id></id>
   
   <author>
     <name></name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>Priority Queue Data Structure and Heaps Implemented in JavaScript</title>
-    <link href="https://adrianmejia.com/priority-queue-data-structure-and-heaps-time-complexity-javascript-implementation/"/>
-    <id>https://adrianmejia.com/priority-queue-data-structure-and-heaps-time-complexity-javascript-implementation/</id>
+    <link href="https://master--bgoonz-blog.netlify.app/priority-queue-data-structure-and-heaps-time-complexity-javascript-implementation/"/>
+    <id>https://master--bgoonz-blog.netlify.app/priority-queue-data-structure-and-heaps-time-complexity-javascript-implementation/</id>
     <published>2021-07-05T22:29:39.000Z</published>
     <updated>2021-07-05T22:29:39.000Z</updated>
     
@@ -186,23 +186,23 @@ We discussed two different approaches of how to heap using an array and sorting 
     
     </summary>
     
-      <category term="Programming" scheme="https://adrianmejia.com/categories/programming/"/>
+      <category term="Programming" scheme="https://master--bgoonz-blog.netlify.app/categories/programming/"/>
     
-      <category term="Data Structures and Algorithms (DSA)" scheme="https://adrianmejia.com/categories/programming/data-structures-and-algorithms-dsa/"/>
+      <category term="Data Structures and Algorithms (DSA)" scheme="https://master--bgoonz-blog.netlify.app/categories/programming/data-structures-and-algorithms-dsa/"/>
     
     
-      <category term="big-o notation" scheme="https://adrianmejia.com/tags/big-o-notation/"/>
+      <category term="big-o notation" scheme="https://master--bgoonz-blog.netlify.app/tags/big-o-notation/"/>
     
-      <category term="algorithms" scheme="https://adrianmejia.com/tags/algorithms/"/>
+      <category term="algorithms" scheme="https://master--bgoonz-blog.netlify.app/tags/algorithms/"/>
     
-      <category term="tutorial_algorithms" scheme="https://adrianmejia.com/tags/tutorial-algorithms/"/>
+      <category term="tutorial_algorithms" scheme="https://master--bgoonz-blog.netlify.app/tags/tutorial-algorithms/"/>
     
   </entry>
   
   <entry>
     <title>2020 recap and how I got my dream job</title>
-    <link href="https://adrianmejia.com/2020-recap-and-how-i-got-my-dream-job/"/>
-    <id>https://adrianmejia.com/2020-recap-and-how-i-got-my-dream-job/</id>
+    <link href="https://master--bgoonz-blog.netlify.app/2020-recap-and-how-i-got-my-dream-job/"/>
+    <id>https://master--bgoonz-blog.netlify.app/2020-recap-and-how-i-got-my-dream-job/</id>
     <published>2021-01-02T22:55:24.000Z</published>
     <updated>2021-01-02T22:55:24.000Z</updated>
     
@@ -213,7 +213,7 @@ We discussed two different approaches of how to heap using an array and sorting 
 <p>So here’s a little backstory that leads me to this point.</p>
 <h2 id="The-dream"><a href="#The-dream" class="headerlink" title="The dream"></a>The dream</h2><p>Since 2011, one of my dream jobs has been to work at Google. I was fascinated by the number of innovative products they released, the Ester eggs, free food, and amenities in the offices. So, I did manage to get an interview with them. But, unfortunately, I bombed my first interview very badly. I was transitioning from Electronics engineering to Software, and data structures knowledge was pretty much arrays and strings. My first interview was about a linked list implementation, so I had to improvise.</p>
 <p>After my big failure, I still wanted to try again in the future. I knew I had to study computer science topics and learn Data Structures and Algorithms (DSA) for real. However, those topics are tedious to study on your own. Eventually, I got other jobs in Software Engineering, and I procrastinated studying DSA for years.</p>
-<p>I had a dream, but I didn’t find the time to put in the work. In 2018, I had an idea to motivate myself. I started writing posts about my learnings. That way, I can keep myself motivated. I wrote a couple of posts: <a href="https://adrianmejia.com/how-you-can-change-the-world-learning-data-structures-algorithms-free-online-course-tutorial/">1</a>, <a href="https://adrianmejia.com/most-popular-algorithms-time-complexity-every-programmer-should-know-free-online-tutorial-course/">2</a>, <a href="https://adrianmejia.com/data-structures-time-complexity-for-beginners-arrays-hashmaps-linked-lists-stacks-queues-tutorial/">3</a>, <a href="https://adrianmejia.com/data-structures-for-beginners-graphs-time-complexity-tutorial/">4</a>, <a href="https://adrianmejia.com/data-structures-for-beginners-trees-binary-search-tree-tutorial/">5</a>, <a href="https://adrianmejia.com/self-balanced-binary-search-trees-with-avl-tree-data-structure-for-beginners/">6</a>, <a href="https://adrianmejia.com/analysis-of-recursive-algorithms/">7</a>. I noticed it got some traction, so I got another crazy idea. Would people be interested in an ebook version of my content? Since It takes so much time to write a book, I had to see if people were willing to pre-buy the book. It turned out around 50+ people got interested and pre-bought the book! That kept me motivated to start the book. Halfway through, I had some issues rendering a PDF and ePub format. However, I didn’t want to let down all the (pre-)buyers that believed in me. So, I pushed through the finish line and delivered what I promised.</p>
+<p>I had a dream, but I didn’t find the time to put in the work. In 2018, I had an idea to motivate myself. I started writing posts about my learnings. That way, I can keep myself motivated. I wrote a couple of posts: <a href="https://master--bgoonz-blog.netlify.app/how-you-can-change-the-world-learning-data-structures-algorithms-free-online-course-tutorial/">1</a>, <a href="https://master--bgoonz-blog.netlify.app/most-popular-algorithms-time-complexity-every-programmer-should-know-free-online-tutorial-course/">2</a>, <a href="https://master--bgoonz-blog.netlify.app/data-structures-time-complexity-for-beginners-arrays-hashmaps-linked-lists-stacks-queues-tutorial/">3</a>, <a href="https://master--bgoonz-blog.netlify.app/data-structures-for-beginners-graphs-time-complexity-tutorial/">4</a>, <a href="https://master--bgoonz-blog.netlify.app/data-structures-for-beginners-trees-binary-search-tree-tutorial/">5</a>, <a href="https://master--bgoonz-blog.netlify.app/self-balanced-binary-search-trees-with-avl-tree-data-structure-for-beginners/">6</a>, <a href="https://master--bgoonz-blog.netlify.app/analysis-of-recursive-algorithms/">7</a>. I noticed it got some traction, so I got another crazy idea. Would people be interested in an ebook version of my content? Since It takes so much time to write a book, I had to see if people were willing to pre-buy the book. It turned out around 50+ people got interested and pre-bought the book! That kept me motivated to start the book. Halfway through, I had some issues rendering a PDF and ePub format. However, I didn’t want to let down all the (pre-)buyers that believed in me. So, I pushed through the finish line and delivered what I promised.</p>
 <h2 id="Tech-Interview-Process"><a href="#Tech-Interview-Process" class="headerlink" title="Tech Interview Process"></a>Tech Interview Process</h2><p>In March of 2020, I got an email from a Facebook recruiter. So, I thought: Hmm, I’m ready! If I’m going to interview again, let’s do it big. I was aware of how hard the interviews were. So to maximize my chances, I applied to all the top tech companies I could and more, E.g., FAANG (Facebook, Apple, Amazon, Netflix, Google).</p>
 <p>The first interview was with Amazon. It was an online assessment. I thought I was ready since I was studying algorithms on and off for a couple of years. I completed the first exercise about solving a problem with a Hash Map and some other things. The second problem was complicated. It was a graph algorithm, and I was able to do a brute force solution. Unfortunately, It was not good enough, so I was rejected. 😭</p>
 <p><strong>Lesson learned: to do well in interviews, you not only need to know the theoretical concepts, but you must be able to apply them quickly.</strong></p>
@@ -304,14 +304,14 @@ We discussed two different approaches of how to heap using an array and sorting 
     </summary>
     
     
-      <category term="year-recap" scheme="https://adrianmejia.com/tags/year-recap/"/>
+      <category term="year-recap" scheme="https://master--bgoonz-blog.netlify.app/tags/year-recap/"/>
     
   </entry>
   
   <entry>
     <title>How to find time complexity of an algorithm?</title>
-    <link href="https://adrianmejia.com/how-to-find-time-complexity-of-an-algorithm-code-big-o-notation/"/>
-    <id>https://adrianmejia.com/how-to-find-time-complexity-of-an-algorithm-code-big-o-notation/</id>
+    <link href="https://master--bgoonz-blog.netlify.app/how-to-find-time-complexity-of-an-algorithm-code-big-o-notation/"/>
+    <id>https://master--bgoonz-blog.netlify.app/how-to-find-time-complexity-of-an-algorithm-code-big-o-notation/</id>
     <published>2020-10-03T12:53:32.000Z</published>
     <updated>2020-10-03T12:53:32.000Z</updated>
     
@@ -442,23 +442,23 @@ References:
     
     </summary>
     
-      <category term="Programming" scheme="https://adrianmejia.com/categories/programming/"/>
+      <category term="Programming" scheme="https://master--bgoonz-blog.netlify.app/categories/programming/"/>
     
-      <category term="Data Structures and Algorithms (DSA)" scheme="https://adrianmejia.com/categories/programming/data-structures-and-algorithms-dsa/"/>
+      <category term="Data Structures and Algorithms (DSA)" scheme="https://master--bgoonz-blog.netlify.app/categories/programming/data-structures-and-algorithms-dsa/"/>
     
     
-      <category term="big-o notation" scheme="https://adrianmejia.com/tags/big-o-notation/"/>
+      <category term="big-o notation" scheme="https://master--bgoonz-blog.netlify.app/tags/big-o-notation/"/>
     
-      <category term="algorithms" scheme="https://adrianmejia.com/tags/algorithms/"/>
+      <category term="algorithms" scheme="https://master--bgoonz-blog.netlify.app/tags/algorithms/"/>
     
-      <category term="tutorial_algorithms" scheme="https://adrianmejia.com/tags/tutorial-algorithms/"/>
+      <category term="tutorial_algorithms" scheme="https://master--bgoonz-blog.netlify.app/tags/tutorial-algorithms/"/>
     
   </entry>
   
   <entry>
     <title>How to solve any graph/Maze interview questions in JavaScript? DFS vs. BFS</title>
-    <link href="https://adrianmejia.com/how-to-solve-any-graph-2d-arrays-maze-interview-questions-in-javascript-dfs-vs-bfs/"/>
-    <id>https://adrianmejia.com/how-to-solve-any-graph-2d-arrays-maze-interview-questions-in-javascript-dfs-vs-bfs/</id>
+    <link href="https://master--bgoonz-blog.netlify.app/how-to-solve-any-graph-2d-arrays-maze-interview-questions-in-javascript-dfs-vs-bfs/"/>
+    <id>https://master--bgoonz-blog.netlify.app/how-to-solve-any-graph-2d-arrays-maze-interview-questions-in-javascript-dfs-vs-bfs/</id>
     <published>2020-08-06T20:30:14.000Z</published>
     <updated>2020-08-06T20:30:14.000Z</updated>
     
@@ -473,7 +473,7 @@ References:
 <li>When can you use only BFS or DFS or both?</li>
 </ol>
 <h2 id="Graph-Representations"><a href="#Graph-Representations" class="headerlink" title="Graph Representations"></a>Graph Representations</h2><p>A Graph can be represented in many ways depending on the problem as a class, Map + Array/Set, implicit graph or adjacency matrix.</p>
-<p><strong>TL;DR</strong>: <em>When building reusable libraries, you can go with the Graph class implementation. However, when solving a problem quickly (during interviews or one-off problems), go with the implicit implementation if possible or Map+Array representation if you need to build the graph upfront. Don’t use <a href="https://adrianmejia.com/data-structures-for-beginners-graphs-time-complexity-tutorial/#Adjacency-Matrix">adjacency matrix</a> since it usually uses more memory than other alternatives.</em></p>
+<p><strong>TL;DR</strong>: <em>When building reusable libraries, you can go with the Graph class implementation. However, when solving a problem quickly (during interviews or one-off problems), go with the implicit implementation if possible or Map+Array representation if you need to build the graph upfront. Don’t use <a href="https://master--bgoonz-blog.netlify.app/data-structures-for-beginners-graphs-time-complexity-tutorial/#Adjacency-Matrix">adjacency matrix</a> since it usually uses more memory than other alternatives.</em></p>
 <h3 id="Graph-as-a-Class"><a href="#Graph-as-a-Class" class="headerlink" title="Graph as a Class"></a>Graph as a Class</h3><p>You can use OOP to represent graphs, like this:</p>
 <figure class="highlight js"><figcaption><span>Graph Class</span><a href="https://github.com/amejiarosario/dsa.js-data-structures-algorithms-javascript/blob/master/src/data-structures/graphs/graph.js">Full Implementation</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Graph</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>() &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line"></span><br><span class="line">  addVertex(value) &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line">  removeVertex(value) &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line">  addEdge(source, destination) &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line">  removeEdge(source, destination) &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line"></span><br><span class="line">  areAdjacents(source, destination) &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line">  areConnected(source, destination) &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line">  findPath(source, destination, path = <span class="keyword">new</span> <span class="built_in">Map</span>()) &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line">  findAllPaths(source, destination, path = <span class="keyword">new</span> <span class="built_in">Map</span>()) &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -996,23 +996,23 @@ const notebooks = elements.reduce((notebooks, element) => {
     
     </summary>
     
-      <category term="Programming" scheme="https://adrianmejia.com/categories/programming/"/>
+      <category term="Programming" scheme="https://master--bgoonz-blog.netlify.app/categories/programming/"/>
     
-      <category term="Data Structures and Algorithms (DSA)" scheme="https://adrianmejia.com/categories/programming/data-structures-and-algorithms-dsa/"/>
+      <category term="Data Structures and Algorithms (DSA)" scheme="https://master--bgoonz-blog.netlify.app/categories/programming/data-structures-and-algorithms-dsa/"/>
     
     
-      <category term="big-o notation" scheme="https://adrianmejia.com/tags/big-o-notation/"/>
+      <category term="big-o notation" scheme="https://master--bgoonz-blog.netlify.app/tags/big-o-notation/"/>
     
-      <category term="algorithms" scheme="https://adrianmejia.com/tags/algorithms/"/>
+      <category term="algorithms" scheme="https://master--bgoonz-blog.netlify.app/tags/algorithms/"/>
     
-      <category term="tutorial_algorithms" scheme="https://adrianmejia.com/tags/tutorial-algorithms/"/>
+      <category term="tutorial_algorithms" scheme="https://master--bgoonz-blog.netlify.app/tags/tutorial-algorithms/"/>
     
   </entry>
   
   <entry>
     <title>Modern MEAN Stack Tutorial with Docker (Angular, Node, Typescript and Mongodb)</title>
-    <link href="https://adrianmejia.com/angular-todo-mean-stack-node-mongodb-typescript-tutorial/"/>
-    <id>https://adrianmejia.com/angular-todo-mean-stack-node-mongodb-typescript-tutorial/</id>
+    <link href="https://master--bgoonz-blog.netlify.app/angular-todo-mean-stack-node-mongodb-typescript-tutorial/"/>
+    <id>https://master--bgoonz-blog.netlify.app/angular-todo-mean-stack-node-mongodb-typescript-tutorial/</id>
     <published>2020-02-27T23:51:28.000Z</published>
     <updated>2020-02-27T23:51:28.000Z</updated>
     
@@ -1278,25 +1278,25 @@ We are passing <code>&#123; new: true &#125;</code> so we can return the updated
     
     </summary>
     
-      <category term="Coding" scheme="https://adrianmejia.com/categories/coding/"/>
+      <category term="Coding" scheme="https://master--bgoonz-blog.netlify.app/categories/coding/"/>
     
-      <category term="Web Development" scheme="https://adrianmejia.com/categories/coding/web-development/"/>
+      <category term="Web Development" scheme="https://master--bgoonz-blog.netlify.app/categories/coding/web-development/"/>
     
-      <category term="Angular" scheme="https://adrianmejia.com/categories/coding/web-development/angular/"/>
+      <category term="Angular" scheme="https://master--bgoonz-blog.netlify.app/categories/coding/web-development/angular/"/>
     
     
-      <category term="angular" scheme="https://adrianmejia.com/tags/angular/"/>
+      <category term="angular" scheme="https://master--bgoonz-blog.netlify.app/tags/angular/"/>
     
-      <category term="angularjs" scheme="https://adrianmejia.com/tags/angularjs/"/>
+      <category term="angularjs" scheme="https://master--bgoonz-blog.netlify.app/tags/angularjs/"/>
     
-      <category term="mean stack" scheme="https://adrianmejia.com/tags/mean-stack/"/>
+      <category term="mean stack" scheme="https://master--bgoonz-blog.netlify.app/tags/mean-stack/"/>
     
   </entry>
   
   <entry>
     <title>The JavaScript Promise Tutorial</title>
-    <link href="https://adrianmejia.com/promises-tutorial-concurrency-in-javascript-node/"/>
-    <id>https://adrianmejia.com/promises-tutorial-concurrency-in-javascript-node/</id>
+    <link href="https://master--bgoonz-blog.netlify.app/promises-tutorial-concurrency-in-javascript-node/"/>
+    <id>https://master--bgoonz-blog.netlify.app/promises-tutorial-concurrency-in-javascript-node/</id>
     <published>2019-07-08T23:26:12.000Z</published>
     <updated>2020-08-06T18:25:12.000Z</updated>
     
@@ -1547,21 +1547,21 @@ The trick here is that the promise auto removes itself from the queue when it is
     
     </summary>
     
-      <category term="Coding" scheme="https://adrianmejia.com/categories/coding/"/>
+      <category term="Coding" scheme="https://master--bgoonz-blog.netlify.app/categories/coding/"/>
     
     
-      <category term="javascript" scheme="https://adrianmejia.com/tags/javascript/"/>
+      <category term="javascript" scheme="https://master--bgoonz-blog.netlify.app/tags/javascript/"/>
     
-      <category term="nodejs" scheme="https://adrianmejia.com/tags/nodejs/"/>
+      <category term="nodejs" scheme="https://master--bgoonz-blog.netlify.app/tags/nodejs/"/>
     
-      <category term="tutorial_async-javascript" scheme="https://adrianmejia.com/tags/tutorial-async-javascript/"/>
+      <category term="tutorial_async-javascript" scheme="https://master--bgoonz-blog.netlify.app/tags/tutorial-async-javascript/"/>
     
   </entry>
   
   <entry>
     <title>Understanding JavaScript Callbacks and best practices</title>
-    <link href="https://adrianmejia.com/callbacks-concurrency-in-javascript-node/"/>
-    <id>https://adrianmejia.com/callbacks-concurrency-in-javascript-node/</id>
+    <link href="https://master--bgoonz-blog.netlify.app/callbacks-concurrency-in-javascript-node/"/>
+    <id>https://master--bgoonz-blog.netlify.app/callbacks-concurrency-in-javascript-node/</id>
     <published>2019-07-03T23:06:12.000Z</published>
     <updated>2019-07-03T23:06:12.000Z</updated>
     
@@ -1667,21 +1667,21 @@ Let’s say we want to see all the directories on a given folder:</p>
     
     </summary>
     
-      <category term="Coding" scheme="https://adrianmejia.com/categories/coding/"/>
+      <category term="Coding" scheme="https://master--bgoonz-blog.netlify.app/categories/coding/"/>
     
     
-      <category term="javascript" scheme="https://adrianmejia.com/tags/javascript/"/>
+      <category term="javascript" scheme="https://master--bgoonz-blog.netlify.app/tags/javascript/"/>
     
-      <category term="nodejs" scheme="https://adrianmejia.com/tags/nodejs/"/>
+      <category term="nodejs" scheme="https://master--bgoonz-blog.netlify.app/tags/nodejs/"/>
     
-      <category term="tutorial_async-javascript" scheme="https://adrianmejia.com/tags/tutorial-async-javascript/"/>
+      <category term="tutorial_async-javascript" scheme="https://master--bgoonz-blog.netlify.app/tags/tutorial-async-javascript/"/>
     
   </entry>
   
   <entry>
     <title>What every programmer should know about Synchronous vs. Asynchronous Code</title>
-    <link href="https://adrianmejia.com/asynchronous-vs-synchronous-handling-concurrency-in-javascript/"/>
-    <id>https://adrianmejia.com/asynchronous-vs-synchronous-handling-concurrency-in-javascript/</id>
+    <link href="https://master--bgoonz-blog.netlify.app/asynchronous-vs-synchronous-handling-concurrency-in-javascript/"/>
+    <id>https://master--bgoonz-blog.netlify.app/asynchronous-vs-synchronous-handling-concurrency-in-javascript/</id>
     <published>2019-07-01T17:15:01.000Z</published>
     <updated>2019-07-01T17:15:01.000Z</updated>
     
@@ -1813,21 +1813,21 @@ File size#3: 523 MB</code></pre>
     
     </summary>
     
-      <category term="Coding" scheme="https://adrianmejia.com/categories/coding/"/>
+      <category term="Coding" scheme="https://master--bgoonz-blog.netlify.app/categories/coding/"/>
     
     
-      <category term="javascript" scheme="https://adrianmejia.com/tags/javascript/"/>
+      <category term="javascript" scheme="https://master--bgoonz-blog.netlify.app/tags/javascript/"/>
     
-      <category term="nodejs" scheme="https://adrianmejia.com/tags/nodejs/"/>
+      <category term="nodejs" scheme="https://master--bgoonz-blog.netlify.app/tags/nodejs/"/>
     
-      <category term="tutorial_async-javascript" scheme="https://adrianmejia.com/tags/tutorial-async-javascript/"/>
+      <category term="tutorial_async-javascript" scheme="https://master--bgoonz-blog.netlify.app/tags/tutorial-async-javascript/"/>
     
   </entry>
   
   <entry>
     <title>How to build a Node.js eCommerce website for free</title>
-    <link href="https://adrianmejia.com/How-to-build-a-Node-js-eCommerce-website-for-free/"/>
-    <id>https://adrianmejia.com/How-to-build-a-Node-js-eCommerce-website-for-free/</id>
+    <link href="https://master--bgoonz-blog.netlify.app/How-to-build-a-Node-js-eCommerce-website-for-free/"/>
+    <id>https://master--bgoonz-blog.netlify.app/How-to-build-a-Node-js-eCommerce-website-for-free/</id>
     <published>2019-05-13T18:43:24.000Z</published>
     <updated>2019-05-14T20:22:24.000Z</updated>
     
@@ -1896,17 +1896,17 @@ Static pages also have the advantage that can be cached and served from a CDN.</
     
     </summary>
     
-      <category term="Coding" scheme="https://adrianmejia.com/categories/coding/"/>
+      <category term="Coding" scheme="https://master--bgoonz-blog.netlify.app/categories/coding/"/>
     
     
-      <category term="nodejs" scheme="https://adrianmejia.com/tags/nodejs/"/>
+      <category term="nodejs" scheme="https://master--bgoonz-blog.netlify.app/tags/nodejs/"/>
     
   </entry>
   
   <entry>
     <title>How to perform Atomic Operations on MongoDB?</title>
-    <link href="https://adrianmejia.com/How-to-perform-Atomic-Operations-on-MongoDB/"/>
-    <id>https://adrianmejia.com/How-to-perform-Atomic-Operations-on-MongoDB/</id>
+    <link href="https://master--bgoonz-blog.netlify.app/How-to-perform-Atomic-Operations-on-MongoDB/"/>
+    <id>https://master--bgoonz-blog.netlify.app/How-to-perform-Atomic-Operations-on-MongoDB/</id>
     <published>2019-03-14T10:40:00.000Z</published>
     <updated>2019-03-14T10:40:00.000Z</updated>
     
@@ -1972,17 +1972,17 @@ By using <code>findAndmodify</code> statement, the document will perform search 
     
     </summary>
     
-      <category term="Coding" scheme="https://adrianmejia.com/categories/coding/"/>
+      <category term="Coding" scheme="https://master--bgoonz-blog.netlify.app/categories/coding/"/>
     
     
-      <category term="mongodb" scheme="https://adrianmejia.com/tags/mongodb/"/>
+      <category term="mongodb" scheme="https://master--bgoonz-blog.netlify.app/tags/mongodb/"/>
     
   </entry>
   
   <entry>
     <title>45 Security Tips to Avoid Hacking</title>
-    <link href="https://adrianmejia.com/I-got-hacked-and-It-changed-my-life-on-security-tips/"/>
-    <id>https://adrianmejia.com/I-got-hacked-and-It-changed-my-life-on-security-tips/</id>
+    <link href="https://master--bgoonz-blog.netlify.app/I-got-hacked-and-It-changed-my-life-on-security-tips/"/>
+    <id>https://master--bgoonz-blog.netlify.app/I-got-hacked-and-It-changed-my-life-on-security-tips/</id>
     <published>2019-01-24T21:08:53.000Z</published>
     <updated>2019-01-24T21:08:53.000Z</updated>
     
@@ -2096,17 +2096,17 @@ By using <code>findAndmodify</code> statement, the document will perform search 
     
     </summary>
     
-      <category term="Learnings" scheme="https://adrianmejia.com/categories/learnings/"/>
+      <category term="Learnings" scheme="https://master--bgoonz-blog.netlify.app/categories/learnings/"/>
     
     
-      <category term="security" scheme="https://adrianmejia.com/tags/security/"/>
+      <category term="security" scheme="https://master--bgoonz-blog.netlify.app/tags/security/"/>
     
   </entry>
   
   <entry>
     <title>How can developers reduce stress</title>
-    <link href="https://adrianmejia.com/How-can-developers-reduce-stress/"/>
-    <id>https://adrianmejia.com/How-can-developers-reduce-stress/</id>
+    <link href="https://master--bgoonz-blog.netlify.app/How-can-developers-reduce-stress/"/>
+    <id>https://master--bgoonz-blog.netlify.app/How-can-developers-reduce-stress/</id>
     <published>2019-01-04T00:28:50.000Z</published>
     <updated>2019-04-30T13:31:00.000Z</updated>
     
@@ -2420,17 +2420,17 @@ https://support.google.com/affiliate/answer/7188084?hl=en&ref_topic=7477733
     
     </summary>
     
-      <category term="Learnings" scheme="https://adrianmejia.com/categories/learnings/"/>
+      <category term="Learnings" scheme="https://master--bgoonz-blog.netlify.app/categories/learnings/"/>
     
     
-      <category term="productivity" scheme="https://adrianmejia.com/tags/productivity/"/>
+      <category term="productivity" scheme="https://master--bgoonz-blog.netlify.app/tags/productivity/"/>
     
   </entry>
   
   <entry>
     <title>Vue.js Tutorial for beginners</title>
-    <link href="https://adrianmejia.com/Vue-js-Tutorial-for-beginners-Create-a-Todo-App/"/>
-    <id>https://adrianmejia.com/Vue-js-Tutorial-for-beginners-Create-a-Todo-App/</id>
+    <link href="https://master--bgoonz-blog.netlify.app/Vue-js-Tutorial-for-beginners-Create-a-Todo-App/"/>
+    <id>https://master--bgoonz-blog.netlify.app/Vue-js-Tutorial-for-beginners-Create-a-Todo-App/</id>
     <published>2018-08-05T01:30:22.000Z</published>
     <updated>2018-08-05T01:30:22.000Z</updated>
     
@@ -2973,25 +2973,25 @@ One should definitely mention the vue.js docs for basics.
     
     </summary>
     
-      <category term="Coding" scheme="https://adrianmejia.com/categories/coding/"/>
+      <category term="Coding" scheme="https://master--bgoonz-blog.netlify.app/categories/coding/"/>
     
-      <category term="Web Development" scheme="https://adrianmejia.com/categories/coding/web-development/"/>
+      <category term="Web Development" scheme="https://master--bgoonz-blog.netlify.app/categories/coding/web-development/"/>
     
-      <category term="Vue" scheme="https://adrianmejia.com/categories/coding/web-development/vue/"/>
+      <category term="Vue" scheme="https://master--bgoonz-blog.netlify.app/categories/coding/web-development/vue/"/>
     
     
-      <category term="javascript" scheme="https://adrianmejia.com/tags/javascript/"/>
+      <category term="javascript" scheme="https://master--bgoonz-blog.netlify.app/tags/javascript/"/>
     
-      <category term="todo app" scheme="https://adrianmejia.com/tags/todo-app/"/>
+      <category term="todo app" scheme="https://master--bgoonz-blog.netlify.app/tags/todo-app/"/>
     
-      <category term="vuejs" scheme="https://adrianmejia.com/tags/vuejs/"/>
+      <category term="vuejs" scheme="https://master--bgoonz-blog.netlify.app/tags/vuejs/"/>
     
   </entry>
   
   <entry>
     <title>Self-balanced Binary Search Trees with AVL in JavaScript</title>
-    <link href="https://adrianmejia.com/Self-balanced-Binary-Search-Trees-with-AVL-tree-Data-Structure-for-beginners/"/>
-    <id>https://adrianmejia.com/Self-balanced-Binary-Search-Trees-with-AVL-tree-Data-Structure-for-beginners/</id>
+    <link href="https://master--bgoonz-blog.netlify.app/Self-balanced-Binary-Search-Trees-with-AVL-tree-Data-Structure-for-beginners/"/>
+    <id>https://master--bgoonz-blog.netlify.app/Self-balanced-Binary-Search-Trees-with-AVL-tree-Data-Structure-for-beginners/</id>
     <published>2018-07-16T19:43:11.000Z</published>
     <updated>2019-05-30T19:43:11.000Z</updated>
     
@@ -3104,7 +3104,7 @@ recursively you will notice they never differ by more than one.</p>
 <p>To define the tree, we are using
 <a href="https://github.com/amejiarosario/dsa.js/blob/master/src/data-structures/trees/tree-node.js">TreeNode </a>
 that we developed in the
-<a href="https://adrianmejia.com/blog/2018/06/11/data-structures-for-beginners-trees-binary-search-tree-tutorial/#BST-Implementation">previous post</a>.</p>
+<a href="https://master--bgoonz-blog.netlify.app/blog/2018/06/11/data-structures-for-beginners-trees-binary-search-tree-tutorial/#BST-Implementation">previous post</a>.</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> n1 = <span class="keyword">new</span> TreeNode(<span class="number">1</span>);</span><br><span class="line"><span class="keyword">const</span> n2 = <span class="keyword">new</span> TreeNode(<span class="number">2</span>);</span><br><span class="line"><span class="keyword">const</span> n3 = <span class="keyword">new</span> TreeNode(<span class="number">3</span>);</span><br><span class="line"><span class="keyword">const</span> n4 = <span class="keyword">new</span> TreeNode(<span class="number">4</span>);</span><br><span class="line"></span><br><span class="line">n1.right = n2;</span><br><span class="line">n2.right = n3;</span><br><span class="line">n3.right = n4;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> newParent = leftRotation(n2);</span><br><span class="line"><span class="built_in">console</span>.log(newParent === n3); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
 
 <p>In this case, we are rotating 2 to the left. Let’s implement the <code>leftRotation</code> function.</p>
@@ -3264,21 +3264,21 @@ You can <code>star</code> it to keep it handy.</p>
     
     </summary>
     
-      <category term="Coding" scheme="https://adrianmejia.com/categories/coding/"/>
+      <category term="Coding" scheme="https://master--bgoonz-blog.netlify.app/categories/coding/"/>
     
-      <category term="Data Structures and Algorithms (DSA)" scheme="https://adrianmejia.com/categories/coding/data-structures-and-algorithms-dsa/"/>
+      <category term="Data Structures and Algorithms (DSA)" scheme="https://master--bgoonz-blog.netlify.app/categories/coding/data-structures-and-algorithms-dsa/"/>
     
     
-      <category term="algorithms" scheme="https://adrianmejia.com/tags/algorithms/"/>
+      <category term="algorithms" scheme="https://master--bgoonz-blog.netlify.app/tags/algorithms/"/>
     
-      <category term="tutorial_algorithms" scheme="https://adrianmejia.com/tags/tutorial-algorithms/"/>
+      <category term="tutorial_algorithms" scheme="https://master--bgoonz-blog.netlify.app/tags/tutorial-algorithms/"/>
     
   </entry>
   
   <entry>
     <title>Tree Data Structures in JavaScript for Beginners</title>
-    <link href="https://adrianmejia.com/Data-Structures-for-Beginners-Trees-binary-search-tree-tutorial/"/>
-    <id>https://adrianmejia.com/Data-Structures-for-Beginners-Trees-binary-search-tree-tutorial/</id>
+    <link href="https://master--bgoonz-blog.netlify.app/Data-Structures-for-Beginners-Trees-binary-search-tree-tutorial/"/>
+    <id>https://master--bgoonz-blog.netlify.app/Data-Structures-for-Beginners-Trees-binary-search-tree-tutorial/</id>
     <published>2018-06-11T22:49:30.000Z</published>
     <updated>2019-05-23T19:17:30.000Z</updated>
     
@@ -3351,8 +3351,8 @@ You can <code>star</code> it to keep it handy.</p>
 <!-- - Searching in a time complexity of *O(log n)*. -->
 <!-- - Cryptography: [Generate pseudorandom numbers](https://www.cs.princeton.edu/courses/archive/fall07/cos433/prf_goldreich.pdf) -->
 <ul>
-<li><a href="https://adrianmejia.com/blog/2018/04/28/data-structures-time-complexity-for-beginners-arrays-hashmaps-linked-lists-stacks-queues-tutorial/#HashMaps">Maps</a></li>
-<li><a href="https://adrianmejia.com/blog/2018/04/28/data-structures-time-complexity-for-beginners-arrays-hashmaps-linked-lists-stacks-queues-tutorial/#Sets">Sets</a></li>
+<li><a href="https://master--bgoonz-blog.netlify.app/blog/2018/04/28/data-structures-time-complexity-for-beginners-arrays-hashmaps-linked-lists-stacks-queues-tutorial/#HashMaps">Maps</a></li>
+<li><a href="https://master--bgoonz-blog.netlify.app/blog/2018/04/28/data-structures-time-complexity-for-beginners-arrays-hashmaps-linked-lists-stacks-queues-tutorial/#Sets">Sets</a></li>
 <li>Databases</li>
 <li>Priority Queues</li>
 <li>Querying an LDAP (Lightweight Directory Access Protocol)</li>
@@ -3545,21 +3545,21 @@ Let’s go through each one.</p>
     
     </summary>
     
-      <category term="Coding" scheme="https://adrianmejia.com/categories/coding/"/>
+      <category term="Coding" scheme="https://master--bgoonz-blog.netlify.app/categories/coding/"/>
     
-      <category term="Data Structures and Algorithms (DSA)" scheme="https://adrianmejia.com/categories/coding/data-structures-and-algorithms-dsa/"/>
+      <category term="Data Structures and Algorithms (DSA)" scheme="https://master--bgoonz-blog.netlify.app/categories/coding/data-structures-and-algorithms-dsa/"/>
     
     
-      <category term="algorithms" scheme="https://adrianmejia.com/tags/algorithms/"/>
+      <category term="algorithms" scheme="https://master--bgoonz-blog.netlify.app/tags/algorithms/"/>
     
-      <category term="tutorial_algorithms" scheme="https://adrianmejia.com/tags/tutorial-algorithms/"/>
+      <category term="tutorial_algorithms" scheme="https://master--bgoonz-blog.netlify.app/tags/tutorial-algorithms/"/>
     
   </entry>
   
   <entry>
     <title>Graph Data Structures in JavaScript for Beginners</title>
-    <link href="https://adrianmejia.com/Data-Structures-for-Beginners-Graphs-Time-Complexity-tutorial/"/>
-    <id>https://adrianmejia.com/Data-Structures-for-Beginners-Graphs-Time-Complexity-tutorial/</id>
+    <link href="https://master--bgoonz-blog.netlify.app/Data-Structures-for-Beginners-Graphs-Time-Complexity-tutorial/"/>
+    <id>https://master--bgoonz-blog.netlify.app/Data-Structures-for-Beginners-Graphs-Time-Complexity-tutorial/</id>
     <published>2018-05-14T09:19:22.000Z</published>
     <updated>2020-12-16T00:36:22.000Z</updated>
     
@@ -3994,21 +3994,21 @@ With this function, we get if two nodes are connected or not. However, they don'
     
     </summary>
     
-      <category term="Coding" scheme="https://adrianmejia.com/categories/coding/"/>
+      <category term="Coding" scheme="https://master--bgoonz-blog.netlify.app/categories/coding/"/>
     
-      <category term="Data Structures and Algorithms (DSA)" scheme="https://adrianmejia.com/categories/coding/data-structures-and-algorithms-dsa/"/>
+      <category term="Data Structures and Algorithms (DSA)" scheme="https://master--bgoonz-blog.netlify.app/categories/coding/data-structures-and-algorithms-dsa/"/>
     
     
-      <category term="algorithms" scheme="https://adrianmejia.com/tags/algorithms/"/>
+      <category term="algorithms" scheme="https://master--bgoonz-blog.netlify.app/tags/algorithms/"/>
     
-      <category term="tutorial_algorithms" scheme="https://adrianmejia.com/tags/tutorial-algorithms/"/>
+      <category term="tutorial_algorithms" scheme="https://master--bgoonz-blog.netlify.app/tags/tutorial-algorithms/"/>
     
   </entry>
   
   <entry>
     <title>Data Structures in JavaScript: Arrays, HashMaps, and Lists</title>
-    <link href="https://adrianmejia.com/Data-Structures-Time-Complexity-for-Beginners-Arrays-HashMaps-Linked-Lists-Stacks-Queues-tutorial/"/>
-    <id>https://adrianmejia.com/Data-Structures-Time-Complexity-for-Beginners-Arrays-HashMaps-Linked-Lists-Stacks-Queues-tutorial/</id>
+    <link href="https://master--bgoonz-blog.netlify.app/Data-Structures-Time-Complexity-for-Beginners-Arrays-HashMaps-Linked-Lists-Stacks-Queues-tutorial/"/>
+    <id>https://master--bgoonz-blog.netlify.app/Data-Structures-Time-Complexity-for-Beginners-Arrays-HashMaps-Linked-Lists-Stacks-Queues-tutorial/</id>
     <published>2018-04-28T23:20:40.000Z</published>
     <updated>2020-12-15T23:46:40.000Z</updated>
     
@@ -4972,7 +4972,7 @@ Backlinks:
 
 https://www.reddit.com/r/compsci/comments/8m1dx0/data_structures_for_beginners_arrays_hashmaps_and/
 
-https://adrianmejia.com/blog/2018/04/28/data-structures-time-complexity-for-beginners-arrays-hashmaps-linked-lists-stacks-queues-tutorial/
+https://master--bgoonz-blog.netlify.app/blog/2018/04/28/data-structures-time-complexity-for-beginners-arrays-hashmaps-linked-lists-stacks-queues-tutorial/
 2、各种数据结构的 JavaScript 实现（英文）
 
 https://www.yuque.com/ruanyf/share/issue-10
@@ -4985,21 +4985,21 @@ https://www.yuque.com/ruanyf/share/issue-10
     
     </summary>
     
-      <category term="Coding" scheme="https://adrianmejia.com/categories/coding/"/>
+      <category term="Coding" scheme="https://master--bgoonz-blog.netlify.app/categories/coding/"/>
     
-      <category term="Data Structures and Algorithms (DSA)" scheme="https://adrianmejia.com/categories/coding/data-structures-and-algorithms-dsa/"/>
+      <category term="Data Structures and Algorithms (DSA)" scheme="https://master--bgoonz-blog.netlify.app/categories/coding/data-structures-and-algorithms-dsa/"/>
     
     
-      <category term="algorithms" scheme="https://adrianmejia.com/tags/algorithms/"/>
+      <category term="algorithms" scheme="https://master--bgoonz-blog.netlify.app/tags/algorithms/"/>
     
-      <category term="tutorial_algorithms" scheme="https://adrianmejia.com/tags/tutorial-algorithms/"/>
+      <category term="tutorial_algorithms" scheme="https://master--bgoonz-blog.netlify.app/tags/tutorial-algorithms/"/>
     
   </entry>
   
   <entry>
     <title>Analysis of Recursive Algorithms</title>
-    <link href="https://adrianmejia.com/Analysis-of-Recursive-Algorithms/"/>
-    <id>https://adrianmejia.com/Analysis-of-Recursive-Algorithms/</id>
+    <link href="https://master--bgoonz-blog.netlify.app/Analysis-of-Recursive-Algorithms/"/>
+    <id>https://master--bgoonz-blog.netlify.app/Analysis-of-Recursive-Algorithms/</id>
     <published>2018-04-24T12:44:35.000Z</published>
     <updated>2018-04-24T12:44:35.000Z</updated>
     
@@ -5143,21 +5143,21 @@ https://www.yuque.com/ruanyf/share/issue-10
     
     </summary>
     
-      <category term="Coding" scheme="https://adrianmejia.com/categories/coding/"/>
+      <category term="Coding" scheme="https://master--bgoonz-blog.netlify.app/categories/coding/"/>
     
-      <category term="Data Structures and Algorithms (DSA)" scheme="https://adrianmejia.com/categories/coding/data-structures-and-algorithms-dsa/"/>
+      <category term="Data Structures and Algorithms (DSA)" scheme="https://master--bgoonz-blog.netlify.app/categories/coding/data-structures-and-algorithms-dsa/"/>
     
     
-      <category term="algorithms" scheme="https://adrianmejia.com/tags/algorithms/"/>
+      <category term="algorithms" scheme="https://master--bgoonz-blog.netlify.app/tags/algorithms/"/>
     
-      <category term="tutorial_algorithms" scheme="https://adrianmejia.com/tags/tutorial-algorithms/"/>
+      <category term="tutorial_algorithms" scheme="https://master--bgoonz-blog.netlify.app/tags/tutorial-algorithms/"/>
     
   </entry>
   
   <entry>
     <title>8 time complexities that every programmer should know</title>
-    <link href="https://adrianmejia.com/most-popular-algorithms-time-complexity-every-programmer-should-know-free-online-tutorial-course/"/>
-    <id>https://adrianmejia.com/most-popular-algorithms-time-complexity-every-programmer-should-know-free-online-tutorial-course/</id>
+    <link href="https://master--bgoonz-blog.netlify.app/most-popular-algorithms-time-complexity-every-programmer-should-know-free-online-tutorial-course/"/>
+    <id>https://master--bgoonz-blog.netlify.app/most-popular-algorithms-time-complexity-every-programmer-should-know-free-online-tutorial-course/</id>
     <published>2018-04-05T20:10:09.000Z</published>
     <updated>2019-09-19T15:39:53.000Z</updated>
     
@@ -5309,7 +5309,7 @@ https://www.yuque.com/ruanyf/share/issue-10
 </ul>
 <p>So, this gets us <code>3(n) + 2</code>.</p>
 <p>Applying the Big O notation that we learn in the
-<a href="https://adrianmejia.com/blog/2018/04/04/how-you-can-change-the-world-learning-data-structures-algorithms-free-online-course-tutorial/#Asymptotic-analysis">previous post</a>,
+<a href="https://master--bgoonz-blog.netlify.app/blog/2018/04/04/how-you-can-change-the-world-learning-data-structures-algorithms-free-online-course-tutorial/#Asymptotic-analysis">previous post</a>,
 we only need the biggest order term, thus <code>O(n)</code>.</p>
 <p>We can verify this using our <code>counter</code>. If <code>n</code> has 3 elements:</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">findMax([<span class="number">3</span>, <span class="number">1</span>, <span class="number">2</span>]);</span><br><span class="line"><span class="comment">// n: 3, counter: 3</span></span><br></pre></td></tr></table></figure>
@@ -5624,21 +5624,21 @@ Let’s call each topping A, B, C, D. What are your choices? You can select no t
     
     </summary>
     
-      <category term="Coding" scheme="https://adrianmejia.com/categories/coding/"/>
+      <category term="Coding" scheme="https://master--bgoonz-blog.netlify.app/categories/coding/"/>
     
-      <category term="Data Structures and Algorithms (DSA)" scheme="https://adrianmejia.com/categories/coding/data-structures-and-algorithms-dsa/"/>
+      <category term="Data Structures and Algorithms (DSA)" scheme="https://master--bgoonz-blog.netlify.app/categories/coding/data-structures-and-algorithms-dsa/"/>
     
     
-      <category term="algorithms" scheme="https://adrianmejia.com/tags/algorithms/"/>
+      <category term="algorithms" scheme="https://master--bgoonz-blog.netlify.app/tags/algorithms/"/>
     
-      <category term="tutorial_algorithms" scheme="https://adrianmejia.com/tags/tutorial-algorithms/"/>
+      <category term="tutorial_algorithms" scheme="https://master--bgoonz-blog.netlify.app/tags/tutorial-algorithms/"/>
     
   </entry>
   
   <entry>
     <title>How you can change the world by learning Data Structures and Algorithms</title>
-    <link href="https://adrianmejia.com/how-you-can-change-the-world-learning-data-structures-algorithms-free-online-course-tutorial/"/>
-    <id>https://adrianmejia.com/how-you-can-change-the-world-learning-data-structures-algorithms-free-online-course-tutorial/</id>
+    <link href="https://master--bgoonz-blog.netlify.app/how-you-can-change-the-world-learning-data-structures-algorithms-free-online-course-tutorial/"/>
+    <id>https://master--bgoonz-blog.netlify.app/how-you-can-change-the-world-learning-data-structures-algorithms-free-online-course-tutorial/</id>
     <published>2018-04-04T20:16:07.000Z</published>
     <updated>2019-04-05T20:12:00.000Z</updated>
     
@@ -5905,21 +5905,21 @@ Titles:
     
     </summary>
     
-      <category term="Coding" scheme="https://adrianmejia.com/categories/coding/"/>
+      <category term="Coding" scheme="https://master--bgoonz-blog.netlify.app/categories/coding/"/>
     
-      <category term="Data Structures and Algorithms (DSA)" scheme="https://adrianmejia.com/categories/coding/data-structures-and-algorithms-dsa/"/>
+      <category term="Data Structures and Algorithms (DSA)" scheme="https://master--bgoonz-blog.netlify.app/categories/coding/data-structures-and-algorithms-dsa/"/>
     
     
-      <category term="algorithms" scheme="https://adrianmejia.com/tags/algorithms/"/>
+      <category term="algorithms" scheme="https://master--bgoonz-blog.netlify.app/tags/algorithms/"/>
     
-      <category term="tutorial_algorithms" scheme="https://adrianmejia.com/tags/tutorial-algorithms/"/>
+      <category term="tutorial_algorithms" scheme="https://master--bgoonz-blog.netlify.app/tags/tutorial-algorithms/"/>
     
   </entry>
   
   <entry>
     <title>Overview of JavaScript ES6 features (a.k.a ECMAScript 6 and ES2015+)</title>
-    <link href="https://adrianmejia.com/Overview-of-JavaScript-ES6-features-a-k-a-ECMAScript-6-and-ES2015/"/>
-    <id>https://adrianmejia.com/Overview-of-JavaScript-ES6-features-a-k-a-ECMAScript-6-and-ES2015/</id>
+    <link href="https://master--bgoonz-blog.netlify.app/Overview-of-JavaScript-ES6-features-a-k-a-ECMAScript-6-and-ES2015/"/>
+    <id>https://master--bgoonz-blog.netlify.app/Overview-of-JavaScript-ES6-features-a-k-a-ECMAScript-6-and-ES2015/</id>
     <published>2016-10-19T21:01:34.000Z</published>
     <updated>2016-10-25T16:02:34.000Z</updated>
     
@@ -6166,17 +6166,17 @@ All JavaScript objects inherit their methods and properties from their prototype
     
     </summary>
     
-      <category term="Coding" scheme="https://adrianmejia.com/categories/coding/"/>
+      <category term="Coding" scheme="https://master--bgoonz-blog.netlify.app/categories/coding/"/>
     
     
-      <category term="javascript es6" scheme="https://adrianmejia.com/tags/javascript-es6/"/>
+      <category term="javascript es6" scheme="https://master--bgoonz-blog.netlify.app/tags/javascript-es6/"/>
     
   </entry>
   
   <entry>
     <title>Angular Tutorial: Create a CRUD App with Angular CLI and TypeScript</title>
-    <link href="https://adrianmejia.com/Angular-2-Tutorial-Create-a-CRUD-App-with-Angular-CLI-and-TypeScript/"/>
-    <id>https://adrianmejia.com/Angular-2-Tutorial-Create-a-CRUD-App-with-Angular-CLI-and-TypeScript/</id>
+    <link href="https://master--bgoonz-blog.netlify.app/Angular-2-Tutorial-Create-a-CRUD-App-with-Angular-CLI-and-TypeScript/"/>
+    <id>https://master--bgoonz-blog.netlify.app/Angular-2-Tutorial-Create-a-CRUD-App-with-Angular-CLI-and-TypeScript/</id>
     <published>2016-10-01T21:16:03.000Z</published>
     <updated>2019-11-06T15:46:23.000Z</updated>
     
@@ -6462,25 +6462,25 @@ You can fix that by making all the variables that are used on the template <code
     
     </summary>
     
-      <category term="Coding" scheme="https://adrianmejia.com/categories/coding/"/>
+      <category term="Coding" scheme="https://master--bgoonz-blog.netlify.app/categories/coding/"/>
     
-      <category term="Web Development" scheme="https://adrianmejia.com/categories/coding/web-development/"/>
+      <category term="Web Development" scheme="https://master--bgoonz-blog.netlify.app/categories/coding/web-development/"/>
     
-      <category term="Angular" scheme="https://adrianmejia.com/categories/coding/web-development/angular/"/>
+      <category term="Angular" scheme="https://master--bgoonz-blog.netlify.app/categories/coding/web-development/angular/"/>
     
     
-      <category term="angular" scheme="https://adrianmejia.com/tags/angular/"/>
+      <category term="angular" scheme="https://master--bgoonz-blog.netlify.app/tags/angular/"/>
     
-      <category term="angularjs" scheme="https://adrianmejia.com/tags/angularjs/"/>
+      <category term="angularjs" scheme="https://master--bgoonz-blog.netlify.app/tags/angularjs/"/>
     
-      <category term="todo app" scheme="https://adrianmejia.com/tags/todo-app/"/>
+      <category term="todo app" scheme="https://master--bgoonz-blog.netlify.app/tags/todo-app/"/>
     
   </entry>
   
   <entry>
     <title>Building a Node.js static file server (files over HTTP) using ES6+</title>
-    <link href="https://adrianmejia.com/Building-a-Node-js-static-file-server-files-over-HTTP-using-ES6/"/>
-    <id>https://adrianmejia.com/Building-a-Node-js-static-file-server-files-over-HTTP-using-ES6/</id>
+    <link href="https://master--bgoonz-blog.netlify.app/Building-a-Node-js-static-file-server-files-over-HTTP-using-ES6/"/>
+    <id>https://master--bgoonz-blog.netlify.app/Building-a-Node-js-static-file-server-files-over-HTTP-using-ES6/</id>
     <published>2016-08-24T21:54:42.000Z</published>
     <updated>2016-08-24T21:54:42.000Z</updated>
     
@@ -6526,17 +6526,17 @@ You can fix that by making all the variables that are used on the template <code
     
     </summary>
     
-      <category term="Coding" scheme="https://adrianmejia.com/categories/coding/"/>
+      <category term="Coding" scheme="https://master--bgoonz-blog.netlify.app/categories/coding/"/>
     
     
-      <category term="nodejs" scheme="https://adrianmejia.com/tags/nodejs/"/>
+      <category term="nodejs" scheme="https://master--bgoonz-blog.netlify.app/tags/nodejs/"/>
     
   </entry>
   
   <entry>
     <title>Node Package Manager (NPM) Tutorial</title>
-    <link href="https://adrianmejia.com/Node-Package-Manager-NPM-Tutorial/"/>
-    <id>https://adrianmejia.com/Node-Package-Manager-NPM-Tutorial/</id>
+    <link href="https://master--bgoonz-blog.netlify.app/Node-Package-Manager-NPM-Tutorial/"/>
+    <id>https://master--bgoonz-blog.netlify.app/Node-Package-Manager-NPM-Tutorial/</id>
     <published>2016-08-19T20:18:32.000Z</published>
     <updated>2016-08-19T20:18:32.000Z</updated>
     
@@ -6607,17 +6607,17 @@ You can fix that by making all the variables that are used on the template <code
     
     </summary>
     
-      <category term="Coding" scheme="https://adrianmejia.com/categories/coding/"/>
+      <category term="Coding" scheme="https://master--bgoonz-blog.netlify.app/categories/coding/"/>
     
     
-      <category term="nodejs" scheme="https://adrianmejia.com/tags/nodejs/"/>
+      <category term="nodejs" scheme="https://master--bgoonz-blog.netlify.app/tags/nodejs/"/>
     
   </entry>
   
   <entry>
     <title>Getting started with Node.js modules: require, exports, imports and beyond</title>
-    <link href="https://adrianmejia.com/Getting-started-with-Node-js-modules-require-exports-imports-npm-and-beyond/"/>
-    <id>https://adrianmejia.com/Getting-started-with-Node-js-modules-require-exports-imports-npm-and-beyond/</id>
+    <link href="https://master--bgoonz-blog.netlify.app/Getting-started-with-Node-js-modules-require-exports-imports-npm-and-beyond/"/>
+    <id>https://master--bgoonz-blog.netlify.app/Getting-started-with-Node-js-modules-require-exports-imports-npm-and-beyond/</id>
     <published>2016-08-12T20:30:23.000Z</published>
     <updated>2019-06-28T18:18:23.000Z</updated>
     
@@ -6744,17 +6744,17 @@ In the following sections, you are going to learn how to do that using <code>exp
     
     </summary>
     
-      <category term="Coding" scheme="https://adrianmejia.com/categories/coding/"/>
+      <category term="Coding" scheme="https://master--bgoonz-blog.netlify.app/categories/coding/"/>
     
     
-      <category term="nodejs" scheme="https://adrianmejia.com/tags/nodejs/"/>
+      <category term="nodejs" scheme="https://master--bgoonz-blog.netlify.app/tags/nodejs/"/>
     
   </entry>
   
   <entry>
     <title>List tasks in NPM, Yarn, Grunt, Gulp and Rake</title>
-    <link href="https://adrianmejia.com/List-tasks-in-npm-grunt-gulp-and-rake/"/>
-    <id>https://adrianmejia.com/List-tasks-in-npm-grunt-gulp-and-rake/</id>
+    <link href="https://master--bgoonz-blog.netlify.app/List-tasks-in-npm-grunt-gulp-and-rake/"/>
+    <id>https://master--bgoonz-blog.netlify.app/List-tasks-in-npm-grunt-gulp-and-rake/</id>
     <published>2016-06-25T19:14:49.000Z</published>
     <updated>2021-07-09T00:14:20.573Z</updated>
     
@@ -6767,21 +6767,21 @@ In the following sections, you are going to learn how to do that using <code>exp
     
     </summary>
     
-      <category term="Coding" scheme="https://adrianmejia.com/categories/coding/"/>
+      <category term="Coding" scheme="https://master--bgoonz-blog.netlify.app/categories/coding/"/>
     
     
-      <category term="gruntjs" scheme="https://adrianmejia.com/tags/gruntjs/"/>
+      <category term="gruntjs" scheme="https://master--bgoonz-blog.netlify.app/tags/gruntjs/"/>
     
-      <category term="gulpjs" scheme="https://adrianmejia.com/tags/gulpjs/"/>
+      <category term="gulpjs" scheme="https://master--bgoonz-blog.netlify.app/tags/gulpjs/"/>
     
-      <category term="nodejs" scheme="https://adrianmejia.com/tags/nodejs/"/>
+      <category term="nodejs" scheme="https://master--bgoonz-blog.netlify.app/tags/nodejs/"/>
     
   </entry>
   
   <entry>
     <title>Creating custom AngularJS directives for beginners</title>
-    <link href="https://adrianmejia.com/creating-custom-angularjs-directives-for-beginners/"/>
-    <id>https://adrianmejia.com/creating-custom-angularjs-directives-for-beginners/</id>
+    <link href="https://master--bgoonz-blog.netlify.app/creating-custom-angularjs-directives-for-beginners/"/>
+    <id>https://master--bgoonz-blog.netlify.app/creating-custom-angularjs-directives-for-beginners/</id>
     <published>2016-04-08T20:41:32.000Z</published>
     <updated>2016-04-08T20:41:32.000Z</updated>
     
@@ -6888,23 +6888,23 @@ In the following sections, you are going to learn how to do that using <code>exp
     
     </summary>
     
-      <category term="Coding" scheme="https://adrianmejia.com/categories/coding/"/>
+      <category term="Coding" scheme="https://master--bgoonz-blog.netlify.app/categories/coding/"/>
     
-      <category term="Web Development" scheme="https://adrianmejia.com/categories/coding/web-development/"/>
+      <category term="Web Development" scheme="https://master--bgoonz-blog.netlify.app/categories/coding/web-development/"/>
     
-      <category term="Angular" scheme="https://adrianmejia.com/categories/coding/web-development/angular/"/>
+      <category term="Angular" scheme="https://master--bgoonz-blog.netlify.app/categories/coding/web-development/angular/"/>
     
     
-      <category term="javascript" scheme="https://adrianmejia.com/tags/javascript/"/>
+      <category term="javascript" scheme="https://master--bgoonz-blog.netlify.app/tags/javascript/"/>
     
-      <category term="angularjs" scheme="https://adrianmejia.com/tags/angularjs/"/>
+      <category term="angularjs" scheme="https://master--bgoonz-blog.netlify.app/tags/angularjs/"/>
     
   </entry>
   
   <entry>
     <title>How to scale a Nodejs app based on number of users</title>
-    <link href="https://adrianmejia.com/how-to-scale-a-nodejs-app-based-on-number-of-users/"/>
-    <id>https://adrianmejia.com/how-to-scale-a-nodejs-app-based-on-number-of-users/</id>
+    <link href="https://master--bgoonz-blog.netlify.app/how-to-scale-a-nodejs-app-based-on-number-of-users/"/>
+    <id>https://master--bgoonz-blog.netlify.app/how-to-scale-a-nodejs-app-based-on-number-of-users/</id>
     <published>2016-03-23T21:34:11.000Z</published>
     <updated>2016-03-23T21:34:11.000Z</updated>
     
@@ -6983,17 +6983,17 @@ In the following sections, you are going to learn how to do that using <code>exp
     
     </summary>
     
-      <category term="Coding" scheme="https://adrianmejia.com/categories/coding/"/>
+      <category term="Coding" scheme="https://master--bgoonz-blog.netlify.app/categories/coding/"/>
     
     
-      <category term="scaling" scheme="https://adrianmejia.com/tags/scaling/"/>
+      <category term="scaling" scheme="https://master--bgoonz-blog.netlify.app/tags/scaling/"/>
     
   </entry>
   
   <entry>
     <title>How to build scalable apps?</title>
-    <link href="https://adrianmejia.com/how-to-build-scalable-apps/"/>
-    <id>https://adrianmejia.com/how-to-build-scalable-apps/</id>
+    <link href="https://master--bgoonz-blog.netlify.app/how-to-build-scalable-apps/"/>
+    <id>https://master--bgoonz-blog.netlify.app/how-to-build-scalable-apps/</id>
     <published>2016-01-09T15:43:27.000Z</published>
     <updated>2016-01-09T15:43:27.000Z</updated>
     
@@ -7092,17 +7092,17 @@ In the following sections, you are going to learn how to do that using <code>exp
     
     </summary>
     
-      <category term="Coding" scheme="https://adrianmejia.com/categories/coding/"/>
+      <category term="Coding" scheme="https://master--bgoonz-blog.netlify.app/categories/coding/"/>
     
     
-      <category term="scaling" scheme="https://adrianmejia.com/tags/scaling/"/>
+      <category term="scaling" scheme="https://master--bgoonz-blog.netlify.app/tags/scaling/"/>
     
   </entry>
   
   <entry>
     <title>Grunt JS tutorial from Beginner to Ninja</title>
-    <link href="https://adrianmejia.com/grunt-js-tutorial-from-beginner-to-ninja/"/>
-    <id>https://adrianmejia.com/grunt-js-tutorial-from-beginner-to-ninja/</id>
+    <link href="https://master--bgoonz-blog.netlify.app/grunt-js-tutorial-from-beginner-to-ninja/"/>
+    <id>https://master--bgoonz-blog.netlify.app/grunt-js-tutorial-from-beginner-to-ninja/</id>
     <published>2014-10-07T14:41:13.000Z</published>
     <updated>2014-10-07T14:41:13.000Z</updated>
     
@@ -7294,12 +7294,12 @@ In the following sections, you are going to learn how to do that using <code>exp
     
     </summary>
     
-      <category term="Coding" scheme="https://adrianmejia.com/categories/coding/"/>
+      <category term="Coding" scheme="https://master--bgoonz-blog.netlify.app/categories/coding/"/>
     
     
-      <category term="gruntjs" scheme="https://adrianmejia.com/tags/gruntjs/"/>
+      <category term="gruntjs" scheme="https://master--bgoonz-blog.netlify.app/tags/gruntjs/"/>
     
-      <category term="nodejs" scheme="https://adrianmejia.com/tags/nodejs/"/>
+      <category term="nodejs" scheme="https://master--bgoonz-blog.netlify.app/tags/nodejs/"/>
     
   </entry>
   

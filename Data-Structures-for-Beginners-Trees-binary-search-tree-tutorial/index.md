@@ -7,7 +7,7 @@
 Tree Data Structures in JavaScript for Beginners
 ================================================
 
-<span title="Last time this post was updated"> Last updated May 23rd 2019 </span> <span class="m-x-2" title="Pageviews"> 65.6k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://adrianmejia.com/Data-Structures-for-Beginners-Trees-binary-search-tree-tutorial/">0</span>](#disqus_thread) </span>
+<span title="Last time this post was updated"> Last updated May 23rd 2019 </span> <span class="m-x-2" title="Pageviews"> 65.6k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/Data-Structures-for-Beginners-Trees-binary-search-tree-tutorial/">0</span>](#disqus_thread) </span>
 
 -   <a href="/tags/algorithms/" class="tag-list-link">algorithms</a><span class="tag-list-count">12</span>
 -   <a href="/tags/tutorial-algorithms/" class="tag-list-link">tutorial_algorithms</a><span class="tag-list-count">10</span>
@@ -110,8 +110,8 @@ The node `abe` is the **root** and `bart`, `lisa` and `maggie` are the **leaf** 
 
 Tree data structures have many applications such as:
 
--   [Maps](https://adrianmejia.com/blog/2018/04/28/data-structures-time-complexity-for-beginners-arrays-hashmaps-linked-lists-stacks-queues-tutorial/#HashMaps)
--   [Sets](https://adrianmejia.com/blog/2018/04/28/data-structures-time-complexity-for-beginners-arrays-hashmaps-linked-lists-stacks-queues-tutorial/#Sets)
+-   [Maps](https://master--bgoonz-blog.netlify.app/blog/2018/04/28/data-structures-time-complexity-for-beginners-arrays-hashmaps-linked-lists-stacks-queues-tutorial/#HashMaps)
+-   [Sets](https://master--bgoonz-blog.netlify.app/blog/2018/04/28/data-structures-time-complexity-for-beginners-arrays-hashmaps-linked-lists-stacks-queues-tutorial/#Sets)
 -   Databases
 -   Priority Queues
 -   Querying an LDAP (Lightweight Directory Access Protocol)

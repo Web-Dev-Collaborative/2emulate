@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://adrianmejia.com/sitemap.xml
+Sitemap: https://master--bgoonz-blog.netlify.app/sitemap.xml

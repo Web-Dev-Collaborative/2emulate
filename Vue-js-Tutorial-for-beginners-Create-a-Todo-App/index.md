@@ -7,7 +7,7 @@
 Vue.js Tutorial for beginners
 =============================
 
-<span title="Last time this post was updated"> Last updated August 4th 2018 </span> <span class="m-x-2" title="Pageviews"> 17.9k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://adrianmejia.com/Vue-js-Tutorial-for-beginners-Create-a-Todo-App/">0</span>](#disqus_thread) </span>
+<span title="Last time this post was updated"> Last updated August 4th 2018 </span> <span class="m-x-2" title="Pageviews"> 17.9k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/Vue-js-Tutorial-for-beginners-Create-a-Todo-App/">0</span>](#disqus_thread) </span>
 
 -   <a href="/tags/javascript/" class="tag-list-link">javascript</a><span class="tag-list-count">5</span>
 -   <a href="/tags/todo-app/" class="tag-list-link">todo app</a><span class="tag-list-count">5</span>

@@ -7,7 +7,7 @@
 How to set up Samba in Ubuntu/Linux, and access it in Mac OS and Windows
 ========================================================================
 
-<span title="Last time this post was updated"> Last updated July 12th 2011 </span> <span class="m-x-2" title="Pageviews"> 261.1k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://adrianmejia.com/how-to-set-up-samba-in-ubuntu-linux-and-access-it-in-mac-os-and-windows/">0</span>](#disqus_thread) </span>
+<span title="Last time this post was updated"> Last updated July 12th 2011 </span> <span class="m-x-2" title="Pageviews"> 261.1k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/how-to-set-up-samba-in-ubuntu-linux-and-access-it-in-mac-os-and-windows/">0</span>](#disqus_thread) </span>
 
 -   <a href="/tags/productivity/" class="tag-list-link">productivity</a><span class="tag-list-count">4</span>
 

@@ -7,7 +7,7 @@
 Ruby on Rails Architectural Design
 ==================================
 
-<span title="Last time this post was updated"> Last updated August 11th 2011 </span> <span class="m-x-2" title="Pageviews"> 57.5k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://adrianmejia.com/ruby-on-rails-architectural-design/">0</span>](#disqus_thread) </span>
+<span title="Last time this post was updated"> Last updated August 11th 2011 </span> <span class="m-x-2" title="Pageviews"> 57.5k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/ruby-on-rails-architectural-design/">0</span>](#disqus_thread) </span>
 
 -   <a href="/tags/ruby-on-rails/" class="tag-list-link">ruby on rails</a><span class="tag-list-count">1</span>
 

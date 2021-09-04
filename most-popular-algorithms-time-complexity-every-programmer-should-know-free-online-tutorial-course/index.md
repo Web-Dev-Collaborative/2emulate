@@ -7,7 +7,7 @@
 8 time complexities that every programmer should know
 =====================================================
 
-<span title="Last time this post was updated"> Last updated September 19th 2019 </span> <span class="m-x-2" title="Pageviews"> 274.5k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://adrianmejia.com/most-popular-algorithms-time-complexity-every-programmer-should-know-free-online-tutorial-course/">0</span>](#disqus_thread) </span>
+<span title="Last time this post was updated"> Last updated September 19th 2019 </span> <span class="m-x-2" title="Pageviews"> 274.5k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/most-popular-algorithms-time-complexity-every-programmer-should-know-free-online-tutorial-course/">0</span>](#disqus_thread) </span>
 
 -   <a href="/tags/algorithms/" class="tag-list-link">algorithms</a><span class="tag-list-count">12</span>
 -   <a href="/tags/tutorial-algorithms/" class="tag-list-link">tutorial_algorithms</a><span class="tag-list-count">10</span>
@@ -191,7 +191,7 @@ If you get the time complexity, it would be something like this:
 
 So, this gets us `3(n) + 2`.
 
-Applying the Big O notation that we learn in the [previous post](https://adrianmejia.com/blog/2018/04/04/how-you-can-change-the-world-learning-data-structures-algorithms-free-online-course-tutorial/#Asymptotic-analysis), we only need the biggest order term, thus `O(n)`.
+Applying the Big O notation that we learn in the [previous post](https://master--bgoonz-blog.netlify.app/blog/2018/04/04/how-you-can-change-the-world-learning-data-structures-algorithms-free-online-course-tutorial/#Asymptotic-analysis), we only need the biggest order term, thus `O(n)`.
 
 We can verify this using our `counter`. If `n` has 3 elements:
 

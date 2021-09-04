@@ -7,7 +7,7 @@
 Getting started with Node.js modules: require, exports, imports and beyond
 ==========================================================================
 
-<span title="Last time this post was updated"> Last updated June 28th 2019 </span> <span class="m-x-2" title="Pageviews"> 321.0k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://adrianmejia.com/Getting-started-with-Node-js-modules-require-exports-imports-npm-and-beyond/">0</span>](#disqus_thread) </span>
+<span title="Last time this post was updated"> Last updated June 28th 2019 </span> <span class="m-x-2" title="Pageviews"> 321.0k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/Getting-started-with-Node-js-modules-require-exports-imports-npm-and-beyond/">0</span>](#disqus_thread) </span>
 
 -   <a href="/tags/nodejs/" class="tag-list-link">nodejs</a><span class="tag-list-count">12</span>
 

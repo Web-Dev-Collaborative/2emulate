@@ -7,7 +7,7 @@
 How to solve any graph/Maze interview questions in JavaScript? DFS vs. BFS
 ==========================================================================
 
-<span title="Last time this post was updated"> Last updated August 6th 2020 </span> <span class="m-x-2" title="Pageviews"> 5.2k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://adrianmejia.com/how-to-solve-any-graph-2d-arrays-maze-interview-questions-in-javascript-dfs-vs-bfs/">0</span>](#disqus_thread) </span>
+<span title="Last time this post was updated"> Last updated August 6th 2020 </span> <span class="m-x-2" title="Pageviews"> 5.2k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/how-to-solve-any-graph-2d-arrays-maze-interview-questions-in-javascript-dfs-vs-bfs/">0</span>](#disqus_thread) </span>
 
 -   <a href="/tags/algorithms/" class="tag-list-link">algorithms</a><span class="tag-list-count">12</span>
 -   <a href="/tags/big-o-notation/" class="tag-list-link">big-o notation</a><span class="tag-list-count">3</span>
@@ -31,7 +31,7 @@ Graphs are one of my favorite data structures because you can model many real-li
 
 A Graph can be represented in many ways depending on the problem as a class, Map + Array/Set, implicit graph or adjacency matrix.
 
-**TL;DR**: *When building reusable libraries, you can go with the Graph class implementation. However, when solving a problem quickly (during interviews or one-off problems), go with the implicit implementation if possible or Map+Array representation if you need to build the graph upfront. Don’t use [adjacency matrix](https://adrianmejia.com/data-structures-for-beginners-graphs-time-complexity-tutorial/#Adjacency-Matrix) since it usually uses more memory than other alternatives.*
+**TL;DR**: *When building reusable libraries, you can go with the Graph class implementation. However, when solving a problem quickly (during interviews or one-off problems), go with the implicit implementation if possible or Map+Array representation if you need to build the graph upfront. Don’t use [adjacency matrix](https://master--bgoonz-blog.netlify.app/data-structures-for-beginners-graphs-time-complexity-tutorial/#Adjacency-Matrix) since it usually uses more memory than other alternatives.*
 
 ### <a href="#Graph-as-a-Class" class="headerlink" title="Graph as a Class"></a>Graph as a Class
 

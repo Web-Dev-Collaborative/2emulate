@@ -7,7 +7,7 @@
 List tasks in NPM, Yarn, Grunt, Gulp and Rake
 =============================================
 
-<span title="Last time this post was updated"> Last updated July 8th 2021 </span> <span class="m-x-2" title="Pageviews"> 2.5k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://adrianmejia.com/List-tasks-in-npm-grunt-gulp-and-rake/">0</span>](#disqus_thread) </span>
+<span title="Last time this post was updated"> Last updated July 8th 2021 </span> <span class="m-x-2" title="Pageviews"> 2.5k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/List-tasks-in-npm-grunt-gulp-and-rake/">0</span>](#disqus_thread) </span>
 
 -   <a href="/tags/gruntjs/" class="tag-list-link">gruntjs</a><span class="tag-list-count">2</span>
 -   <a href="/tags/gulpjs/" class="tag-list-link">gulpjs</a><span class="tag-list-count">1</span>

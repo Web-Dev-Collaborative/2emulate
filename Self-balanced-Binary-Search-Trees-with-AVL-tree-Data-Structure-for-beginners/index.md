@@ -7,7 +7,7 @@
 Self-balanced Binary Search Trees with AVL in JavaScript
 ========================================================
 
-<span title="Last time this post was updated"> Last updated May 30th 2019 </span> <span class="m-x-2" title="Pageviews"> 13.6k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://adrianmejia.com/Self-balanced-Binary-Search-Trees-with-AVL-tree-Data-Structure-for-beginners/">0</span>](#disqus_thread) </span>
+<span title="Last time this post was updated"> Last updated May 30th 2019 </span> <span class="m-x-2" title="Pageviews"> 13.6k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/Self-balanced-Binary-Search-Trees-with-AVL-tree-Data-Structure-for-beginners/">0</span>](#disqus_thread) </span>
 
 -   <a href="/tags/algorithms/" class="tag-list-link">algorithms</a><span class="tag-list-count">12</span>
 -   <a href="/tags/tutorial-algorithms/" class="tag-list-link">tutorial_algorithms</a><span class="tag-list-count">10</span>
@@ -182,7 +182,7 @@ For the coding part, let’s do another example:
      \
       4</code></pre></td></tr></tbody></table>
 
-To define the tree, we are using [TreeNode](https://github.com/amejiarosario/dsa.js/blob/master/src/data-structures/trees/tree-node.js) that we developed in the [previous post](https://adrianmejia.com/blog/2018/06/11/data-structures-for-beginners-trees-binary-search-tree-tutorial/#BST-Implementation).
+To define the tree, we are using [TreeNode](https://github.com/amejiarosario/dsa.js/blob/master/src/data-structures/trees/tree-node.js) that we developed in the [previous post](https://master--bgoonz-blog.netlify.app/blog/2018/06/11/data-structures-for-beginners-trees-binary-search-tree-tutorial/#BST-Implementation).
 
 <table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><pre><code>1
 2

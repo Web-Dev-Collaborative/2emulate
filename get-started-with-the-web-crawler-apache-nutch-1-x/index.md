@@ -7,7 +7,7 @@
 Get Started with the web crawler Apache Nutch 1.x
 =================================================
 
-<span title="Last time this post was updated"> Last updated February 4th 2012 </span> <span class="m-x-2" title="Pageviews"> 9.9k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://adrianmejia.com/get-started-with-the-web-crawler-apache-nutch-1-x/">0</span>](#disqus_thread) </span>
+<span title="Last time this post was updated"> Last updated February 4th 2012 </span> <span class="m-x-2" title="Pageviews"> 9.9k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/get-started-with-the-web-crawler-apache-nutch-1-x/">0</span>](#disqus_thread) </span>
 
 ![Get Started with the web crawler Apache Nutch 1.x ](/images/apache_nutch_web_crawler_large.png)
 

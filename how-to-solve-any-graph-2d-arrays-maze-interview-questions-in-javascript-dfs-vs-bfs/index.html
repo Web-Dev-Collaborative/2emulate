@@ -35,24 +35,21 @@
     <meta name="msapplication-square150x150logo" content="/mstile-150x150.png" />
     <meta name="msapplication-wide310x150logo" content="/mstile-310x150.png" />
     <meta name="msapplication-square310x310logo" content="/mstile-310x310.png" />
-    <meta name="msapplication-notification" content="frequency=30;polling-uri=http://notifications.buildmypinnedsite.com/?feed=https://adrianmejia.com/atom.xml" />
+    <meta name="msapplication-notification" content="frequency=30;polling-uri=http://notifications.buildmypinnedsite.com/?feed=https://master--bgoonz-blog.netlify.app/atom.xml" />
 
-    <link rel="canonical" href="https://adrianmejia.com/how-to-solve-any-graph-2d-arrays-maze-interview-questions-in-javascript-dfs-vs-bfs/" />
+    <link rel="canonical" href="https://master--bgoonz-blog.netlify.app/how-to-solve-any-graph-2d-arrays-maze-interview-questions-in-javascript-dfs-vs-bfs/" />
     <!-- Open Graph -->
-    <meta property="og:url" content="https://adrianmejia.com/how-to-solve-any-graph-2d-arrays-maze-interview-questions-in-javascript-dfs-vs-bfs/" />
+    <meta property="og:url" content="https://master--bgoonz-blog.netlify.app/how-to-solve-any-graph-2d-arrays-maze-interview-questions-in-javascript-dfs-vs-bfs/" />
     <meta property="og:site_name" content=" Blog" />
     <meta property="og:type" content="article" />
     <meta property="og:description" content="Graphs are one of my favorite data structures because you can model many real-life situations with them. Such problems involve finding the shortest paths between 2 or more locations, scheduling courses, finding relationships in family trees, solving mazes, and many more! As a result, it’s ubiquitous in tech interview questions. In this article, we are going to demystify it." />
-    <meta property="og:image" content="https://adrianmejia.com/images/graph-interview-questions-large.png" />
+    <meta property="og:image" content="https://master--bgoonz-blog.netlify.app/images/graph-interview-questions-large.png" />
     <meta property="og:title" content="How to solve any graph/Maze interview questions in JavaScript? DFS vs. BFS" />
     <meta property="fb:app_id" content="761831487293468" />
     <meta property="fb:admins" content="895685163"/>
     <!-- /Open Graph -->
 
-    <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', 'UA-24183929-4', 'auto');
-ga('send', 'pageview');
-</script><script async defer src='https://www.google-analytics.com/analytics.js'></script>
+
 
 
     <!-- Critical Styles -->
@@ -261,7 +258,7 @@ ga('send', 'pageview');
   
   "image": {
     "@type": "ImageObject",
-    "url": "https://adrianmejia.com/images/graph-interview-questions-large.png",
+    "url": "https://master--bgoonz-blog.netlify.app/images/graph-interview-questions-large.png",
     "height": 360,
     "width": 728
   },
@@ -277,7 +274,7 @@ ga('send', 'pageview');
     "name": "",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://adrianmejia.com/images/logo.png",
+      "url": "https://master--bgoonz-blog.netlify.app/images/logo.png",
       "width": 347,
       "height": 50
     }
@@ -313,7 +310,7 @@ ga('send', 'pageview');
       <span class="m-x-2" title="Click to go to the comments section">
         <a href="#disqus_thread">
           <i class="fa fa-comment-o" aria-hidden="true"></i>
-          <span class="disqus-comment-count" data-disqus-url="https://adrianmejia.com/how-to-solve-any-graph-2d-arrays-maze-interview-questions-in-javascript-dfs-vs-bfs/">0</span>
+          <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/how-to-solve-any-graph-2d-arrays-maze-interview-questions-in-javascript-dfs-vs-bfs/">0</span>
         </a>
       </span>
 
@@ -350,7 +347,7 @@ ga('send', 'pageview');
 <li>When can you use only BFS or DFS or both?</li>
 </ol>
 <h2 id="Graph-Representations"><a href="#Graph-Representations" class="headerlink" title="Graph Representations"></a>Graph Representations</h2><p>A Graph can be represented in many ways depending on the problem as a class, Map + Array/Set, implicit graph or adjacency matrix.</p>
-<p><strong>TL;DR</strong>: <em>When building reusable libraries, you can go with the Graph class implementation. However, when solving a problem quickly (during interviews or one-off problems), go with the implicit implementation if possible or Map+Array representation if you need to build the graph upfront. Don’t use <a href="https://adrianmejia.com/data-structures-for-beginners-graphs-time-complexity-tutorial/#Adjacency-Matrix">adjacency matrix</a> since it usually uses more memory than other alternatives.</em></p>
+<p><strong>TL;DR</strong>: <em>When building reusable libraries, you can go with the Graph class implementation. However, when solving a problem quickly (during interviews or one-off problems), go with the implicit implementation if possible or Map+Array representation if you need to build the graph upfront. Don’t use <a href="https://master--bgoonz-blog.netlify.app/data-structures-for-beginners-graphs-time-complexity-tutorial/#Adjacency-Matrix">adjacency matrix</a> since it usually uses more memory than other alternatives.</em></p>
 <h3 id="Graph-as-a-Class"><a href="#Graph-as-a-Class" class="headerlink" title="Graph as a Class"></a>Graph as a Class</h3><p>You can use OOP to represent graphs, like this:</p>
 <figure class="highlight js"><figcaption><span>Graph Class</span><a target="_blank" rel="noopener" href="https://github.com/amejiarosario/dsa.js-data-structures-algorithms-javascript/blob/master/src/data-structures/graphs/graph.js">Full Implementation</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Graph</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>() &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line"></span><br><span class="line">  addVertex(value) &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line">  removeVertex(value) &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line">  addEdge(source, destination) &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line">  removeEdge(source, destination) &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line"></span><br><span class="line">  areAdjacents(source, destination) &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line">  areConnected(source, destination) &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line">  findPath(source, destination, path = <span class="keyword">new</span> <span class="built_in">Map</span>()) &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line">  findAllPaths(source, destination, path = <span class="keyword">new</span> <span class="built_in">Map</span>()) &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -1264,8 +1261,8 @@ const notebooks = elements.reduce((notebooks, element) => {
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
-      this.page.url = 'https://adrianmejia.com/how-to-solve-any-graph-2d-arrays-maze-interview-questions-in-javascript-dfs-vs-bfs/';
-      this.page.identifier = 'https://adrianmejia.com/how-to-solve-any-graph-2d-arrays-maze-interview-questions-in-javascript-dfs-vs-bfs/';
+      this.page.url = 'https://master--bgoonz-blog.netlify.app/how-to-solve-any-graph-2d-arrays-maze-interview-questions-in-javascript-dfs-vs-bfs/';
+      this.page.identifier = 'https://master--bgoonz-blog.netlify.app/how-to-solve-any-graph-2d-arrays-maze-interview-questions-in-javascript-dfs-vs-bfs/';
     };
     (function() {
       var d = document, s = d.createElement('script');

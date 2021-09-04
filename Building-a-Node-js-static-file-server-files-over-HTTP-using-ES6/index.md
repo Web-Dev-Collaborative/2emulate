@@ -7,7 +7,7 @@
 Building a Node.js static file server (files over HTTP) using ES6+
 ==================================================================
 
-<span title="Last time this post was updated"> Last updated August 24th 2016 </span> <span class="m-x-2" title="Pageviews"> 50.7k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://adrianmejia.com/Building-a-Node-js-static-file-server-files-over-HTTP-using-ES6/">0</span>](#disqus_thread) </span>
+<span title="Last time this post was updated"> Last updated August 24th 2016 </span> <span class="m-x-2" title="Pageviews"> 50.7k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/Building-a-Node-js-static-file-server-files-over-HTTP-using-ES6/">0</span>](#disqus_thread) </span>
 
 -   <a href="/tags/nodejs/" class="tag-list-link">nodejs</a><span class="tag-list-count">12</span>
 

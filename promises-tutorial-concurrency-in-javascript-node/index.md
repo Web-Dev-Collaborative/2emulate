@@ -7,7 +7,7 @@
 The JavaScript Promise Tutorial
 ===============================
 
-<span title="Last time this post was updated"> Last updated August 6th 2020 </span> <span class="m-x-2" title="Pageviews"> 7.0k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://adrianmejia.com/promises-tutorial-concurrency-in-javascript-node/">0</span>](#disqus_thread) </span>
+<span title="Last time this post was updated"> Last updated August 6th 2020 </span> <span class="m-x-2" title="Pageviews"> 7.0k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/promises-tutorial-concurrency-in-javascript-node/">0</span>](#disqus_thread) </span>
 
 -   <a href="/tags/javascript/" class="tag-list-link">javascript</a><span class="tag-list-count">5</span>
 -   <a href="/tags/nodejs/" class="tag-list-link">nodejs</a><span class="tag-list-count">12</span>

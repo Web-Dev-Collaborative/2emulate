@@ -7,7 +7,7 @@
 45 Security Tips to Avoid Hacking
 =================================
 
-<span title="Last time this post was updated"> Last updated January 24th 2019 </span> <span class="m-x-2" title="Pageviews"> 1.3k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://adrianmejia.com/I-got-hacked-and-It-changed-my-life-on-security-tips/">0</span>](#disqus_thread) </span>
+<span title="Last time this post was updated"> Last updated January 24th 2019 </span> <span class="m-x-2" title="Pageviews"> 1.3k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/I-got-hacked-and-It-changed-my-life-on-security-tips/">0</span>](#disqus_thread) </span>
 
 -   <a href="/tags/security/" class="tag-list-link">security</a><span class="tag-list-count">1</span>
 

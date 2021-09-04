@@ -7,7 +7,7 @@
 Backbone.js for absolute beginners - getting started (part 3: CRUD)
 ===================================================================
 
-<span title="Last time this post was updated"> Last updated September 13th 2012 </span> <span class="m-x-2" title="Pageviews"> 96.3k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://adrianmejia.com/backbonejs-for-absolute-beginners-getting-started-part-3/">0</span>](#disqus_thread) </span>
+<span title="Last time this post was updated"> Last updated September 13th 2012 </span> <span class="m-x-2" title="Pageviews"> 96.3k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/backbonejs-for-absolute-beginners-getting-started-part-3/">0</span>](#disqus_thread) </span>
 
 -   <a href="/tags/backbonejs/" class="tag-list-link">backbonejs</a><span class="tag-list-count">4</span>
 -   <a href="/tags/tutorial-backbonejs/" class="tag-list-link">tutorial_backbonejs</a><span class="tag-list-count">4</span>

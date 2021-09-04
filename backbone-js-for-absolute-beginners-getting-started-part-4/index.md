@@ -7,7 +7,7 @@
 Backbone.js for absolute beginners - getting started (part 4: Routers)
 ======================================================================
 
-<span title="Last time this post was updated"> Last updated September 13th 2012 </span> <span class="m-x-2" title="Pageviews"> 71.6k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://adrianmejia.com/backbone-js-for-absolute-beginners-getting-started-part-4/">0</span>](#disqus_thread) </span>
+<span title="Last time this post was updated"> Last updated September 13th 2012 </span> <span class="m-x-2" title="Pageviews"> 71.6k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/backbone-js-for-absolute-beginners-getting-started-part-4/">0</span>](#disqus_thread) </span>
 
 -   <a href="/tags/backbonejs/" class="tag-list-link">backbonejs</a><span class="tag-list-count">4</span>
 -   <a href="/tags/todo-app/" class="tag-list-link">todo app</a><span class="tag-list-count">5</span>

@@ -7,7 +7,7 @@
 How to scale a Nodejs app based on number of users
 ==================================================
 
-<span title="Last time this post was updated"> Last updated March 23rd 2016 </span> <span class="m-x-2" title="Pageviews"> 42.2k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://adrianmejia.com/how-to-scale-a-nodejs-app-based-on-number-of-users/">0</span>](#disqus_thread) </span>
+<span title="Last time this post was updated"> Last updated March 23rd 2016 </span> <span class="m-x-2" title="Pageviews"> 42.2k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/how-to-scale-a-nodejs-app-based-on-number-of-users/">0</span>](#disqus_thread) </span>
 
 -   <a href="/tags/scaling/" class="tag-list-link">scaling</a><span class="tag-list-count">2</span>
 

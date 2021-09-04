@@ -7,7 +7,7 @@
 Git auto-commit with Crontab
 ============================
 
-<span title="Last time this post was updated"> Last updated August 15th 2011 </span> <span class="m-x-2" title="Pageviews"> 13.0k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://adrianmejia.com/git-auto-commit-with-crontab/">0</span>](#disqus_thread) </span>
+<span title="Last time this post was updated"> Last updated August 15th 2011 </span> <span class="m-x-2" title="Pageviews"> 13.0k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/git-auto-commit-with-crontab/">0</span>](#disqus_thread) </span>
 
 -   <a href="/tags/git/" class="tag-list-link">git</a><span class="tag-list-count">1</span>
 

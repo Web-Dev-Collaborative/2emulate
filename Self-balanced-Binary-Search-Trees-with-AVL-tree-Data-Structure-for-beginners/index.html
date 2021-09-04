@@ -35,27 +35,24 @@
     <meta name="msapplication-square150x150logo" content="/mstile-150x150.png" />
     <meta name="msapplication-wide310x150logo" content="/mstile-310x150.png" />
     <meta name="msapplication-square310x310logo" content="/mstile-310x310.png" />
-    <meta name="msapplication-notification" content="frequency=30;polling-uri=http://notifications.buildmypinnedsite.com/?feed=https://adrianmejia.com/atom.xml" />
+    <meta name="msapplication-notification" content="frequency=30;polling-uri=http://notifications.buildmypinnedsite.com/?feed=https://master--bgoonz-blog.netlify.app/atom.xml" />
 
-    <link rel="canonical" href="https://adrianmejia.com/self-balanced-binary-search-trees-with-avl-tree-data-structure-for-beginners/" />
+    <link rel="canonical" href="https://master--bgoonz-blog.netlify.app/self-balanced-binary-search-trees-with-avl-tree-data-structure-for-beginners/" />
     <!-- Open Graph -->
-    <meta property="og:url" content="https://adrianmejia.com/Self-balanced-Binary-Search-Trees-with-AVL-tree-Data-Structure-for-beginners/" />
+    <meta property="og:url" content="https://master--bgoonz-blog.netlify.app/Self-balanced-Binary-Search-Trees-with-AVL-tree-Data-Structure-for-beginners/" />
     <meta property="og:site_name" content=" Blog" />
     <meta property="og:type" content="article" />
     <meta property="og:description" content="
 
 
 Binary Search Trees (BST) is used for many things that we might not be aware of. For instance: in compilers to generate syntax trees, cryptography and in compressions algorithms used in JPG and MP3. However, search trees need to be balanced to be fast. So, we are going to discuss how to keep the BST balanced as you add and remove elements." />
-    <meta property="og:image" content="https://adrianmejia.com/images/data-structures-algorithms-avl-binary-search-trees-large.jpg" />
+    <meta property="og:image" content="https://master--bgoonz-blog.netlify.app/images/data-structures-algorithms-avl-binary-search-trees-large.jpg" />
     <meta property="og:title" content="Self-balanced Binary Search Trees with AVL in JavaScript" />
     <meta property="fb:app_id" content="761831487293468" />
     <meta property="fb:admins" content="895685163"/>
     <!-- /Open Graph -->
 
-    <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', 'UA-24183929-4', 'auto');
-ga('send', 'pageview');
-</script><script async defer src='https://www.google-analytics.com/analytics.js'></script>
+
 
 
     <!-- Critical Styles -->
@@ -264,7 +261,7 @@ ga('send', 'pageview');
   
   "image": {
     "@type": "ImageObject",
-    "url": "https://adrianmejia.com/images/data-structures-algorithms-avl-binary-search-trees-large.jpg",
+    "url": "https://master--bgoonz-blog.netlify.app/images/data-structures-algorithms-avl-binary-search-trees-large.jpg",
     "height": 360,
     "width": 728
   },
@@ -280,7 +277,7 @@ ga('send', 'pageview');
     "name": "",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://adrianmejia.com/images/logo.png",
+      "url": "https://master--bgoonz-blog.netlify.app/images/logo.png",
       "width": 347,
       "height": 50
     }
@@ -319,7 +316,7 @@ Binary Search Trees (BST) is used for many things that we might not be aware of.
       <span class="m-x-2" title="Click to go to the comments section">
         <a href="#disqus_thread">
           <i class="fa fa-comment-o" aria-hidden="true"></i>
-          <span class="disqus-comment-count" data-disqus-url="https://adrianmejia.com/Self-balanced-Binary-Search-Trees-with-AVL-tree-Data-Structure-for-beginners/">0</span>
+          <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/Self-balanced-Binary-Search-Trees-with-AVL-tree-Data-Structure-for-beginners/">0</span>
         </a>
       </span>
 
@@ -454,7 +451,7 @@ recursively you will notice they never differ by more than one.</p>
 <p>To define the tree, we are using
 <a target="_blank" rel="noopener" href="https://github.com/amejiarosario/dsa.js/blob/master/src/data-structures/trees/tree-node.js">TreeNode </a>
 that we developed in the
-<a href="https://adrianmejia.com/blog/2018/06/11/data-structures-for-beginners-trees-binary-search-tree-tutorial/#BST-Implementation">previous post</a>.</p>
+<a href="https://master--bgoonz-blog.netlify.app/blog/2018/06/11/data-structures-for-beginners-trees-binary-search-tree-tutorial/#BST-Implementation">previous post</a>.</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> n1 = <span class="keyword">new</span> TreeNode(<span class="number">1</span>);</span><br><span class="line"><span class="keyword">const</span> n2 = <span class="keyword">new</span> TreeNode(<span class="number">2</span>);</span><br><span class="line"><span class="keyword">const</span> n3 = <span class="keyword">new</span> TreeNode(<span class="number">3</span>);</span><br><span class="line"><span class="keyword">const</span> n4 = <span class="keyword">new</span> TreeNode(<span class="number">4</span>);</span><br><span class="line"></span><br><span class="line">n1.right = n2;</span><br><span class="line">n2.right = n3;</span><br><span class="line">n3.right = n4;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> newParent = leftRotation(n2);</span><br><span class="line"><span class="built_in">console</span>.log(newParent === n3); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
 
 <p>In this case, we are rotating 2 to the left. Let’s implement the <code>leftRotation</code> function.</p>
@@ -1002,8 +999,8 @@ You can <code>star</code> it to keep it handy.</p>
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
-      this.page.url = 'https://adrianmejia.com/Self-balanced-Binary-Search-Trees-with-AVL-tree-Data-Structure-for-beginners/';
-      this.page.identifier = 'https://adrianmejia.com/Self-balanced-Binary-Search-Trees-with-AVL-tree-Data-Structure-for-beginners/';
+      this.page.url = 'https://master--bgoonz-blog.netlify.app/Self-balanced-Binary-Search-Trees-with-AVL-tree-Data-Structure-for-beginners/';
+      this.page.identifier = 'https://master--bgoonz-blog.netlify.app/Self-balanced-Binary-Search-Trees-with-AVL-tree-Data-Structure-for-beginners/';
     };
     (function() {
       var d = document, s = d.createElement('script');

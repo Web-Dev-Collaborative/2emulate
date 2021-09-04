@@ -7,7 +7,7 @@
 Node Package Manager (NPM) Tutorial
 ===================================
 
-<span title="Last time this post was updated"> Last updated August 19th 2016 </span> <span class="m-x-2" title="Pageviews"> 3.2k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://adrianmejia.com/Node-Package-Manager-NPM-Tutorial/">0</span>](#disqus_thread) </span>
+<span title="Last time this post was updated"> Last updated August 19th 2016 </span> <span class="m-x-2" title="Pageviews"> 3.2k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/Node-Package-Manager-NPM-Tutorial/">0</span>](#disqus_thread) </span>
 
 -   <a href="/tags/nodejs/" class="tag-list-link">nodejs</a><span class="tag-list-count">12</span>
 

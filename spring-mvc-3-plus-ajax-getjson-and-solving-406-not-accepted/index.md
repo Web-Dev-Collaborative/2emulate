@@ -7,7 +7,7 @@
 Spring MVC 3 + AJAX (getJSON) and solving 406 Not Accepted
 ==========================================================
 
-<span title="Last time this post was updated"> Last updated April 27th 2012 </span> <span class="m-x-2" title="Pageviews"> 18.7k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://adrianmejia.com/spring-mvc-3-plus-ajax-getjson-and-solving-406-not-accepted/">0</span>](#disqus_thread) </span>
+<span title="Last time this post was updated"> Last updated April 27th 2012 </span> <span class="m-x-2" title="Pageviews"> 18.7k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/spring-mvc-3-plus-ajax-getjson-and-solving-406-not-accepted/">0</span>](#disqus_thread) </span>
 
 -   <a href="/tags/java/" class="tag-list-link">java</a><span class="tag-list-count">1</span>
 -   <a href="/tags/spring-mvc/" class="tag-list-link">spring mvc</a><span class="tag-list-count">1</span>

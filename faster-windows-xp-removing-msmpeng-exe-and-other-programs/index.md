@@ -7,7 +7,7 @@
 Faster Windows XP removing Msmpeng.Exe and other programs
 =========================================================
 
-<span title="Last time this post was updated"> Last updated July 15th 2011 </span> <span class="m-x-2" title="Pageviews"> 62.6k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://adrianmejia.com/faster-windows-xp-removing-msmpeng-exe-and-other-programs/">0</span>](#disqus_thread) </span>
+<span title="Last time this post was updated"> Last updated July 15th 2011 </span> <span class="m-x-2" title="Pageviews"> 62.6k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/faster-windows-xp-removing-msmpeng-exe-and-other-programs/">0</span>](#disqus_thread) </span>
 
 -   <a href="/tags/troubleshooting/" class="tag-list-link">troubleshooting</a><span class="tag-list-count">5</span>
 

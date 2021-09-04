@@ -7,7 +7,7 @@
 Adding Subversion (SVN) Properties to your code
 ===============================================
 
-<span title="Last time this post was updated"> Last updated February 11th 2012 </span> <span class="m-x-2" title="Pageviews"> 2.4k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://adrianmejia.com/adding-subversion-svn-properties-to-your-code/">0</span>](#disqus_thread) </span>
+<span title="Last time this post was updated"> Last updated February 11th 2012 </span> <span class="m-x-2" title="Pageviews"> 2.4k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/adding-subversion-svn-properties-to-your-code/">0</span>](#disqus_thread) </span>
 
 When you are coding in a team enviroment it's good to have the subversion properties in your files, that way any other developer can see quickly who made the last changes and when.
 

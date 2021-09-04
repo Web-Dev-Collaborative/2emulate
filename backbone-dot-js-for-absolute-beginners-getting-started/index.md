@@ -7,7 +7,7 @@
 Backbone.js for Absolute Beginners - Getting started (Part 1: Intro)
 ====================================================================
 
-<span title="Last time this post was updated"> Last updated April 14th 2021 </span> <span class="m-x-2" title="Pageviews"> 359.7k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://adrianmejia.com/backbone-dot-js-for-absolute-beginners-getting-started/">0</span>](#disqus_thread) </span>
+<span title="Last time this post was updated"> Last updated April 14th 2021 </span> <span class="m-x-2" title="Pageviews"> 359.7k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/backbone-dot-js-for-absolute-beginners-getting-started/">0</span>](#disqus_thread) </span>
 
 -   <a href="/tags/backbonejs/" class="tag-list-link">backbonejs</a><span class="tag-list-count">4</span>
 -   <a href="/tags/tutorial-backbonejs/" class="tag-list-link">tutorial_backbonejs</a><span class="tag-list-count">4</span>

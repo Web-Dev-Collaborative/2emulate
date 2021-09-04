@@ -7,7 +7,7 @@
 How you can change the world by learning Data Structures and Algorithms
 =======================================================================
 
-<span title="Last time this post was updated"> Last updated April 5th 2019 </span> <span class="m-x-2" title="Pageviews"> 63.9k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://adrianmejia.com/how-you-can-change-the-world-learning-data-structures-algorithms-free-online-course-tutorial/">0</span>](#disqus_thread) </span>
+<span title="Last time this post was updated"> Last updated April 5th 2019 </span> <span class="m-x-2" title="Pageviews"> 63.9k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/how-you-can-change-the-world-learning-data-structures-algorithms-free-online-course-tutorial/">0</span>](#disqus_thread) </span>
 
 -   <a href="/tags/algorithms/" class="tag-list-link">algorithms</a><span class="tag-list-count">12</span>
 -   <a href="/tags/tutorial-algorithms/" class="tag-list-link">tutorial_algorithms</a><span class="tag-list-count">10</span>

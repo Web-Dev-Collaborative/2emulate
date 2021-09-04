@@ -7,7 +7,7 @@
 How to execute SQL statements on MS Access?
 ===========================================
 
-<span title="Last time this post was updated"> Last updated November 9th 2011 </span> <span class="m-x-2" title="Pageviews"> 4.0k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://adrianmejia.com/how-to-execute-sql-statements-on-ms-access/">0</span>](#disqus_thread) </span>
+<span title="Last time this post was updated"> Last updated November 9th 2011 </span> <span class="m-x-2" title="Pageviews"> 4.0k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/how-to-execute-sql-statements-on-ms-access/">0</span>](#disqus_thread) </span>
 
 -   <a href="/tags/troubleshooting/" class="tag-list-link">troubleshooting</a><span class="tag-list-count">5</span>
 
