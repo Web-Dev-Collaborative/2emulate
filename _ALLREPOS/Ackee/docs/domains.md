@@ -15,8 +15,8 @@ GET /domains
 
 ### Headers
 
-| Name | Example |
-|:-----------|:------------|
+| Name          | Example                          |
+| :------------ | :------------------------------- |
 | Authorization | `Authorization: Bearer :tokenId` |
 
 ### Response
@@ -27,18 +27,18 @@ Status: 200 OK
 
 ```json
 {
-	"type": "domains",
-	"data": [
-		{
-			"type": "domain",
-			"data": {
-				"id": ":domainId",
-				"title": "Example",
-				"created": "1475491394341",
-				"updated": "1475491394341"
-			}
-		}
-	]
+  "type": "domains",
+  "data": [
+    {
+      "type": "domain",
+      "data": {
+        "id": ":domainId",
+        "title": "Example",
+        "created": "1475491394341",
+        "updated": "1475491394341"
+      }
+    }
+  ]
 }
 ```
 
@@ -52,21 +52,21 @@ POST /domains
 
 ```json
 {
-	"title": "Example"
+  "title": "Example"
 }
 ```
 
 ### Headers
 
-| Name | Example |
-|:-----------|:------------|
+| Name          | Example                          |
+| :------------ | :------------------------------- |
 | Authorization | `Authorization: Bearer :tokenId` |
 
 ### Parameters
 
-| Name | Type | Required | Description |
-|:-----------|:------------|:------------|:------------|
-| title | String | true | Title of the domain. |
+| Name  | Type   | Required | Description          |
+| :---- | :----- | :------- | :------------------- |
+| title | String | true     | Title of the domain. |
 
 ### Response
 
@@ -77,13 +77,13 @@ Location: /domains/:domainId
 
 ```json
 {
-	"type": "domain",
-	"data": {
-		"id": ":domainId",
-		"title": "Example",
-		"created": "1475491394341",
-		"updated": "1475491394341"
-	}
+  "type": "domain",
+  "data": {
+    "id": ":domainId",
+    "title": "Example",
+    "created": "1475491394341",
+    "updated": "1475491394341"
+  }
 }
 ```
 
@@ -97,21 +97,21 @@ PUT /domains/:domainId
 
 ```json
 {
-	"title": "Example"
+  "title": "Example"
 }
 ```
 
 ### Headers
 
-| Name | Example |
-|:-----------|:------------|
+| Name          | Example                          |
+| :------------ | :------------------------------- |
 | Authorization | `Authorization: Bearer :tokenId` |
 
 ### Parameters
 
-| Name | Type | Required | Description |
-|:-----------|:------------|:------------|:------------|
-| title | String | false | Title of the domain. |
+| Name  | Type   | Required | Description          |
+| :---- | :----- | :------- | :------------------- |
+| title | String | false    | Title of the domain. |
 
 ### Response
 
@@ -121,13 +121,13 @@ Status: 200 OK
 
 ```json
 {
-	"type": "domain",
-	"data": {
-		"id": ":domainId",
-		"title": "Example",
-		"created": "1475491394341",
-		"updated": "1475491394341"
-	}
+  "type": "domain",
+  "data": {
+    "id": ":domainId",
+    "title": "Example",
+    "created": "1475491394341",
+    "updated": "1475491394341"
+  }
 }
 ```
 
@@ -141,8 +141,8 @@ DELETE /domains/:domainId
 
 ### Headers
 
-| Name | Example |
-|:-----------|:------------|
+| Name          | Example                          |
+| :------------ | :------------------------------- |
 | Authorization | `Authorization: Bearer :tokenId` |
 
 ### Response

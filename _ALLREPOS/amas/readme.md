@@ -118,16 +118,11 @@
 - [From the Front](https://github.com/fromthefront/ama) - Nonprofit organization behind the "From the Front" conference series in Italy.
 - [HackCU](https://github.com/HackCU/ama) - A collegiate hackathon at the University of Colorado that operates a free bi-annual event for students to learn coding or push their skills building things.
 
-
 -
 
 #### [Create your own AMA!](create-ama.md)
 
--
-
-
-*Fun: AMAs is a [recursive acronym](https://en.wikipedia.org/wiki/Recursive_acronym).*
-
+- _Fun: AMAs is a [recursive acronym](https://en.wikipedia.org/wiki/Recursive_acronym)._
 
 ## License
 

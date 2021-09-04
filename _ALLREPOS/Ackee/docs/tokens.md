@@ -15,17 +15,17 @@ POST /tokens
 
 ```json
 {
-	"username": "username",
-	"password": "password"
+  "username": "username",
+  "password": "password"
 }
 ```
 
 ### Parameters
 
-| Name | Type | Required | Description |
-|:-----------|:------------|:------------|:------------|
-| username | String | true | [Username of Ackee](../README.md#username-and-password). |
-| password | String | true | [Password of Ackee](../README.md#username-and-password). |
+| Name     | Type   | Required | Description                                              |
+| :------- | :----- | :------- | :------------------------------------------------------- |
+| username | String | true     | [Username of Ackee](../README.md#username-and-password). |
+| password | String | true     | [Password of Ackee](../README.md#username-and-password). |
 
 ### Response
 
@@ -36,12 +36,12 @@ Location: /tokens/:tokenId
 
 ```json
 {
-	"type": "token",
-	"data": {
-		"id": ":tokenId",
-		"created": "1526999812",
-		"updated": "1526999812"
-	}
+  "type": "token",
+  "data": {
+    "id": ":tokenId",
+    "created": "1526999812",
+    "updated": "1526999812"
+  }
 }
 ```
 

@@ -23,12 +23,13 @@ Status: 200 OK
 ```
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-
-		<title>Ackee</title>
-		…
+  <head>
+    <title>Ackee</title>
+    …
+  </head>
+</html>
 ```
 
 ## Styles

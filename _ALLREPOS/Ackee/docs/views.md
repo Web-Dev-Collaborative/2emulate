@@ -15,8 +15,8 @@ GET /domains/:domainId/views?type=total
 
 ### Headers
 
-| Name | Example |
-|:-----------|:------------|
+| Name          | Example                          |
+| :------------ | :------------------------------- |
 | Authorization | `Authorization: Bearer :tokenId` |
 
 ### Response
@@ -27,20 +27,20 @@ Status: 200 OK
 
 ```json
 {
-	"type": "views",
-	"data": [
-		{
-			"type": "view",
-			"data": {
-				"id": {
-					"day": 3,
-					"month": 10,
-					"year": 2016
-				},
-				"count": 1
-			}
-		}
-	]
+  "type": "views",
+  "data": [
+    {
+      "type": "view",
+      "data": {
+        "id": {
+          "day": 3,
+          "month": 10,
+          "year": 2016
+        },
+        "count": 1
+      }
+    }
+  ]
 }
 ```
 
@@ -56,8 +56,8 @@ GET /domains/:domainId/views?type=unique
 
 ### Headers
 
-| Name | Example |
-|:-----------|:------------|
+| Name          | Example                          |
+| :------------ | :------------------------------- |
 | Authorization | `Authorization: Bearer :tokenId` |
 
 ### Response
@@ -68,19 +68,19 @@ Status: 200 OK
 
 ```json
 {
-	"type": "views",
-	"data": [
-		{
-			"type": "view",
-			"data": {
-				"id": {
-					"day": 3,
-					"month": 10,
-					"year": 2016
-				},
-				"count": 1
-			}
-		}
-	]
+  "type": "views",
+  "data": [
+    {
+      "type": "view",
+      "data": {
+        "id": {
+          "day": 3,
+          "month": 10,
+          "year": 2016
+        },
+        "count": 1
+      }
+    }
+  ]
 }
 ```

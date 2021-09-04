@@ -1,9 +1,7 @@
 .subHeader {
-
-	grid-column: 1 / -1;
-	display: grid;
-	justify-content: flex-end;
-	grid-auto-flow: column;
-	grid-template-columns: max-content;
-
+  grid-column: 1 / -1;
+  display: grid;
+  justify-content: flex-end;
+  grid-auto-flow: column;
+  grid-template-columns: max-content;
 }

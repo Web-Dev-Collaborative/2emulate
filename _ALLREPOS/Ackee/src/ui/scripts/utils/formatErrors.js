@@ -1,3 +1,3 @@
-import formatError from './formatError'
+import formatError from "./formatError";
 
-export default (errors) => errors.map(formatError).join('\n\n')
+export default (errors) => errors.map(formatError).join("\n\n");

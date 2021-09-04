@@ -1,3 +1,4 @@
-export default (fn, ms) => setTimeout(() => {
-	requestAnimationFrame(fn)
-}, ms)
+export default (fn, ms) =>
+  setTimeout(() => {
+    requestAnimationFrame(fn);
+  }, ms);

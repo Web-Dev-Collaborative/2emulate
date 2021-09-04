@@ -1,55 +1,47 @@
-'use strict'
+"use strict";
 
-const test = require('ava')
+const test = require("ava");
 
-const ttl = require('../../src/utils/ttl')
+const ttl = require("../../src/utils/ttl");
 
-test('return true when `timestamp` is valid', (t) => {
+test("return true when `timestamp` is valid", (t) => {
+  const date = new Date();
+  const timestamp = date.getTime();
 
-	const date = new Date()
-	const timestamp = date.getTime()
+  const result = ttl(timestamp);
 
-	const result = ttl(timestamp)
+  t.true(result);
+});
 
-	t.true(result)
+test("return false when `timestamp` is invalid", (t) => {
+  const date = new Date();
 
-})
+  date.setDate(date.getDate() - 1);
 
-test('return false when `timestamp` is invalid', (t) => {
+  const timestamp = date.getTime();
 
-	const date = new Date()
+  const result = ttl(timestamp);
 
-	date.setDate(date.getDate() - 1)
+  t.false(result);
+});
 
-	const timestamp = date.getTime()
+test("return true when `timestamp` is newer than `ttl`", (t) => {
+  const date = new Date();
+  const timestamp = date.getTime();
 
-	const result = ttl(timestamp)
+  const result = ttl(timestamp, 86400000);
 
-	t.false(result)
+  t.true(result);
+});
 
-})
+test("return false when `timestamp` is older than `ttl`", (t) => {
+  const date = new Date();
 
-test('return true when `timestamp` is newer than `ttl`', (t) => {
+  date.setDate(date.getDate() - 1);
 
-	const date = new Date()
-	const timestamp = date.getTime()
+  const timestamp = date.getTime();
 
-	const result = ttl(timestamp, 86400000)
+  const result = ttl(timestamp, 0);
 
-	t.true(result)
-
-})
-
-test('return false when `timestamp` is older than `ttl`', (t) => {
-
-	const date = new Date()
-
-	date.setDate(date.getDate() - 1)
-
-	const timestamp = date.getTime()
-
-	const result = ttl(timestamp, 0)
-
-	t.false(result)
-
-})
+  t.false(result);
+});

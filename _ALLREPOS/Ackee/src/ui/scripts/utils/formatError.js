@@ -1,1 +1,1 @@
-export default (error) => [ error.message, error.stack ].join('\n')
+export default (error) => [error.message, error.stack].join("\n");

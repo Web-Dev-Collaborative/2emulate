@@ -1,97 +1,81 @@
-'use strict'
+"use strict";
 
-const { send, json, createError } = require('micro')
+const { send, json, createError } = require("micro");
 
-const messages = require('../utils/messages')
-const domains = require('../database/domains')
+const messages = require("../utils/messages");
+const domains = require("../database/domains");
 
 const response = (entry) => ({
-	type: 'domain',
-	data: {
-		id: entry.id,
-		title: entry.title,
-		created: entry.created,
-		updated: entry.updated
-	}
-})
+  type: "domain",
+  data: {
+    id: entry.id,
+    title: entry.title,
+    created: entry.created,
+    updated: entry.updated,
+  },
+});
 
 const responses = (entries) => ({
-	type: 'domains',
-	data: entries.map(response)
-})
+  type: "domains",
+  data: entries.map(response),
+});
 
 const add = async (req, res) => {
+  const data = await json(req);
 
-	const data = await json(req)
+  let entry;
 
-	let entry
+  try {
+    entry = await domains.add(data);
+  } catch (err) {
+    if (err.name === "ValidationError") {
+      throw createError(400, messages(err.errors), err);
+    }
 
-	try {
+    throw err;
+  }
 
-		entry = await domains.add(data)
-
-	} catch (err) {
-
-		if (err.name === 'ValidationError') {
-			throw createError(400, messages(err.errors), err)
-		}
-
-		throw err
-
-	}
-
-	return send(res, 201, response(entry))
-
-}
+  return send(res, 201, response(entry));
+};
 
 const all = async () => {
+  const entries = await domains.all();
 
-	const entries = await domains.all()
-
-	return responses(entries)
-
-}
+  return responses(entries);
+};
 
 const update = async (req) => {
+  const { domainId } = req.params;
+  const data = await json(req);
 
-	const { domainId } = req.params
-	const data = await json(req)
+  let entry;
 
-	let entry
+  try {
+    entry = await domains.update(domainId, data);
+  } catch (err) {
+    if (err.name === "ValidationError") {
+      throw createError(400, messages(err.errors), err);
+    }
 
-	try {
+    throw err;
+  }
 
-		entry = await domains.update(domainId, data)
+  if (entry == null) throw createError(404, "Unknown domain");
 
-	} catch (err) {
-
-		if (err.name === 'ValidationError') {
-			throw createError(400, messages(err.errors), err)
-		}
-
-		throw err
-
-	}
-
-	if (entry == null) throw createError(404, 'Unknown domain')
-
-	return response(entry)
-
-}
+  return response(entry);
+};
 
 const del = async (req, res) => {
+  const { domainId } = req.params;
 
-	const { domainId } = req.params
+  await domains.del(domainId);
 
-	await domains.del(domainId)
-
-	send(res, 204)
-
-}
+  send(res, 204);
+};
 
 module.exports = {
-	add,
-	all,
-	update,
-	del
-}
+  add,
+  all,
+  update,
+  del,
+};

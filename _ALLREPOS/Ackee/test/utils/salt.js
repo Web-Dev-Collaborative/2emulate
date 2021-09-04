@@ -1,14 +1,12 @@
-'use strict'
+"use strict";
 
-const test = require('ava')
+const test = require("ava");
 
-const salt = require('../../src/utils/salt')
+const salt = require("../../src/utils/salt");
 
-test('return same result as long as it is the same day', async (t) => {
+test("return same result as long as it is the same day", async (t) => {
+  const a = salt();
+  const b = salt();
 
-	const a = salt()
-	const b = salt()
-
-	t.is(a, b)
-
-})
+  t.is(a, b);
+});

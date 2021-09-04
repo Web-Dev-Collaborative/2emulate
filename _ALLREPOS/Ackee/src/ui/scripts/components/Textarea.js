@@ -1,14 +1,10 @@
-import { createElement as h } from 'react'
+import { createElement as h } from "react";
 
 const Textarea = (props) => {
+  return h("textarea", {
+    className: "input",
+    ...props,
+  });
+};
 
-	return (
-		h('textarea', {
-			className: 'input',
-			...props
-		})
-	)
-
-}
-
-export default Textarea
+export default Textarea;

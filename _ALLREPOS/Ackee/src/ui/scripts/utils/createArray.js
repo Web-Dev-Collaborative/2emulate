@@ -1,1 +1,1 @@
-export default (length) => Array(length).fill(undefined)
+export default (length) => Array(length).fill(undefined);

@@ -15,47 +15,47 @@ POST /domains/:domainId/records
 
 ```json
 {
-	"siteLocation": "https://example.com/index.html",
-	"siteReferrer": "https://example.com/referrer.html",
-	"siteLanguage": "en",
-	"screenWidth": 2560,
-	"screenHeight": 1440,
-	"screenColorDepth": 32,
-	"deviceName": "iPad",
-	"deviceManufacturer": "Apple",
-	"osName": "iOS",
-	"osVersion": "9.0.1",
-	"browserName": "Safari",
-	"browserVersion": "9.0.1",
-	"browserWidth": 1000,
-	"browserHeight": 900
+  "siteLocation": "https://example.com/index.html",
+  "siteReferrer": "https://example.com/referrer.html",
+  "siteLanguage": "en",
+  "screenWidth": 2560,
+  "screenHeight": 1440,
+  "screenColorDepth": 32,
+  "deviceName": "iPad",
+  "deviceManufacturer": "Apple",
+  "osName": "iOS",
+  "osVersion": "9.0.1",
+  "browserName": "Safari",
+  "browserVersion": "9.0.1",
+  "browserWidth": 1000,
+  "browserHeight": 900
 }
 ```
 
 ### Headers
 
-| Name | Example |
-|:-----------|:------------|
+| Name          | Example                          |
+| :------------ | :------------------------------- |
 | Authorization | `Authorization: Bearer :tokenId` |
 
 ### Parameters
 
-| Name | Type | Required | Description |
-|:-----------|:------------|:------------|:------------|
-| siteLocation | String | true | URL of the site. |
-| siteReferrer | String | false | URL of the document that loaded the current document. |
-| siteLanguage | String | false | Language version of the browser. |
-| screenWidth | Number | false | The width of the screen in pixels. |
-| screenHeight | Number | false | The height of the screen in pixels. |
-| screenColorDepth | Number | false | The bit depth of the color palette for displaying images (in bits per pixel). |
-| deviceName | String | false | The name of the product hosting the browser. |
-| deviceManufacturer | String | false | The name of the product's manufacturer. |
-| osName | String | false | The family of the OS. |
-| osVersion | String | false | The version of the OS. |
-| browserName | String | false | The name of the browser/environment. |
-| browserVersion | String | false | The browser/environment version. |
-| browserWidth | Number | false | The width of the screen in pixels. |
-| browserHeight | Number | false | The height of the screen in pixels. |
+| Name               | Type   | Required | Description                                                                   |
+| :----------------- | :----- | :------- | :---------------------------------------------------------------------------- |
+| siteLocation       | String | true     | URL of the site.                                                              |
+| siteReferrer       | String | false    | URL of the document that loaded the current document.                         |
+| siteLanguage       | String | false    | Language version of the browser.                                              |
+| screenWidth        | Number | false    | The width of the screen in pixels.                                            |
+| screenHeight       | Number | false    | The height of the screen in pixels.                                           |
+| screenColorDepth   | Number | false    | The bit depth of the color palette for displaying images (in bits per pixel). |
+| deviceName         | String | false    | The name of the product hosting the browser.                                  |
+| deviceManufacturer | String | false    | The name of the product's manufacturer.                                       |
+| osName             | String | false    | The family of the OS.                                                         |
+| osVersion          | String | false    | The version of the OS.                                                        |
+| browserName        | String | false    | The name of the browser/environment.                                          |
+| browserVersion     | String | false    | The browser/environment version.                                              |
+| browserWidth       | Number | false    | The width of the screen in pixels.                                            |
+| browserHeight      | Number | false    | The height of the screen in pixels.                                           |
 
 ### Response
 
@@ -66,27 +66,27 @@ Location: /domains/:domainId/records/:recordId
 
 ```json
 {
-	"type": "record",
-	"data": {
-		"id": ":recordId",
-		"domainId": ":domainId",
-		"siteLocation": "https://example.com/index.html",
-		"siteReferrer": "https://example.com/referrer.html",
-		"siteLanguage": "en",
-		"screenWidth": 2560,
-		"screenHeight": 1440,
-		"screenColorDepth": 32,
-		"deviceName": "iPad",
-		"deviceManufacturer": "Apple",
-		"osName": "iOS",
-		"osVersion": "9.0.1",
-		"browserName": "Safari",
-		"browserVersion": "9.0.1",
-		"browserWidth": 1000,
-		"browserHeight": 900,
-		"created": "1475491394341",
-		"updated": "1475491394341"
-	}
+  "type": "record",
+  "data": {
+    "id": ":recordId",
+    "domainId": ":domainId",
+    "siteLocation": "https://example.com/index.html",
+    "siteReferrer": "https://example.com/referrer.html",
+    "siteLanguage": "en",
+    "screenWidth": 2560,
+    "screenHeight": 1440,
+    "screenColorDepth": 32,
+    "deviceName": "iPad",
+    "deviceManufacturer": "Apple",
+    "osName": "iOS",
+    "osVersion": "9.0.1",
+    "browserName": "Safari",
+    "browserVersion": "9.0.1",
+    "browserWidth": 1000,
+    "browserHeight": 900,
+    "created": "1475491394341",
+    "updated": "1475491394341"
+  }
 }
 ```
 
@@ -104,8 +104,8 @@ PATCH /domains/:domainId/records/:recordId
 
 ### Headers
 
-| Name | Example |
-|:-----------|:------------|
+| Name          | Example                          |
+| :------------ | :------------------------------- |
 | Authorization | `Authorization: Bearer :tokenId` |
 
 ### Response
@@ -116,26 +116,26 @@ Status: 200 OK
 
 ```json
 {
-	"type": "record",
-	"data": {
-		"id": ":recordId",
-		"domainId": ":domainId",
-		"siteLocation": "https://example.com/index.html",
-		"siteReferrer": "https://example.com/referrer.html",
-		"siteLanguage": "en",
-		"screenWidth": 2560,
-		"screenHeight": 1440,
-		"screenColorDepth": 32,
-		"deviceName": "iPad",
-		"deviceManufacturer": "Apple",
-		"osName": "iOS",
-		"osVersion": "9.0.1",
-		"browserName": "Safari",
-		"browserVersion": "9.0.1",
-		"browserWidth": 1000,
-		"browserHeight": 900,
-		"created": "1475491394341",
-		"updated": "1475491394341"
-	}
+  "type": "record",
+  "data": {
+    "id": ":recordId",
+    "domainId": ":domainId",
+    "siteLocation": "https://example.com/index.html",
+    "siteReferrer": "https://example.com/referrer.html",
+    "siteLanguage": "en",
+    "screenWidth": 2560,
+    "screenHeight": 1440,
+    "screenColorDepth": 32,
+    "deviceName": "iPad",
+    "deviceManufacturer": "Apple",
+    "osName": "iOS",
+    "osVersion": "9.0.1",
+    "browserName": "Safari",
+    "browserVersion": "9.0.1",
+    "browserWidth": 1000,
+    "browserHeight": 900,
+    "created": "1475491394341",
+    "updated": "1475491394341"
+  }
 }
 ```

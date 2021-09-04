@@ -15,8 +15,8 @@ GET /domains/:domainId/referrers?sorting=top
 
 ### Headers
 
-| Name | Example |
-|:-----------|:------------|
+| Name          | Example                          |
+| :------------ | :------------------------------- |
 | Authorization | `Authorization: Bearer :tokenId` |
 
 ### Response
@@ -27,16 +27,16 @@ Status: 200 OK
 
 ```json
 {
-	"type": "referrers",
-	"data": [
-		{
-			"type": "referrer",
-			"data": {
-				"id": "https://www.example.com/",
-				"count": 1
-			}
-		}
-	]
+  "type": "referrers",
+  "data": [
+    {
+      "type": "referrer",
+      "data": {
+        "id": "https://www.example.com/",
+        "count": 1
+      }
+    }
+  ]
 }
 ```
 
@@ -52,8 +52,8 @@ GET /domains/:domainId/referrers?sorting=recent
 
 ### Headers
 
-| Name | Example |
-|:-----------|:------------|
+| Name          | Example                          |
+| :------------ | :------------------------------- |
 | Authorization | `Authorization: Bearer :tokenId` |
 
 ### Response
@@ -64,14 +64,14 @@ Status: 200 OK
 
 ```json
 {
-	"type": "referrers",
-	"data": [
-		{
-			"type": "referrer",
-			"data": {
-				"id": "https://www.example.com/"
-			}
-		}
-	]
+  "type": "referrers",
+  "data": [
+    {
+      "type": "referrer",
+      "data": {
+        "id": "https://www.example.com/"
+      }
+    }
+  ]
 }
 ```

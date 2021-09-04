@@ -1,55 +1,50 @@
-import timeout from './timeout'
+import timeout from "./timeout";
 
 export default async (url, { props, method, body }) => {
+  try {
+    const headers = new Headers();
+    const token = props.token.value.id;
 
-	try {
+    if (token) headers.append("Authorization", `Bearer ${token}`);
 
-		const headers = new Headers()
-		const token = props.token.value.id
+    const request = fetch(url, {
+      headers,
+      method,
+      body,
+    });
 
-		if (token) headers.append('Authorization', `Bearer ${ token }`)
+    const response = await timeout(request, "Request timeout", 30000);
 
-		const request = fetch(url, {
-			headers,
-			method,
-			body
-		})
+    if (response.ok === false) {
+      const text = await response.text();
+      throw new Error(text);
+    }
 
-		const response = await timeout(request, 'Request timeout', 30000)
+    const type = response.headers.get("content-type");
 
-		if (response.ok === false) {
-			const text = await response.text()
-			throw new Error(text)
-		}
+    const isEmpty = type == null;
+    const isJSON =
+      isEmpty === false && type.includes("application/json") === true;
 
-		const type = response.headers.get('content-type')
+    if (isEmpty === true) {
+      return undefined;
+    }
 
-		const isEmpty = type == null
-		const isJSON = isEmpty === false && type.includes('application/json') === true
+    if (isJSON === true) {
+      const json = await response.json();
+      return json.data;
+    }
 
-		if (isEmpty === true) {
-			return undefined
-		}
+    throw new Error("Unknown response content-type");
+  } catch (err) {
+    console.error(err);
 
-		if (isJSON === true) {
-			const json = await response.json()
-			return json.data
-		}
+    if (err.message === "Token invalid") {
+      // Reset token and show login
+      props.deleteToken(props);
+    }
 
-		throw new Error('Unknown response content-type')
-
-	} catch (err) {
-
-		console.error(err)
-
-		if (err.message === 'Token invalid') {
-			// Reset token and show login
-			props.deleteToken(props)
-		}
-
-		// Re-throw error so the caller can handle it, too
-		throw err
-
-	}
-
-}
+    // Re-throw error so the caller can handle it, too
+    throw err;
+  }
+};

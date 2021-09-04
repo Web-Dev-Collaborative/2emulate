@@ -1,3 +1,3 @@
-'use strict'
+"use strict";
 
-module.exports = (arr) => arr[Math.floor(Math.random() * arr.length)]
+module.exports = (arr) => arr[Math.floor(Math.random() * arr.length)];

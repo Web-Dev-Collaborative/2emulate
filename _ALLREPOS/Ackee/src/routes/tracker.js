@@ -1,18 +1,16 @@
-'use strict'
+"use strict";
 
-const { readFile } = require('fs').promises
+const { readFile } = require("fs").promises;
 
-const preload = require('../utils/preload')
-const isProductionEnv = require('../utils/isProductionEnv')
+const preload = require("../utils/preload");
+const isProductionEnv = require("../utils/isProductionEnv");
 
 const get = async () => {
+  const filePath = require.resolve("ackee-tracker");
 
-	const filePath = require.resolve('ackee-tracker')
-
-	return readFile(filePath, 'utf8')
-
-}
+  return readFile(filePath, "utf8");
+};
 
 module.exports = {
-	get: isProductionEnv === true ? preload(get) : get
-}
+  get: isProductionEnv === true ? preload(get) : get,
+};

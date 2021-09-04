@@ -1,3 +1,3 @@
-'use strict'
+"use strict";
 
-module.exports = process.env.DEMO === 'true'
+module.exports = process.env.DEMO === "true";
