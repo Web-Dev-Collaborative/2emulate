@@ -1,16 +1,11 @@
-
-
-
-
 <a href="/categories/coding/" class="category-link">Coding</a> &gt; <a href="/categories/coding/data-structures-and-algorithms-dsa/" class="category-link">Data Structures and Algorithms (DSA)</a>
 
-How you can change the world by learning Data Structures and Algorithms
-=======================================================================
+# How you can change the world by learning Data Structures and Algorithms
 
 <span title="Last time this post was updated"> Last updated April 5th 2019 </span> <span class="m-x-2" title="Pageviews"> 63.9k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/how-you-can-change-the-world-learning-data-structures-algorithms-free-online-course-tutorial/">0</span>](#disqus_thread) </span>
 
--   <a href="/tags/algorithms/" class="tag-list-link">algorithms</a><span class="tag-list-count">12</span>
--   <a href="/tags/tutorial-algorithms/" class="tag-list-link">tutorial_algorithms</a><span class="tag-list-count">10</span>
+- <a href="/tags/algorithms/" class="tag-list-link">algorithms</a><span class="tag-list-count">12</span>
+- <a href="/tags/tutorial-algorithms/" class="tag-list-link">tutorial_algorithms</a><span class="tag-list-count">10</span>
 
 ![How you can change the world by learning Data Structures and Algorithms](/images/data-structures-algorithms-time-complexity-big-o-notation-large.jpg)
 
@@ -20,7 +15,7 @@ However, these accomplishments are only possible if we write software that is fa
 
 <span id="more"></span>
 
-------------------------------------------------------------------------
+---
 
 This post is part of a tutorial series:
 
@@ -40,14 +35,13 @@ This post is part of a tutorial series:
 
 7.  [Appendix I: Analysis of Recursive Algorithms](/blog/2018/04/24/Analysis-of-Recursive-Algorithms/)
 
-------------------------------------------------------------------------
+---
 
 We will explore how you can measure your code performance using analysis of algorithms: **time complexity** and **big O notation**.
 
 First, let’s see a real story to learn why this is important.
 
-<a href="#An-algorithm-that-saved-millions-of-lives" class="headerlink" title="An algorithm that saved millions of lives"></a>An algorithm that saved millions of lives
------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## <a href="#An-algorithm-that-saved-millions-of-lives" class="headerlink" title="An algorithm that saved millions of lives"></a>An algorithm that saved millions of lives
 
 During World War II, the Germans used AM radio signals to communicate with troops around Europe. Anybody with an AM frequency radio and some knowledge of Morse code could intercept the message. However, the information was encoded! All the countries that were under attack tried to decode it. Sometimes, they got lucky and could make sense of a couple of messages at the end of the day. Unfortunately, the Nazis changed the encoding every single day!
 
@@ -55,24 +49,22 @@ A brilliant mathematician called Alan Turing joined the British military to crac
 
 Alan’s team found out that every encrypted message ended with the same string: “Heil Hitler” Aha! After changing the algorithm, the machine was able to decode transmissions a lot faster! They used the info to finish the war quicker and save millions of lives!
 
-*The same machine that was going to get shut down as a failure became a live saver. Likewise, you can do way more with your computing resources when you write efficient code. That is what we are going to learn in this post series!*
+_The same machine that was going to get shut down as a failure became a live saver. Likewise, you can do way more with your computing resources when you write efficient code. That is what we are going to learn in this post series!_
 
 Another popular algorithm is `PageRank` developed in 1998 by Sergey Brin and Larry Page (Google founders). This algorithm was (and is) used by a Google search engine to make sense of trillions of web pages. Google was not the only search engine. However, since their algorithm returned better results, most of the competitors faded away. Today it powers most of 3 billion daily searches very quickly. That is the power of algorithms that scale! 🏋🏻‍
 
-<a href="#So-why-should-you-learn-to-write-efficient-algorithms" class="headerlink" title="So, why should you learn to write efficient algorithms?"></a>So, why should you learn to write efficient algorithms?
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## <a href="#So-why-should-you-learn-to-write-efficient-algorithms" class="headerlink" title="So, why should you learn to write efficient algorithms?"></a>So, why should you learn to write efficient algorithms?
 
 There are many advantages; these are just some of them:
 
--   You would become a much better software developer (and get better jobs/income).
--   Spend less time debugging, optimizing, and re-writing code.
--   Your software will run faster with the same hardware (cheaper to scale).
--   Your programs might be used to aid discoveries that save lives (maybe?).
+- You would become a much better software developer (and get better jobs/income).
+- Spend less time debugging, optimizing, and re-writing code.
+- Your software will run faster with the same hardware (cheaper to scale).
+- Your programs might be used to aid discoveries that save lives (maybe?).
 
 Without further ado, let’s step up our game!
 
-<a href="#What-are-algorithms" class="headerlink" title="What are algorithms?"></a>What are algorithms?
--------------------------------------------------------------------------------------------------------
+## <a href="#What-are-algorithms" class="headerlink" title="What are algorithms?"></a>What are algorithms?
 
 Algorithms (as you might know) are steps of how to do some task. For example, when you cook, you follow a **recipe** to prepare a dish. If you play a game, you are devising **strategies** to help you win. Likewise, algorithms in computers are a set of instructions used to solve a problem.
 
@@ -82,8 +74,7 @@ There are “good” and “bad” algorithms. The good ones are fast; the bad o
 
 We are going to explore the basic concepts of algorithms. Also, we are going to learn how to distinguish “fast” from “slow” ones. Even better, you will be able to “measure” your algorithms’ performance and improve them!
 
-<a href="#How-to-improve-your-coding-skills" class="headerlink" title="How to improve your coding skills?"></a>How to improve your coding skills?
--------------------------------------------------------------------------------------------------------------------------------------------------
+## <a href="#How-to-improve-your-coding-skills" class="headerlink" title="How to improve your coding skills?"></a>How to improve your coding skills?
 
 The first step to improving something is to measure it.
 
@@ -99,22 +90,21 @@ To answer these questions, we need to nail some concepts first, like **time comp
 
 Time complexity (or **running time**) is the estimated time an algorithm takes to run. However, you do not measure time complexity in seconds, but as a **function** of the input. (I know it’s weird but bear with me).
 
-> The **time complexity** is not about timing how long the algorithm takes. Instead, *how many operations* are executed. The number of instructions executed by a program is affected by the input’s size and how their elements are arranged.
+> The **time complexity** is not about timing how long the algorithm takes. Instead, _how many operations_ are executed. The number of instructions executed by a program is affected by the input’s size and how their elements are arranged.
 
 Why is that the time complexity is expressed as a function of the input? Well, let’s say you want to sort an array of numbers. If the elements are already sorted, the program will perform fewer operations. On the contrary, if the items are in reverse order, it will require more time to get them sorted. The time a program takes to execute is directly related to the input size and its arrangement.
 
 We can say for each algorithm have the following running times:
 
--   Worst-case time complexity (e.g., input elements in reversed order)
--   Best-case time complexity (e.g., already sorted)
--   Average-case time complexity (e.g., elements in random order)
+- Worst-case time complexity (e.g., input elements in reversed order)
+- Best-case time complexity (e.g., already sorted)
+- Average-case time complexity (e.g., elements in random order)
 
-We usually care more about the **worst-case time complexity** (We hope for the best but preparing for the *worst*).
+We usually care more about the **worst-case time complexity** (We hope for the best but preparing for the _worst_).
 
-<a href="#Calculating-time-complexity" class="headerlink" title="Calculating time complexity"></a>Calculating time complexity
------------------------------------------------------------------------------------------------------------------------------
+## <a href="#Calculating-time-complexity" class="headerlink" title="Calculating time complexity"></a>Calculating time complexity
 
-Here’s a code example of how you can calculate the time complexity: *Find the smallest number in an array*.
+Here’s a code example of how you can calculate the time complexity: _Find the smallest number in an array_.
 
 <table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><pre><code>1
 2
@@ -138,22 +128,22 @@ function getMin(n) {
   const array = Array.from(n);
   let min;
 
-  array.forEach(element =&gt; {
-    if(min === undefined || element &lt; min) {
-      min = element;
-    }
-  });
-  return min;
+array.forEach(element =&gt; {
+if(min === undefined || element &lt; min) {
+min = element;
+}
+});
+return min;
 }</code></pre></td></tr></tbody></table>
 
 We can represent `getMin` as a function of the size of the input `n` based on the number of operations it has to perform. For simplicity, let’s assume that each line of code takes the same amount of time in the CPU to execute. Let’s make the sum:
 
--   Line 6: 1 operation
--   Line 7: 1 operation
--   Line 9-13: it is a loop that executes `n` times
-    -   Line 10: 1 operation
-    -   Line 11: this one is tricky. It is inside a conditional. We will assume the worst case where the array is sorted in descending order. The condition (`if` block) will be executed each time. Thus, one operation
--   Line 14: 1 operation
+- Line 6: 1 operation
+- Line 7: 1 operation
+- Line 9-13: it is a loop that executes `n` times
+  - Line 10: 1 operation
+  - Line 11: this one is tricky. It is inside a conditional. We will assume the worst case where the array is sorted in descending order. The condition (`if` block) will be executed each time. Thus, one operation
+- Line 14: 1 operation
 
 All in all, we have `3` operations outside the loop and `2` inside the `forEach` block. Since the loop goes for the size of `n`, this leaves us with `2(n) + 3`.
 
@@ -201,11 +191,9 @@ In the next post, we will explore all of these time complexities with a code exa
 
 Thanks for reading this far. Here are some things you can do next:
 
--   Found a typo? [Edit this post](https://github.com/amejiarosario/amejiarosario.github.io/edit/source/source/_posts/2018-04-18-how-you-can-change-the-world-learning-data-structures-algorithms-free-online-course-tutorial.md).
--   Got questions? [comment](#comments-section) below.
--   Was it useful? Show your support and share it.
-
-
+- Found a typo? [Edit this post](https://github.com/amejiarosario/amejiarosario.github.io/edit/source/source/_posts/2018-04-18-how-you-can-change-the-world-learning-data-structures-algorithms-free-online-course-tutorial.md).
+- Got questions? [comment](#comments-section) below.
+- Was it useful? Show your support and share it.
 
 <a href="/most-popular-algorithms-time-complexity-every-programmer-should-know-free-online-tutorial-course/" class="article-nav-newer"><strong><em></em> newer</strong></a>
 
@@ -217,18 +205,9 @@ Overview of JavaScript ES6 features (a.k.a ECMAScript 6 and ES2015+)
 
 Subscribe & stay up to date!
 
- 
 
 
-
-
-
-
-
-
-
-tutorial algorithms Series
-==========================
+# tutorial algorithms Series
 
 [<img src="/images/from-code-to-big-o-algorithms-small.png" width="300" height="250" />](/how-to-find-time-complexity-of-an-algorithm-code-big-o-notation/)
 
@@ -282,7 +261,3 @@ tutorial algorithms Series
 5.  <a href="#Calculating-time-complexity" class="toc-link"><span class="toc-number">5.</span> <span class="toc-text">Calculating time complexity</span></a>
     1.  <a href="#Asymptotic-analysis" class="toc-link"><span class="toc-number">5.1.</span> <span class="toc-text">Asymptotic analysis</span></a>
     2.  <a href="#Big-O-notation-and-Growth-rate-of-Functions" class="toc-link"><span class="toc-number">5.2.</span> <span class="toc-text">Big-O notation and Growth rate of Functions</span></a>
-
-
-
-

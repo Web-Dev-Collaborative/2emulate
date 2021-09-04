@@ -1,0 +1,7 @@
+dist/*
+trunk/*
+build/*
+*.class
+web/WEB-INF/classes/*
+.svn
+.svn/*

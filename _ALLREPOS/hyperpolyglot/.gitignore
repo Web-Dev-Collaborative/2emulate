@@ -1,0 +1,8 @@
+*.wiki
+*.math
+sitemap.xml
+root
+root.*
+skeleton.db
+build
+.DS_Store

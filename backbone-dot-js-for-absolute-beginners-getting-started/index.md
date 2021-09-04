@@ -1,16 +1,11 @@
-
-
-
-
 <a href="/categories/coding/" class="category-link">Coding</a> &gt; <a href="/categories/coding/web-development/" class="category-link">Web Development</a> &gt; <a href="/categories/coding/web-development/backbone/" class="category-link">Backbone</a>
 
-Backbone.js for Absolute Beginners - Getting started (Part 1: Intro)
-====================================================================
+# Backbone.js for Absolute Beginners - Getting started (Part 1: Intro)
 
 <span title="Last time this post was updated"> Last updated April 14th 2021 </span> <span class="m-x-2" title="Pageviews"> 359.7k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/backbone-dot-js-for-absolute-beginners-getting-started/">0</span>](#disqus_thread) </span>
 
--   <a href="/tags/backbonejs/" class="tag-list-link">backbonejs</a><span class="tag-list-count">4</span>
--   <a href="/tags/tutorial-backbonejs/" class="tag-list-link">tutorial_backbonejs</a><span class="tag-list-count">4</span>
+- <a href="/tags/backbonejs/" class="tag-list-link">backbonejs</a><span class="tag-list-count">4</span>
+- <a href="/tags/tutorial-backbonejs/" class="tag-list-link">tutorial_backbonejs</a><span class="tag-list-count">4</span>
 
 ![Backbone.js for Absolute Beginners - Getting started (Part 1: Intro)](/images/BackbonesforBeginners_large.png)
 
@@ -29,8 +24,7 @@ BackboneJS Tutorial series:
 3.  [Backbone.js for absolute beginners - getting started (part 3: CRUD)](/backbonejs-for-absolute-beginners-getting-started-part-3/)
 4.  [Backbone.js for absolute beginners - getting started (part 4: Routers)](/backbone-js-for-absolute-beginners-getting-started-part-4/)
 
-<a href="#Brief-Background" class="headerlink" title="Brief Background"></a>Brief Background
---------------------------------------------------------------------------------------------
+## <a href="#Brief-Background" class="headerlink" title="Brief Background"></a>Brief Background
 
 [TL; DR](#start): You need to use JavaScript heavily in order to make responsive and interactive web applications. [Jump to this and get started.](#start)
 
@@ -44,18 +38,17 @@ Edit 2021: ReactJS, [Vue.js](/tags/vuejs/) and [Angular](/tags/angular/) are ver
 
 <span id="start"></span>
 
-<a href="#BackboneJS-Overview" class="headerlink" title="BackboneJS Overview"></a>BackboneJS Overview
------------------------------------------------------------------------------------------------------
+## <a href="#BackboneJS-Overview" class="headerlink" title="BackboneJS Overview"></a>BackboneJS Overview
 
 **Just enough to get started with Backbone.js**
 
 Backbone.js has a hard dependency on underscore.js and a soft dependency on jQuery. It’s made up of the following modules:
 
--   Views
--   Events
--   Models
--   Collections
--   Routers
+- Views
+- Events
+- Models
+- Collections
+- Routers
 
 **Shut up and show me the code!**
 
@@ -63,8 +56,7 @@ Alright! the way we are going to explore all of these modules is through example
 
 The first example is a ‘Hello World’ app in Backbone, and the second is a ‘to do’ app. After working through these two example apps, you’ll see every Backbone module and have a practical understanding of them.
 
-<a href="#Hello-World-in-Backbone-js" class="headerlink" title="Hello World in Backbone.js"></a>Hello World in Backbone.js
---------------------------------------------------------------------------------------------------------------------------
+## <a href="#Hello-World-in-Backbone-js" class="headerlink" title="Hello World in Backbone.js"></a>Hello World in Backbone.js
 
 You can follow along with this tutorial’s code in this [repository](https://github.com/amejiarosario/Backbone-tutorial/commits/). Each feature implemented is a new commit, so you can easily see what changed in every step.
 
@@ -168,8 +160,7 @@ var appView = new AppView();</code></pre></td></tr></tbody></table>
 
 Rerun the app and verify that it’s working with the template.
 
-<a href="#What’s-next" class="headerlink" title="What’s next?"></a>What’s next?
--------------------------------------------------------------------------------
+## <a href="#What’s-next" class="headerlink" title="What’s next?"></a>What’s next?
 
 Continue with the [2nd part](/backbone-js-for-absolute-beginners-getting-started-part-2/) and learn more about Backbone’s Models, Collections, View and Events!
 
@@ -177,11 +168,9 @@ Continue with the [2nd part](/backbone-js-for-absolute-beginners-getting-started
 
 Thanks for reading this far. Here are some things you can do next:
 
--   Found a typo? [Edit this post](https://github.com/amejiarosario/amejiarosario.github.io/edit/source/source/_posts/2012-09-11-backbone-dot-js-for-absolute-beginners-getting-started.markdown).
--   Got questions? [comment](#comments-section) below.
--   Was it useful? Show your support and share it.
-
-
+- Found a typo? [Edit this post](https://github.com/amejiarosario/amejiarosario.github.io/edit/source/source/_posts/2012-09-11-backbone-dot-js-for-absolute-beginners-getting-started.markdown).
+- Got questions? [comment](#comments-section) below.
+- Was it useful? Show your support and share it.
 
 <a href="/backbone-js-for-absolute-beginners-getting-started-part-2/" class="article-nav-newer"><strong><em></em> newer</strong></a>
 
@@ -193,18 +182,9 @@ Instagram mobile design secrets revealed
 
 Subscribe & stay up to date!
 
- 
 
 
-
-
-
-
-
-
-
-tutorial backbonejs Series
-==========================
+# tutorial backbonejs Series
 
 [<img src="/images/Backbonesforbeginners_small.png" width="300" height="250" />](/backbone-dot-js-for-absolute-beginners-getting-started/)
 
@@ -233,7 +213,3 @@ tutorial backbonejs Series
     2.  <a href="#Test-the-app" class="toc-link"><span class="toc-number">3.2.</span> <span class="toc-text">Test the app</span></a>
     3.  <a href="#Backbone%E2%80%99s-Templates" class="toc-link"><span class="toc-number">3.3.</span> <span class="toc-text">Backbone’s Templates</span></a>
 4.  <a href="#What%E2%80%99s-next" class="toc-link"><span class="toc-number">4.</span> <span class="toc-text">What’s next?</span></a>
-
-
-
-

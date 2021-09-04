@@ -1,23 +1,17 @@
-
-
-
-
 <a href="/categories/coding/" class="category-link">Coding</a>
 
-Blog migration explained: Drupal 7 to Jekyll
-============================================
+# Blog migration explained: Drupal 7 to Jekyll
 
 <span title="Last time this post was updated"> Last updated April 27th 2012 </span> <span class="m-x-2" title="Pageviews"> 0.5k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/blog-migration-explained-drupal-7-to-jekyll/">0</span>](#disqus_thread) </span>
 
--   <a href="/tags/drupal/" class="tag-list-link">drupal</a><span class="tag-list-count">1</span>
--   <a href="/tags/php/" class="tag-list-link">php</a><span class="tag-list-count">2</span>
+- <a href="/tags/drupal/" class="tag-list-link">drupal</a><span class="tag-list-count">1</span>
+- <a href="/tags/php/" class="tag-list-link">php</a><span class="tag-list-count">2</span>
 
 This post is a guide on how to extract your blog posts information from Drupal 7 to other systems. And also automatically create a redirect files from the old blog to the new one. In this case, I migrated to Jerkyll/Octopress blog but from the data extracted in with my script you can migrate any other blog system. Hopefully, this will save you a lot of time if you need to do the same task. If you run into troubles go to last section of the post it has some suggestions.
 
 <span id="more"></span>
 
-<a href="#Extract-data-from-Drupal-7-site" class="headerlink" title="Extract data from Drupal 7 site"></a>Extract data from Drupal 7 site
------------------------------------------------------------------------------------------------------------------------------------------
+## <a href="#Extract-data-from-Drupal-7-site" class="headerlink" title="Extract data from Drupal 7 site"></a>Extract data from Drupal 7 site
 
 ### <a href="#SQL-extraction" class="headerlink" title="SQL extraction"></a>SQL extraction
 
@@ -39,19 +33,19 @@ The 2nd and final step is to run the script that does all the magic. Below I wil
 
 Replace the place holders with your actual values:
 
--   OLD\_DOMAIN
--   NEW\_DOMAIN
--   ENV\[‘DRUPAL\_DATABASE’\]
--   ENV\[‘DB\_USER’\]
--   ENV\[‘DB\_PASSWORD’\]
+- OLD_DOMAIN
+- NEW_DOMAIN
+- ENV\[‘DRUPAL_DATABASE’\]
+- ENV\[‘DB_USER’\]
+- ENV\[‘DB_PASSWORD’\]
 
 After you run it, it will generate 3 folders:
 
--   \_post: has all your post in the Jekyll style (categories and tags and everything)
--   \_draft: not published posts if any
--   drupal\_redirect: for each url of your posts it has a folder with a redirect index.php file to your new domain.
+- \_post: has all your post in the Jekyll style (categories and tags and everything)
+- \_draft: not published posts if any
+- drupal_redirect: for each url of your posts it has a folder with a redirect index.php file to your new domain.
 
-Copy each of this folder to their respective places. Copy the content to your drupal\_redirect to the root of your old blog and that’s it. It will redirect all your all blog URLs to your new site.
+Copy each of this folder to their respective places. Copy the content to your drupal_redirect to the root of your old blog and that’s it. It will redirect all your all blog URLs to your new site.
 
 ### <a href="#Behind-the-scenes…" class="headerlink" title="Behind the scenes…"></a>Behind the scenes…
 
@@ -117,11 +111,11 @@ I had a hard time having the mysql gem work with seqel in my Mac OS X 10.7 (Lion
 
 I got the following errors:
 
--   Library not loaded: libmysqlclient.18.dylib (LoadError) Sequel::DatabaseConnectionError: Mysql::ClientError::ServerGoneError: The MySQL server has gone away mysql2 ruby
--   “LoadError: require ‘mysql’ did not define Mysql::CLIENT\_MULTI\_RESULTS!”
--   “You are probably using the pure ruby mysql.rb driver, which Sequel does not support. You need to install the C based adapter, and make sure that the mysql.so file is loaded instead of the mysql.rb file.”
--   Sequel::AdapterNotFound: LoadError: require ‘mysql’ did not define Mysql::CLIENT\_MULTI\_RESULTS! You are probably using the pure ruby mysql.rb driver, which Sequel does not support. You need to install the C based adapter, and make sure that the mysql.so file is loaded instead of the mysql.rb file.
--   And others…
+- Library not loaded: libmysqlclient.18.dylib (LoadError) Sequel::DatabaseConnectionError: Mysql::ClientError::ServerGoneError: The MySQL server has gone away mysql2 ruby
+- “LoadError: require ‘mysql’ did not define Mysql::CLIENT_MULTI_RESULTS!”
+- “You are probably using the pure ruby mysql.rb driver, which Sequel does not support. You need to install the C based adapter, and make sure that the mysql.so file is loaded instead of the mysql.rb file.”
+- Sequel::AdapterNotFound: LoadError: require ‘mysql’ did not define Mysql::CLIENT_MULTI_RESULTS! You are probably using the pure ruby mysql.rb driver, which Sequel does not support. You need to install the C based adapter, and make sure that the mysql.so file is loaded instead of the mysql.rb file.
+- And others…
 
 #### <a href="#Solution" class="headerlink" title="Solution:"></a>Solution:
 
@@ -159,11 +153,9 @@ $ irb
 
 Thanks for reading this far. Here are some things you can do next:
 
--   Found a typo? [Edit this post](https://github.com/amejiarosario/amejiarosario.github.io/edit/source/source/_posts/2012-04-27-blog-migration-explained-drupal-7-to-jekyll.markdown).
--   Got questions? [comment](#comments-section) below.
--   Was it useful? Show your support and share it.
-
-
+- Found a typo? [Edit this post](https://github.com/amejiarosario/amejiarosario.github.io/edit/source/source/_posts/2012-04-27-blog-migration-explained-drupal-7-to-jekyll.markdown).
+- Got questions? [comment](#comments-section) below.
+- Was it useful? Show your support and share it.
 
 <a href="/instagram-mobile-design-secrets-revealed/" class="article-nav-newer"><strong><em></em> newer</strong></a>
 
@@ -175,16 +167,6 @@ Spring MVC 3 + AJAX (getJSON) and solving 406 Not Accepted
 
 Subscribe & stay up to date!
 
- 
-
-
-
-
-
-
-
 
 
 [<span id="back-to-top" title="Go back to the top of this page"> Top </span>](#) <a href="#" class="p-x-3" title="Improve this post"><em></em> Edit this post</a>
-
-

@@ -1,0 +1,7 @@
+.sass-cache/
+.DS_Store
+.push-tmp
+/tmp
+/config/deploy.yml
+log/*.log
+config/compass.rb

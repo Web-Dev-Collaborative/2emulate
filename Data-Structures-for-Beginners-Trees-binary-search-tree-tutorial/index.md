@@ -1,16 +1,11 @@
-
-
-
-
 <a href="/categories/coding/" class="category-link">Coding</a> &gt; <a href="/categories/coding/data-structures-and-algorithms-dsa/" class="category-link">Data Structures and Algorithms (DSA)</a>
 
-Tree Data Structures in JavaScript for Beginners
-================================================
+# Tree Data Structures in JavaScript for Beginners
 
 <span title="Last time this post was updated"> Last updated May 23rd 2019 </span> <span class="m-x-2" title="Pageviews"> 65.6k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/Data-Structures-for-Beginners-Trees-binary-search-tree-tutorial/">0</span>](#disqus_thread) </span>
 
--   <a href="/tags/algorithms/" class="tag-list-link">algorithms</a><span class="tag-list-count">12</span>
--   <a href="/tags/tutorial-algorithms/" class="tag-list-link">tutorial_algorithms</a><span class="tag-list-count">10</span>
+- <a href="/tags/algorithms/" class="tag-list-link">algorithms</a><span class="tag-list-count">12</span>
+- <a href="/tags/tutorial-algorithms/" class="tag-list-link">tutorial_algorithms</a><span class="tag-list-count">10</span>
 
 ![Tree Data Structures in JavaScript for Beginners](/images/data-structures-for-beginners-trees-binary-search-tree-large.jpg)
 
@@ -20,7 +15,7 @@ Tree data structures have many uses, and it’s good to have a basic understandi
 
 We explored [Graph data structures](/blog/2018/05/14/Data-Structures-for-Beginners-Graphs-Time-Complexity-tutorial/) in the previous post, which are a generalized case of trees. Let’s get started learning what tree data structures are!
 
-------------------------------------------------------------------------
+---
 
 This post is part of a tutorial series:
 
@@ -40,10 +35,9 @@ This post is part of a tutorial series:
 
 7.  [Appendix I: Analysis of Recursive Algorithms](/blog/2018/04/24/Analysis-of-Recursive-Algorithms/)
 
-------------------------------------------------------------------------
+---
 
-<a href="#Trees-basic-concepts" class="headerlink" title="Trees: basic concepts"></a>Trees: basic concepts
-----------------------------------------------------------------------------------------------------------
+## <a href="#Trees-basic-concepts" class="headerlink" title="Trees: basic concepts"></a>Trees: basic concepts
 
 A tree is a data structure where a node can have zero or more children. Each node contains a **value**. Like graphs, the connection between nodes is called **edges**. A tree is a type of graph, but not all graphs are trees (more on that later).
 
@@ -53,14 +47,14 @@ These data structures are called “trees” because the data structure resemble
 
 Here are some properties of trees:
 
--   The top-most node is called **root**.
--   A node without children is called **leaf** node or **terminal** node.
--   **Height** (*h*) of the tree is the distance (edge count) between the farthest leaf to the root.
-    -   `A` has a height of 3
-    -   `I` has a height of 0
--   **Depth** or **level** of a node is the distance between the root and the node in question.
-    -   `H` has a depth of 2
-    -   `B` has a depth of 1
+- The top-most node is called **root**.
+- A node without children is called **leaf** node or **terminal** node.
+- **Height** (_h_) of the tree is the distance (edge count) between the farthest leaf to the root.
+  - `A` has a height of 3
+  - `I` has a height of 0
+- **Depth** or **level** of a node is the distance between the root and the node in question.
+  - `H` has a depth of 2
+  - `B` has a depth of 1
 
 ### <a href="#Implementing-a-simple-tree-data-structure" class="headerlink" title="Implementing a simple tree data structure"></a>Implementing a simple tree data structure
 
@@ -110,15 +104,14 @@ The node `abe` is the **root** and `bart`, `lisa` and `maggie` are the **leaf** 
 
 Tree data structures have many applications such as:
 
--   [Maps](https://master--bgoonz-blog.netlify.app/blog/2018/04/28/data-structures-time-complexity-for-beginners-arrays-hashmaps-linked-lists-stacks-queues-tutorial/#HashMaps)
--   [Sets](https://master--bgoonz-blog.netlify.app/blog/2018/04/28/data-structures-time-complexity-for-beginners-arrays-hashmaps-linked-lists-stacks-queues-tutorial/#Sets)
--   Databases
--   Priority Queues
--   Querying an LDAP (Lightweight Directory Access Protocol)
--   Representing the Document Object Model (DOM) for HTML on Websites.
+- [Maps](https://master--bgoonz-blog.netlify.app/blog/2018/04/28/data-structures-time-complexity-for-beginners-arrays-hashmaps-linked-lists-stacks-queues-tutorial/#HashMaps)
+- [Sets](https://master--bgoonz-blog.netlify.app/blog/2018/04/28/data-structures-time-complexity-for-beginners-arrays-hashmaps-linked-lists-stacks-queues-tutorial/#Sets)
+- Databases
+- Priority Queues
+- Querying an LDAP (Lightweight Directory Access Protocol)
+- Representing the Document Object Model (DOM) for HTML on Websites.
 
-<a href="#Binary-Trees" class="headerlink" title="Binary Trees"></a>Binary Trees
---------------------------------------------------------------------------------
+## <a href="#Binary-Trees" class="headerlink" title="Binary Trees"></a>Binary Trees
 
 Trees nodes can have zero or more children. However, when a tree has at the most two children, then it’s called **binary tree**.
 
@@ -126,9 +119,9 @@ Trees nodes can have zero or more children. However, when a tree has at the most
 
 Depending on how nodes are arranged in a binary tree, it can be **full**, **complete** and **perfect**:
 
--   **Full binary tree**: each node has exactly 0 or 2 children (but never 1).
--   **Complete binary tree**: when all levels except the last one are **full** with nodes.
--   **Perfect binary tree**: when all the levels (including the last one) are full of nodes.
+- **Full binary tree**: each node has exactly 0 or 2 children (but never 1).
+- **Complete binary tree**: when all levels except the last one are **full** with nodes.
+- **Perfect binary tree**: when all the levels (including the last one) are full of nodes.
 
 Look at these examples:
 
@@ -136,14 +129,13 @@ Look at these examples:
 
 These properties are not always mutually exclusive. You can have more than one:
 
--   A perfect tree is **always** complete and full.
-    -   Perfect binary trees have precisely \`2^k - 1\` nodes, where *`k`* is the last level of the tree (starting with 1).
--   A complete tree is **not** always `full`.
-    -   Like in our “complete” example, since it has a parent with only one child. If we remove the rightmost gray node, then we would have a **complete** and **full** tree but not perfect.
--   A full tree is not always complete and perfect.
+- A perfect tree is **always** complete and full.
+  - Perfect binary trees have precisely \`2^k - 1\` nodes, where _`k`_ is the last level of the tree (starting with 1).
+- A complete tree is **not** always `full`.
+  - Like in our “complete” example, since it has a parent with only one child. If we remove the rightmost gray node, then we would have a **complete** and **full** tree but not perfect.
+- A full tree is not always complete and perfect.
 
-<a href="#Binary-Search-Tree-BST" class="headerlink" title="Binary Search Tree (BST)"></a>Binary Search Tree (BST)
-------------------------------------------------------------------------------------------------------------------
+## <a href="#Binary-Search-Tree-BST" class="headerlink" title="Binary Search Tree (BST)"></a>Binary Search Tree (BST)
 
 Binary Search Trees or BST for short are a particular application of binary trees. BST has at most two nodes (like all binary trees). However, the values are so that the left children value must be less than the parent, and the right children must be higher.
 
@@ -155,8 +147,8 @@ Let’s implement a Binary Search Tree!
 
 BST are very similar to our previous [implementation of a tree](#Implementing-a-simple-tree-data-structure). However, there are some differences:
 
--   Nodes can have, at most, only two children: left and right.
--   Nodes values has to be ordered as `left < parent < right`.
+- Nodes can have, at most, only two children: left and right.
+- Nodes values has to be ordered as `left < parent < right`.
 
 Here’s the tree node. Very similar to what we did before, but we added some handy getters and setters for left and right children. Notice is also keeping a reference to the parent, and we update it every time we add children.
 
@@ -197,33 +189,33 @@ TreeNode.js[Code](https://github.com/amejiarosario/dsa.js/blob/master/src/data-s
 const RIGHT = 1;
 
 class TreeNode {
-  constructor(value) {
-    this.value = value;
-    this.descendants = [];
-    this.parent = null;
-  }
+constructor(value) {
+this.value = value;
+this.descendants = [];
+this.parent = null;
+}
 
-  get left() {
-    return this.descendants[LEFT];
-  }
+get left() {
+return this.descendants[LEFT];
+}
 
-  set left(node) {
-    this.descendants[LEFT] = node;
-    if (node) {
-      node.parent = this;
-    }
-  }
+set left(node) {
+this.descendants[LEFT] = node;
+if (node) {
+node.parent = this;
+}
+}
 
-  get right() {
-    return this.descendants[RIGHT];
-  }
+get right() {
+return this.descendants[RIGHT];
+}
 
-  set right(node) {
-    this.descendants[RIGHT] = node;
-    if (node) {
-      node.parent = this;
-    }
-  }
+set right(node) {
+this.descendants[RIGHT] = node;
+if (node) {
+node.parent = this;
+}
+}
 }</code></pre></td></tr></tbody></table>
 
 Ok, so far, we can add a left and right child. Now, let’s do the BST class that enforces the `left < parent < right` rule.
@@ -248,11 +240,11 @@ BinarySearchTree.js linkUrl linkText
     this.size = 0;
   }
 
-  add(value) { /* ... */ }
-  find(value) { /* ... */ }
-  remove(value) { /* ... */ }
-  getMax() { /* ... */ }
-  getMin() { /* ... */ }
+add(value) { /_ ... _/ }
+find(value) { /_ ... _/ }
+remove(value) { /_ ... _/ }
+getMax() { /_ ... _/ }
+getMin() { /_ ... _/ }
 }</code></pre></td></tr></tbody></table>
 
 Let’s implementing insertion.
@@ -262,7 +254,7 @@ Let’s implementing insertion.
 To insert a node in a binary tree, we do the following:
 
 1.  If a tree is empty, the first node becomes the **root**, and you are done.
-2.  Compare root/parent’s value if it’s *higher* go **right**, if it’s *lower* go **left**. If it’s the same, then the value already exists so that you can increase the duplicate count (multiplicity).
+2.  Compare root/parent’s value if it’s _higher_ go **right**, if it’s _lower_ go **left**. If it’s the same, then the value already exists so that you can increase the duplicate count (multiplicity).
 3.  Repeat \#2 until we found an empty slot to insert the new node.
 
 Let’s do an illustration how to insert 30, 40, 10, 15, 12, 50:
@@ -294,21 +286,21 @@ BinarySearchTree.prototype.add[Full Code](https://github.com/amejiarosario/dsa.j
 19</code></pre></td><td><pre><code>add(value) {
   const newNode = new TreeNode(value);
 
-  if (this.root) {
-    const { found, parent } = this.findNodeAndParent(value);
-    if (found) { // duplicated: value already exist on the tree
-      found.meta.multiplicity = (found.meta.multiplicity || 1) + 1;
-    } else if (value &lt; parent.value) {
-      parent.left = newNode;
-    } else {
-      parent.right = newNode;
-    }
-  } else {
-    this.root = newNode;
-  }
+if (this.root) {
+const { found, parent } = this.findNodeAndParent(value);
+if (found) { // duplicated: value already exist on the tree
+found.meta.multiplicity = (found.meta.multiplicity || 1) + 1;
+} else if (value &lt; parent.value) {
+parent.left = newNode;
+} else {
+parent.right = newNode;
+}
+} else {
+this.root = newNode;
+}
 
-  this.size += 1;
-  return newNode;
+this.size += 1;
+return newNode;
 }</code></pre></td></tr></tbody></table>
 
 We are using a helper function called `findNodeAndParent`. If we found that the node already exists in the tree, then we increase the `multiplicity` counter. Let’s see how this function is implemented:
@@ -332,15 +324,15 @@ BinarySearchTree.prototype.findNodeAndParent[Full Code](https://github.com/ameji
   let node = this.root;
   let parent;
 
-  while (node) {
-    if (node.value === value) {
-      break;
-    }
-    parent = node;
-    node = ( value &gt;= node.value) ? node.right : node.left;
-  }
+while (node) {
+if (node.value === value) {
+break;
+}
+parent = node;
+node = ( value &gt;= node.value) ? node.right : node.left;
+}
 
-  return { found: node, parent };
+return { found: node, parent };
 }</code></pre></td></tr></tbody></table>
 
 `findNodeAndParent` goes through the tree, searching for the value. It starts at the root (line 2) and then goes left or right based on the value (line 10). If the value already exists, it will return the node `found` and also the parent. In case that the node doesn’t exist, we still return the `parent`.
@@ -459,31 +451,31 @@ BinarySearchTree.prototype.remove[Full Code](https://github.com/amejiarosario/ds
   const nodeToRemove = this.find(value);
   if (!nodeToRemove) return false;
 
-  // Combine left and right children into one subtree without nodeToRemove
-  const nodeToRemoveChildren = this.combineLeftIntoRightSubtree(nodeToRemove);
+// Combine left and right children into one subtree without nodeToRemove
+const nodeToRemoveChildren = this.combineLeftIntoRightSubtree(nodeToRemove);
 
-  if (nodeToRemove.meta.multiplicity &amp;&amp; nodeToRemove.meta.multiplicity &gt; 1) {
-    nodeToRemove.meta.multiplicity -= 1; // handle duplicated
-  } else if (nodeToRemove === this.root) {
-    // Replace (root) node to delete with the combined subtree.
-    this.root = nodeToRemoveChildren;
-    this.root.parent = null; // clearing up old parent
-  } else {
-    const side = nodeToRemove.isParentLeftChild ? &#39;left&#39; : &#39;right&#39;;
-    const { parent } = nodeToRemove; // get parent
-    // Replace node to delete with the combined subtree.
-    parent[side] = nodeToRemoveChildren;
-  }
+if (nodeToRemove.meta.multiplicity &amp;&amp; nodeToRemove.meta.multiplicity &gt; 1) {
+nodeToRemove.meta.multiplicity -= 1; // handle duplicated
+} else if (nodeToRemove === this.root) {
+// Replace (root) node to delete with the combined subtree.
+this.root = nodeToRemoveChildren;
+this.root.parent = null; // clearing up old parent
+} else {
+const side = nodeToRemove.isParentLeftChild ? &#39;left&#39; : &#39;right&#39;;
+const { parent } = nodeToRemove; // get parent
+// Replace node to delete with the combined subtree.
+parent[side] = nodeToRemoveChildren;
+}
 
-  this.size -= 1;
-  return true;
+this.size -= 1;
+return true;
 }</code></pre></td></tr></tbody></table>
 
 Here are some highlights of the implementation:
 
--   First, we search if the node exists. If it doesn’t, we return false, and we are done!
--   If the node to remove exists, then combine left and right children into one subtree.
--   Replace node to delete with the combined subtree.
+- First, we search if the node exists. If it doesn’t, we return false, and we are done!
+- If the node to remove exists, then combine left and right children into one subtree.
+- Replace node to delete with the combined subtree.
 
 The function that combines left into right subtree is the following:
 
@@ -523,8 +515,7 @@ For instance, let’s say that we want to combine the following tree, and we are
 
 If we make the new subtree the root, then node `30` is no more!
 
-<a href="#Binary-Tree-Transversal" class="headerlink" title="Binary Tree Transversal"></a>Binary Tree Transversal
------------------------------------------------------------------------------------------------------------------
+## <a href="#Binary-Tree-Transversal" class="headerlink" title="Binary Tree Transversal"></a>Binary Tree Transversal
 
 There are different ways of traversing a Binary Tree, depending on the order that the nodes are visited: in-order, pre-order, and post-order. Also, we can use them [DFS](/blog/2018/05/14/Data-Structures-for-Beginners-Graphs-Time-Complexity-tutorial/#Depth-first-search-DFS-Graph-search) and [BFS](/blog/2018/05/14/Data-Structures-for-Beginners-Graphs-Time-Complexity-tutorial/#Breadth-frirst-search-BFS-Graph-search) that we learned from the [graph post.](/blog/2018/05/14/Data-Structures-for-Beginners-Graphs-Time-Complexity-tutorial/) Let’s go through each one.
 
@@ -614,14 +605,14 @@ BinarySearchTree.prototype.dfs[Full Code](https://github.com/amejiarosario/dsa.j
 12</code></pre></td><td><pre><code>* dfs() {
   const stack = new Stack();
 
-  stack.add(this.root);
+stack.add(this.root);
 
-  while (!stack.isEmpty()) {
-    const node = stack.remove();
-    yield node;
-    // reverse array, so left gets removed before right
-    node.descendants.reverse().forEach(child =&gt; stack.add(child));
-  }
+while (!stack.isEmpty()) {
+const node = stack.remove();
+yield node;
+// reverse array, so left gets removed before right
+node.descendants.reverse().forEach(child =&gt; stack.add(child));
+}
 }</code></pre></td></tr></tbody></table>
 
 If you need a refresher on DFS, we covered it in detail on [Graph post](/blog/2018/05/14/Data-Structures-for-Beginners-Graphs-Time-Complexity-tutorial/#Depth-first-search-DFS-Graph-search).
@@ -645,19 +636,18 @@ BinarySearchTree.prototype.bfs[Full Code](https://github.com/amejiarosario/dsa.j
 11</code></pre></td><td><pre><code>* bfs() {
   const queue = new Queue();
 
-  queue.add(this.root);
+queue.add(this.root);
 
-  while (!queue.isEmpty()) {
-    const node = queue.remove();
-    yield node;
-    node.descendants.forEach(child =&gt; queue.add(child));
-  }
+while (!queue.isEmpty()) {
+const node = queue.remove();
+yield node;
+node.descendants.forEach(child =&gt; queue.add(child));
+}
 }</code></pre></td></tr></tbody></table>
 
 The BFS order is: `10, 5, 30, 4, 15, 40, 3`
 
-<a href="#Balanced-vs-Non-balanced-Trees" class="headerlink" title="Balanced vs. Non-balanced Trees"></a>Balanced vs. Non-balanced Trees
-----------------------------------------------------------------------------------------------------------------------------------------
+## <a href="#Balanced-vs-Non-balanced-Trees" class="headerlink" title="Balanced vs. Non-balanced Trees"></a>Balanced vs. Non-balanced Trees
 
 So far, we have discussed how to `add`, `remove`, and `find` elements. However, we haven’t talked about runtimes. Let’s think about the worst-case scenarios.
 
@@ -665,13 +655,13 @@ Let’s say that we want to add numbers in ascending order.
 
 ![](/images/bst-asc.gif "Inserting values in ascending order in a Binary Search Tree")
 
-We will end up with all the nodes on the right side! This unbalanced tree is no better than a LinkedList, so finding an element would take *O(n)*. 😱
+We will end up with all the nodes on the right side! This unbalanced tree is no better than a LinkedList, so finding an element would take _O(n)_. 😱
 
 Looking for something in an unbalanced tree is like looking for a word in the dictionary page by page. When the tree is balanced, you can open the dictionary in the middle, and from there, you know if you have to go left or right depending on the alphabet and the word you are looking for.
 
 We need to find a way to balance the tree!
 
-If the tree was **balanced**, we could find elements in *O(log n)* instead of going through each node. Let’s talk about what a balanced tree means.
+If the tree was **balanced**, we could find elements in _O(log n)_ instead of going through each node. Let’s talk about what a balanced tree means.
 
 ![](/images/balanced-vs-non-balanced-tree.jpg "Balanced vs unbalanced Tree")
 
@@ -679,28 +669,25 @@ If we search for `7` in the non-balanced tree, we have to go from 1 to 7. Howeve
 
 We are going to solve this issue in the next post using self-balanced trees (AVL trees).
 
-<a href="#Summary" class="headerlink" title="Summary"></a>Summary
------------------------------------------------------------------
+## <a href="#Summary" class="headerlink" title="Summary"></a>Summary
 
 We have covered much ground for trees. Let’s sum it up with bullets:
 
--   The tree is a data structure where a node has 0 or more descendants/children.
--   Tree nodes don’t have cycles (acyclic). If it has cycles, it is a [Graph data structure](/blog/2018/05/14/Data-Structures-for-Beginners-Graphs-Time-Complexity-tutorial/) instead.
--   Trees with two children or less are called: Binary Tree
--   When a Binary Tree is sorted so that the left value is less than the parent and the right children is higher, then and only then we have a **Binary Search Tree**.
--   You can visit a tree in a pre/post/in-order fashion.
--   An unbalanced has a time complexity of *O(n)*. 🤦🏻‍
--   A balanced has a time complexity of *O(log n)*. 🎉
+- The tree is a data structure where a node has 0 or more descendants/children.
+- Tree nodes don’t have cycles (acyclic). If it has cycles, it is a [Graph data structure](/blog/2018/05/14/Data-Structures-for-Beginners-Graphs-Time-Complexity-tutorial/) instead.
+- Trees with two children or less are called: Binary Tree
+- When a Binary Tree is sorted so that the left value is less than the parent and the right children is higher, then and only then we have a **Binary Search Tree**.
+- You can visit a tree in a pre/post/in-order fashion.
+- An unbalanced has a time complexity of _O(n)_. 🤦🏻‍
+- A balanced has a time complexity of _O(log n)_. 🎉
 
 ### Now, your turn!
 
 Thanks for reading this far. Here are some things you can do next:
 
--   Found a typo? [Edit this post](https://github.com/amejiarosario/amejiarosario.github.io/edit/source/source/_posts/2018-07-18-Data-Structures-for-Beginners-Trees-binary-search-tree-tutorial.md).
--   Got questions? [comment](#comments-section) below.
--   Was it useful? Show your support and share it.
-
-
+- Found a typo? [Edit this post](https://github.com/amejiarosario/amejiarosario.github.io/edit/source/source/_posts/2018-07-18-Data-Structures-for-Beginners-Trees-binary-search-tree-tutorial.md).
+- Got questions? [comment](#comments-section) below.
+- Was it useful? Show your support and share it.
 
 <a href="/Self-balanced-Binary-Search-Trees-with-AVL-tree-Data-Structure-for-beginners/" class="article-nav-newer"><strong><em></em> newer</strong></a>
 
@@ -712,18 +699,9 @@ Graph Data Structures in JavaScript for Beginners
 
 Subscribe & stay up to date!
 
- 
 
 
-
-
-
-
-
-
-
-tutorial algorithms Series
-==========================
+# tutorial algorithms Series
 
 [<img src="/images/from-code-to-big-o-algorithms-small.png" width="300" height="250" />](/how-to-find-time-complexity-of-an-algorithm-code-big-o-notation/)
 
@@ -780,7 +758,3 @@ tutorial algorithms Series
 4.  <a href="#Binary-Tree-Transversal" class="toc-link"><span class="toc-number">4.</span> <span class="toc-text">Binary Tree Transversal</span></a>
 5.  <a href="#Balanced-vs-Non-balanced-Trees" class="toc-link"><span class="toc-number">5.</span> <span class="toc-text">Balanced vs. Non-balanced Trees</span></a>
 6.  <a href="#Summary" class="toc-link"><span class="toc-number">6.</span> <span class="toc-text">Summary</span></a>
-
-
-
-

@@ -1,17 +1,12 @@
-
-
-
-
 <a href="/categories/coding/" class="category-link">Coding</a> &gt; <a href="/categories/coding/web-development/" class="category-link">Web Development</a> &gt; <a href="/categories/coding/web-development/backbone/" class="category-link">Backbone</a>
 
-Backbone.js for absolute beginners - getting started (part 2: Models, Collections and Views)
-============================================================================================
+# Backbone.js for absolute beginners - getting started (part 2: Models, Collections and Views)
 
 <span title="Last time this post was updated"> Last updated September 13th 2012 </span> <span class="m-x-2" title="Pageviews"> 204.8k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/backbone-js-for-absolute-beginners-getting-started-part-2/">0</span>](#disqus_thread) </span>
 
--   <a href="/tags/backbonejs/" class="tag-list-link">backbonejs</a><span class="tag-list-count">4</span>
--   <a href="/tags/todo-app/" class="tag-list-link">todo app</a><span class="tag-list-count">5</span>
--   <a href="/tags/tutorial-backbonejs/" class="tag-list-link">tutorial_backbonejs</a><span class="tag-list-count">4</span>
+- <a href="/tags/backbonejs/" class="tag-list-link">backbonejs</a><span class="tag-list-count">4</span>
+- <a href="/tags/todo-app/" class="tag-list-link">todo app</a><span class="tag-list-count">5</span>
+- <a href="/tags/tutorial-backbonejs/" class="tag-list-link">tutorial_backbonejs</a><span class="tag-list-count">4</span>
 
 ![Backbone.js for absolute beginners - getting started (part 2: Models, Collections and Views)](/images/BackbonesforBeginners_large.png)
 
@@ -26,12 +21,11 @@ BackboneJS Tutorial series:
 3.  [Backbone.js for absolute beginners - getting started (part 3: CRUD)](/backbonejs-for-absolute-beginners-getting-started-part-3/)
 4.  [Backbone.js for absolute beginners - getting started (part 4: Routers)](/backbone-js-for-absolute-beginners-getting-started-part-4/)
 
-<a href="#Todo-App-in-Backbone" class="headerlink" title="Todo App in Backbone"></a>Todo App in Backbone
---------------------------------------------------------------------------------------------------------
+## <a href="#Todo-App-in-Backbone" class="headerlink" title="Todo App in Backbone"></a>Todo App in Backbone
 
 After completing this example app, you will have experience and a basic understanding of Backbone modules!
 
-(Updated: 2013-02-02, 2013-11-24) *Notice*: This tutorial was written using Backbone v.0.9.x, now version 1.1.x or later are out. However, all the principles explained here apply to both.
+(Updated: 2013-02-02, 2013-11-24) _Notice_: This tutorial was written using Backbone v.0.9.x, now version 1.1.x or later are out. However, all the principles explained here apply to both.
 
 **Todo app Boilerplate**
 
@@ -62,8 +56,7 @@ HTML Structure[Full Code](https://raw.github.com/amejiarosario/Backbone-tutorial
 
 We will implement a Todo list, basically an unordered list (ul) of elements with checkboxes.
 
-<a href="#Backbone-Model" class="headerlink" title="Backbone.Model"></a>Backbone.Model
---------------------------------------------------------------------------------------
+## <a href="#Backbone-Model" class="headerlink" title="Backbone.Model"></a>Backbone.Model
 
 Models are the heart of every application. It contains the interactive data and the logic surrounding it, such as data validation, getters and setters, default values, data initialization, conversions, etc. For our example, we are going to create a model called `Todo`, which will store a string of text (title) and whether the task has been completed or not.
 
@@ -81,10 +74,10 @@ Todo Model[Full Code](https://raw.github.com/amejiarosario/Backbone-tutorial/fe0
 10</code></pre></td><td><pre><code>var app = {}; // create namespace for our app
 
 app.Todo = Backbone.Model.extend({
-  defaults: {
-    title: &#39;&#39;,
-    completed: false
-  }
+defaults: {
+title: &#39;&#39;,
+completed: false
+}
 });
 </code></pre></td></tr></tbody></table>
 
@@ -108,8 +101,7 @@ todo.get(&#39;created_at&#39;); // undefined
 todo.set(&#39;created_at&#39;, Date());
 todo.get(&#39;created_at&#39;); // &quot;Wed Sep 12 2012 12:51:17 GMT-0400 (EDT)&quot;</code></pre></td></tr></tbody></table>
 
-<a href="#Backbone-Collection" class="headerlink" title="Backbone.Collection"></a>Backbone.Collection
------------------------------------------------------------------------------------------------------
+## <a href="#Backbone-Collection" class="headerlink" title="Backbone.Collection"></a>Backbone.Collection
 
 As its name indicates, collections are ordered sets of models. You can get and set models in the collection, listen for events when any element in the array changes, and fetch for model’s data from the server.
 
@@ -162,8 +154,7 @@ todoList.pluck(&#39;title&#39;);     // [&quot;Learn Backbone&#39;s Collection&q
 todoList.pluck(&#39;completed&#39;); // [false, true]
 JSON.stringify(todoList);    // &quot;[{&quot;title&quot;:&quot;Learn Backbone&#39;s Collection&quot;,&quot;completed&quot;:false,&quot;id&quot;:&quot;d9763e99-2267-75f5-62c3-9d7e40742aa6&quot;},{&quot;title&quot;:&quot;Learn Models&quot;,&quot;completed&quot;:true}]&quot;</code></pre></td></tr></tbody></table>
 
-<a href="#Backbone-View" class="headerlink" title="Backbone.View"></a>Backbone.View
------------------------------------------------------------------------------------
+## <a href="#Backbone-View" class="headerlink" title="Backbone.View"></a>Backbone.View
 
 As mentioned in [1.2](/backbone-dot-js-for-absolute-beginners-getting-started/#1.2), Views doesn’t have the HTML markups for our application, but instead (It’s like the controller in MVC frameworks) process data and link it to templates. It finally render HTML based on events or data changes.
 
@@ -229,8 +220,7 @@ in jQuery it would be something like:
 
 `$('#new-todo').keypress(createTodoOnEnter);`
 
-<a href="#Todo-View" class="headerlink" title="Todo View"></a>Todo View
------------------------------------------------------------------------
+## <a href="#Todo-View" class="headerlink" title="Todo View"></a>Todo View
 
 Now back to our Todo application: We need a view that renders each of the todo model objects into the page. The `item-template` and `app.TodoView` will generate each todo item.
 
@@ -282,8 +272,7 @@ When we instantiate a Backbone View, it can receive any parameter that we need. 
 
 Also, notice that our view uses a `tagName: li` instead of just `el` from before. This means that the new rendered elements will be wrapped around a `<li></li>`
 
-<a href="#Backbone-Events" class="headerlink" title="Backbone.Events"></a>Backbone.Events
------------------------------------------------------------------------------------------
+## <a href="#Backbone-Events" class="headerlink" title="Backbone.Events"></a>Backbone.Events
 
 This module can be mixed with any object and give it the pub/sub (observer pattern) behavior. Events provide a couple of methods from which we will discuss: `on`, `off` and `trigger`. (If this you are familiar with, then in jQuery, they will work the same way + some excellent built-in features)
 
@@ -307,14 +296,13 @@ Events can also be set on arbitrary objects using underscore.js `extend` functio
 8</code></pre></td><td><pre><code>var object = {},
     callback = function(msg) { console.log(&quot;Triggered &quot; + msg); };
 
-_.extend(object, Backbone.Events);
+\_.extend(object, Backbone.Events);
 
 object.on(&quot;my_event&quot;, callback);
 
 object.trigger(&quot;my_event&quot;, &quot;my custom event&quot;);</code></pre></td></tr></tbody></table>
 
-<a href="#App-View" class="headerlink" title="App View"></a>App View
---------------------------------------------------------------------
+## <a href="#App-View" class="headerlink" title="App View"></a>App View
 
 Now, we need another view that takes a collection and renders each of the individual items. We are going to call it ‘AppView’. This is a new large chunk of code so read it closely. Please take a look through this code and identify each of the elements.
 
@@ -379,31 +367,32 @@ app.AppView = Backbone.View.extend({
     app.todoList.on(&#39;add&#39;, this.addOne, this);
     app.todoList.on(&#39;reset&#39;, this.addAll, this);
     app.todoList.fetch(); // Loads list from local storage
-  },
-  events: {
-    &#39;keypress #new-todo&#39;: &#39;createTodoOnEnter&#39;
-  },
-  createTodoOnEnter: function(e){
-    if ( e.which !== 13 || !this.input.val().trim() ) { // ENTER_KEY = 13
-      return;
-    }
-    app.todoList.create(this.newAttributes());
-    this.input.val(&#39;&#39;); // clean input box
-  },
-  addOne: function(todo){
-    var view = new app.TodoView({model: todo});
-    $(&#39;#todo-list&#39;).append(view.render().el);
+
+},
+events: {
+&#39;keypress #new-todo&#39;: &#39;createTodoOnEnter&#39;
+},
+createTodoOnEnter: function(e){
+if ( e.which !== 13 || !this.input.val().trim() ) { // ENTER_KEY = 13
+return;
+}
+app.todoList.create(this.newAttributes());
+this.input.val(&#39;&#39;); // clean input box
+},
+addOne: function(todo){
+var view = new app.TodoView({model: todo});
+$(&#39;#todo-list&#39;).append(view.render().el);
   },
   addAll: function(){
     this.$(&#39;#todo-list&#39;).html(&#39;&#39;); // clean the todo list
-    app.todoList.each(this.addOne, this);
-  },
-  newAttributes: function(){
-    return {
-      title: this.input.val().trim(),
-      completed: false
-    }
-  }
+app.todoList.each(this.addOne, this);
+},
+newAttributes: function(){
+return {
+title: this.input.val().trim(),
+completed: false
+}
+}
 });
 
 //--------------
@@ -413,8 +402,7 @@ app.AppView = Backbone.View.extend({
 app.appView = new app.AppView();
 </code></pre></td></tr></tbody></table>
 
-<a href="#What’s-next" class="headerlink" title="What’s next?"></a>What’s next?
--------------------------------------------------------------------------------
+## <a href="#What’s-next" class="headerlink" title="What’s next?"></a>What’s next?
 
 Continue with the [3rd part](/backbonejs-for-absolute-beginners-getting-started-part-3/) and learn how to make CRUD for your models!
 
@@ -422,11 +410,9 @@ Continue with the [3rd part](/backbonejs-for-absolute-beginners-getting-started-
 
 Thanks for reading this far. Here are some things you can do next:
 
--   Found a typo? [Edit this post](https://github.com/amejiarosario/amejiarosario.github.io/edit/source/source/_posts/2012-09-13-backbone-js-for-absolute-beginners-getting-started-part-2.md).
--   Got questions? [comment](#comments-section) below.
--   Was it useful? Show your support and share it.
-
-
+- Found a typo? [Edit this post](https://github.com/amejiarosario/amejiarosario.github.io/edit/source/source/_posts/2012-09-13-backbone-js-for-absolute-beginners-getting-started-part-2.md).
+- Got questions? [comment](#comments-section) below.
+- Was it useful? Show your support and share it.
 
 <a href="/backbonejs-for-absolute-beginners-getting-started-part-3/" class="article-nav-newer"><strong><em></em> newer</strong></a>
 
@@ -438,18 +424,9 @@ Backbone.js for Absolute Beginners - Getting started (Part 1: Intro)
 
 Subscribe & stay up to date!
 
- 
 
 
-
-
-
-
-
-
-
-tutorial backbonejs Series
-==========================
+# tutorial backbonejs Series
 
 [<img src="/images/Backbonesforbeginners_small.png" width="300" height="250" />](/backbone-dot-js-for-absolute-beginners-getting-started/)
 
@@ -484,7 +461,3 @@ tutorial backbonejs Series
 6.  <a href="#Backbone-Events" class="toc-link"><span class="toc-number">6.</span> <span class="toc-text">Backbone.Events</span></a>
 7.  <a href="#App-View" class="toc-link"><span class="toc-number">7.</span> <span class="toc-text">App View</span></a>
 8.  <a href="#What%E2%80%99s-next" class="toc-link"><span class="toc-number">8.</span> <span class="toc-text">What’s next?</span></a>
-
-
-
-

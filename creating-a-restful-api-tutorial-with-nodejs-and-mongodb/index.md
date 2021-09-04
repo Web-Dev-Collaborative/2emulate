@@ -1,18 +1,13 @@
-
-
-
-
 <a href="/categories/coding/" class="category-link">Coding</a> &gt; <a href="/categories/coding/web-development/" class="category-link">Web Development</a> &gt; <a href="/categories/coding/web-development/angular/" class="category-link">Angular</a>
 
-Creating RESTful APIs with NodeJS and MongoDB Tutorial (Part II)
-================================================================
+# Creating RESTful APIs with NodeJS and MongoDB Tutorial (Part II)
 
 <span title="Last time this post was updated"> Last updated October 14th 2016 </span> <span class="m-x-2" title="Pageviews"> 574.4k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/creating-a-restful-api-tutorial-with-nodejs-and-mongodb/">0</span>](#disqus_thread) </span>
 
--   <a href="/tags/express/" class="tag-list-link">express</a><span class="tag-list-count">2</span>
--   <a href="/tags/mongodb/" class="tag-list-link">mongodb</a><span class="tag-list-count">3</span>
--   <a href="/tags/nodejs/" class="tag-list-link">nodejs</a><span class="tag-list-count">12</span>
--   <a href="/tags/tutorial-mean-stack/" class="tag-list-link">tutorial_mean-stack</a><span class="tag-list-count">3</span>
+- <a href="/tags/express/" class="tag-list-link">express</a><span class="tag-list-count">2</span>
+- <a href="/tags/mongodb/" class="tag-list-link">mongodb</a><span class="tag-list-count">3</span>
+- <a href="/tags/nodejs/" class="tag-list-link">nodejs</a><span class="tag-list-count">12</span>
+- <a href="/tags/tutorial-mean-stack/" class="tag-list-link">tutorial_mean-stack</a><span class="tag-list-count">3</span>
 
 ![Creating RESTful APIs with NodeJS and MongoDB Tutorial (Part II)](/images/RESTfulAPIs_NodeJS__mongodb_large.png)
 
@@ -28,17 +23,16 @@ MEAN Stack tutorial series:
 2.  Creating RESTful APIs with NodeJS and MongoDB Tutorial (Part II) **👈 you are here**
 3.  [MEAN Stack Tutorial: MongoDB, ExpressJS, AngularJS and NodeJS (Part III)](/blog/2014/10/03/mean-stack-tutorial-mongodb-expressjs-angularjs-nodejs/)
 
-<a href="#What-is-a-RESTful-API" class="headerlink" title="What is a RESTful API?"></a>What is a RESTful API?
--------------------------------------------------------------------------------------------------------------
+## <a href="#What-is-a-RESTful-API" class="headerlink" title="What is a RESTful API?"></a>What is a RESTful API?
 
 REST stands for Representational State Transfer. It is an architecture that allows `client-server` communication through a uniform interface. REST is `stateless`, `cachable` and has property called `idempotence`. It means that the side effect of identical requests have the same side-effect as a single request.
 
 HTTP RESTful API’s are compose of:
 
--   HTTP methods, e.g. GET, PUT, DELETE, PATCH, POST, …
--   Base URI, e.g. `http://adrianmejia.com`
--   URL path, e.g. `/blog/2014/10/01/creating-a-restful-api-tutorial-with-nodejs-and-mongodb/`
--   Media type, e.g. `html`, `JSON`, `XML`, `Microformats`, `Atom`, `Images`…
+- HTTP methods, e.g. GET, PUT, DELETE, PATCH, POST, …
+- Base URI, e.g. `http://adrianmejia.com`
+- URL path, e.g. `/blog/2014/10/01/creating-a-restful-api-tutorial-with-nodejs-and-mongodb/`
+- Media type, e.g. `html`, `JSON`, `XML`, `Microformats`, `Atom`, `Images`…
 
 Here is a summary what we want to implement:
 
@@ -46,12 +40,11 @@ Here is a summary what we want to implement:
 
 **NOTE** for this tutorial:
 
--   Format will be JSON.
--   Bulk updates and bulk destroys are not safe, so we will not be implementing those.
--   **CRUD** functionality: POST == **C**REATE, GET == **R**EAD, PUT == **U**PDATE, DELETE == **D**ELETE.
+- Format will be JSON.
+- Bulk updates and bulk destroys are not safe, so we will not be implementing those.
+- **CRUD** functionality: POST == **C**REATE, GET == **R**EAD, PUT == **U**PDATE, DELETE == **D**ELETE.
 
-<a href="#Installing-the-MEAN-Stack-Backend" class="headerlink" title="Installing the MEAN Stack Backend"></a>Installing the MEAN Stack Backend
------------------------------------------------------------------------------------------------------------------------------------------------
+## <a href="#Installing-the-MEAN-Stack-Backend" class="headerlink" title="Installing the MEAN Stack Backend"></a>Installing the MEAN Stack Backend
 
 In this section, we are going to install the backend components of the MEAN stack: MongoDB, NodeJS and ExpressJS. If you already are familiar with them, then jump to [wiring the stack](#wiring-up-the-mean-stack). Otherwise, enjoy the ride!
 
@@ -85,9 +78,12 @@ mongod --version
 ## =&gt; 2014-10-01T19:07:26.649-0400 git version: nogitversion
 
 ## Ubuntu
+
 mongod --version
+
 ## =&gt; db version v2.0.4, pdfile version 4.5
-## =&gt; Wed Oct  1 23:06:54 git version: nogitversion</code></pre></td></tr></tbody></table>
+
+## =&gt; Wed Oct 1 23:06:54 git version: nogitversion</code></pre></td></tr></tbody></table>
 
 ### <a href="#Installing-NodeJS" class="headerlink" title="Installing NodeJS"></a>Installing NodeJS
 
@@ -115,10 +111,12 @@ Since Node versions changes very often. You can use the NVM (Node Version Manage
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.4/install.sh | bash
 
 ## load NPM
+
 export NVM_DIR=&quot;$HOME/.nvm&quot;
 [ -s &quot;$NVM_DIR/nvm.sh&quot; ] &amp;&amp; . &quot;$NVM_DIR/nvm.sh&quot; # This loads nvm
 
 ## Install latest stable version
+
 nvm install stable</code></pre></td></tr></tbody></table>
 
 Check out <https://github.com/creationix/nvm> for more details.
@@ -137,6 +135,7 @@ After you got it installed, check node version and npm (node package manager) ve
 ## =&gt; v6.2.2
 
 npm -v
+
 ## =&gt; 3.9.5</code></pre></td></tr></tbody></table>
 
 ### <a href="#Installing-ExpressJS" class="headerlink" title="Installing ExpressJS"></a>Installing ExpressJS
@@ -157,16 +156,17 @@ We are going to create a project folder first, and then add `express` as a depen
 mkdir todo-app
 
 ## move to the folder and initialize the project
+
 cd todo-app
-npm init .  # press enter multiple times to accept all defaults
+npm init . # press enter multiple times to accept all defaults
 
 ## install express v4.14 and save it as dependency
+
 npm install express@4.14 --save</code></pre></td></tr></tbody></table>
 
 Notice that after the last command, `express` should be added to package.json with the version `4.14.x`.
 
-<a href="#Using-MongoDB-with-Mongoose" class="headerlink" title="Using MongoDB with Mongoose"></a>Using MongoDB with Mongoose
------------------------------------------------------------------------------------------------------------------------------
+## <a href="#Using-MongoDB-with-Mongoose" class="headerlink" title="Using MongoDB with Mongoose"></a>Using MongoDB with Mongoose
 
 Mongoose is an NPM package that allows you to interact with MongoDB. You can install it as follows:
 
@@ -209,10 +209,10 @@ mongoose.connect(&#39;mongodb://localhost/todoAppTest&#39;);
 
 // Create a schema
 var TodoSchema = new mongoose.Schema({
-  name: String,
-  completed: Boolean,
-  note: String,
-  updated_at: { type: Date, default: Date.now },
+name: String,
+completed: Boolean,
+note: String,
+updated_at: { type: Date, default: Date.now },
 });
 
 // Create a model based on the schema
@@ -237,10 +237,10 @@ var todo = new Todo({name: &#39;Master NodeJS&#39;, completed: false, note: &#39
 
 // Save it to database
 todo.save(function(err){
-  if(err)
-    console.log(err);
-  else
-    console.log(todo);
+if(err)
+console.log(err);
+else
+console.log(todo);
 });</code></pre></td></tr></tbody></table>
 
 If you take a look to Mongo you will notice that we just created an entry. You can easily visualize data using [Robomongo](https://robomongo.org/):
@@ -261,9 +261,9 @@ You can also build the object and save it in one step using `create`:
 
 So far we have been able to save data, now we are going explore how to query the information. There are multiple options for reading/querying data:
 
--   Model.find(conditions, \[fields\], \[options\], \[callback\])
--   Model.findById(id, \[fields\], \[options\], \[callback\])
--   Model.findOne(conditions, \[fields\], \[options\], \[callback\])
+- Model.find(conditions, \[fields\], \[options\], \[callback\])
+- Model.findById(id, \[fields\], \[options\], \[callback\])
+- Model.findOne(conditions, \[fields\], \[options\], \[callback\])
 
 Some examples:
 
@@ -361,9 +361,9 @@ Moving on, we are now going to explore how to update data.
 
 Each model has an `update` method which accepts multiple updates (for batch updates, because it doesn’t return an array with data).
 
--   Model.update(conditions, update, \[options\], \[callback\])
--   Model.findByIdAndUpdate(id, \[update\], \[options\], \[callback\])
--   Model.findOneAndUpdate(\[conditions\], \[update\], \[options\], \[callback\])
+- Model.update(conditions, update, \[options\], \[callback\])
+- Model.findByIdAndUpdate(id, \[update\], \[options\], \[callback\])
+- Model.findOneAndUpdate(\[conditions\], \[update\], \[options\], \[callback\])
 
 Alternatively, the method `findOneAndUpdate` could be used to update just one and return an object.
 
@@ -390,19 +390,18 @@ As you might noticed the batch updates (`multi: true`) doesn’t show the data, 
 
 Here is what they mean:
 
--   `n` means the number of records that matches the query
--   `nModified` represents the number of documents that were modified with update query.
+- `n` means the number of records that matches the query
+- `nModified` represents the number of documents that were modified with update query.
 
 ### <a href="#Mongoose-Delete" class="headerlink" title="Mongoose Delete"></a>Mongoose Delete
 
 `update` and `remove` mongoose API are identical, the only difference it is that no elements are returned. Try it on your own ;)
 
--   Model.remove(conditions, \[callback\])
--   Model.findByIdAndRemove(id, \[options\], \[callback\])
--   Model.findOneAndRemove(conditions, \[options\], \[callback\])
+- Model.remove(conditions, \[callback\])
+- Model.findByIdAndRemove(id, \[options\], \[callback\])
+- Model.findOneAndRemove(conditions, \[options\], \[callback\])
 
-<a href="#ExpressJS-and-Middlewares" class="headerlink" title="ExpressJS and Middlewares"></a>ExpressJS and Middlewares
------------------------------------------------------------------------------------------------------------------------
+## <a href="#ExpressJS-and-Middlewares" class="headerlink" title="ExpressJS and Middlewares"></a>ExpressJS and Middlewares
 
 ExpressJS is a complete web framework solution. It has HTML template solutions (jade, ejs, handlebars, hogan.js) and CSS precompilers (less, stylus, compass). Through middlewares layers, it handles: cookies, sessions, caching, CSRF, compression and many more.
 
@@ -430,9 +429,9 @@ Log the client IP on every request
 
 Notice that each middleware has 3 parameters:
 
--   `req`: contain all the requests objects like URLs, path, …
--   `res`: is the response object where we can send the reply back to the client.
--   `next`: continue with the next middleware in the chain.
+- `req`: contain all the requests objects like URLs, path, …
+- `res`: is the response object where we can send the reply back to the client.
+- `next`: continue with the next middleware in the chain.
 
 You can also specify a path that you want the middleware to activate on.
 
@@ -468,36 +467,35 @@ Hopefully, you don’t have to develop a bunch of middlewares besides routes, si
 
 ### <a href="#Default-Express-4-0-middlewares" class="headerlink" title="Default Express 4.0 middlewares"></a>Default Express 4.0 middlewares
 
--   [morgan](https://github.com/expressjs/morgan): logger
+- [morgan](https://github.com/expressjs/morgan): logger
 
--   [body-parser](https://github.com/expressjs/body-parser): parse the body so you can access parameters in requests in `req.body`. e.g. `req.body.name`.
+- [body-parser](https://github.com/expressjs/body-parser): parse the body so you can access parameters in requests in `req.body`. e.g. `req.body.name`.
 
--   [cookie-parser](https://github.com/expressjs/cookie-parser): parse the cookies so you can access parameters in cookies `req.cookies`. e.g. `req.cookies.name`.
+- [cookie-parser](https://github.com/expressjs/cookie-parser): parse the cookies so you can access parameters in cookies `req.cookies`. e.g. `req.cookies.name`.
 
--   [serve-favicon](https://github.com/expressjs/serve-favicon): exactly that, serve favicon from route `/favicon.ico`. Should be call on the top before any other routing/middleware takes place to avoids unnecessary parsing.
+- [serve-favicon](https://github.com/expressjs/serve-favicon): exactly that, serve favicon from route `/favicon.ico`. Should be call on the top before any other routing/middleware takes place to avoids unnecessary parsing.
 
 ### <a href="#Other-ExpressJS-Middlewares" class="headerlink" title="Other ExpressJS Middlewares"></a>Other ExpressJS Middlewares
 
 The following middlewares are not added by default, but it’s nice to know they exist at least:
 
--   [compression](https://github.com/expressjs/compression): compress all request. e.g. `app.use(compression())`
+- [compression](https://github.com/expressjs/compression): compress all request. e.g. `app.use(compression())`
 
--   [session](https://github.com/expressjs/session): create sessions. e.g. `app.use(session({secret: 'Secr3t'}))`
+- [session](https://github.com/expressjs/session): create sessions. e.g. `app.use(session({secret: 'Secr3t'}))`
 
--   [method-override](https://github.com/expressjs/method-override): `app.use(methodOverride('_method'))` Override methods to the one specified on the `_method` param. e.g. `GET /resource/1?_method=DELETE` will become `DELETE /resource/1`.
+- [method-override](https://github.com/expressjs/method-override): `app.use(methodOverride('_method'))` Override methods to the one specified on the `_method` param. e.g. `GET /resource/1?_method=DELETE` will become `DELETE /resource/1`.
 
--   [response-time](https://github.com/expressjs/response-time): `app.use(responseTime())` adds `X-Response-Time` header to responses.
+- [response-time](https://github.com/expressjs/response-time): `app.use(responseTime())` adds `X-Response-Time` header to responses.
 
--   [errorhandler](https://github.com/expressjs/errorhandler): Aid development, by sending full error stack traces to the client when an error occurs. `app.use(errorhandler())`. It is good practice to surround it with an if statement to check `process.env.NODE_ENV === 'development'`.
+- [errorhandler](https://github.com/expressjs/errorhandler): Aid development, by sending full error stack traces to the client when an error occurs. `app.use(errorhandler())`. It is good practice to surround it with an if statement to check `process.env.NODE_ENV === 'development'`.
 
--   [vhost](https://github.com/expressjs/vhost): Allows you to use different stack of middlewares depending on the request `hostname`. e.g. `app.use(vhost('*.user.local', userapp))` and `app.use(vhost('assets-*.example.com', staticapp))` where `userapp` and `staticapp` are different express instances with different middlewares.
+- [vhost](https://github.com/expressjs/vhost): Allows you to use different stack of middlewares depending on the request `hostname`. e.g. `app.use(vhost('*.user.local', userapp))` and `app.use(vhost('assets-*.example.com', staticapp))` where `userapp` and `staticapp` are different express instances with different middlewares.
 
--   [csurf](https://github.com/expressjs/csurf): Adds a **C**ross-**s**ite **r**equest **f**orgery (CSRF) protection by adding a token to responds either via `session` or `cookie-parser` middleware. `app.use(csrf());`
+- [csurf](https://github.com/expressjs/csurf): Adds a **C**ross-**s**ite **r**equest **f**orgery (CSRF) protection by adding a token to responds either via `session` or `cookie-parser` middleware. `app.use(csrf());`
 
--   [timeout](https://github.com/expressjs/timeout): halt execution if it takes more that a given time. e.g. `app.use(timeout('5s'));`. However you need to check by yourself under every request with a middleware that checks `if (!req.timedout) next();`.
+- [timeout](https://github.com/expressjs/timeout): halt execution if it takes more that a given time. e.g. `app.use(timeout('5s'));`. However you need to check by yourself under every request with a middleware that checks `if (!req.timedout) next();`.
 
-<a href="#Wiring-up-the-MEAN-Stack" class="headerlink" title="Wiring up the MEAN Stack"></a>Wiring up the MEAN Stack
---------------------------------------------------------------------------------------------------------------------
+## <a href="#Wiring-up-the-MEAN-Stack" class="headerlink" title="Wiring up the MEAN Stack"></a>Wiring up the MEAN Stack
 
 In the next sections, we are going to put together everything that we learn from and build an API. They can be consume by browsers, mobile apps and even other servers.
 
@@ -546,34 +544,60 @@ Install and run "express-generator"
 npm install express-generator -g
 
 ## create todo-app API with EJS views (instead the default Jade)
+
 express todo-api -e
 
-##   create : todo-api
-##   create : todo-api/package.json
-##   create : todo-api/app.js
-##   create : todo-api/public
-##   create : todo-api/public/javascripts
-##   create : todo-api/routes
-##   create : todo-api/routes/index.js
-##   create : todo-api/routes/users.js
-##   create : todo-api/public/stylesheets
-##   create : todo-api/public/stylesheets/style.css
-##   create : todo-api/views
-##   create : todo-api/views/index.ejs
-##   create : todo-api/views/layout.ejs
-##   create : todo-api/views/error.ejs
-##   create : todo-api/public/images
-##   create : todo-api/bin
-##   create : todo-api/bin/www
+## create : todo-api
+
+## create : todo-api/package.json
+
+## create : todo-api/app.js
+
+## create : todo-api/public
+
+## create : todo-api/public/javascripts
+
+## create : todo-api/routes
+
+## create : todo-api/routes/index.js
+
+## create : todo-api/routes/users.js
+
+## create : todo-api/public/stylesheets
+
+## create : todo-api/public/stylesheets/style.css
+
+## create : todo-api/views
+
+## create : todo-api/views/index.ejs
+
+## create : todo-api/views/layout.ejs
+
+## create : todo-api/views/error.ejs
+
+## create : todo-api/public/images
+
+## create : todo-api/bin
+
+## create : todo-api/bin/www
+
 ##
-##   install dependencies:
-##     $ cd todo-api &amp;&amp; npm install
+
+## install dependencies:
+
+## $ cd todo-api &amp;&amp; npm install
+
 ##
-##   run the app on Linux/Mac:
-##     $ DEBUG=todo-app:* npm start
+
+## run the app on Linux/Mac:
+
+## $ DEBUG=todo-app:\* npm start
+
 ##
-##   run the app on Windows:
-##     $ SET DEBUG=todo-api:* &amp; npm start</code></pre></td></tr></tbody></table>
+
+## run the app on Windows:
+
+## $ SET DEBUG=todo-api:\* &amp; npm start</code></pre></td></tr></tbody></table>
 
 This will create a new folder called `todo-api`. Let’s go ahead and install the dependencies and run the app:
 
@@ -588,9 +612,11 @@ This will create a new folder called `todo-api`. Let’s go ahead and install th
 cd todo-api &amp;&amp; npm install
 
 ## run the app on Linux/Mac
+
 PORT=4000 npm start
 
 ## run the app on Windows
+
 SET PORT=4000 &amp; npm start</code></pre></td></tr></tbody></table>
 
 Use your browser to go to [http://0.0.0.0:4000](http://0.0.0.0:4000/), and you should see a message “Welcome to Express”
@@ -628,8 +654,8 @@ mongoose.Promise = global.Promise;
 
 // connect to MongoDB
 mongoose.connect(&#39;mongodb://localhost/todo-api&#39;)
-  .then(() =&gt;  console.log(&#39;connection succesful&#39;))
-  .catch((err) =&gt; console.error(err));</code></pre></td></tr></tbody></table>
+.then(() =&gt; console.log(&#39;connection succesful&#39;))
+.catch((err) =&gt; console.error(err));</code></pre></td></tr></tbody></table>
 
 Now, When you run `npm start` or `./bin/www`, you will notice the message `connection successful`. Great!
 
@@ -659,10 +685,10 @@ In the `models/Todo.js`:
 10</code></pre></td><td><pre><code>var mongoose = require(&#39;mongoose&#39;);
 
 var TodoSchema = new mongoose.Schema({
-  name: String,
-  completed: Boolean,
-  note: String,
-  updated_at: { type: Date, default: Date.now },
+name: String,
+completed: Boolean,
+note: String,
+updated_at: { type: Date, default: Date.now },
 });
 
 module.exports = mongoose.model(&#39;Todo&#39;, TodoSchema);</code></pre></td></tr></tbody></table>
@@ -673,17 +699,16 @@ What’s going on up there? Isn’t MongoDB suppose to be schemaless? Well, it i
 
 You can use the following types:
 
--   String
--   Boolean
--   Date
--   Array
--   Number
--   ObjectId
--   Mixed
--   Buffer
+- String
+- Boolean
+- Date
+- Array
+- Number
+- ObjectId
+- Mixed
+- Buffer
 
-<a href="#API-clients-Browser-Postman-and-curl" class="headerlink" title="API clients (Browser, Postman and curl)"></a>API clients (Browser, Postman and curl)
---------------------------------------------------------------------------------------------------------------------------------------------------------------
+## <a href="#API-clients-Browser-Postman-and-curl" class="headerlink" title="API clients (Browser, Postman and curl)"></a>API clients (Browser, Postman and curl)
 
 I know you have not created any route yet. However, in the next sections you will. These are just three ways to retrieve, change and delete data from your future API.
 
@@ -699,6 +724,7 @@ Create tasks
 curl -XPOST http://localhost:3000/todos -d &#39;name=Master%20Routes&amp;completed=false&amp;note=soon...&#39;
 
 ## List tasks
+
 curl -XGET http://localhost:3000/todos</code></pre></td></tr></tbody></table>
 
 ### <a href="#Browser-and-Postman" class="headerlink" title="Browser and Postman"></a>Browser and Postman
@@ -715,8 +741,7 @@ Probably these are the main consumers of APIs. You can interact with RESTful API
 
 In the end, we are going to explain how to use AngularJS to interact with this API.
 
-<a href="#ExpressJS-Routes" class="headerlink" title="ExpressJS Routes"></a>ExpressJS Routes
---------------------------------------------------------------------------------------------
+## <a href="#ExpressJS-Routes" class="headerlink" title="ExpressJS Routes"></a>ExpressJS Routes
 
 To sum up we want to achieve the following:
 
@@ -733,7 +758,7 @@ Let’s setup the routes
 5
 6</code></pre></td><td><pre><code>In `app.js` add new `todos` route, or just replace `./routes/users` for `./routes/todos`
 
-``` javascript Adding todos routes
+```javascript Adding todos routes
 var todos = require(&#39;./routes/todos&#39;);
 app.use(&#39;/todos&#39;, todos);</code></pre></td></tr></tbody></table>
 
@@ -1038,3 +1063,4 @@ tutorial mean stack Series
 
 
 
+```

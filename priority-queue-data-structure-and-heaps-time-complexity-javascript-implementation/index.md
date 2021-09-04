@@ -1,17 +1,12 @@
-
-
-
-
 <a href="/categories/programming/" class="category-link">Programming</a> &gt; <a href="/categories/programming/data-structures-and-algorithms-dsa/" class="category-link">Data Structures and Algorithms (DSA)</a>
 
-Priority Queue Data Structure and Heaps Implemented in JavaScript
-=================================================================
+# Priority Queue Data Structure and Heaps Implemented in JavaScript
 
 <span title="Last time this post was updated"> Last updated July 5th 2021 </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/priority-queue-data-structure-and-heaps-time-complexity-javascript-implementation/">0</span>](#disqus_thread) </span>
 
--   <a href="/tags/algorithms/" class="tag-list-link">algorithms</a><span class="tag-list-count">12</span>
--   <a href="/tags/big-o-notation/" class="tag-list-link">big-o notation</a><span class="tag-list-count">3</span>
--   <a href="/tags/tutorial-algorithms/" class="tag-list-link">tutorial_algorithms</a><span class="tag-list-count">10</span>
+- <a href="/tags/algorithms/" class="tag-list-link">algorithms</a><span class="tag-list-count">12</span>
+- <a href="/tags/big-o-notation/" class="tag-list-link">big-o notation</a><span class="tag-list-count">3</span>
+- <a href="/tags/tutorial-algorithms/" class="tag-list-link">tutorial_algorithms</a><span class="tag-list-count">10</span>
 
 ![Priority Queue Data Structure and Heaps Implemented in JavaScript](/images/priority-queue-pq-heaps-large.jpg)
 
@@ -19,36 +14,34 @@ A priority queue is a versatile data structure that is good to have under your a
 
 <span id="more"></span>
 
-<a href="#What’s-a-Priority-Queue-PQ" class="headerlink" title="What’s a Priority Queue (PQ)?"></a>What’s a Priority Queue (PQ)?
---------------------------------------------------------------------------------------------------------------------------------
+## <a href="#What’s-a-Priority-Queue-PQ" class="headerlink" title="What’s a Priority Queue (PQ)?"></a>What’s a Priority Queue (PQ)?
 
 A priority queue is a data structure that extends the queue by a priority dimension. Let’s expand both terms. The **queue** is a list of elements taken in the same order as they arrived. For instance, a line of people waiting to pay at the Supermarket behaves like a queue: first-in, first-served, or FIFO (first in, first out).
 
-The *priority queue* adds a priority to each element’s value. If we go back to the example of a line of people in a supermarket. You can add preferred lanes, for example, Seniors (65+ years old) and pregnant women. If you have Seniors in the line, you will take them first, even if other people arrived before them. That’s what a priority queue (PQ) does. If all elements in a PQ have the same priority, then it will behave like a regular queue.
+The _priority queue_ adds a priority to each element’s value. If we go back to the example of a line of people in a supermarket. You can add preferred lanes, for example, Seniors (65+ years old) and pregnant women. If you have Seniors in the line, you will take them first, even if other people arrived before them. That’s what a priority queue (PQ) does. If all elements in a PQ have the same priority, then it will behave like a regular queue.
 
 ![priority queue as line of people](/images/priority-queue-pq-heap.png)
 
 Why a priority queue? Can’t we just have different queues for each priority? That only works if you have a few priorities, but sometimes you have infinite possibilities (e.g., the distance between two points, ETA, etc.). Later in this post, we will explore how we can implement an efficient solution for these cases.
 
-<a href="#What-is-a-priority-queue-good-for-Applications" class="headerlink" title="What is a priority queue good for? / Applications"></a>What is a priority queue good for? / Applications
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## <a href="#What-is-a-priority-queue-good-for-Applications" class="headerlink" title="What is a priority queue good for? / Applications"></a>What is a priority queue good for? / Applications
 
 There are many real-world applications for priority queues, such as:
 
--   System to triage hospital patients and attend them by their severity order.
--   Forward network packages in order of urgency (e.g., “real-time video call” should go before “time sync checks,” so to speak)
--   Scheduling tasks in a system: “critical” goes before “shadow drawing” for instance.
--   Asynchronous control flows like firing events (or notifying observers) in a certain order.
--   Keeping track of top k elements efficiently
--   Keeping track of median numbers in constant time
--   Used in some graph algorithms like Dijkstra for finding the shortest path between two points. The distance among points is used as a priority.
+- System to triage hospital patients and attend them by their severity order.
+- Forward network packages in order of urgency (e.g., “real-time video call” should go before “time sync checks,” so to speak)
+- Scheduling tasks in a system: “critical” goes before “shadow drawing” for instance.
+- Asynchronous control flows like firing events (or notifying observers) in a certain order.
+- Keeping track of top k elements efficiently
+- Keeping track of median numbers in constant time
+- Used in some graph algorithms like Dijkstra for finding the shortest path between two points. The distance among points is used as a priority.
 
 Some priority queue JavaScript implementations on the wild:
 
--   **closure-library**: [heap.js](https://github.com/google/closure-library/blob/master/closure/goog/structs/heap.js), [priorityqueue.js](https://github.com/google/closure-library/blob/master/closure/goog/structs/priorityqueue.js)
--   **dsa.js**: [heap.js](https://github.com/amejiarosario/dsa.js-data-structures-algorithms-javascript/blob/master/src/data-structures/heaps/heap.js), [priority-queue.js](https://github.com/amejiarosario/dsa.js-data-structures-algorithms-javascript/blob/master/src/data-structures/heaps/priority-queue.js), [min-heap.js](https://github.com/amejiarosario/dsa.js-data-structures-algorithms-javascript/blob/master/src/data-structures/heaps/min-heap.js), [max-heap.js](https://github.com/amejiarosario/dsa.js-data-structures-algorithms-javascript/blob/master/src/data-structures/heaps/max-heap.js)
--   **async** : [priorityQueue.js](https://github.com/caolan/async/blob/master/lib/priorityQueue.js), [Heap.js](https://github.com/caolan/async/blob/master/lib/internal/Heap.js).
--   **datastructures-js**: [heap.js](https://github.com/datastructures-js/heap/blob/master/src/heap.js), [priorityQueue.js](https://github.com/datastructures-js/priority-queue/blob/master/src/priorityQueue.js)
+- **closure-library**: [heap.js](https://github.com/google/closure-library/blob/master/closure/goog/structs/heap.js), [priorityqueue.js](https://github.com/google/closure-library/blob/master/closure/goog/structs/priorityqueue.js)
+- **dsa.js**: [heap.js](https://github.com/amejiarosario/dsa.js-data-structures-algorithms-javascript/blob/master/src/data-structures/heaps/heap.js), [priority-queue.js](https://github.com/amejiarosario/dsa.js-data-structures-algorithms-javascript/blob/master/src/data-structures/heaps/priority-queue.js), [min-heap.js](https://github.com/amejiarosario/dsa.js-data-structures-algorithms-javascript/blob/master/src/data-structures/heaps/min-heap.js), [max-heap.js](https://github.com/amejiarosario/dsa.js-data-structures-algorithms-javascript/blob/master/src/data-structures/heaps/max-heap.js)
+- **async** : [priorityQueue.js](https://github.com/caolan/async/blob/master/lib/priorityQueue.js), [Heap.js](https://github.com/caolan/async/blob/master/lib/internal/Heap.js).
+- **datastructures-js**: [heap.js](https://github.com/datastructures-js/heap/blob/master/src/heap.js), [priorityQueue.js](https://github.com/datastructures-js/priority-queue/blob/master/src/priorityQueue.js)
 
 This tutorial will start with a simple implementation and then build it to a robust implementation while making it easy to follow.
 
@@ -64,8 +57,8 @@ As always, there are many ways to solve the same problem. We are going to brains
 
 The essential operations of the priority queue are:
 
--   enqueue: insert elements on the queue
--   dequeue: remove elements from the queue in the same order they were inserted.
+- enqueue: insert elements on the queue
+- dequeue: remove elements from the queue in the same order they were inserted.
 
 Priority queue usually has a comparison function. Since our data could be simple (just an array of numbers where the value and priority are the same) or compound, where we have multiple fields (e.g. the priority could be the age of a student object). The comparator function tells our PQ what we can use as a priority. Here’s an example:
 
@@ -99,8 +92,8 @@ Every time we insert a new element, we need to sort the elements. That’s **O(n
 
 Complexity
 
--   Time: O(n log n), insertion into an array is constant but sorting takes n log n.
--   Space: O(n), the space used in memory will grow proportionally to the number of elements in the queue.
+- Time: O(n log n), insertion into an array is constant but sorting takes n log n.
+- Space: O(n), the space used in memory will grow proportionally to the number of elements in the queue.
 
 Here’s the implementation of the Enqueue method:
 
@@ -127,17 +120,18 @@ Here’s the implementation of the Enqueue method:
     this.comparator = comparator;
   }
 
-  /**
-   * Insert element
-   * @runtime O(n log n)
-   * @param {any} value
-   */
+/\*\*
+
+- Insert element
+- @runtime O(n log n)
+- @param {any} value
+  \*/
   add(value) {
-    this.array.push(value);
-    this.array.sort(this.comparator);
+  this.array.push(value);
+  this.array.sort(this.comparator);
   }
 
- //...
+//...
 }</code></pre></td></tr></tbody></table>
 
 **Dequeue**
@@ -146,8 +140,8 @@ Dequeue removes elements from the PQ. We need to find the element with the highe
 
 Complexity
 
--   Time: O(n), finding the top element.
--   Space: O(n), space is technically O(n-1). However, we just care about the “higher order” term, so O(n).
+- Time: O(n), finding the top element.
+- Space: O(n), space is technically O(n-1). However, we just care about the “higher order” term, so O(n).
 
 <table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><pre><code>1
 2
@@ -190,9 +184,9 @@ Even though a heap is conceptually a binary tree, it can be implemented using an
 
 You can calculate the following formula to translate tree to array:
 
--   parent(i) = Math.ceil(i / 2 - 1)
--   leftChild(i) = 2 \* i + 1
--   rightChild2(i) = 2 \* i + 1
+- parent(i) = Math.ceil(i / 2 - 1)
+- leftChild(i) = 2 \* i + 1
+- rightChild2(i) = 2 \* i + 1
 
 **What’s the time complexity of heaps and Priority Queue?**
 
@@ -241,52 +235,54 @@ Here’s an implementation of the Heap. Also we are using a comparator function 
     this.comparator = (i1, i2) =&gt; comparator(this.array[i1], this.array[i2]);
   }
 
-  /**
-   * Insert element
-   * @runtime O(log n)
-   * @param {any} value
-   */
+/\*\*
+
+- Insert element
+- @runtime O(log n)
+- @param {any} value
+  \*/
   add(value) {
-    this.array.push(value);
-    this.bubbleUp();
+  this.array.push(value);
+  this.bubbleUp();
   }
 
-  /**
-   * Move new element upwards on the Heap, if it&#39;s out of order
-   * @runtime O(log n)
-   */
+/\*\*
+
+- Move new element upwards on the Heap, if it&#39;s out of order
+- @runtime O(log n)
+  \*/
   bubbleUp() {
-    let index = this.size - 1;
-    const parent = (i) =&gt; Math.ceil(i / 2 - 1);
-    while (parent(index) &gt;= 0 &amp;&amp; this.comparator(parent(index), index) &gt; 0) {
-      this.swap(parent(index), index);
-      index = parent(index);
-    }
+  let index = this.size - 1;
+  const parent = (i) =&gt; Math.ceil(i / 2 - 1);
+  while (parent(index) &gt;= 0 &amp;&amp; this.comparator(parent(index), index) &gt; 0) {
+  this.swap(parent(index), index);
+  index = parent(index);
   }
-}</code></pre></td></tr></tbody></table>
+  }
+  }</code></pre></td></tr></tbody></table>
 
 This algorithm can keep a heap sorted in O(**log n**) because it only visits half of the tree at most.
 
-*“Why **log n?**“\*\**,\*\* you asked.
+\*“Why **log n?**“\*\*\*,\*\* you asked.
 
 Because that’s the maximum number of swaps that you would have to bubble up the newly inserted element.
 
-I see, but where did you that *log n* from?
+I see, but where did you that _log n_ from?
 
 ![binary tree parts](/images/binary-tree-parts.png)
 
 Well, in a complete binary tree, you double the number of nodes at each level. If you use some intuition and math you can find the following relationship:
 
--   Level 0: 2<sup>0</sup> = 1 node (root)
--   Level 1: 2<sup>1</sup> = 2 nodes
--   Level 2: 2<sup>2</sup> = 4 nodes
--   Level 3: 2<sup>3</sup> = 8 nodes
--   …
--   Level h: 2<sup>h</sup> = 2<sup>h</sup> nodes
+- Level 0: 2<sup>0</sup> = 1 node (root)
+- Level 1: 2<sup>1</sup> = 2 nodes
+- Level 2: 2<sup>2</sup> = 4 nodes
+- Level 3: 2<sup>3</sup> = 8 nodes
+- …
+- Level h: 2<sup>h</sup> = 2<sup>h</sup> nodes
 
-------------------------------------------------------------------------
+---
 
--   Total number of nodes, n: 1 + 2 + 4 + 8 + … + 2<sup>h</sup>
+- Total number of nodes, n: 1 + 2 + 4 + 8 + … + 2<sup>h</sup>
 
 So, we have a formula that relates the total number of nodes with the tree’s height. The height is essential because that will be the maximum number of times we would swap nodes when we insert a new element in the Heap.
 
@@ -304,8 +300,8 @@ Well, there you have it. That’s where the **log n** comes from.
 
 Complexity:
 
--   Time: O(log n), in the worst case, you will have to bubble up the inserted element up to the root of the tree. These will involve log n swaps, where n is the total number of nodes.
--   Space: O(n)
+- Time: O(log n), in the worst case, you will have to bubble up the inserted element up to the root of the tree. These will involve log n swaps, where n is the total number of nodes.
+- Space: O(n)
 
 **Dequeue**
 
@@ -316,8 +312,8 @@ The algorithms for dequeuing an element from a PQ is the following:
 
 Complexity:
 
--   Time: O(log n), The maximum number of swaps is given by the tree’s height, which is log n.
--   Space: O(n).
+- Time: O(log n), The maximum number of swaps is given by the tree’s height, which is log n.
+- Space: O(n).
 
 <table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><pre><code>1
 2
@@ -359,28 +355,28 @@ remove(index = 0) {
   return value;
 }
 
-/**
- * After removal, moves element downwards on the Heap, if it&#39;s out of order
- * @runtime O(log n)
- */
-bubbleDown(index = 0) {
-  let curr = index;
-  const left = (i) =&gt; 2 * i + 1;
-  const right = (i) =&gt; 2 * i + 2;
-  const getTopChild = (i) =&gt; (right(i) &lt; this.size
-    &amp;&amp; this.comparator(left(i), right(i)) &gt; 0 ? right(i) : left(i));
+/\*\*
 
-  while (left(curr) &lt; this.size &amp;&amp; this.comparator(curr, getTopChild(curr)) &gt; 0) {
-    const next = getTopChild(curr);
-    this.swap(curr, next);
-    curr = next;
-  }
+- After removal, moves element downwards on the Heap, if it&#39;s out of order
+- @runtime O(log n)
+  _/
+  bubbleDown(index = 0) {
+  let curr = index;
+  const left = (i) =&gt; 2 _ i + 1;
+  const right = (i) =&gt; 2 \* i + 2;
+  const getTopChild = (i) =&gt; (right(i) &lt; this.size
+  &amp;&amp; this.comparator(left(i), right(i)) &gt; 0 ? right(i) : left(i));
+
+while (left(curr) &lt; this.size &amp;&amp; this.comparator(curr, getTopChild(curr)) &gt; 0) {
+const next = getTopChild(curr);
+this.swap(curr, next);
+curr = next;
+}
 }</code></pre></td></tr></tbody></table>
 
 You can find the full implementation at: <https://github.com/amejiarosario/dsa.js-data-structures-algorithms-javascript/blob/master/src/data-structures/heaps/heap.js>
 
-<a href="#Summary" class="headerlink" title="Summary"></a>Summary
------------------------------------------------------------------
+## <a href="#Summary" class="headerlink" title="Summary"></a>Summary
 
 In these post we learned about the usages of a priority queue and how to implement it with an array+sorting and using array-based heap. We also explored it’s time complexity for each implementation so we can verify that the heap implementation is more efficient.
 
@@ -388,11 +384,9 @@ In these post we learned about the usages of a priority queue and how to impleme
 
 Thanks for reading this far. Here are some things you can do next:
 
--   Found a typo? [Edit this post](https://github.com/amejiarosario/amejiarosario.github.io/edit/source/source/_posts/priority-queue-data-structure-and-heaps-time-complexity-javascript-implementation.md).
--   Got questions? [comment](#comments-section) below.
--   Was it useful? Show your support and share it.
-
-
+- Found a typo? [Edit this post](https://github.com/amejiarosario/amejiarosario.github.io/edit/source/source/_posts/priority-queue-data-structure-and-heaps-time-complexity-javascript-implementation.md).
+- Got questions? [comment](#comments-section) below.
+- Was it useful? Show your support and share it.
 
 <a href="/2020-recap-and-how-i-got-my-dream-job/" class="article-nav-older"><strong>older <em></em></strong></a>
 
@@ -400,18 +394,9 @@ Thanks for reading this far. Here are some things you can do next:
 
 Subscribe & stay up to date!
 
- 
 
 
-
-
-
-
-
-
-
-tutorial algorithms Series
-==========================
+# tutorial algorithms Series
 
 [<img src="/images/from-code-to-big-o-algorithms-small.png" width="300" height="250" />](/how-to-find-time-complexity-of-an-algorithm-code-big-o-notation/)
 
@@ -464,7 +449,3 @@ tutorial algorithms Series
         1.  <a href="#Naive-Priority-Queue-implemented-using-Array-Sorting" class="toc-link"><span class="toc-number">2.2.1.</span> <span class="toc-text">Naive: Priority Queue implemented using Array + Sorting</span></a>
         2.  <a href="#Priority-Queue-implemented-using-a-Heap" class="toc-link"><span class="toc-number">2.2.2.</span> <span class="toc-text">Priority Queue implemented using a Heap</span></a>
 3.  <a href="#Summary" class="toc-link"><span class="toc-number">3.</span> <span class="toc-text">Summary</span></a>
-
-
-
-

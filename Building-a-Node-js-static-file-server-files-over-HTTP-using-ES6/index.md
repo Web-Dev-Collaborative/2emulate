@@ -1,15 +1,10 @@
-
-
-
-
 <a href="/categories/coding/" class="category-link">Coding</a>
 
-Building a Node.js static file server (files over HTTP) using ES6+
-==================================================================
+# Building a Node.js static file server (files over HTTP) using ES6+
 
 <span title="Last time this post was updated"> Last updated August 24th 2016 </span> <span class="m-x-2" title="Pageviews"> 50.7k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/Building-a-Node-js-static-file-server-files-over-HTTP-using-ES6/">0</span>](#disqus_thread) </span>
 
--   <a href="/tags/nodejs/" class="tag-list-link">nodejs</a><span class="tag-list-count">12</span>
+- <a href="/tags/nodejs/" class="tag-list-link">nodejs</a><span class="tag-list-count">12</span>
 
 ![Building a Node.js static file server (files over HTTP) using ES6+](/images/node-web-server-large.png)
 
@@ -17,8 +12,7 @@ We are going to do a **static file server** in Node.js. This web server is going
 
 <span id="more"></span>
 
-<a href="#HTTP-Web-Servers" class="headerlink" title="HTTP Web Servers"></a>HTTP Web Servers
---------------------------------------------------------------------------------------------
+## <a href="#HTTP-Web-Servers" class="headerlink" title="HTTP Web Servers"></a>HTTP Web Servers
 
 Node’s HTTP module is versatile. You can use it as a client, to grab content from websites or as a server. We are going to use it server files from our file system.
 
@@ -37,15 +31,16 @@ Existing HTTP Servers Implementations
 python -m SimpleHTTPServer 9000
 
 ## ruby HTTP server
+
 ruby -run -e httpd . -p 9000
 
 ## Node HTTP server (npm install http-server)
+
 http-server . -p 9000</code></pre></td></tr></tbody></table>
 
 Let’s do our own. It’s not that hard.
 
-<a href="#Simple-HTTP-Server" class="headerlink" title="Simple HTTP Server"></a>Simple HTTP Server
---------------------------------------------------------------------------------------------------
+## <a href="#Simple-HTTP-Server" class="headerlink" title="Simple HTTP Server"></a>Simple HTTP Server
 
 One of the simplest servers that you can create in Node, looks like this:
 
@@ -62,9 +57,9 @@ Simple server.js
 9</code></pre></td><td><pre><code>const http = require(&#39;http&#39;);
 
 http.createServer(function (req, res) {
-  // server code
-  console.log(`${req.method} ${req.url}`);
-  res.end(&#39;hello world!&#39;);
+// server code
+console.log(`${req.method} ${req.url}`);
+res.end(&#39;hello world!&#39;);
 }).listen(9000);
 
 console.log(&#39;Server listening on port 9000&#39;);</code></pre></td></tr></tbody></table>
@@ -83,8 +78,7 @@ The response object is used to reply to the client. You can set what you want to
 
 Finally, the listening part. It allows you to set the port that you want your server to run on. In this case, we are using `9000`.
 
-<a href="#Node-js-HTTP-static-file-server-with-ES6" class="headerlink" title="Node.js HTTP static file server with ES6+"></a>Node.js HTTP static file server with ES6+
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## <a href="#Node-js-HTTP-static-file-server-with-ES6" class="headerlink" title="Node.js HTTP static file server with ES6+"></a>Node.js HTTP static file server with ES6+
 
 Let’s now proceed to do the static web server. We want to parse the URL path and get the file matching that path. For instance, if we get a request like `localhost:9000/example/server.js`. We want to look for a file in `./example/server.js`.
 
@@ -92,7 +86,7 @@ Browsers don’t rely on the extension to render a file. Instead, they use the h
 
 For now, we can infer the file content type based on the file extension. The content types are represented in MIME formmat. MIME stands for Multipurpose Internet Mail Extensions. You can see the MIME types according to file extentions in the following code:
 
-static\_server.js
+static_server.js
 
 <table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><pre><code>1
 2
@@ -175,43 +169,43 @@ const port = process.argv[2] || 9000;
 // maps file extention to MIME types
 // full list can be found here: https://www.freeformatter.com/mime-types-list.html
 const mimeType = {
-  &#39;.ico&#39;: &#39;image/x-icon&#39;,
-  &#39;.html&#39;: &#39;text/html&#39;,
-  &#39;.js&#39;: &#39;text/javascript&#39;,
-  &#39;.json&#39;: &#39;application/json&#39;,
-  &#39;.css&#39;: &#39;text/css&#39;,
-  &#39;.png&#39;: &#39;image/png&#39;,
-  &#39;.jpg&#39;: &#39;image/jpeg&#39;,
-  &#39;.wav&#39;: &#39;audio/wav&#39;,
-  &#39;.mp3&#39;: &#39;audio/mpeg&#39;,
-  &#39;.svg&#39;: &#39;image/svg+xml&#39;,
-  &#39;.pdf&#39;: &#39;application/pdf&#39;,
-  &#39;.zip&#39;: &#39;application/zip&#39;,
-  &#39;.doc&#39;: &#39;application/msword&#39;,
-  &#39;.eot&#39;: &#39;application/vnd.ms-fontobject&#39;,
-  &#39;.ttf&#39;: &#39;application/x-font-ttf&#39;,
+&#39;.ico&#39;: &#39;image/x-icon&#39;,
+&#39;.html&#39;: &#39;text/html&#39;,
+&#39;.js&#39;: &#39;text/javascript&#39;,
+&#39;.json&#39;: &#39;application/json&#39;,
+&#39;.css&#39;: &#39;text/css&#39;,
+&#39;.png&#39;: &#39;image/png&#39;,
+&#39;.jpg&#39;: &#39;image/jpeg&#39;,
+&#39;.wav&#39;: &#39;audio/wav&#39;,
+&#39;.mp3&#39;: &#39;audio/mpeg&#39;,
+&#39;.svg&#39;: &#39;image/svg+xml&#39;,
+&#39;.pdf&#39;: &#39;application/pdf&#39;,
+&#39;.zip&#39;: &#39;application/zip&#39;,
+&#39;.doc&#39;: &#39;application/msword&#39;,
+&#39;.eot&#39;: &#39;application/vnd.ms-fontobject&#39;,
+&#39;.ttf&#39;: &#39;application/x-font-ttf&#39;,
 };
 
 http.createServer(function (req, res) {
-  console.log(`${req.method} ${req.url}`);
+console.log(`${req.method} ${req.url}`);
 
-  // parse URL
-  const parsedUrl = url.parse(req.url);
+// parse URL
+const parsedUrl = url.parse(req.url);
 
-  // extract URL path
-  // Avoid https://en.wikipedia.org/wiki/Directory_traversal_attack
-  // e.g curl --path-as-is http://localhost:9000/../fileInDanger.txt
-  // by limiting the path to current directory only
-  const sanitizePath = path.normalize(parsedUrl.pathname).replace(/^(\.\.[\/\\])+/, &#39;&#39;);
-  let pathname = path.join(__dirname, sanitizePath);
+// extract URL path
+// Avoid https://en.wikipedia.org/wiki/Directory_traversal_attack
+// e.g curl --path-as-is http://localhost:9000/../fileInDanger.txt
+// by limiting the path to current directory only
+const sanitizePath = path.normalize(parsedUrl.pathname).replace(/^(\.\.[\/\\])+/, &#39;&#39;);
+let pathname = path.join(\_\_dirname, sanitizePath);
 
-  fs.exists(pathname, function (exist) {
-    if(!exist) {
-      // if the file is not found, return 404
-      res.statusCode = 404;
-      res.end(`File ${pathname} not found!`);
-      return;
-    }
+fs.exists(pathname, function (exist) {
+if(!exist) {
+// if the file is not found, return 404
+res.statusCode = 404;
+res.end(`File ${pathname} not found!`);
+return;
+}
 
     // if is a directory, then look for index.html
     if (fs.statSync(pathname).isDirectory()) {
@@ -231,8 +225,8 @@ http.createServer(function (req, res) {
         res.end(data);
       }
     });
-  });
 
+});
 
 }).listen(parseInt(port));
 
@@ -255,9 +249,11 @@ Command lines to test the server
 node server.js
 
 ## get the javascript file with
+
 curl -i localhost:9000/server.js
 
 ## testing with non-existing file
+
 curl -i localhost:9000/invalid-file.doc</code></pre></td></tr></tbody></table>
 
 For the first one, you will get a 200 OK response, while for the 2nd one you will get a 404 not found error, as expected.
@@ -285,15 +281,16 @@ cd meanshop
 git checkout static-server
 
 ## start the server (requires Node 4+)
+
 npm start
 
 ## test it in your browser with the following paths:
+
 open http://localhost:9000/
 open http://localhost:9000/index.html
 open http://localhost:9000/test/meanshop-book.png</code></pre></td></tr></tbody></table>
 
-<a href="#Summary" class="headerlink" title="Summary"></a>Summary
------------------------------------------------------------------
+## <a href="#Summary" class="headerlink" title="Summary"></a>Summary
 
 In this post, we went through the basics about `http` module to create a server. We talk about the MIME types and how the help the browser to render properly. Finally, we put all together to accomplish our static file server with Node.js!
 
@@ -301,11 +298,9 @@ In this post, we went through the basics about `http` module to create a server.
 
 Thanks for reading this far. Here are some things you can do next:
 
--   Found a typo? [Edit this post](https://github.com/amejiarosario/amejiarosario.github.io/edit/source/source/_posts/2016-08-24-Building-a-Node-js-static-file-server-files-over-HTTP-using-ES6.md).
--   Got questions? [comment](#comments-section) below.
--   Was it useful? Show your support and share it.
-
-
+- Found a typo? [Edit this post](https://github.com/amejiarosario/amejiarosario.github.io/edit/source/source/_posts/2016-08-24-Building-a-Node-js-static-file-server-files-over-HTTP-using-ES6.md).
+- Got questions? [comment](#comments-section) below.
+- Was it useful? Show your support and share it.
 
 <a href="/Angular-2-Tutorial-Create-a-CRUD-App-with-Angular-CLI-and-TypeScript/" class="article-nav-newer"><strong><em></em> newer</strong></a>
 
@@ -317,14 +312,6 @@ Node Package Manager (NPM) Tutorial
 
 Subscribe & stay up to date!
 
- 
-
-
-
-
-
-
-
 
 
 [<span id="back-to-top" title="Go back to the top of this page"> Top </span>](#) <a href="#" class="p-x-3" title="Improve this post"><em></em> Edit this post</a>
@@ -335,7 +322,3 @@ Subscribe & stay up to date!
 2.  <a href="#Simple-HTTP-Server" class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">Simple HTTP Server</span></a>
 3.  <a href="#Node-js-HTTP-static-file-server-with-ES6" class="toc-link"><span class="toc-number">3.</span> <span class="toc-text">Node.js HTTP static file server with ES6+</span></a>
 4.  <a href="#Summary" class="toc-link"><span class="toc-number">4.</span> <span class="toc-text">Summary</span></a>
-
-
-
-

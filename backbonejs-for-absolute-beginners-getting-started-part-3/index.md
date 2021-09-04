@@ -1,16 +1,11 @@
-
-
-
-
 <a href="/categories/coding/" class="category-link">Coding</a> &gt; <a href="/categories/coding/web-development/" class="category-link">Web Development</a> &gt; <a href="/categories/coding/web-development/backbone/" class="category-link">Backbone</a>
 
-Backbone.js for absolute beginners - getting started (part 3: CRUD)
-===================================================================
+# Backbone.js for absolute beginners - getting started (part 3: CRUD)
 
 <span title="Last time this post was updated"> Last updated September 13th 2012 </span> <span class="m-x-2" title="Pageviews"> 96.3k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/backbonejs-for-absolute-beginners-getting-started-part-3/">0</span>](#disqus_thread) </span>
 
--   <a href="/tags/backbonejs/" class="tag-list-link">backbonejs</a><span class="tag-list-count">4</span>
--   <a href="/tags/tutorial-backbonejs/" class="tag-list-link">tutorial_backbonejs</a><span class="tag-list-count">4</span>
+- <a href="/tags/backbonejs/" class="tag-list-link">backbonejs</a><span class="tag-list-count">4</span>
+- <a href="/tags/tutorial-backbonejs/" class="tag-list-link">tutorial_backbonejs</a><span class="tag-list-count">4</span>
 
 ![Backbone.js for absolute beginners - getting started (part 3: CRUD)](/images/BackbonesforBeginners_large.png)
 
@@ -25,8 +20,7 @@ BackboneJS Tutorial series:
 3.  Backbone.js for absolute beginners - getting started (part 3: CRUD) **👈 you are here**
 4.  [Backbone.js for absolute beginners - getting started (part 4: Routers)](/backbone-js-for-absolute-beginners-getting-started-part-4/)
 
-<a href="#Todo-item-list-CRUD" class="headerlink" title="Todo item list CRUD"></a>Todo item list CRUD
------------------------------------------------------------------------------------------------------
+## <a href="#Todo-item-list-CRUD" class="headerlink" title="Todo item list CRUD"></a>Todo item list CRUD
 
 There are a couple of features that we could improve. Let’s implement the CRUD (Create-Read-Update-Delete) for the item list.
 
@@ -239,8 +233,7 @@ Add the destroy method to app.TodoView[Full Code](https://raw.github.com/amejiar
 
 You can download the full working code so far in [here](https://raw.github.com/amejiarosario/Backbone-tutorial/1267e531ae3ef508eb32e5308c2cc965f02d1b45/backbone-tutorial.html) and you can visualize the changes needed to implement the delete feature in [here](https://github.com/amejiarosario/Backbone-tutorial/commit/1267e531ae3ef508eb32e5308c2cc965f02d1b45)
 
-<a href="#What’s-next" class="headerlink" title="What’s next?"></a>What’s next?
--------------------------------------------------------------------------------
+## <a href="#What’s-next" class="headerlink" title="What’s next?"></a>What’s next?
 
 Continue with the [4th part](/backbone-js-for-absolute-beginners-getting-started-part-4/) and learn about Backbone’s Routes!
 
@@ -248,11 +241,9 @@ Continue with the [4th part](/backbone-js-for-absolute-beginners-getting-started
 
 Thanks for reading this far. Here are some things you can do next:
 
--   Found a typo? [Edit this post](https://github.com/amejiarosario/amejiarosario.github.io/edit/source/source/_posts/2012-09-13-backbonejs-for-absolute-beginners-getting-started-part-3.markdown).
--   Got questions? [comment](#comments-section) below.
--   Was it useful? Show your support and share it.
-
-
+- Found a typo? [Edit this post](https://github.com/amejiarosario/amejiarosario.github.io/edit/source/source/_posts/2012-09-13-backbonejs-for-absolute-beginners-getting-started-part-3.markdown).
+- Got questions? [comment](#comments-section) below.
+- Was it useful? Show your support and share it.
 
 <a href="/backbone-js-for-absolute-beginners-getting-started-part-4/" class="article-nav-newer"><strong><em></em> newer</strong></a>
 
@@ -264,18 +255,9 @@ Backbone.js for absolute beginners - getting started (part 2: Models, Collection
 
 Subscribe & stay up to date!
 
- 
 
 
-
-
-
-
-
-
-
-tutorial backbonejs Series
-==========================
+# tutorial backbonejs Series
 
 [<img src="/images/Backbonesforbeginners_small.png" width="300" height="250" />](/backbone-dot-js-for-absolute-beginners-getting-started/)
 
@@ -302,7 +284,3 @@ tutorial backbonejs Series
     2.  <a href="#U-pdate" class="toc-link"><span class="toc-number">1.2.</span> <span class="toc-text">U-pdate</span></a>
     3.  <a href="#D-elete" class="toc-link"><span class="toc-number">1.3.</span> <span class="toc-text">D-elete</span></a>
 2.  <a href="#What%E2%80%99s-next" class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">What’s next?</span></a>
-
-
-
-

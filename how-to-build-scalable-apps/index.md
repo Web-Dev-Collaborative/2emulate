@@ -1,15 +1,10 @@
-
-
-
-
 <a href="/categories/coding/" class="category-link">Coding</a>
 
-How to build scalable apps?
-===========================
+# How to build scalable apps?
 
 <span title="Last time this post was updated"> Last updated January 9th 2016 </span> <span class="m-x-2" title="Pageviews"> 3.9k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/how-to-build-scalable-apps/">0</span>](#disqus_thread) </span>
 
--   <a href="/tags/scaling/" class="tag-list-link">scaling</a><span class="tag-list-count">2</span>
+- <a href="/tags/scaling/" class="tag-list-link">scaling</a><span class="tag-list-count">2</span>
 
 ![How to build scalable apps?](/images/scaling_apps_2016_large.png)
 
@@ -21,121 +16,109 @@ The Twelve steps are a compilation of guidelines to ensure apps can scale up wit
 
 **The Twelve Factor Principles**
 
-<a href="#One-codebase-per-app-multiple-deployments" class="headerlink" title="One codebase per app, multiple deployments"></a>One codebase per app, multiple deployments
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## <a href="#One-codebase-per-app-multiple-deployments" class="headerlink" title="One codebase per app, multiple deployments"></a>One codebase per app, multiple deployments
 
-*DO*
+_DO_
 
--   One codebase to rule all deployment environments: production, staging, local and so on and differentiate them from config files (see \#3).
+- One codebase to rule all deployment environments: production, staging, local and so on and differentiate them from config files (see \#3).
 
-*DON’T*
+_DON’T_
 
--   Multiple apps sharing the same code. INSTEAD the common code should be extracted from a library and included through a dependency manager.
+- Multiple apps sharing the same code. INSTEAD the common code should be extracted from a library and included through a dependency manager.
 
-<a href="#Declare-and-isolate-dependencies" class="headerlink" title="Declare and isolate dependencies"></a>Declare and isolate dependencies
---------------------------------------------------------------------------------------------------------------------------------------------
+## <a href="#Declare-and-isolate-dependencies" class="headerlink" title="Declare and isolate dependencies"></a>Declare and isolate dependencies
 
-*DO*
+_DO_
 
--   Have a dependency declaration manifest (e.g. packages.json, Gemfile)
--   Execute dependencies in isolation per app (e.g. bundle exec).
+- Have a dependency declaration manifest (e.g. packages.json, Gemfile)
+- Execute dependencies in isolation per app (e.g. bundle exec).
 
-*DON’T*
+_DON’T_
 
--   Rely on implicit existence of system-wide packages (e.g. curl, ImageMagik). INSTEAD vendor them into the app.
+- Rely on implicit existence of system-wide packages (e.g. curl, ImageMagik). INSTEAD vendor them into the app.
 
-<a href="#Store-the-config-in-the-environment" class="headerlink" title="Store the config in the environment"></a>Store the config in the environment
------------------------------------------------------------------------------------------------------------------------------------------------------
+## <a href="#Store-the-config-in-the-environment" class="headerlink" title="Store the config in the environment"></a>Store the config in the environment
 
-*DO*
+_DO_
 
--   Separate app’s config (AWS S3, passwords, Google/Fb/Tw/APIs credentials, deployment hostname) from the code.
--   Keep the code ready in a way that if were open source, it wouldn’t compromise any credentials.
--   Use/commit ‘config’ files with sensitive information into repository. INSTEAD use environmental variables (env, env vars) which are easily changed between deployments and without changing code.
+- Separate app’s config (AWS S3, passwords, Google/Fb/Tw/APIs credentials, deployment hostname) from the code.
+- Keep the code ready in a way that if were open source, it wouldn’t compromise any credentials.
+- Use/commit ‘config’ files with sensitive information into repository. INSTEAD use environmental variables (env, env vars) which are easily changed between deployments and without changing code.
 
-*DON’T*
+_DON’T_
 
--   Group config variables by environment (e.g. AWS\_S3\_PRODUCTION, AWS\_S3\_TEST, AWS\_S3\_QA, AWS\_S3\_STAGING, AWS\_S3\_JOE…). INSTEAD use clean environment variables (e.g. AWS\_S3) that are managed individually per deploy.
+- Group config variables by environment (e.g. AWS_S3_PRODUCTION, AWS_S3_TEST, AWS_S3_QA, AWS_S3_STAGING, AWS_S3_JOE…). INSTEAD use clean environment variables (e.g. AWS_S3) that are managed individually per deploy.
 
-<a href="#Swappable-local-and-third-party-services" class="headerlink" title="Swappable local and third party services"></a>Swappable local and third party services
---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## <a href="#Swappable-local-and-third-party-services" class="headerlink" title="Swappable local and third party services"></a>Swappable local and third party services
 
-*DO*
+_DO_
 
--   Services like databases (e.g. MongoDB, PostgreSQL), message queues (e.g. RabbitMQ, Beanstalkd) should be accessed via URL or locator/credential stored in config.
--   Swapping local to production services should be done without any code changes.
+- Services like databases (e.g. MongoDB, PostgreSQL), message queues (e.g. RabbitMQ, Beanstalkd) should be accessed via URL or locator/credential stored in config.
+- Swapping local to production services should be done without any code changes.
 
-<a href="#Build-and-runtime" class="headerlink" title="Build and runtime"></a>Build and runtime
------------------------------------------------------------------------------------------------
+## <a href="#Build-and-runtime" class="headerlink" title="Build and runtime"></a>Build and runtime
 
-*DO*
+_DO_
 
--   Code changes flows in one direction only development -&gt; build -&gt; run time environments.
+- Code changes flows in one direction only development -&gt; build -&gt; run time environments.
 
-<a href="#Execute-the-app-as-share-nothing-stateless-processes" class="headerlink" title="Execute the app as share-nothing stateless processes"></a>Execute the app as share-nothing stateless processes
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## <a href="#Execute-the-app-as-share-nothing-stateless-processes" class="headerlink" title="Execute the app as share-nothing stateless processes"></a>Execute the app as share-nothing stateless processes
 
-*DO*
+_DO_
 
--   Store any persistent data in external services (such as databases)
+- Store any persistent data in external services (such as databases)
 
-*DON’T*
+_DON’T_
 
--   Use the filesystem/memory to save states. INSTEAD any instance of the app should be able to handle requests.
+- Use the filesystem/memory to save states. INSTEAD any instance of the app should be able to handle requests.
 
-<a href="#Export-services-via-port-binding" class="headerlink" title="Export services via port binding"></a>Export services via port binding
---------------------------------------------------------------------------------------------------------------------------------------------
+## <a href="#Export-services-via-port-binding" class="headerlink" title="Export services via port binding"></a>Export services via port binding
 
-*DO*
+_DO_
 
--   App is completely self-contained and communicates with other processes through port binding.
+- App is completely self-contained and communicates with other processes through port binding.
 
-<a href="#Scale-out-the-app-horizontally" class="headerlink" title="Scale out the app horizontally"></a>Scale out the app horizontally
---------------------------------------------------------------------------------------------------------------------------------------
+## <a href="#Scale-out-the-app-horizontally" class="headerlink" title="Scale out the app horizontally"></a>Scale out the app horizontally
 
-*DO*
+_DO_
 
--   Scale app horizontally since the app is a stateless and share-nothing model.
+- Scale app horizontally since the app is a stateless and share-nothing model.
 
-*DON’T*
+_DON’T_
 
--   Daemonize. INSTEAD use operating system manager such as Upstart or init and Foreman in development.
+- Daemonize. INSTEAD use operating system manager such as Upstart or init and Foreman in development.
 
-<a href="#Fast-startup-and-shutdown" class="headerlink" title="Fast startup and shutdown"></a>Fast startup and shutdown
------------------------------------------------------------------------------------------------------------------------
+## <a href="#Fast-startup-and-shutdown" class="headerlink" title="Fast startup and shutdown"></a>Fast startup and shutdown
 
-*DO*
+_DO_
 
--   app start in few seconds to serve requests or jobs.
--   shut down gracefully after receiving SIGTERM signal (stop receiving new request/jobs, finish processing current request/job before stopping).
+- app start in few seconds to serve requests or jobs.
+- shut down gracefully after receiving SIGTERM signal (stop receiving new request/jobs, finish processing current request/job before stopping).
 
-<a href="#Keep-development-staging-and-production-as-similar-as-possible" class="headerlink" title="Keep development, staging, and production as similar as possible"></a>Keep development, staging, and production as similar as possible
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## <a href="#Keep-development-staging-and-production-as-similar-as-possible" class="headerlink" title="Keep development, staging, and production as similar as possible"></a>Keep development, staging, and production as similar as possible
 
-*DO*
+_DO_
 
--   design app for continuous deployment keeping the tools gaps and deployment times as minimum as possible.
--   code from development to production should take few hours or just few minutes.
--   developers who wrote the code should be able to deploy it to production.
--   keep production and development tool the same as possible
+- design app for continuous deployment keeping the tools gaps and deployment times as minimum as possible.
+- code from development to production should take few hours or just few minutes.
+- developers who wrote the code should be able to deploy it to production.
+- keep production and development tool the same as possible
 
-*DON’T*
+_DON’T_
 
--   use different services on production and development (e.g. development using SQLite and production ProtgreSQL).
+- use different services on production and development (e.g. development using SQLite and production ProtgreSQL).
 
-<a href="#Logs-goes-to-stdout" class="headerlink" title="Logs goes to stdout"></a>Logs goes to stdout
------------------------------------------------------------------------------------------------------
+## <a href="#Logs-goes-to-stdout" class="headerlink" title="Logs goes to stdout"></a>Logs goes to stdout
 
-*DON’T*
+_DON’T_
 
--   write logs to a particular location in the filesystem. INSTEAD send them to STDOUT, so they can be routed as will depending the environment (e.g. output to terminal in development and output to log file in production)
+- write logs to a particular location in the filesystem. INSTEAD send them to STDOUT, so they can be routed as will depending the environment (e.g. output to terminal in development and output to log file in production)
 
-<a href="#Admin-processes" class="headerlink" title="Admin processes"></a>Admin processes
------------------------------------------------------------------------------------------
+## <a href="#Admin-processes" class="headerlink" title="Admin processes"></a>Admin processes
 
-*DO*
+_DO_
 
--   favor languages/frameworks that use REPL shell out of the box to do admin tasks such as migrating databases, running consoles or running one-time scripts.
+- favor languages/frameworks that use REPL shell out of the box to do admin tasks such as migrating databases, running consoles or running one-time scripts.
 
 This is just the beginning follow up with [this next post](/blog/2016/03/23/how-to-scale-a-nodejs-app-based-on-number-of-users/).
 
@@ -143,11 +126,9 @@ This is just the beginning follow up with [this next post](/blog/2016/03/23/how-
 
 Thanks for reading this far. Here are some things you can do next:
 
--   Found a typo? [Edit this post](https://github.com/amejiarosario/amejiarosario.github.io/edit/source/source/_posts/2016-01-09-how-to-build-scalable-apps.markdown).
--   Got questions? [comment](#comments-section) below.
--   Was it useful? Show your support and share it.
-
-
+- Found a typo? [Edit this post](https://github.com/amejiarosario/amejiarosario.github.io/edit/source/source/_posts/2016-01-09-how-to-build-scalable-apps.markdown).
+- Got questions? [comment](#comments-section) below.
+- Was it useful? Show your support and share it.
 
 <a href="/how-to-scale-a-nodejs-app-based-on-number-of-users/" class="article-nav-newer"><strong><em></em> newer</strong></a>
 
@@ -158,14 +139,6 @@ How to scale a Nodejs app based on number of users
 Grunt JS tutorial from Beginner to Ninja
 
 Subscribe & stay up to date!
-
- 
-
-
-
-
-
-
 
 
 
@@ -185,7 +158,3 @@ Subscribe & stay up to date!
 10. <a href="#Keep-development-staging-and-production-as-similar-as-possible" class="toc-link"><span class="toc-number">10.</span> <span class="toc-text">Keep development, staging, and production as similar as possible</span></a>
 11. <a href="#Logs-goes-to-stdout" class="toc-link"><span class="toc-number">11.</span> <span class="toc-text">Logs goes to stdout</span></a>
 12. <a href="#Admin-processes" class="toc-link"><span class="toc-number">12.</span> <span class="toc-text">Admin processes</span></a>
-
-
-
-

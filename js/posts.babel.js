@@ -19,11 +19,13 @@
     elEnd = document.getElementsByClassName("sticky-element--end")[0];
     elStart.classList.remove(fixedClass);
     elStartTop = elStart.offsetTop;
-    elementsHeight = Array.from(elStart.children).map(function (el) {
-      return el.clientHeight;
-    }).reduce(function (x, y) {
-      return x + y;
-    });
+    elementsHeight = Array.from(elStart.children)
+      .map(function (el) {
+        return el.clientHeight;
+      })
+      .reduce(function (x, y) {
+        return x + y;
+      });
     elEndTop = elEnd.offsetTop - elementsHeight - 100;
     setStickyClass();
   }
@@ -38,7 +40,6 @@
     }
   } // executes only after 300 ms of inactivity
 
-
   function repaintStickyElement() {
     window.requestAnimationFrame(setStickyClass);
   }
@@ -46,7 +47,6 @@
   window.addEventListener("scroll", repaintStickyElement);
   window.addEventListener("resize", initialize);
 })(); // back to top
-
 
 (function backToTop() {
   var link = document.getElementById("back-to-top");
@@ -180,17 +180,18 @@
  * Get current scroll y position
  */
 
-
 function getScrollY() {
-  return document.body.scrollTop || // deprecated
-  window.scrollY || window.pageYOffset; // IE11
+  return (
+    document.body.scrollTop || // deprecated
+    window.scrollY ||
+    window.pageYOffset
+  ); // IE11
 }
 /**
  * Scrolls to `baseY` in `duration` ms
  * @param baseY
  * @param duration
  */
-
 
 function scrollBy(baseY, duration) {
   var initialY = getScrollY(); // var y = initialY + distance;
@@ -209,7 +210,6 @@ function scrollBy(baseY, duration) {
 
   window.requestAnimationFrame(step);
 } // copy to clipboard
-
 
 (function copyToClipboardMain() {
   // $$('.highlight').prepend((b = document.createElement('button'), b.classList.add('copy-btn'), b))

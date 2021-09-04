@@ -1,17 +1,12 @@
-
-
-
-
 <a href="/categories/coding/" class="category-link">Coding</a>
 
-The JavaScript Promise Tutorial
-===============================
+# The JavaScript Promise Tutorial
 
 <span title="Last time this post was updated"> Last updated August 6th 2020 </span> <span class="m-x-2" title="Pageviews"> 7.0k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/promises-tutorial-concurrency-in-javascript-node/">0</span>](#disqus_thread) </span>
 
--   <a href="/tags/javascript/" class="tag-list-link">javascript</a><span class="tag-list-count">5</span>
--   <a href="/tags/nodejs/" class="tag-list-link">nodejs</a><span class="tag-list-count">12</span>
--   <a href="/tags/tutorial-async-javascript/" class="tag-list-link">tutorial_async-javascript</a><span class="tag-list-count">3</span>
+- <a href="/tags/javascript/" class="tag-list-link">javascript</a><span class="tag-list-count">5</span>
+- <a href="/tags/nodejs/" class="tag-list-link">nodejs</a><span class="tag-list-count">12</span>
+- <a href="/tags/tutorial-async-javascript/" class="tag-list-link">tutorial_async-javascript</a><span class="tag-list-count">3</span>
 
 ![The JavaScript Promise Tutorial](/images/promises-concurrency-in-javascript-large.png)
 
@@ -19,9 +14,9 @@ This post is intended to be the ultimate JavaScript Promises tutorial: recipes a
 
 <span id="more"></span>
 
-*NOTE: I’d like this post to be up-to-date with the most common use cases for promises. If you have a question about promises and it’s not answered here. Please, comment below or reach out to me directly [@iAmAdrianMejia](https://twitter.com/iAmAdrianMejia). I’ll look into it and update this post.*
+_NOTE: I’d like this post to be up-to-date with the most common use cases for promises. If you have a question about promises and it’s not answered here. Please, comment below or reach out to me directly [@iAmAdrianMejia](https://twitter.com/iAmAdrianMejia). I’ll look into it and update this post._
 
-------------------------------------------------------------------------
+---
 
 **Related Posts:**
 
@@ -29,18 +24,17 @@ This post is intended to be the ultimate JavaScript Promises tutorial: recipes a
 2.  [JavaScript Callbacks](/callbacks-concurrency-in-javascript-node/)
 3.  [JavaScript Promises](/promises-tutorial-concurrency-in-javascript-node/) (this one)
 
-------------------------------------------------------------------------
+---
 
-<a href="#JavaScript-Promises" class="headerlink" title="JavaScript Promises"></a>JavaScript Promises
------------------------------------------------------------------------------------------------------
+## <a href="#JavaScript-Promises" class="headerlink" title="JavaScript Promises"></a>JavaScript Promises
 
 A promise is an object that allows you to handle asynchronous operations. It’s an alternative to plain old callbacks.
 
 Promises have many advantages over callbacks. To name a few:
 
--   Make the async code easier to read.
--   Provide combined error handling.
--   Better control flow. You can have async actions execute in parallel or series.
+- Make the async code easier to read.
+- Provide combined error handling.
+- Better control flow. You can have async actions execute in parallel or series.
 
 Callbacks tend to form deeply nested structures (a.k.a. Callback hell). Like the following:
 
@@ -78,15 +72,14 @@ If you convert those functions to promises, they can be chained producing more m
 
 As you can see, in the example above, the promise object exposes the methods `.then` and `.catch`. We are going to explore these methods later.
 
-<a href="#How-do-I-convert-an-existing-callback-API-to-promises" class="headerlink" title="How do I convert an existing callback API to promises?"></a>How do I convert an existing callback API to promises?
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## <a href="#How-do-I-convert-an-existing-callback-API-to-promises" class="headerlink" title="How do I convert an existing callback API to promises?"></a>How do I convert an existing callback API to promises?
 
 We can convert callbacks into promises using the Promise constructor.
 
 The Promise constructor takes a callback with two arguments `resolve` and `reject`.
 
--   **Resolve**: is a callback that should be invoked when the async operation is completed.
--   **Reject**: is a callback function to be invoked when an error occurs.
+- **Resolve**: is a callback that should be invoked when the async operation is completed.
+- **Reject**: is a callback function to be invoked when an error occurs.
 
 The constructor returns an object immediately, the promise instance. You can get notified when the promise is “done” using the method `.then` in the promise instance. Let’s see an example.
 
@@ -186,22 +179,20 @@ It’s the latter, because
 
 > When a promise it’s `resolve`d, it can no longer be `reject`ed.
 
-Once you call one method (`resolve` or `reject`) the other is invalidated since the promise in a *settled* state. Let’s explore all the different states of a promise.
+Once you call one method (`resolve` or `reject`) the other is invalidated since the promise in a _settled_ state. Let’s explore all the different states of a promise.
 
-<a href="#Promise-states" class="headerlink" title="Promise states"></a>Promise states
---------------------------------------------------------------------------------------
+## <a href="#Promise-states" class="headerlink" title="Promise states"></a>Promise states
 
 There are four states in which the promises can be:
 
--   ⏳ **Pending**: initial state. Async operation is still in process.
--   ✅ **Fulfilled**: the operation was successful. It invokes `.then` callback. E.g., `.then(onSuccess)`.
--   ⛔️ **Rejected**: the operation failed. It invokes the `.catch` or `.then` ‘s second argument (if any). E.g., `.catch(onError)` or `.then(..., onError)`
--   😵 **Settled**: it’s the promise final state. The promise is dead. Nothing else can be resolved or rejected anymore. The `.finally` method is invoked.
+- ⏳ **Pending**: initial state. Async operation is still in process.
+- ✅ **Fulfilled**: the operation was successful. It invokes `.then` callback. E.g., `.then(onSuccess)`.
+- ⛔️ **Rejected**: the operation failed. It invokes the `.catch` or `.then` ‘s second argument (if any). E.g., `.catch(onError)` or `.then(..., onError)`
+- 😵 **Settled**: it’s the promise final state. The promise is dead. Nothing else can be resolved or rejected anymore. The `.finally` method is invoked.
 
 ![Promises four states](/images/promises-states.png)
 
-<a href="#Promise-instance-methods" class="headerlink" title="Promise instance methods"></a>Promise instance methods
---------------------------------------------------------------------------------------------------------------------
+## <a href="#Promise-instance-methods" class="headerlink" title="Promise instance methods"></a>Promise instance methods
 
 The Promise API exposes three main methods: `then`, `catch` and `finally`. Let’s explore each one and provide examples.
 
@@ -341,15 +332,14 @@ or you can use the `.finally` keyword:
   .catch(console.error)
   .finally(() =&gt; console.log(&#39;always called&#39;));</code></pre></td></tr></tbody></table>
 
-<a href="#Promise-class-Methods" class="headerlink" title="Promise class Methods"></a>Promise class Methods
------------------------------------------------------------------------------------------------------------
+## <a href="#Promise-class-Methods" class="headerlink" title="Promise class Methods"></a>Promise class Methods
 
 There are four static methods that you can use directly from the `Promise` object.
 
--   Promise.all
--   Promise.reject
--   Promise.resolve
--   Promise.race
+- Promise.all
+- Promise.reject
+- Promise.resolve
+- Promise.race
 
 Let’s see each one and provide examples.
 
@@ -419,9 +409,9 @@ const d = () =&gt; new Promise((resolve) =&gt; setTimeout(() =&gt; resolve(&#39;
 
 console.time(&#39;promise.all&#39;);
 Promise.all([a(), b(), c(), d()])
-  .then(results =&gt; console.log(`Done! ${results}`))
-  .catch(console.error)
-  .finally(() =&gt; console.timeEnd(&#39;promise.all&#39;));</code></pre></td></tr></tbody></table>
+.then(results =&gt; console.log(`Done! ${results}`))
+.catch(console.error)
+.finally(() =&gt; console.timeEnd(&#39;promise.all&#39;));</code></pre></td></tr></tbody></table>
 
 How long is it going to take to solve each of these promises? 5 seconds? 1 second? Or 2 seconds?
 
@@ -447,9 +437,9 @@ const d = () =&gt; new Promise((resolve) =&gt; setTimeout(() =&gt; resolve(&#39;
 
 console.time(&#39;promise.race&#39;);
 Promise.race([a(), b(), c(), d()])
-  .then(results =&gt; console.log(`Done! ${results}`))
-  .catch(console.error)
-  .finally(() =&gt; console.timeEnd(&#39;promise.race&#39;));</code></pre></td></tr></tbody></table>
+.then(results =&gt; console.log(`Done! ${results}`))
+.catch(console.error)
+.finally(() =&gt; console.timeEnd(&#39;promise.race&#39;));</code></pre></td></tr></tbody></table>
 
 What’s the output?
 
@@ -491,8 +481,7 @@ If the request is fast enough, then you have the result.
 
 ![Promise race](/images/promise-race-pass.gif)
 
-<a href="#Promises-FAQ" class="headerlink" title="Promises FAQ"></a>Promises FAQ
---------------------------------------------------------------------------------
+## <a href="#Promises-FAQ" class="headerlink" title="Promises FAQ"></a>Promises FAQ
 
 This section covers tricks and tips using all the promises methods that we explained before.
 
@@ -509,10 +498,10 @@ This time we are going to use the promises API for Node’s `fs` and we are goin
 7</code></pre></td><td><pre><code>const fs = require(&#39;fs&#39;).promises; // requires node v8+
 
 fs.readFile(&#39;file.txt&#39;, &#39;utf8&#39;)
-  .then(content1 =&gt; fs.writeFile(&#39;output.txt&#39;, content1))
-  .then(() =&gt; fs.readFile(&#39;file2.txt&#39;, &#39;utf8&#39;))
-  .then(content2 =&gt; fs.writeFile(&#39;output.txt&#39;, content2, { flag: &#39;a+&#39; }))
-  .catch(error =&gt; console.log(error));</code></pre></td></tr></tbody></table>
+.then(content1 =&gt; fs.writeFile(&#39;output.txt&#39;, content1))
+.then(() =&gt; fs.readFile(&#39;file2.txt&#39;, &#39;utf8&#39;))
+.then(content2 =&gt; fs.writeFile(&#39;output.txt&#39;, content2, { flag: &#39;a+&#39; }))
+.catch(error =&gt; console.log(error));</code></pre></td></tr></tbody></table>
 
 In this example, we read file 1 and write it to the output file. Later, we read file 2 and append it to the output file again. As you can see, `writeFile` promise returns the content of the file, and you can use it in the next `then` clause.
 
@@ -555,7 +544,7 @@ if (shouldExecC) chain = chain.then(c);
 if (shouldExecD) chain = chain.then(d);
 
 chain
-  .then(() =&gt; console.log(&#39;done&#39;));</code></pre></td></tr></tbody></table>
+.then(() =&gt; console.log(&#39;done&#39;));</code></pre></td></tr></tbody></table>
 
 ### <a href="#How-to-limit-parallel-promises" class="headerlink" title="How to limit parallel promises?"></a>How to limit parallel promises?
 
@@ -576,8 +565,8 @@ const requests = Array(10)
   .map((_, i) =&gt; () =&gt; new Promise((resolve =&gt; setTimeout(() =&gt; { console.log(`exec&#39;ing task #${i}`), resolve(`task #${i}`); }, 5000))));
 
 promiseAllThrottled(requests, { concurrency: 3 })
-  .then(console.log)
-  .catch(error =&gt; console.error(&#39;Oops something went wrong&#39;, error));</code></pre></td></tr></tbody></table>
+.then(console.log)
+.catch(error =&gt; console.error(&#39;Oops something went wrong&#39;, error));</code></pre></td></tr></tbody></table>
 
 The output should be something like this:
 
@@ -626,34 +615,35 @@ So, the code above will limit the concurrency to 3 tasks executing in parallel. 
 function promiseAllThrottled(iterable, { concurrency = 3 } = {}) {
   const promises = [];
 
-  function enqueue(current = 0, queue = []) {
-    // return if done
-    if (current === iterable.length) { return Promise.resolve(); }
-    // take one promise from collection
-    const promise = iterable[current];
-    const activatedPromise = promise();
-    // add promise to the final result array
-    promises.push(activatedPromise);
-    // add current activated promise to queue and remove it when done
-    const autoRemovePromise = activatedPromise.then(() =&gt; {
-      // remove promise from the queue when done
-      return queue.splice(queue.indexOf(autoRemovePromise), 1);
-    });
-    // add promise to the queue
-    queue.push(autoRemovePromise);
+function enqueue(current = 0, queue = []) {
+// return if done
+if (current === iterable.length) { return Promise.resolve(); }
+// take one promise from collection
+const promise = iterable[current];
+const activatedPromise = promise();
+// add promise to the final result array
+promises.push(activatedPromise);
+// add current activated promise to queue and remove it when done
+const autoRemovePromise = activatedPromise.then(() =&gt; {
+// remove promise from the queue when done
+return queue.splice(queue.indexOf(autoRemovePromise), 1);
+});
+// add promise to the queue
+queue.push(autoRemovePromise);
 
     // if queue length &gt;= concurrency, wait for one promise to finish before adding more.
     const readyForMore = queue.length &lt; concurrency ? Promise.resolve() : Promise.race(queue);
     return readyForMore.then(() =&gt; enqueue(current + 1, queue));
-  }
 
-  return enqueue()
-    .then(() =&gt; Promise.all(promises));
+}
+
+return enqueue()
+.then(() =&gt; Promise.all(promises));
 }</code></pre></td></tr></tbody></table>
 
 The `promiseAllThrottled` takes promises one by one. It executes the promises and adds it to the queue. If the queue is less than the concurrency limit, it keeps adding to the queue. Once the limit is reached, we use `Promise.race` to wait for one promise to finish so we can replace it with a new one. The trick here is that the promise auto removes itself from the queue when it is done. Also, we use race to detect when a promise has finished, and it adds a new one.
 
-------------------------------------------------------------------------
+---
 
 **Related Posts:**
 
@@ -661,17 +651,15 @@ The `promiseAllThrottled` takes promises one by one. It executes the promises an
 2.  [JavaScript Callbacks](/callbacks-concurrency-in-javascript-node/)
 3.  [JavaScript Promises](/promises-tutorial-concurrency-in-javascript-node/) (this one)
 
-------------------------------------------------------------------------
+---
 
 ### Now, your turn!
 
 Thanks for reading this far. Here are some things you can do next:
 
--   Found a typo? [Edit this post](https://github.com/amejiarosario/amejiarosario.github.io/edit/source/source/_posts/2019-07-05-promises-tutorial-concurrency-in-javascript-node.md).
--   Got questions? [comment](#comments-section) below.
--   Was it useful? Show your support and share it.
-
-
+- Found a typo? [Edit this post](https://github.com/amejiarosario/amejiarosario.github.io/edit/source/source/_posts/2019-07-05-promises-tutorial-concurrency-in-javascript-node.md).
+- Got questions? [comment](#comments-section) below.
+- Was it useful? Show your support and share it.
 
 <a href="/angular-todo-mean-stack-node-mongodb-typescript-tutorial/" class="article-nav-newer"><strong><em></em> newer</strong></a>
 
@@ -683,18 +671,9 @@ Understanding JavaScript Callbacks and best practices
 
 Subscribe & stay up to date!
 
- 
 
 
-
-
-
-
-
-
-
-tutorial async javascript Series
-================================
+# tutorial async javascript Series
 
 [<img src="/images/async-vs-sync-concurrency-in-javascript-small.png" width="300" height="250" />](/asynchronous-vs-synchronous-handling-concurrency-in-javascript/)
 
@@ -731,7 +710,3 @@ tutorial async javascript Series
     1.  <a href="#Executing-promises-in-series-and-passing-arguments" class="toc-link"><span class="toc-number">6.1.</span> <span class="toc-text">Executing promises in series and passing arguments</span></a>
     2.  <a href="#How-do-I-chain-multiple-conditional-promises" class="toc-link"><span class="toc-number">6.2.</span> <span class="toc-text">How do I chain multiple conditional promises?</span></a>
     3.  <a href="#How-to-limit-parallel-promises" class="toc-link"><span class="toc-number">6.3.</span> <span class="toc-text">How to limit parallel promises?</span></a>
-
-
-
-

@@ -1,0 +1,7 @@
+/.bundle/
+/.idea/
+/.ruby-*
+/_*/
+/Gemfile.lock
+/README.html
+/pkg/

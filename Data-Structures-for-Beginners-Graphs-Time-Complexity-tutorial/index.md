@@ -1,16 +1,11 @@
-
-
-
-
 <a href="/categories/coding/" class="category-link">Coding</a> &gt; <a href="/categories/coding/data-structures-and-algorithms-dsa/" class="category-link">Data Structures and Algorithms (DSA)</a>
 
-Graph Data Structures in JavaScript for Beginners
-=================================================
+# Graph Data Structures in JavaScript for Beginners
 
 <span title="Last time this post was updated"> Last updated December 15th 2020 </span> <span class="m-x-2" title="Pageviews"> 52.8k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/Data-Structures-for-Beginners-Graphs-Time-Complexity-tutorial/">0</span>](#disqus_thread) </span>
 
--   <a href="/tags/algorithms/" class="tag-list-link">algorithms</a><span class="tag-list-count">12</span>
--   <a href="/tags/tutorial-algorithms/" class="tag-list-link">tutorial_algorithms</a><span class="tag-list-count">10</span>
+- <a href="/tags/algorithms/" class="tag-list-link">algorithms</a><span class="tag-list-count">12</span>
+- <a href="/tags/tutorial-algorithms/" class="tag-list-link">tutorial_algorithms</a><span class="tag-list-count">10</span>
 
 ![Graph Data Structures in JavaScript for Beginners](/images/graph-data-structures-time-complexity-large.jpg)
 
@@ -24,7 +19,7 @@ In the previous post, we explore linear data structures like arrays, linked list
 
 You can find all these implementations and more in the Github repo: <https://github.com/amejiarosario/dsa.js>
 
-------------------------------------------------------------------------
+---
 
 This post is part of a tutorial series:
 
@@ -44,14 +39,13 @@ This post is part of a tutorial series:
 
 7.  [Appendix I: Analysis of Recursive Algorithms](/blog/2018/04/24/Analysis-of-Recursive-Algorithms/)
 
-------------------------------------------------------------------------
+---
 
 Here is the summary of the operations that we are going to cover on this post:
 
 <table><thead><tr class="header"><th> </th><th>Adjacency List</th><th>Adjacency Matrix</th></tr></thead><tbody><tr class="odd"><td>Space</td><td><a href="#List.space">O(|V| + |E|)</a></td><td><a href="#Matrix.space">O(|V|<sup>2</sup>)</a></td></tr><tr class="even"><td>addVertex</td><td><a href="#Graph.addVertex">O(1)</a></td><td><a href="#Matrix.addVertex">O(|V|<sup>2</sup>)</a></td></tr><tr class="odd"><td>removeVertex</td><td><a href="#Graph.removeVertex">O(|V| + |E|)</a></td><td><a href="#Matrix.addVertex">O(|V|<sup>2</sup>)</a></td></tr><tr class="even"><td>addEdge</td><td><a href="#Graph.addEdge">O(1)</a></td><td><a href="#Matrix.addVertex">O(1)</a></td></tr><tr class="odd"><td>removeEdge (using Array)</td><td><a href="#Graph.removeEdge">O(|E|)</a></td><td><a href="#Matrix.addVertex">O(1)</a></td></tr><tr class="even"><td>removeEdge (using HashSet)</td><td>O(1)</td><td><a href="#Matrix.addVertex">O(1)</a></td></tr><tr class="odd"><td>getAdjacents</td><td><a href="#Node.getAdjacents">O(|E|)</a></td><td><a href="#Matrix.getAdjacents">O(|V|)</a></td></tr><tr class="even"><td>isAdjacent (using Array)</td><td><a href="#Node.getAdjacents">O(|E|)</a></td><td><a href="#Matrix.getAdjacents">O(1)</a></td></tr><tr class="odd"><td>isAdjacent (using HashSet)</td><td>O(1)</td><td><a href="#Matrix.getAdjacents">O(1)</a></td></tr></tbody></table>
 
-<a href="#Graphs-Basics" class="headerlink" title="Graphs Basics"></a>Graphs Basics
------------------------------------------------------------------------------------
+## <a href="#Graphs-Basics" class="headerlink" title="Graphs Basics"></a>Graphs Basics
 
 Before we dive into interesting graph algorithms, let’s first clarify the naming conventions and graph properties.
 
@@ -81,8 +75,7 @@ Not all vertices have to be connected in the graph. You might have isolated node
 
 For a complete graph, each node should have `#nodes - 1` edges. In the previous example, we have seven vertices, so each node has six edges.
 
-<a href="#Graph-Applications" class="headerlink" title="Graph Applications"></a>Graph Applications
---------------------------------------------------------------------------------------------------
+## <a href="#Graph-Applications" class="headerlink" title="Graph Applications"></a>Graph Applications
 
 When edges have values/cost assigned to them, we say we have a **weighted graph**. If the weight is absent, we can assume it’s 1.
 
@@ -90,40 +83,39 @@ When edges have values/cost assigned to them, we say we have a **weighted graph*
 
 Weighted graphs have many applications depending on the domain where you need to solve a problem. To name a few:
 
--   Airline Traffic (image above)
+- Airline Traffic (image above)
 
-    -   Node/vertex = Airport
-    -   Edges = direct flights between two airports
-    -   Weight = miles between two airports
+  - Node/vertex = Airport
+  - Edges = direct flights between two airports
+  - Weight = miles between two airports
 
--   GPS Navigation
+- GPS Navigation
 
-    -   Node = road intersection
-    -   Edge = road
-    -   Weight = time required to go from one intersection to another
+  - Node = road intersection
+  - Edge = road
+  - Weight = time required to go from one intersection to another
 
--   Networks routing
+- Networks routing
 
-    -   Node = server
-    -   Edge = data link
-    -   Weight = connection speed
+  - Node = server
+  - Edge = data link
+  - Weight = connection speed
 
 In general, graphs have many real-world applications like:
 
--   Electronic circuits
--   Flight reservations
--   Driving directions
--   Telcom: Cell tower frequency planning
--   Social networks. E.g., Facebook uses a graph for suggesting friends
--   Recommendations: Amazon/Netflix uses graphs to make suggestions for products/movies
--   Graphs help to plan the logistics of delivering goods
+- Electronic circuits
+- Flight reservations
+- Driving directions
+- Telcom: Cell tower frequency planning
+- Social networks. E.g., Facebook uses a graph for suggesting friends
+- Recommendations: Amazon/Netflix uses graphs to make suggestions for products/movies
+- Graphs help to plan the logistics of delivering goods
 
 ![](/images/map-graph.jpg "Graph applications: pathfinder")
 
 We just learned the basics of graphs and some applications. Let’s cover how to represent graphs in JavaScript.
 
-<a href="#Representing-graphs" class="headerlink" title="Representing graphs"></a>Representing graphs
------------------------------------------------------------------------------------------------------
+## <a href="#Representing-graphs" class="headerlink" title="Representing graphs"></a>Representing graphs
 
 There are two primary ways of representing a graph:
 
@@ -160,13 +152,13 @@ It’s important to notice that the adjacency matrix will **always** be symmetri
 
 What is the time complexity of finding connections of two vertices?
 
-> Querying if two nodes are connected in an adjacency matrix takes a constant time or *O(1)*.
+> Querying if two nodes are connected in an adjacency matrix takes a constant time or _O(1)_.
 
 <span id="Matrix.space"></span>
 
 What is the space complexity?
 
-> Storing a graph as an adjacency matrix has a space complexity of *O(n<sup>2</sup>)*, where `n` is the number of vertices. Also, represented as *O(|V|<sup>2</sup>)*
+> Storing a graph as an adjacency matrix has a space complexity of _O(n<sup>2</sup>)_, where `n` is the number of vertices. Also, represented as _O(|V|<sup>2</sup>)_
 
 <span id="Matrix.addVertex"></span>
 
@@ -174,7 +166,7 @@ What is the runtime to add a vertex?
 
 The vertices are stored as a *`V`*x*`V`* matrix. So, every time a vertex is added, the matrix needs to be reconstructed to a *`V+1`*x*`V+1`*.
 
-> Adding a vertex on an adjacency matrix is *O(|V|<sup>2</sup>)*
+> Adding a vertex on an adjacency matrix is _O(|V|<sup>2</sup>)_
 
 <span id="Matrix.getAdjacents"></span>
 
@@ -190,7 +182,7 @@ b - - 1 - -</code></pre></td></tr></tbody></table>
 
 We have to visit all nodes so,
 
-> Getting adjacent nodes on an adjacency matrix is *O(|V|)*
+> Getting adjacent nodes on an adjacency matrix is _O(|V|)_
 
 Imagine that you need to represent the Facebook network as a graph. You would have to create a matrix of 2 billion x 2 billion, where most of it would be empty! Nobody would know everybody else, just a few thousand at most.
 
@@ -216,16 +208,15 @@ d -&gt; { b c }</code></pre></td></tr></tbody></table>
 
 As you can imagine, if you want to know if a node is connected to another node, you would have to go through the list.
 
-> Querying if two nodes are connected in an adjacency list is *O(n)*, where `n` is the number of vertices. Also represented as *O(|V|)*
+> Querying if two nodes are connected in an adjacency list is _O(n)_, where `n` is the number of vertices. Also represented as _O(|V|)_
 
 <span id="List.space"></span>
 
 What about space complexity?
 
-> Storing a graph as an adjacency list has a space complexity of *O(n)*, where `n` is the sum of vertices and edges. Also, represented as *O(|V| + |E|)*
+> Storing a graph as an adjacency list has a space complexity of _O(n)_, where `n` is the sum of vertices and edges. Also, represented as _O(|V| + |E|)_
 
-<a href="#Adjacency-List-Graph-HashMap-Implementation" class="headerlink" title="Adjacency List Graph HashMap Implementation"></a>Adjacency List Graph HashMap Implementation
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## <a href="#Adjacency-List-Graph-HashMap-Implementation" class="headerlink" title="Adjacency List Graph HashMap Implementation"></a>Adjacency List Graph HashMap Implementation
 
 The adjacency list is the most common way of representing graphs. There are several ways to implement the adjacency list:
 
@@ -247,17 +238,16 @@ Adjacency List as a Hashmap
 
 Graph usually needs the following operations:
 
--   Add and remove vertices
--   Add and remove edges
+- Add and remove vertices
+- Add and remove edges
 
 Adding and removing vertices involves updating the adjacency list.
 
 Let’s say that we want to remove the vertex `b`. We could do `delete graph['b'];`. However, we still have to remove the references on the adjacency list on `d` and `a`.
 
-Every time we remove a node, we would have to iterate through all the nodes’ list *O(|V| + |E|)*. Can we do better? We will answer that soon, but first, let’s \*implement our list in a more object-oriented way to swap implementations easily.
+Every time we remove a node, we would have to iterate through all the nodes’ list _O(|V| + |E|)_. Can we do better? We will answer that soon, but first, let’s \*implement our list in a more object-oriented way to swap implementations easily.
 
-<a href="#Adjacency-List-Graph-OO-Implementation" class="headerlink" title="Adjacency List Graph OO Implementation"></a>Adjacency List Graph OO Implementation
---------------------------------------------------------------------------------------------------------------------------------------------------------------
+## <a href="#Adjacency-List-Graph-OO-Implementation" class="headerlink" title="Adjacency List Graph OO Implementation"></a>Adjacency List Graph OO Implementation
 
 Let’s start with the `Node` class that holds the vertex’s value and adjacent vertices. We can also have helper functions for adding and removing adjacent nodes from the list.
 
@@ -296,28 +286,28 @@ Node[Commented Code](https://github.com/amejiarosario/dsa.js/blob/master/src/dat
     this.adjacents = []; // adjacency list
   }
 
-  addAdjacent(node) {
-    this.adjacents.push(node);
-  }
+addAdjacent(node) {
+this.adjacents.push(node);
+}
 
-  removeAdjacent(node) {
-    const index = this.adjacents.indexOf(node);
-    if(index &gt; -1) {
-      this.adjacents.splice(index, 1);
-      return node;
-    }
-  }
+removeAdjacent(node) {
+const index = this.adjacents.indexOf(node);
+if(index &gt; -1) {
+this.adjacents.splice(index, 1);
+return node;
+}
+}
 
-  getAdjacents() {
-    return this.adjacents;
-  }
+getAdjacents() {
+return this.adjacents;
+}
 
-  isAdjacent(node) {
-    return this.adjacents.indexOf(node) &gt; -1;
-  }
+isAdjacent(node) {
+return this.adjacents.indexOf(node) &gt; -1;
+}
 }</code></pre></td></tr></tbody></table>
 
-Notice that `adjacent` runtime is *O(1)*, while `remove adjacent` is *O(|E|)*. What if, instead of an array, use a HashSet 🧐? It could be *O(1)*. But, let first get it working, and later we can make it faster.
+Notice that `adjacent` runtime is _O(1)_, while `remove adjacent` is _O(|E|)_. What if, instead of an array, use a HashSet 🧐? It could be _O(1)_. But, let first get it working, and later we can make it faster.
 
 > Make it work. Make it right. Make it faster.
 
@@ -372,18 +362,18 @@ Graph.addEdge[Full Code](https://github.com/amejiarosario/dsa.js/blob/master/src
   const sourceNode = this.addVertex(source);
   const destinationNode = this.addVertex(destination);
 
-  sourceNode.addAdjacent(destinationNode);
+sourceNode.addAdjacent(destinationNode);
 
-  if(this.edgeDirection === Graph.UNDIRECTED) {
-    destinationNode.addAdjacent(sourceNode);
-  }
+if(this.edgeDirection === Graph.UNDIRECTED) {
+destinationNode.addAdjacent(sourceNode);
+}
 
-  return [sourceNode, destinationNode];
+return [sourceNode, destinationNode];
 }</code></pre></td></tr></tbody></table>
 
 We add an edge from the source vertex to the destination. If we have an undirected graph, we also add from target node to source since it’s bidirectional.
 
-> The runtime of adding an edge from a graph adjacency list is: *O(1)*
+> The runtime of adding an edge from a graph adjacency list is: _O(1)_
 
 If we try to add an edge and the nodes don’t exist, we need to create them first. Let’s do that next!
 
@@ -415,7 +405,7 @@ Graph.addVertex[Full Code](https://github.com/amejiarosario/dsa.js/blob/master/s
 
 If the node already exists, we don’t want to overwrite it. So, we first check if it already exists, and if it doesn’t, then we create it.
 
-> The runtime of adding a vertex from a graph adjacency list is: *O(1)*
+> The runtime of adding a vertex from a graph adjacency list is: _O(1)_
 
 <span id="Graph.removeVertex"></span>
 
@@ -445,7 +435,7 @@ Graph.removeVertex[Full Code](https://github.com/amejiarosario/dsa.js/blob/maste
 
 We have to go through each vertex and then each adjacent node (edges).
 
-> The runtime of removing a vertex from a graph adjacency list is *O(|V| + |E|)*
+> The runtime of removing a vertex from a graph adjacency list is _O(|V| + |E|)_
 
 Finally, let’s remove implement removing an edge!
 
@@ -474,30 +464,30 @@ Graph.removeVertex[Full Code](https://github.com/amejiarosario/dsa.js/blob/maste
   const sourceNode = this.nodes.get(source);
   const destinationNode = this.nodes.get(destination);
 
-  if(sourceNode &amp;&amp; destinationNode) {
-    sourceNode.removeAdjacent(destinationNode);
+if(sourceNode &amp;&amp; destinationNode) {
+sourceNode.removeAdjacent(destinationNode);
 
     if(this.edgeDirection === Graph.UNDIRECTED) {
       destinationNode.removeAdjacent(sourceNode);
     }
-  }
 
-  return [sourceNode, destinationNode];
+}
+
+return [sourceNode, destinationNode];
 }</code></pre></td></tr></tbody></table>
 
 The main difference between `addEdge` and `removeEdge` is that:
 
--   If the vertices don’t exist, we won’t create them.
--   We use `Node.removeAdjacent` instead of `Node.addAdjacent`.
+- If the vertices don’t exist, we won’t create them.
+- We use `Node.removeAdjacent` instead of `Node.addAdjacent`.
 
 Since `removeAdjacent` has to go through all the adjacent vertices, we have the following runtime:
 
-> The runtime of removing an edge from a graph adjacency list is *O(|E|)*
+> The runtime of removing an edge from a graph adjacency list is _O(|E|)_
 
 We are going to explore how to search for values from a node.
 
-<a href="#Breadth-first-search-BFS-Graph-search" class="headerlink" title="Breadth-first search (BFS) - Graph search"></a>Breadth-first search (BFS) - Graph search
--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## <a href="#Breadth-first-search-BFS-Graph-search" class="headerlink" title="Breadth-first search (BFS) - Graph search"></a>Breadth-first search (BFS) - Graph search
 
 Breadth-first search is a way to navigate a graph from an initial vertex by visiting all the adjacent nodes first.
 
@@ -525,16 +515,16 @@ Graph.bfs[Full Code](https://github.com/amejiarosario/dsa.js/blob/master/src/dat
   const visited = new Map();
   const visitList = new Queue();
 
-  visitList.add(first);
+visitList.add(first);
 
-  while(!visitList.isEmpty()) {
-    const node = visitList.remove();
-    if(node &amp;&amp; !visited.has(node)) {
-      yield node;
-      visited.set(node);
-      node.getAdjacents().forEach(adj =&gt; visitList.add(adj));
-    }
-  }
+while(!visitList.isEmpty()) {
+const node = visitList.remove();
+if(node &amp;&amp; !visited.has(node)) {
+yield node;
+visited.set(node);
+node.getAdjacents().forEach(adj =&gt; visitList.add(adj));
+}
+}
 }</code></pre></td></tr></tbody></table>
 
 As you can see, we are using a `Queue` where the first node is also the first node to be visited (FIFO). You can find the [Queue implementation here](https://github.com/amejiarosario/dsa.js-data-structures-algorithms-javascript/blob/5628a2772513a05ceb3f088976b81914c9951fd2/src/data-structures/queues/queue.js#L47).
@@ -583,8 +573,7 @@ bfsFromFirst.next().value.value; // 4
 
 You can find more illustrations of usage in the [test cases](https://github.com/amejiarosario/dsa.js/blob/master/src/data-structures/graphs/graph.spec.js). Let’s move on to the DFS!
 
-<a href="#Depth-first-search-DFS-Graph-search" class="headerlink" title="Depth-first search (DFS)  - Graph search"></a>Depth-first search (DFS) - Graph search
---------------------------------------------------------------------------------------------------------------------------------------------------------------
+## <a href="#Depth-first-search-DFS-Graph-search" class="headerlink" title="Depth-first search (DFS)  - Graph search"></a>Depth-first search (DFS) - Graph search
 
 Depth-first search is another way to navigate a graph from an initial vertex by recursively the first adjacent node of each vertex found.
 
@@ -614,16 +603,16 @@ Graph.dfs[Full Code](https://github.com/amejiarosario/dsa.js/blob/master/src/dat
   const visited = new Map();
   const visitList = new Stack();
 
-  visitList.add(first);
+visitList.add(first);
 
-  while(!visitList.isEmpty()) {
-    const node = visitList.remove();
-    if(node &amp;&amp; !visited.has(node)) {
-      yield node;
-      visited.set(node);
-      node.getAdjacents().forEach(adj =&gt; visitList.add(adj));
-    }
-  }
+while(!visitList.isEmpty()) {
+const node = visitList.remove();
+if(node &amp;&amp; !visited.has(node)) {
+yield node;
+visited.set(node);
+node.getAdjacents().forEach(adj =&gt; visitList.add(adj));
+}
+}
 }</code></pre></td></tr></tbody></table>
 
 We can test our graph as follow.
@@ -662,8 +651,7 @@ console.log(values); // [1, 4, 8, 3, 7, 6, 10, 2, 5, 9]</code></pre></td></tr></
 
 As you can see, the graph is the same on BFS and DFS. However, the order of how the nodes were visited is very different. BFS went from 1 to 10 in that order, while DFS went as deep as it could on each node.
 
-<a href="#Graph-Time-and-Space-Complexity" class="headerlink" title="Graph Time and Space Complexity"></a>Graph Time and Space Complexity
------------------------------------------------------------------------------------------------------------------------------------------
+## <a href="#Graph-Time-and-Space-Complexity" class="headerlink" title="Graph Time and Space Complexity"></a>Graph Time and Space Complexity
 
 We have seen some of the basic operations of a Graph. How to add and remove vertices and edges. Here’s a summary of what we have covered so far:
 
@@ -671,8 +659,7 @@ We have seen some of the basic operations of a Graph. How to add and remove vert
 
 As you can see, an adjacency list is faster in almost all operations. The only action that the adjacency matrix will outperform the adjacency list is checking if a node is adjacent to another. However, if we change our implementation from Array to a HashSet, we can get it in constant time.
 
-<a href="#Summary" class="headerlink" title="Summary"></a>Summary
------------------------------------------------------------------
+## <a href="#Summary" class="headerlink" title="Summary"></a>Summary
 
 As we saw, Graphs can help to model many real-life scenarios such as airports, social networks, the internet, and so on. We covered some of the most fundamental algorithms, such as Breadth-First Search (BFS) and Depth-First Search (DFS). Also, we studied implementation trade-offs such as adjacency lists and matrix. Subscribe to my newsletter and don’t miss any of my posts because there are many other applications that we will learn soon, such as finding the shortest path between nodes and different exciting graph algorithms!
 
@@ -680,11 +667,9 @@ As we saw, Graphs can help to model many real-life scenarios such as airports, s
 
 Thanks for reading this far. Here are some things you can do next:
 
--   Found a typo? [Edit this post](https://github.com/amejiarosario/amejiarosario.github.io/edit/source/source/_posts/2018-06-12-Data-Structures-for-Beginners-Graphs-Time-Complexity-tutorial.md).
--   Got questions? [comment](#comments-section) below.
--   Was it useful? Show your support and share it.
-
-
+- Found a typo? [Edit this post](https://github.com/amejiarosario/amejiarosario.github.io/edit/source/source/_posts/2018-06-12-Data-Structures-for-Beginners-Graphs-Time-Complexity-tutorial.md).
+- Got questions? [comment](#comments-section) below.
+- Was it useful? Show your support and share it.
 
 <a href="/Data-Structures-for-Beginners-Trees-binary-search-tree-tutorial/" class="article-nav-newer"><strong><em></em> newer</strong></a>
 
@@ -696,18 +681,9 @@ Data Structures in JavaScript: Arrays, HashMaps, and Lists
 
 Subscribe & stay up to date!
 
- 
 
 
-
-
-
-
-
-
-
-tutorial algorithms Series
-==========================
+# tutorial algorithms Series
 
 [<img src="/images/from-code-to-big-o-algorithms-small.png" width="300" height="250" />](/how-to-find-time-complexity-of-an-algorithm-code-big-o-notation/)
 
@@ -764,7 +740,3 @@ tutorial algorithms Series
 7.  <a href="#Depth-first-search-DFS-Graph-search" class="toc-link"><span class="toc-number">7.</span> <span class="toc-text">Depth-first search (DFS) - Graph search</span></a>
 8.  <a href="#Graph-Time-and-Space-Complexity" class="toc-link"><span class="toc-number">8.</span> <span class="toc-text">Graph Time and Space Complexity</span></a>
 9.  <a href="#Summary" class="toc-link"><span class="toc-number">9.</span> <span class="toc-text">Summary</span></a>
-
-
-
-

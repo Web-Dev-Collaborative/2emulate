@@ -1,15 +1,10 @@
-
-
-
-
 <a href="/categories/coding/" class="category-link">Coding</a>
 
-How to scale a Nodejs app based on number of users
-==================================================
+# How to scale a Nodejs app based on number of users
 
 <span title="Last time this post was updated"> Last updated March 23rd 2016 </span> <span class="m-x-2" title="Pageviews"> 42.2k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/how-to-scale-a-nodejs-app-based-on-number-of-users/">0</span>](#disqus_thread) </span>
 
--   <a href="/tags/scaling/" class="tag-list-link">scaling</a><span class="tag-list-count">2</span>
+- <a href="/tags/scaling/" class="tag-list-link">scaling</a><span class="tag-list-count">2</span>
 
 ![How to scale a Nodejs app based on number of users](/images/scalabilty_matryoshka_large.png)
 
@@ -25,15 +20,13 @@ The examples and solutions will be as practical as possible. We might use refere
 
 You may notice, that the measurement we are using is “concurrent user”, which means all users are hitting the web app at the same time. It’s different from the number of users supported (which might be higher) since it’s unlikely that all users are hitting the app at the same time. However, we are going to use “concurrent user” since it’s easier to explain.
 
-<a href="#Local-host-1-concurrent-users" class="headerlink" title="Local host (1 concurrent users)"></a>Local host (1 concurrent users)
----------------------------------------------------------------------------------------------------------------------------------------
+## <a href="#Local-host-1-concurrent-users" class="headerlink" title="Local host (1 concurrent users)"></a>Local host (1 concurrent users)
 
 You are the only one using your app on your localhost.
 
 There is no need to worry about scale.
 
-<a href="#Single-Server-2-9-concurrent-users" class="headerlink" title="Single Server (2 - 9 concurrent users)"></a>Single Server (2 - 9 concurrent users)
-----------------------------------------------------------------------------------------------------------------------------------------------------------
+## <a href="#Single-Server-2-9-concurrent-users" class="headerlink" title="Single Server (2 - 9 concurrent users)"></a>Single Server (2 - 9 concurrent users)
 
 You deployed your app to the wild! 👏🏻 You and your colleges (and maybe close friends) are the only users so far.
 
@@ -45,8 +38,7 @@ Your app should be a monolith (single app) right now, and it’s fine. No need t
 
 The “Single Server Setup” is the simplest. Web application and database share the same resources (CPU, Memory RAM, I/O).
 
-<a href="#Vertical-Scaling-10-99-concurrent-users" class="headerlink" title="Vertical Scaling (10 - 99 concurrent users)"></a>Vertical Scaling (10 - 99 concurrent users)
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## <a href="#Vertical-Scaling-10-99-concurrent-users" class="headerlink" title="Vertical Scaling (10 - 99 concurrent users)"></a>Vertical Scaling (10 - 99 concurrent users)
 
 You decided to talk about your app in your social networks 👍🏻. Your friends from Facebook and other social network start clicking the link to your web app at once and you are getting around 100 users.
 
@@ -58,11 +50,10 @@ If you are using AWS, you might upgrade to a t2.medium or equivalent (2 CPU / 4 
 
 This setup has several improvements over the previous one:
 
--   Nginx takes care of users requests and accomplish two functions: static filers server and reverse proxy. It serve by itself all static files (CSS, JS, Images) without touching the web app. The request that needs the app to resolve are redirected it, this is called reverse proxy.
--   Zero-downtime upgrades.
+- Nginx takes care of users requests and accomplish two functions: static filers server and reverse proxy. It serve by itself all static files (CSS, JS, Images) without touching the web app. The request that needs the app to resolve are redirected it, this is called reverse proxy.
+- Zero-downtime upgrades.
 
-<a href="#Horizontal-Scaling-100-999-concurrent-users" class="headerlink" title="Horizontal Scaling (100 - 999 concurrent users)"></a>Horizontal Scaling (100 - 999 concurrent users)
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## <a href="#Horizontal-Scaling-100-999-concurrent-users" class="headerlink" title="Horizontal Scaling (100 - 999 concurrent users)"></a>Horizontal Scaling (100 - 999 concurrent users)
 
 Looks like the hard work has paid off and your app continue growing to around 1,000 users! 🙌🏻
 
@@ -78,21 +69,20 @@ Vertical scaling has another issue: all your eggs are in one basket. If the serv
 
 At this point, it’s better to start scaling horizontally rather than vertically. The bottleneck is most likely on the database. So, we can:
 
--   Move the database to a different server and scale it independently
--   Add replica set if the database hits its limit and db caching if it makes sense.
+- Move the database to a different server and scale it independently
+- Add replica set if the database hits its limit and db caching if it makes sense.
 
 Since the Node is very efficient, it will spend most of the time waiting for the database to return data. So, the main limitation will be dictated by the network limits. You might need to play also with `/etc/security/limits.d` and `/etc/sysctl.conf` based on your needs. For instance the maximum number of requests queued are determined by `net.core.somaxconn`, which defaults to 128. Change it to `1024` so we can meet the 100 - 999 range of users. From now on, let’s handle 1000 users per application server.
 
-<a href="#Multi-servers-1-000-concurrent-users" class="headerlink" title="Multi-servers (1,000+ concurrent users)"></a>Multi-servers (1,000+ concurrent users)
---------------------------------------------------------------------------------------------------------------------------------------------------------------
+## <a href="#Multi-servers-1-000-concurrent-users" class="headerlink" title="Multi-servers (1,000+ concurrent users)"></a>Multi-servers (1,000+ concurrent users)
 
 The app keeps growing and now we need to prepare to support around 10k users!
 
 We can improve our previous setup, as follows:
 
--   Add load balancer (e.g. ELB) and add app units.
--   Use multiple availability zones (AZ) in a region (e.g. us-east-1, us-west-1), which one are connected through low latency links.
--   Split static files to different server/service for easier maintenance. (e.g. AWS S3 and CloudFront CDN). Add CDN for static files for optimizing cross-origin performance and lower the latency. You can store assets such as Javascript, CSS, images, videos, and so on.
+- Add load balancer (e.g. ELB) and add app units.
+- Use multiple availability zones (AZ) in a region (e.g. us-east-1, us-west-1), which one are connected through low latency links.
+- Split static files to different server/service for easier maintenance. (e.g. AWS S3 and CloudFront CDN). Add CDN for static files for optimizing cross-origin performance and lower the latency. You can store assets such as Javascript, CSS, images, videos, and so on.
 
 Using Elastic Load Balancer (ELB) with Route 53 is Amazon AWS specific, but there are similar solutions for other clouds providers. ELB is a load balancer managed by AWS and is available in all existing AZ. ELB has health checks so it won’t route to a failing host. It also can manage around 1000s instances.
 
@@ -100,13 +90,12 @@ Using Elastic Load Balancer (ELB) with Route 53 is Amazon AWS specific, but ther
 
 In this server setup, we started growing horizontally rather than vertically. In other words, we separated web application from database and scale each one with multiple instances. There are several advantages of having the database in a different server than the app:
 
--   Application and database doesn’t fight for the same resources.
--   We can scale each tier (app, db) independently to as many as we need.
+- Application and database doesn’t fight for the same resources.
+- We can scale each tier (app, db) independently to as many as we need.
 
 The cons is that getting this setup is more complicated. Furthermore, since app and db are not in the same server performance issues might arise due to network latency or bandwidth limits. It maximize performance, it’s recommended to use private networks with low latency and high speed links.
 
-<a href="#Microservices-100-000-concurrent-users" class="headerlink" title="Microservices (100,000+ concurrent users)"></a>Microservices (100,000+ concurrent users)
---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## <a href="#Microservices-100-000-concurrent-users" class="headerlink" title="Microservices (100,000+ concurrent users)"></a>Microservices (100,000+ concurrent users)
 
 This is it! We need to plan the infrastructure to allow us to grow to infinity! ∞
 
@@ -118,8 +107,7 @@ It’s time to take down our web app monolith and break it down into multiple sm
 
 If you notice, we have three new components that can scale independently as needed: Users, Products Catalog, and Orders for instance. Another advantages of having microservices is that we can have split the database as well.
 
-<a href="#Automate-Chores-1-000-000-concurrent-users" class="headerlink" title="Automate Chores (1,000,000+ concurrent users)"></a>Automate Chores (1,000,000+ concurrent users)
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## <a href="#Automate-Chores-1-000-000-concurrent-users" class="headerlink" title="Automate Chores (1,000,000+ concurrent users)"></a>Automate Chores (1,000,000+ concurrent users)
 
 OMG! That’s so many people, get you champagne bottle out and celebrate 🎉after you automate!
 
@@ -139,11 +127,9 @@ For more general guidelines [read my previous post](/blog/2016/01/09/how-to-buil
 
 Thanks for reading this far. Here are some things you can do next:
 
--   Found a typo? [Edit this post](https://github.com/amejiarosario/amejiarosario.github.io/edit/source/source/_posts/2016-03-23-how-to-scale-a-nodejs-app-based-on-number-of-users.markdown).
--   Got questions? [comment](#comments-section) below.
--   Was it useful? Show your support and share it.
-
-
+- Found a typo? [Edit this post](https://github.com/amejiarosario/amejiarosario.github.io/edit/source/source/_posts/2016-03-23-how-to-scale-a-nodejs-app-based-on-number-of-users.markdown).
+- Got questions? [comment](#comments-section) below.
+- Was it useful? Show your support and share it.
 
 <a href="/creating-custom-angularjs-directives-for-beginners/" class="article-nav-newer"><strong><em></em> newer</strong></a>
 
@@ -154,14 +140,6 @@ Creating custom AngularJS directives for beginners
 How to build scalable apps?
 
 Subscribe & stay up to date!
-
- 
-
-
-
-
-
-
 
 
 
@@ -176,7 +154,3 @@ Subscribe & stay up to date!
 5.  <a href="#Multi-servers-1-000-concurrent-users" class="toc-link"><span class="toc-number">5.</span> <span class="toc-text">Multi-servers (1,000+ concurrent users)</span></a>
 6.  <a href="#Microservices-100-000-concurrent-users" class="toc-link"><span class="toc-number">6.</span> <span class="toc-text">Microservices (100,000+ concurrent users)</span></a>
 7.  <a href="#Automate-Chores-1-000-000-concurrent-users" class="toc-link"><span class="toc-number">7.</span> <span class="toc-text">Automate Chores (1,000,000+ concurrent users)</span></a>
-
-
-
-

@@ -1,15 +1,10 @@
-
-
-
-
 <a href="/categories/coding/" class="category-link">Coding</a>
 
-Cheap Airplay receiver with Raspberry Pi
-========================================
+# Cheap Airplay receiver with Raspberry Pi
 
 <span title="Last time this post was updated"> Last updated February 15th 2014 </span> <span class="m-x-2" title="Pageviews"> 6.8k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/cheap-airplay-receiver-with-raspberry-pi/">0</span>](#disqus_thread) </span>
 
--   <a href="/tags/raspberrypi/" class="tag-list-link">raspberrypi</a><span class="tag-list-count">1</span>
+- <a href="/tags/raspberrypi/" class="tag-list-link">raspberrypi</a><span class="tag-list-count">1</span>
 
 ![Cheap Airplay receiver with Raspberry Pi](/images/RaspiModelB.png)
 
@@ -57,8 +52,8 @@ You can also adjust the volume
 
 I tested with 2 different programs, both of them did the trick for me.
 
--   <https://github.com/juhovh/shairplay>
--   <https://github.com/abrasive/shairport>
+- <https://github.com/juhovh/shairplay>
+- <https://github.com/abrasive/shairport>
 
 The latter is more popular so I will give the instructions for that one:
 
@@ -102,11 +97,9 @@ Reboot your Pi and you are good to go! (If you have any questions you can write 
 
 Thanks for reading this far. Here are some things you can do next:
 
--   Found a typo? [Edit this post](https://github.com/amejiarosario/amejiarosario.github.io/edit/source/source/_posts/2014-02-15-cheap-airplay-receiver-with-raspberry-pi.markdown).
--   Got questions? [comment](#comments-section) below.
--   Was it useful? Show your support and share it.
-
-
+- Found a typo? [Edit this post](https://github.com/amejiarosario/amejiarosario.github.io/edit/source/source/_posts/2014-02-15-cheap-airplay-receiver-with-raspberry-pi.markdown).
+- Got questions? [comment](#comments-section) below.
+- Was it useful? Show your support and share it.
 
 <a href="/angularjs-tutorial-for-beginners-with-nodejs-expressjs-and-mongodb/" class="article-nav-newer"><strong><em></em> newer</strong></a>
 
@@ -118,16 +111,6 @@ Algorithms for dummies (Part 1): Big-O Notation and Sorting
 
 Subscribe & stay up to date!
 
- 
-
-
-
-
-
-
-
 
 
 [<span id="back-to-top" title="Go back to the top of this page"> Top </span>](#) <a href="#" class="p-x-3" title="Improve this post"><em></em> Edit this post</a>
-
-

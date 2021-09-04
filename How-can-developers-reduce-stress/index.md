@@ -1,15 +1,10 @@
-
-
-
-
 <a href="/categories/learnings/" class="category-link">Learnings</a>
 
-How can developers reduce stress
-================================
+# How can developers reduce stress
 
 <span title="Last time this post was updated"> Last updated April 30th 2019 </span> <span class="m-x-2" title="Pageviews"> 2.6k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/How-can-developers-reduce-stress/">0</span>](#disqus_thread) </span>
 
--   <a href="/tags/productivity/" class="tag-list-link">productivity</a><span class="tag-list-count">4</span>
+- <a href="/tags/productivity/" class="tag-list-link">productivity</a><span class="tag-list-count">4</span>
 
 ![How can developers reduce stress](/images/how-to-deal-with-stress-large.jpg)
 
@@ -17,15 +12,13 @@ Most professions nowadays involve a certain degree of stress. We have deadlines,
 
 <span id="more"></span>
 
-<a href="#Background" class="headerlink" title="Background"></a>Background
---------------------------------------------------------------------------
+## <a href="#Background" class="headerlink" title="Background"></a>Background
 
 There was a time in my life, back in 2015, where I went through severe stress crisis. I was juggling too many things at once: writing my first book, traveling to the USA interviewing for new jobs, getting a work visa, and planning a wedding while keeping up with a full-time job and also the sole programmer on two attempts of startups. It was the busiest time of my life, and my health suffered a lot! I dreamt about source code. Some nights I couldn’t sleep, so I worked instead. I went to the ER multiple times with heart palpitations. I knew I could not keep living in that way.
 
 I’ve been experimenting with different things to see helped and what not. This post is a compilation of the ones that helped. I’ll start with general things that applies to anybody working in front of a computer and end with some more specific tips for web and software developers.
 
-<a href="#Ideas-to-handle-stress" class="headerlink" title="Ideas to handle stress"></a>Ideas to handle stress
---------------------------------------------------------------------------------------------------------------
+## <a href="#Ideas-to-handle-stress" class="headerlink" title="Ideas to handle stress"></a>Ideas to handle stress
 
 I’ve been incorporating the following techniques and it had helped me a lot to cope with stress! Hope they can help you, too!
 
@@ -43,32 +36,30 @@ The 25/5 minutes of work/break is also known as the Pomodoro technique. There ar
 
 **Note** : working out after work doesn’t compensate for a long time of uninterrupted sitting. Your muscle and pain cripples in after a couple of hours static. So, you still have to try walking around at least every hour, so your body doesn’t suffer.
 
-Apps I've used...  
+Apps I've used...
 
 **MacOs**
 
--   **[Recess](https://geo.itunes.apple.com/us/app/recess/id621451282?mt=12&app=apps)** this one of my favorite because it's the simplest and blackout the screen. It keep some [stats](https://i.imgur.com/WZfeTLy.png)
--   **[Be Focused - Timer](https://geo.itunes.apple.com/us/app/be-focused-pro-focus-timer/id961632517?mt=12&app=apps)** similar to \`Recess\` but also has a list where you can keep track of the time spend on each one.
-
-  
+- **[Recess](https://geo.itunes.apple.com/us/app/recess/id621451282?mt=12&app=apps)** this one of my favorite because it's the simplest and blackout the screen. It keep some [stats](https://i.imgur.com/WZfeTLy.png)
+- **[Be Focused - Timer](https://geo.itunes.apple.com/us/app/be-focused-pro-focus-timer/id961632517?mt=12&app=apps)** similar to \`Recess\` but also has a list where you can keep track of the time spend on each one.
 
 **iOS**
 
--   **[Forest](https://itunes.apple.com/us/app/forest-stay-focused/id866450515?mt=8)** This has a timer and some background music that could help you concentrate.
+- **[Forest](https://itunes.apple.com/us/app/forest-stay-focused/id866450515?mt=8)** This has a timer and some background music that could help you concentrate.
 
 I don't use Android/Windows very often, so if you have suggestions write it down in the comments.
 
-------------------------------------------------------------------------
+---
 
 Taking breaks can also reduce eye strain. I suffer from dry eyes from time to time. When we stare at a digital screen, we don’t blink as often causing our eyes dryness. There’s also a rule of thumb 20-20-20. It means that, every 20 minutes, you look at something of 20 feet away for 20 seconds. At one point I also notice that my eyesight was getting worse, so I also incorporated some eyes exercises during the break. That also helped with the dryness a lot!
 
 Eye exercises I've tried...
 
--   Blinking rapidly around 20 times. It helps with the dryness.
--   Extending my thumb as far and close to my eyes as I can.
--   Doing circles with thumbs while my eyes follow them. You can also look up and down, and right to left.
+- Blinking rapidly around 20 times. It helps with the dryness.
+- Extending my thumb as far and close to my eyes as I can.
+- Doing circles with thumbs while my eyes follow them. You can also look up and down, and right to left.
 
-------------------------------------------------------------------------
+---
 
 ### <a href="#Brainstorm-🧠" class="headerlink" title="Brainstorm 🧠"></a>Brainstorm 🧠
 
@@ -96,13 +87,11 @@ If you have more on your plate more than you can chew, then share with others. D
 
 When you request for help, the other person usually feels good. You are creating a bond and companionship with that person. However, don’t overdo it! Otherwise, it will have the opposite effect. Before asking for help, you should do your homework. Try to solve it yourself first, google it and struggle with the issue a little while. Write down some questions and where you got stuck (exact error messages, etc.) The other person will appreciate that you are respecting their time and that you are asking detailed questions.
 
-  
-
-------------------------------------------------------------------------
+---
 
 When we neglect our body the proper care we also can become sick which will take productivity to the floor. The following tips will help our body to cope with stress and keep the health.
 
-------------------------------------------------------------------------
+---
 
 ### <a href="#Drink-🚰" class="headerlink" title="Drink 🚰"></a>Drink 🚰
 
@@ -115,12 +104,12 @@ Another way to know if you are hydrated is monitoring how often your pee (crazy,
 Apps I've used...  
 **iOS**
 
--   [WaterMinder](https://itunes.apple.com/us/app/waterminder/id653031147?mt=8) You can track the amount of water that you drink and have reminders.
--   [Pee & See: Water Reminder](https://itunes.apple.com/us/app/pee-see-water-reminder/id1090749982?mt=8) Alternative method of measuring hydration. Instead of logging the amout of water drank you log how often you pee. If you haven't pee in 3+ hours you will get a reminder to drink more water.
+- [WaterMinder](https://itunes.apple.com/us/app/waterminder/id653031147?mt=8) You can track the amount of water that you drink and have reminders.
+- [Pee & See: Water Reminder](https://itunes.apple.com/us/app/pee-see-water-reminder/id1090749982?mt=8) Alternative method of measuring hydration. Instead of logging the amout of water drank you log how often you pee. If you haven't pee in 3+ hours you will get a reminder to drink more water.
 
 I don't use Android very often, so if you have suggestions write it down in the comments.
 
-------------------------------------------------------------------------
+---
 
 ### <a href="#Nourish-🥦" class="headerlink" title="Nourish 🥦"></a>Nourish 🥦
 
@@ -130,13 +119,13 @@ Supplement yourself with **vitamin C** & fruits. Vitamin C helps your body to qu
 
 Foods to eat more regularly...
 
--   Nuts
--   Fish
--   Vegetable of different colors
--   Leafy greens
--   Fruits
+- Nuts
+- Fish
+- Vegetable of different colors
+- Leafy greens
+- Fruits
 
-------------------------------------------------------------------------
+---
 
 ### <a href="#Stretch-🙆‍♀️" class="headerlink" title="Stretch 🙆‍♀️"></a>Stretch 🙆‍♀️
 
@@ -150,13 +139,13 @@ Move your butt often, get some sweat in your forehead. Working out releases endo
 
 Working out your muscles can help you release tension and reduce your mental stress. However, don’t overdo it or it can backfire you. Try to avoid getting injured by doing small progressive changes rather than going too big the first day and then not being able to walk nor shower.
 
-Apps I've used...  
+Apps I've used...
 
 **iOS**
 
--   **[Stronglifts 5x5 Weight Lifting](https://itunes.apple.com/us/app/stronglifts-5x5-weight-lifting/id488580022?mt=8)** I have used this program for 6 months and I have seen very good results. It's simple and have a nice tracker and videos how to do each exercise.
+- **[Stronglifts 5x5 Weight Lifting](https://itunes.apple.com/us/app/stronglifts-5x5-weight-lifting/id488580022?mt=8)** I have used this program for 6 months and I have seen very good results. It's simple and have a nice tracker and videos how to do each exercise.
 
-------------------------------------------------------------------------
+---
 
 ### <a href="#Breath-💨" class="headerlink" title="Breath 💨"></a>Breath 💨
 
@@ -174,10 +163,10 @@ Devices I've used...
 
 This one you wear it on your belt or bra. It will capture your breathing. I easily forget to wear it or I lose it. However I learn a couple of thinks wearing the device:
 
--   How is my breathing per minute when I’m stress/calm/focus. [bpm](https://i.imgur.com/GjYPPpm.png)
--   What activities stress me out [Location and time when stress](https://i.imgur.com/O71NzJb.png)
+- How is my breathing per minute when I’m stress/calm/focus. [bpm](https://i.imgur.com/GjYPPpm.png)
+- What activities stress me out [Location and time when stress](https://i.imgur.com/O71NzJb.png)
 
-------------------------------------------------------------------------
+---
 
 ### <a href="#Meditate-🧘‍♀️" class="headerlink" title="Meditate 🧘‍♀️"></a>Meditate 🧘‍♀️
 
@@ -185,22 +174,20 @@ Meditation is trending but still sounds a little strange for some people. It’s
 
 One of the best ways to be present is **being aware of your breathing**. It’s always in the present. So, the basis of meditation is mindful of your breath, and that alone can be calming.
 
-Apps I've used...  
+Apps I've used...
 
 There are many apps that you can use for helping you pick up the habit of being present and relax:
 
-  
-
 **iOS**
 
--   **[Breethe: Sleep & Meditation](https://itunes.apple.com/us/app/breethe-sleep-meditation/id920161006?mt=8)** This app has a nice series of guides for beginners. It has a lot of different topics like sleeping, concentration.
--   **[Simple Habit - Meditation](https://itunes.apple.com/us/app/simple-habit-meditation/id1093360165?mt=8)** It has a lot of different topics and also many instructors. Having different voices makes more dynamic.
--   **[Calm](https://itunes.apple.com/us/app/calm/id571800810?mt=8)** It's has a lot of free meditations and ambient music.
--   **[Headspace: Meditation](https://itunes.apple.com/us/app/headspace-meditation/id493145008?mt=8)** It has only one instructor you might get bored listening to the same person.
+- **[Breethe: Sleep & Meditation](https://itunes.apple.com/us/app/breethe-sleep-meditation/id920161006?mt=8)** This app has a nice series of guides for beginners. It has a lot of different topics like sleeping, concentration.
+- **[Simple Habit - Meditation](https://itunes.apple.com/us/app/simple-habit-meditation/id1093360165?mt=8)** It has a lot of different topics and also many instructors. Having different voices makes more dynamic.
+- **[Calm](https://itunes.apple.com/us/app/calm/id571800810?mt=8)** It's has a lot of free meditations and ambient music.
+- **[Headspace: Meditation](https://itunes.apple.com/us/app/headspace-meditation/id493145008?mt=8)** It has only one instructor you might get bored listening to the same person.
 
 I'm sure there are many other apps for this but this is the ones I've used, and they are in my order of preference.
 
-------------------------------------------------------------------------
+---
 
 ### <a href="#Play-🎮" class="headerlink" title="Play 🎮"></a>Play 🎮
 
@@ -226,10 +213,10 @@ Some people do it in the morning like Tim Ferris, I have seen a lot of benefits 
 
 Tools I've used...
 
--   **[Rocketbook Everlast Reusable Smart Notebook](https://amzn.to/2RxM3w0)** This nice to avoid getting distracted with phone/table notifications and being able to save your notes digitally (evernote/email). [![](//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=B06ZXWVZ3X&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=adrian0ea-20)](https://www.amazon.com/gp/product/B06ZXWVZ3X/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B06ZXWVZ3X&linkCode=as2&tag=adrian0ea-20&linkId=b0e7cd8801dc03ea32af135c8222b701) <img src="//ir-na.amazon-adsystem.com/e/ir?t=adrian0ea-20&amp;l=am2&amp;o=1&amp;a=B06ZXWVZ3X" width="1" height="1" />
--   **[Rocketbook App](https://itunes.apple.com/us/app/rocketbook-app/id1036898971?mt=8)** This app allow to convert your handwriting into scanned images.
+- **[Rocketbook Everlast Reusable Smart Notebook](https://amzn.to/2RxM3w0)** This nice to avoid getting distracted with phone/table notifications and being able to save your notes digitally (evernote/email). [![](//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=B06ZXWVZ3X&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=adrian0ea-20)](https://www.amazon.com/gp/product/B06ZXWVZ3X/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B06ZXWVZ3X&linkCode=as2&tag=adrian0ea-20&linkId=b0e7cd8801dc03ea32af135c8222b701) <img src="//ir-na.amazon-adsystem.com/e/ir?t=adrian0ea-20&amp;l=am2&amp;o=1&amp;a=B06ZXWVZ3X" width="1" height="1" />
+- **[Rocketbook App](https://itunes.apple.com/us/app/rocketbook-app/id1036898971?mt=8)** This app allow to convert your handwriting into scanned images.
 
-------------------------------------------------------------------------
+---
 
 ### <a href="#Sleep-😴" class="headerlink" title="Sleep 😴"></a>Sleep 😴
 
@@ -241,24 +228,21 @@ Also, we have an idea of what happens when we don’t sleep much for a couple of
 
 Do you know having a good night sleep start during the day? For most people, it’s hard to sleep well (or at all) after a very stressful day or some big event coming up. That’s why doing breathing exercises through the day helps. Also, taking breaks every 25 or 50 minutes of work. Journaling helps me a lot to calm down my monkey mind jumping all over the place at night.
 
-Apps I've used...  
+Apps I've used...
 
 **iOS**
 
--   **[AutoSleep Tracker for Watch](https://itunes.apple.com/us/app/autosleep-tracker-for-watch/id1164801111?mt=8)** Keeps track of your sleep automatically. I used with the Apple Watch and works pretty well so far.
+- **[AutoSleep Tracker for Watch](https://itunes.apple.com/us/app/autosleep-tracker-for-watch/id1164801111?mt=8)** Keeps track of your sleep automatically. I used with the Apple Watch and works pretty well so far.
 
-------------------------------------------------------------------------
+---
 
-  
-
-------------------------------------------------------------------------
+---
 
 An Additional bonus for Software Developers
 
-------------------------------------------------------------------------
+---
 
-<a href="#Stress-management-for-Software-Developers" class="headerlink" title="Stress management for Software Developers"></a>Stress management for Software Developers
------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## <a href="#Stress-management-for-Software-Developers" class="headerlink" title="Stress management for Software Developers"></a>Stress management for Software Developers
 
 All the recommendations above could apply to anyone working at an office. In this section, we are going to give some more for people working with technology that changes very fast (like Software Developers).
 
@@ -293,11 +277,9 @@ This is what I follow:
 
 Thanks for reading this far. Here are some things you can do next:
 
--   Found a typo? [Edit this post](https://github.com/amejiarosario/amejiarosario.github.io/edit/source/source/_posts/2019-01-03-How-can-developers-reduce-stress.md).
--   Got questions? [comment](#comments-section) below.
--   Was it useful? Show your support and share it.
-
-
+- Found a typo? [Edit this post](https://github.com/amejiarosario/amejiarosario.github.io/edit/source/source/_posts/2019-01-03-How-can-developers-reduce-stress.md).
+- Got questions? [comment](#comments-section) below.
+- Was it useful? Show your support and share it.
 
 <a href="/I-got-hacked-and-It-changed-my-life-on-security-tips/" class="article-nav-newer"><strong><em></em> newer</strong></a>
 
@@ -308,14 +290,6 @@ Thanks for reading this far. Here are some things you can do next:
 Vue.js Tutorial for beginners
 
 Subscribe & stay up to date!
-
- 
-
-
-
-
-
-
 
 
 
@@ -343,7 +317,3 @@ Subscribe & stay up to date!
     1.  <a href="#Information-overload-%F0%9F%A4%AF" class="toc-link"><span class="toc-number">3.1.</span> <span class="toc-text">Information overload 🤯</span></a>
     2.  <a href="#Testing-%F0%9F%90%9E" class="toc-link"><span class="toc-number">3.2.</span> <span class="toc-text">Testing 🐞</span></a>
     3.  <a href="#Refactoring-%F0%9F%9B%A0" class="toc-link"><span class="toc-number">3.3.</span> <span class="toc-text">Refactoring 🛠</span></a>
-
-
-
-

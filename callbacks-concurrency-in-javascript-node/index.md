@@ -1,17 +1,12 @@
-
-
-
-
 <a href="/categories/coding/" class="category-link">Coding</a>
 
-Understanding JavaScript Callbacks and best practices
-=====================================================
+# Understanding JavaScript Callbacks and best practices
 
 <span title="Last time this post was updated"> Last updated July 3rd 2019 </span> <span class="m-x-2" title="Pageviews"> 6.3k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/callbacks-concurrency-in-javascript-node/">0</span>](#disqus_thread) </span>
 
--   <a href="/tags/javascript/" class="tag-list-link">javascript</a><span class="tag-list-count">5</span>
--   <a href="/tags/nodejs/" class="tag-list-link">nodejs</a><span class="tag-list-count">12</span>
--   <a href="/tags/tutorial-async-javascript/" class="tag-list-link">tutorial_async-javascript</a><span class="tag-list-count">3</span>
+- <a href="/tags/javascript/" class="tag-list-link">javascript</a><span class="tag-list-count">5</span>
+- <a href="/tags/nodejs/" class="tag-list-link">nodejs</a><span class="tag-list-count">12</span>
+- <a href="/tags/tutorial-async-javascript/" class="tag-list-link">tutorial_async-javascript</a><span class="tag-list-count">3</span>
 
 ![Understanding JavaScript Callbacks and best practices](/images/callbacks-concurrency-in-javascript-large.png)
 
@@ -23,7 +18,7 @@ This post assumes you know the [difference between synchronous and asynchronous 
 
 JavaScript is an event-driven language. Instead of waiting for things to happen, it executes while listening for events. The way you respond to an event is using callbacks.
 
-------------------------------------------------------------------------
+---
 
 **Related Posts:**
 
@@ -31,10 +26,9 @@ JavaScript is an event-driven language. Instead of waiting for things to happen,
 2.  [JavaScript Callbacks](/callbacks-concurrency-in-javascript-node/) (this one)
 3.  [JavaScript Promises](/promises-tutorial-concurrency-in-javascript-node/)
 
-------------------------------------------------------------------------
+---
 
-<a href="#JavaScript-callbacks" class="headerlink" title="JavaScript callbacks"></a>JavaScript callbacks
---------------------------------------------------------------------------------------------------------
+## <a href="#JavaScript-callbacks" class="headerlink" title="JavaScript callbacks"></a>JavaScript callbacks
 
 > A callback is a function that is passed as an argument to another function.
 
@@ -51,28 +45,26 @@ An example of a callback is the following:
 const sum = (n1, n2) =&gt; n1 + n2;
 const product = (n1, n2) =&gt; n1 * n2;
 
-console.log(compute(5, 3, sum));     // ↪️  8
-console.log(compute(5, 3, product)); // ↪️  15</code></pre></td></tr></tbody></table>
+console.log(compute(5, 3, sum)); // ↪️ 8
+console.log(compute(5, 3, product)); // ↪️ 15</code></pre></td></tr></tbody></table>
 
 As you can see the function `compute` takes two numbers and a callback function. This `callback` function can be `sum`, `product` and any other that you develop that operates two numbers.
 
-<a href="#Callback-Advantages" class="headerlink" title="Callback Advantages"></a>Callback Advantages
------------------------------------------------------------------------------------------------------
+## <a href="#Callback-Advantages" class="headerlink" title="Callback Advantages"></a>Callback Advantages
 
 Callbacks can help to make your code more maintainable if you use them well. They will also help you to:
 
--   Keep your code DRY (Do Not Repeat Yourself)
--   Implement better abstraction where you can have more generic functions like `compute` that can handle all sorts of functionalities (e.g., `sum`, `product`)
--   Improve code readability and maintainability.
+- Keep your code DRY (Do Not Repeat Yourself)
+- Implement better abstraction where you can have more generic functions like `compute` that can handle all sorts of functionalities (e.g., `sum`, `product`)
+- Improve code readability and maintainability.
 
 So far, we have only seen callbacks that are executed immediately; however, most of the callbacks in JavaScript are tied to an event like a timer, API request or reading a file.
 
-<a href="#Asynchronous-callbacks" class="headerlink" title="Asynchronous callbacks"></a>Asynchronous callbacks
---------------------------------------------------------------------------------------------------------------
+## <a href="#Asynchronous-callbacks" class="headerlink" title="Asynchronous callbacks"></a>Asynchronous callbacks
 
-> An asynchronous callback is a function that is passed as an argument to another function *and gets invoke zero or multiple times after certain events happens*.
+> An asynchronous callback is a function that is passed as an argument to another function _and gets invoke zero or multiple times after certain events happens_.
 
-It’s like when your friends tell you to call them back when you arrive at the restaurant. You coming to the restaurant is the “event” that *triggers* the callback. Something similar happens in the programming world. The event could be you click a button, a file is loaded into memory, and request to a server API, and so on.
+It’s like when your friends tell you to call them back when you arrive at the restaurant. You coming to the restaurant is the “event” that _triggers_ the callback. Something similar happens in the programming world. The event could be you click a button, a file is loaded into memory, and request to a server API, and so on.
 
 Let’s see an example with two callbacks:
 
@@ -88,8 +80,7 @@ The `console.log('tick')` only gets executed when a second has passed.
 
 The functions `setInterval` and `setTimeout` callbacks are very simple. They don’t provide any parameters on the callback functions. But, if we are reading from the file system or network, we can get the response as a callback parameter.
 
-<a href="#Callback-Parameters" class="headerlink" title="Callback Parameters"></a>Callback Parameters
------------------------------------------------------------------------------------------------------
+## <a href="#Callback-Parameters" class="headerlink" title="Callback Parameters"></a>Callback Parameters
 
 The callback parameters allow you to get messages into your functions when they are available. Let’s say we are going to create a vanilla server on Node.js.
 
@@ -111,12 +102,12 @@ const port = 1777;
 const host = &#39;127.0.0.1&#39;;
 
 const proxy = http.createServer((req, res) =&gt; {
-  res.writeHead(200, { &#39;Content-Type&#39;: &#39;text/plain&#39; });
-  res.end(`Hello World from Node! You used url &quot;${req.url}&quot;\r\n`);
+res.writeHead(200, { &#39;Content-Type&#39;: &#39;text/plain&#39; });
+res.end(`Hello World from Node! You used url &quot;${req.url}&quot;\r\n`);
 });
 
 proxy.listen(port, host, () =&gt; {
-  console.log(`Server running on http://${host}:${port}`);
+console.log(`Server running on http://${host}:${port}`);
 });</code></pre></td></tr></tbody></table>
 
 We have two callbacks here. The `http.createServer`‘s callback sends the parameters (`req`)uest and (`res`)ponse every time somebody connects to the server.
@@ -127,8 +118,7 @@ You can test this server using curl (or browser)
 
 There you have it! An HTTP server that replies to everyone that connects to it using a callback. But, What would happen if there’s an error? Let’s see how to handle that next.
 
-<a href="#Handling-errors-with-Node-js-callbacks" class="headerlink" title="Handling errors with Node.js callbacks"></a>Handling errors with Node.js callbacks
---------------------------------------------------------------------------------------------------------------------------------------------------------------
+## <a href="#Handling-errors-with-Node-js-callbacks" class="headerlink" title="Handling errors with Node.js callbacks"></a>Handling errors with Node.js callbacks
 
 Some callbacks send errors on the first parameter and then the data (`callback(error, data)`). That’s very common in Node.js API. Let’s say we want to see all the directories on a given folder:
 
@@ -140,8 +130,8 @@ Some callbacks send errors on the first parameter and then the data (`callback(e
 6</code></pre></td><td><pre><code>const fs = require(&#39;fs&#39;);
 
 fs.readdir(&#39;/Users/adrian/Code&#39;, (error, files) =&gt; {
-  if (error) { console.error(error); }
-  console.log(files);
+if (error) { console.error(error); }
+console.log(files);
 });</code></pre></td></tr></tbody></table>
 
 As you notice, the first parameter will have an error message. If you run it, you would probably have the error message (unless you have the same name and directory).
@@ -188,12 +178,12 @@ So that’s how you handle errors, you check for that parameter. But (there’s 
 const dir = &#39;/Users/adrian/Code&#39;;
 
 function printFilesSize(basePath) {
-  fs.readdir(basePath, (err, files) =&gt; {
-    if (err) {
-      console.log(`Error finding files: ${err}`);
-    } else {
-      files.forEach((filename) =&gt; {
-        const filePath = `${basePath}/${filename}`;
+fs.readdir(basePath, (err, files) =&gt; {
+if (err) {
+console.log(`Error finding files: ${err}`);
+} else {
+files.forEach((filename) =&gt; {
+const filePath = `${basePath}/${filename}`;
 
         fs.lstat(filePath, (err, stat) =&gt; {
           if (err) { console.error(err); }
@@ -203,7 +193,8 @@ function printFilesSize(basePath) {
         });
       });
     }
-  });
+
+});
 }
 
 printFilesSize(dir);</code></pre></td></tr></tbody></table>
@@ -216,8 +207,7 @@ When callbacks are nested too many levels deep, we call this callback hell! 🔥
 
 Because they are hard to maintain, how do we fix the callback hell? Read on!
 
-<a href="#Callback-Hell-problem-and-solutions" class="headerlink" title="Callback Hell problem and solutions"></a>Callback Hell problem and solutions
------------------------------------------------------------------------------------------------------------------------------------------------------
+## <a href="#Callback-Hell-problem-and-solutions" class="headerlink" title="Callback Hell problem and solutions"></a>Callback Hell problem and solutions
 
 Callback hell is when you have too many nested callbacks.
 
@@ -279,30 +269,31 @@ Let’s fix the callback hell from `printFilesSize` keeping our code shallow and
 const dir = &#39;/Users/adrian/Code&#39;;
 
 function printFileSize(filePath) {
-  fs.lstat(filePath, (err, stat) =&gt; {
-    if (err) { console.error(err); }
-    if (stat.isFile()) {
-      console.log(filePath, stat.size.toLocaleString());
-    }
-  });
+fs.lstat(filePath, (err, stat) =&gt; {
+if (err) { console.error(err); }
+if (stat.isFile()) {
+console.log(filePath, stat.size.toLocaleString());
+}
+});
 }
 
 function printFilesSize(files, basePath) {
-  files.forEach((filename) =&gt; {
-    const filePath = `${basePath}/${filename}`;
+files.forEach((filename) =&gt; {
+const filePath = `${basePath}/${filename}`;
 
     printFileSize(filePath);
-  });
+
+});
 }
 
 function printFilesSizeFromDirectory(basePath) {
-  fs.readdir(basePath, (err, files) =&gt; {
-    if (err) {
-      console.log(`Error finding files: ${err}`);
-    } else {
-      printFilesSize(files, basePath);
-    }
-  });
+fs.readdir(basePath, (err, files) =&gt; {
+if (err) {
+console.log(`Error finding files: ${err}`);
+} else {
+printFilesSize(files, basePath);
+}
+});
 }
 
 printFilesSizeFromDirectory(dir);</code></pre></td></tr></tbody></table>
@@ -311,13 +302,13 @@ The original implement had five levels of indentation, now that we modularized i
 
 Callbacks are not the only way to deal with asynchronous code. In the following post we are going to cover:
 
--   Promises
--   Async/Await
--   Generators
+- Promises
+- Async/Await
+- Generators
 
 Stay tuned!
 
-------------------------------------------------------------------------
+---
 
 **Related Posts:**
 
@@ -325,17 +316,15 @@ Stay tuned!
 2.  [JavaScript Callbacks](/callbacks-concurrency-in-javascript-node/) (this one)
 3.  [JavaScript Promises](/promises-tutorial-concurrency-in-javascript-node/)
 
-------------------------------------------------------------------------
+---
 
 ### Now, your turn!
 
 Thanks for reading this far. Here are some things you can do next:
 
--   Found a typo? [Edit this post](https://github.com/amejiarosario/amejiarosario.github.io/edit/source/source/_posts/2019-07-03-callbacks-concurrency-in-javascript-node.md).
--   Got questions? [comment](#comments-section) below.
--   Was it useful? Show your support and share it.
-
-
+- Found a typo? [Edit this post](https://github.com/amejiarosario/amejiarosario.github.io/edit/source/source/_posts/2019-07-03-callbacks-concurrency-in-javascript-node.md).
+- Got questions? [comment](#comments-section) below.
+- Was it useful? Show your support and share it.
 
 <a href="/promises-tutorial-concurrency-in-javascript-node/" class="article-nav-newer"><strong><em></em> newer</strong></a>
 
@@ -347,18 +336,9 @@ What every programmer should know about Synchronous vs. Asynchronous Code
 
 Subscribe & stay up to date!
 
- 
 
 
-
-
-
-
-
-
-
-tutorial async javascript Series
-================================
+# tutorial async javascript Series
 
 [<img src="/images/async-vs-sync-concurrency-in-javascript-small.png" width="300" height="250" />](/asynchronous-vs-synchronous-handling-concurrency-in-javascript/)
 
@@ -382,7 +362,3 @@ tutorial async javascript Series
 4.  <a href="#Callback-Parameters" class="toc-link"><span class="toc-number">4.</span> <span class="toc-text">Callback Parameters</span></a>
 5.  <a href="#Handling-errors-with-Node-js-callbacks" class="toc-link"><span class="toc-number">5.</span> <span class="toc-text">Handling errors with Node.js callbacks</span></a>
 6.  <a href="#Callback-Hell-problem-and-solutions" class="toc-link"><span class="toc-number">6.</span> <span class="toc-text">Callback Hell problem and solutions</span></a>
-
-
-
-

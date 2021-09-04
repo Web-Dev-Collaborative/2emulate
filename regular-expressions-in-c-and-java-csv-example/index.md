@@ -1,17 +1,12 @@
-
-
-
-
 <a href="/categories/coding/" class="category-link">Coding</a>
 
-Regular Expressions in C\# and Java - CSV Example
-=================================================
+# Regular Expressions in C\# and Java - CSV Example
 
 <span title="Last time this post was updated"> Last updated November 10th 2011 </span> <span class="m-x-2" title="Pageviews"> 3.1k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/regular-expressions-in-c-and-java-csv-example/">0</span>](#disqus_thread) </span>
 
--   <a href="/tags/regex/" class="tag-list-link">regex</a><span class="tag-list-count">1</span>
+- <a href="/tags/regex/" class="tag-list-link">regex</a><span class="tag-list-count">1</span>
 
-Regular expressions are used to find matches in texts. The following is a real application of Regex in C\# and Java. 
+Regular expressions are used to find matches in texts. The following is a real application of Regex in C\# and Java.
 
 <span id="more"></span>
 
@@ -25,11 +20,11 @@ You cand easily use String.Split() in C\# to get all the values. But, there are 
 
 In this case a regular expression (regex) could be use to determine if the comma is inside a quote or not.
 
- 
+
 
 C\# Example:
 
- 
+
 
         public string[] parseCSV(string line)
         {
@@ -96,17 +91,15 @@ C\# Example:
     } </pre>
     </div>
 
- 
+
 
 ### Now, your turn!
 
 Thanks for reading this far. Here are some things you can do next:
 
--   Found a typo? [Edit this post](https://github.com/amejiarosario/amejiarosario.github.io/edit/source/source/_posts/2011-11-10-regular-expressions-in-c-and-java-csv-example.md).
--   Got questions? [comment](#comments-section) below.
--   Was it useful? Show your support and share it.
-
-
+- Found a typo? [Edit this post](https://github.com/amejiarosario/amejiarosario.github.io/edit/source/source/_posts/2011-11-10-regular-expressions-in-c-and-java-csv-example.md).
+- Got questions? [comment](#comments-section) below.
+- Was it useful? Show your support and share it.
 
 <a href="/learning-algorithms-from-scratch-algorithms-for-dummies/" class="article-nav-newer"><strong><em></em> newer</strong></a>
 
@@ -118,16 +111,6 @@ git+ftp: Publish Git repository over FTP
 
 Subscribe & stay up to date!
 
- 
-
-
-
-
-
-
-
 
 
 [<span id="back-to-top" title="Go back to the top of this page"> Top </span>](#) <a href="#" class="p-x-3" title="Improve this post"><em></em> Edit this post</a>
-
-

@@ -1,15 +1,10 @@
-
-
-
-
 <a href="/categories/coding/" class="category-link">Coding</a>
 
-Getting started with Node.js modules: require, exports, imports and beyond
-==========================================================================
+# Getting started with Node.js modules: require, exports, imports and beyond
 
 <span title="Last time this post was updated"> Last updated June 28th 2019 </span> <span class="m-x-2" title="Pageviews"> 321.0k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/Getting-started-with-Node-js-modules-require-exports-imports-npm-and-beyond/">0</span>](#disqus_thread) </span>
 
--   <a href="/tags/nodejs/" class="tag-list-link">nodejs</a><span class="tag-list-count">12</span>
+- <a href="/tags/nodejs/" class="tag-list-link">nodejs</a><span class="tag-list-count">12</span>
 
 ![Getting started with Node.js modules: require, exports, imports and beyond](/images/node-modules-large.png)
 
@@ -25,13 +20,12 @@ Node modules allow you to write reusable code. You can nest them one inside anot
 
 In this section, we are going to cover how to create Node modules and each one of its components:
 
--   Require
--   Exports
--   Module (module.exports vs. export)
--   Import
+- Require
+- Exports
+- Module (module.exports vs. export)
+- Import
 
-<a href="#Require" class="headerlink" title="Require"></a>Require
------------------------------------------------------------------
+## <a href="#Require" class="headerlink" title="Require"></a>Require
 
 `require` are used to consume modules. It allows you to include modules in your programs. You can add built-in core Node.js modules, community-based modules (`node_modules`), and local modules.
 
@@ -45,8 +39,8 @@ Let’s say we want to read a file from the filesystem. Node has a core module c
 6</code></pre></td><td><pre><code>const fs = require(&#39;fs&#39;);
 
 fs.readFile(&#39;./file.txt&#39;, &#39;utf-8&#39;, (err, data) =&gt; {
-  if(err) { throw err; }
-  console.log(&#39;data: &#39;, data);
+if(err) { throw err; }
+console.log(&#39;data: &#39;, data);
 });</code></pre></td></tr></tbody></table>
 
 As you can see, we imported the “fs” module into our code. It allows us to use any function attached to it, like “readFile” and many others.
@@ -65,10 +59,10 @@ When you install node, it comes with many built-in modules. Node comes with batt
 
 Some of the most used core modules are:
 
--   [fs](https://nodejs.org/api/fs.html): Allows you to manipulate (create/read/write) files and directories.
--   [path](https://nodejs.org/api/path.html): utilities to work with files and directories paths.
--   [http](https://nodejs.org/api/http.html): create HTTP servers and clients for web development.
--   [url](https://nodejs.org/api/url.html): utilities for parsing URLs and extracting elements from it.
+- [fs](https://nodejs.org/api/fs.html): Allows you to manipulate (create/read/write) files and directories.
+- [path](https://nodejs.org/api/path.html): utilities to work with files and directories paths.
+- [http](https://nodejs.org/api/http.html): create HTTP servers and clients for web development.
+- [url](https://nodejs.org/api/url.html): utilities for parsing URLs and extracting elements from it.
 
 These you don’t have to install it, you can import them and use them in your programs.
 
@@ -76,9 +70,9 @@ These you don’t have to install it, you can import them and use them in your p
 
 NPM modules are 3rd-party modules that you can use after you install them. To name a few:
 
--   [lodash](https://www.npmjs.com/package/lodash): a collection of utility functions for manipulating arrays, objects, and strings.
--   [request](https://www.npmjs.com/package/request): HTTP client simpler to use than the built-in `http` module.
--   [express](https://www.npmjs.com/package/express): HTTP server for building websites and API. Again, simpler to use than the built-in `http` module.
+- [lodash](https://www.npmjs.com/package/lodash): a collection of utility functions for manipulating arrays, objects, and strings.
+- [request](https://www.npmjs.com/package/request): HTTP client simpler to use than the built-in `http` module.
+- [express](https://www.npmjs.com/package/express): HTTP server for building websites and API. Again, simpler to use than the built-in `http` module.
 
 These you have to install them first, like this:
 
@@ -92,8 +86,7 @@ and then you can reference them like built-in modules, but this time they are go
 
 If you can’t find a built-in or 3rd-party library that does what you want, you will have to develop it yourself. In the following sections, you are going to learn how to do that using `exports`.
 
-<a href="#Exports" class="headerlink" title="Exports"></a>Exports
------------------------------------------------------------------
+## <a href="#Exports" class="headerlink" title="Exports"></a>Exports
 
 The `exports` keyword gives you the chance to “export” your objects and methods. Let’s do an example:
 
@@ -104,8 +97,8 @@ circle.js
 3
 4</code></pre></td><td><pre><code>const PI = 3.14159265359;
 
-exports.area = radius =&gt; (radius ** 2) * PI;
-exports.circumference = radius =&gt; 2 * radius * PI;</code></pre></td></tr></tbody></table>
+exports.area = radius =&gt; (radius \*_ 2) _ PI;
+exports.circumference = radius =&gt; 2 _ radius _ PI;</code></pre></td></tr></tbody></table>
 
 In the code below, we are exporting the `area` and `circumference` functions. We defined the `PI` constant, but this is only accessible within the module. Only the elements associated with `exports` are available outside the module.
 
@@ -121,14 +114,11 @@ main.js
 6</code></pre></td><td><pre><code>const circle = require(&#39;./circle&#39;);
 
 const r = 3;
-console.log(`Circle with radius ${r} has
-  area: ${circle.area(r)};
-  circumference: ${circle.circumference(r)}`);</code></pre></td></tr></tbody></table>
+console.log(`Circle with radius ${r} has area: ${circle.area(r)}; circumference: ${circle.circumference(r)}`);</code></pre></td></tr></tbody></table>
 
 Noticed that this time we prefix the module name with `./`. That indicates that the module is a local file.
 
-<a href="#Module-Wrapper" class="headerlink" title="Module Wrapper"></a>Module Wrapper
---------------------------------------------------------------------------------------
+## <a href="#Module-Wrapper" class="headerlink" title="Module Wrapper"></a>Module Wrapper
 
 You can think of each Node.js module as a self-contained function like the following one:
 
@@ -142,7 +132,7 @@ Module Wrapper
 6</code></pre></td><td><pre><code>(function (exports, require, module, __filename, __dirname) {
   module.exports = exports = {};
 
-  // Your module code ...
+// Your module code ...
 
 });</code></pre></td></tr></tbody></table>
 
@@ -152,14 +142,13 @@ For our convenience `__filename` and `__dirname` are defined. They provide the f
 
 For instance, for our `./circle.js` module, it would be something like this:
 
--   `__filename`: `/User/adrian/code/circle.js`
+- `__filename`: `/User/adrian/code/circle.js`
 
--   `__dirname`: `/User/adrian/code`
+- `__dirname`: `/User/adrian/code`
 
 Ok, we have covered `exports`, `require`, `__filename`, and `__dirname`. The only one we haven’t covered is `module`. Let’s go for it!
 
-<a href="#Module-exports-vs-Exports" class="headerlink" title="Module.exports vs. Exports"></a>Module.exports vs. Exports
--------------------------------------------------------------------------------------------------------------------------
+## <a href="#Module-exports-vs-Exports" class="headerlink" title="Module.exports vs. Exports"></a>Module.exports vs. Exports
 
 The `module` is not global; it is local for each module. It contains metadata about a module like id, exports, parent, children, and so on.
 
@@ -201,7 +190,7 @@ To sum up, when to use `module.exports` vs `exports`:
 
 Use `exports` to:
 
--   Export named function. e.g. `exports.area`, `exports.circumference`.
+- Export named function. e.g. `exports.area`, `exports.circumference`.
 
 Use `module.exports` to:
 
@@ -209,8 +198,7 @@ Use `module.exports` to:
 
 2.  If you prefer to return a single object that exposes multiple assignments. e.g.`module.exports = {area, circumference};`
 
-<a href="#Imports" class="headerlink" title="Imports"></a>Imports
------------------------------------------------------------------
+## <a href="#Imports" class="headerlink" title="Imports"></a>Imports
 
 Starting with version 8.5.0+, Node.js supports ES modules natively with a feature flag and new file extension `*.mjs`.
 
@@ -229,11 +217,11 @@ circle.mjs
 9</code></pre></td><td><pre><code>const PI = 3.14159265359;
 
 export function area(radius) {
-  return (radius ** 2) * PI;
+return (radius \*_ 2) _ PI;
 }
 
 export function circumference(radius) {
-  return 2 * radius * PI;
+return 2 _ radius _ PI;
 }</code></pre></td></tr></tbody></table>
 
 Then, we can use import:
@@ -250,9 +238,7 @@ main.mjs
 
 const r = 3;
 
-console.log(`Circle with radius ${r} has
-  area: ${area(r)};
-  circunference: ${circumference(r)}`);</code></pre></td></tr></tbody></table>
+console.log(`Circle with radius ${r} has area: ${area(r)}; circunference: ${circumference(r)}`);</code></pre></td></tr></tbody></table>
 
 And, finally you can run it using the experimental module feature flag:
 
@@ -295,17 +281,14 @@ However, with `*.mjs` you can load both kinds of modules!
 import Cat from &#39;./cat.js&#39;;
 
 const r = 3;
-console.log(`Circle with radius ${r} has
-  area: ${area(r)};
-  circumference: ${circumference(r)}`);
+console.log(`Circle with radius ${r} has area: ${area(r)}; circumference: ${circumference(r)}`);
 
 const cat = new Cat();
 console.log(cat.makeSound());</code></pre></td></tr></tbody></table>
 
 Notice that `cat.js` is using commonJS modules.
 
-<a href="#Summary" class="headerlink" title="Summary"></a>Summary
------------------------------------------------------------------
+## <a href="#Summary" class="headerlink" title="Summary"></a>Summary
 
 We learned about how to create Node.js modules and used it in our code. Modules allow us to reuse code easily. They provide functionality that is isolated from other modules. The `require` function is used to load modules. The `exports` and `module.exports` allow us to define what parts of our code we want to expose. We also explored the difference between `module.exports` and `exports`. Finally, we took a quick pick about what’s coming up for modules using `imports`.
 
@@ -313,11 +296,9 @@ We learned about how to create Node.js modules and used it in our code. Modules 
 
 Thanks for reading this far. Here are some things you can do next:
 
--   Found a typo? [Edit this post](https://github.com/amejiarosario/amejiarosario.github.io/edit/source/source/_posts/2016-08-12-Getting-started-with-Node-js-modules-require-exports-imports-npm-and-beyond.md).
--   Got questions? [comment](#comments-section) below.
--   Was it useful? Show your support and share it.
-
-
+- Found a typo? [Edit this post](https://github.com/amejiarosario/amejiarosario.github.io/edit/source/source/_posts/2016-08-12-Getting-started-with-Node-js-modules-require-exports-imports-npm-and-beyond.md).
+- Got questions? [comment](#comments-section) below.
+- Was it useful? Show your support and share it.
 
 <a href="/Node-Package-Manager-NPM-Tutorial/" class="article-nav-newer"><strong><em></em> newer</strong></a>
 
@@ -328,14 +309,6 @@ Node Package Manager (NPM) Tutorial
 List tasks in NPM, Yarn, Grunt, Gulp and Rake
 
 Subscribe & stay up to date!
-
- 
-
-
-
-
-
-
 
 
 
@@ -355,7 +328,3 @@ Subscribe & stay up to date!
         1.  <a href="#Experimental-Flag" class="toc-link"><span class="toc-number">5.1.1.</span> <span class="toc-text">Experimental Flag</span></a>
         2.  <a href="#File-extension-mjs-vs-js-or-cjs" class="toc-link"><span class="toc-number">5.1.2.</span> <span class="toc-text">File extension .mjs vs .js (or .cjs)</span></a>
 6.  <a href="#Summary" class="toc-link"><span class="toc-number">6.</span> <span class="toc-text">Summary</span></a>
-
-
-
-

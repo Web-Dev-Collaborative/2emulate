@@ -1,22 +1,16 @@
-
-
-
-
 <a href="/categories/coding/" class="category-link">Coding</a>
 
-Overview of JavaScript ES6 features (a.k.a ECMAScript 6 and ES2015+)
-====================================================================
+# Overview of JavaScript ES6 features (a.k.a ECMAScript 6 and ES2015+)
 
 <span title="Last time this post was updated"> Last updated October 25th 2016 </span> <span class="m-x-2" title="Pageviews"> 60.7k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/Overview-of-JavaScript-ES6-features-a-k-a-ECMAScript-6-and-ES2015/">0</span>](#disqus_thread) </span>
 
--   <a href="/tags/javascript-es6/" class="tag-list-link">javascript es6</a><span class="tag-list-count">1</span>
+- <a href="/tags/javascript-es6/" class="tag-list-link">javascript es6</a><span class="tag-list-count">1</span>
 
 ![Overview of JavaScript ES6 features (a.k.a ECMAScript 6 and ES2015+)](/images/es6-core-features-overview-large.png)
 
 JavaScript has changed quite a bit in the last years. These are 12 new features that you can start using today!
 
-<a href="#JavaScript-History" class="headerlink" title="JavaScript History"></a>JavaScript History
---------------------------------------------------------------------------------------------------
+## <a href="#JavaScript-History" class="headerlink" title="JavaScript History"></a>JavaScript History
 
 The new additions to the language are called ECMAScript 6. It is also referred as ES6 or ES2015+.
 
@@ -26,8 +20,7 @@ Since JavaScript conception on 1995, it has been evolving slowly. New additions 
 
 As you can see, there are gaps of 10 and 6 years between the ES3, ES5, and ES6. The new model is to make small incremental changes every year. Instead of doing massive changes at once like happened with ES6.
 
-<a href="#Browsers-Support" class="headerlink" title="Browsers Support"></a>Browsers Support
---------------------------------------------------------------------------------------------
+## <a href="#Browsers-Support" class="headerlink" title="Browsers Support"></a>Browsers Support
 
 All modern browser and environments support ES6 already!
 
@@ -39,8 +32,7 @@ Chrome, MS Edge, Firefox, Safari, Node and many others have already built-in sup
 
 Let’s get started with ECMAScript 6!
 
-<a href="#Core-ES6-Features" class="headerlink" title="Core ES6 Features"></a>Core ES6 Features
------------------------------------------------------------------------------------------------
+## <a href="#Core-ES6-Features" class="headerlink" title="Core ES6 Features"></a>Core ES6 Features
 
 You can test all these code snippets on your browser console!
 
@@ -88,28 +80,28 @@ Because even though the if-block is not executed, the expression `var x` in line
 
 > var **hoisting**:
 
--   `var` is function scoped. It is availble in the whole function even before being declared.
--   Declarations are Hoisted. So you can use a variable before it has been declared.
--   Initializations are NOT hoisted. If you are using `var` ALWAYS declare your variables at the top.
--   After applying the rules of hoisting we can understand better what’s happening:
-    ES5
-    <table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><pre><code>1
-    2
-    3
-    4
-    5
-    6
-    7
-    8
-    9</code></pre></td><td><pre><code>var x = &#39;outer&#39;;
-    function test(inner) {
-      var x; // HOISTED DECLARATION
-      if (inner) {
-        x = &#39;inner&#39;; // INITIALIZATION NOT HOISTED
-        return x;
-      }
+- `var` is function scoped. It is availble in the whole function even before being declared.
+- Declarations are Hoisted. So you can use a variable before it has been declared.
+- Initializations are NOT hoisted. If you are using `var` ALWAYS declare your variables at the top.
+- After applying the rules of hoisting we can understand better what’s happening:
+  ES5
+  <table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><pre><code>1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9</code></pre></td><td><pre><code>var x = &#39;outer&#39;;
+  function test(inner) {
+    var x; // HOISTED DECLARATION
+    if (inner) {
+      x = &#39;inner&#39;; // INITIALIZATION NOT HOISTED
       return x;
-    }</code></pre></td></tr></tbody></table>
+    }
+    return x;
+  }</code></pre></td></tr></tbody></table>
 
 ECMAScript 2015 comes to the rescue:
 
@@ -141,10 +133,10 @@ Changing `var` for `let` makes things work as expected. If the `if` block is not
 
 > Let **hoisting** and “temporal dead zone”
 
--   In ES6, `let` will hoist the variable to the top of the block (NOT at the top of function like ES5).
--   However, referencing the variable in the block before the variable declaration results in a `ReferenceError`.
--   `let` is blocked scoped. You cannot use it before it is declared.
--   “Temporal dead zone” is the zone from the start of the block until the variable is declared.
+- In ES6, `let` will hoist the variable to the top of the block (NOT at the top of function like ES5).
+- However, referencing the variable in the block before the variable declaration results in a `ReferenceError`.
+- `let` is blocked scoped. You cannot use it before it is declared.
+- “Temporal dead zone” is the zone from the start of the block until the variable is declared.
 
 **IIFE**
 
@@ -200,8 +192,8 @@ You can also use `const` if you don’t want a variable to change at all.
 
 > Bottom line: ditch `var` for `let` and `const`.
 
--   Use `const` for all your references; avoid using `var`.
--   If you must reassign references, use `let` instead of `const`.
+- Use `const` for all your references; avoid using `var`.
+- If you must reassign references, use `let` instead of `const`.
 
 ### <a href="#Template-Literals" class="headerlink" title="Template Literals"></a>Template Literals
 
@@ -397,7 +389,7 @@ const { left, bottom } = margin();
 
 console.log(left, bottom); // 1 4</code></pre></td></tr></tbody></table>
 
-*Notice:* Line 3, we have some other ES6 features going on. We can compact `{ left: left }` to just `{ left }`. Look how much concise it is compare to the ES5 version. Isn’t that cool?
+_Notice:_ Line 3, we have some other ES6 features going on. We can compact `{ left: left }` to just `{ left }`. Look how much concise it is compare to the ES5 version. Isn’t that cool?
 
 **Destructuring for parameters matching**
 
@@ -415,10 +407,10 @@ ES5
 10</code></pre></td><td><pre><code>var user = {firstName: &#39;Adrian&#39;, lastName: &#39;Mejia&#39;};
 
 function getFullName(user) {
-  var firstName = user.firstName;
-  var lastName = user.lastName;
+var firstName = user.firstName;
+var lastName = user.lastName;
 
-  return firstName + &#39; &#39; + lastName;
+return firstName + &#39; &#39; + lastName;
 }
 
 console.log(getFullName(user)); // </code></pre></td></tr></tbody></table>
@@ -436,7 +428,7 @@ ES6
 7</code></pre></td><td><pre><code>const user = {firstName: &#39;Adrian&#39;, lastName: &#39;Mejia&#39;};
 
 function getFullName({ firstName, lastName }) {
-  return `${firstName} ${lastName}`;
+return `${firstName} ${lastName}`;
 }
 
 console.log(getFullName(user)); // </code></pre></td></tr></tbody></table>
@@ -487,8 +479,8 @@ As you can see, destructing is very useful and encourages good coding styles.
 
 > Best practices:
 
--   Use array destructing to get elements out or swap variables. It saves you from creating temporary references.
--   Don’t use array destructuring for multiple return values, instead use object destructuring
+- Use array destructing to get elements out or swap variables. It saves you from creating temporary references.
+- Don’t use array destructuring for multiple return values, instead use object destructuring
 
 ### <a href="#Classes-and-Objects" class="headerlink" title="Classes and Objects"></a>Classes and Objects
 
@@ -554,8 +546,8 @@ As we saw, both styles (ES5/6) produces the same results behind the scenes and a
 
 > Best practices:
 
--   Always use `class` syntax and avoid manipulating the `prototype` directly. Why? because it makes the code more concise and easier to understand.
--   Avoid having an empty constructor. Classes have a default constructor if one is not specified.
+- Always use `class` syntax and avoid manipulating the `prototype` directly. Why? because it makes the code more concise and easier to understand.
+- Avoid having an empty constructor. Classes have a default constructor if one is not specified.
 
 ### <a href="#Inheritance" class="headerlink" title="Inheritance"></a>Inheritance
 
@@ -588,15 +580,15 @@ ES5
     Animal.call(this, name);
   }
 
-  // prototypal inheritance
-  MyConstructor.prototype = Object.create(Animal.prototype);
-  MyConstructor.prototype.constructor = Animal;
+// prototypal inheritance
+MyConstructor.prototype = Object.create(Animal.prototype);
+MyConstructor.prototype.constructor = Animal;
 
-  MyConstructor.prototype.speak = function speak() {
-    Animal.prototype.speak.call(this);
-    console.log(this.name + &#39; roars 🦁&#39;);
-  };
-  return MyConstructor;
+MyConstructor.prototype.speak = function speak() {
+Animal.prototype.speak.call(this);
+console.log(this.name + &#39; roars 🦁&#39;);
+};
+return MyConstructor;
 })();
 
 var lion = new Lion(&#39;Simba&#39;);
@@ -605,9 +597,9 @@ lion.speak(); // Simba makes a noise.
 
 I won’t go over all details but notice:
 
--   Line 3, we explicitly call `Animal` constructor with the parameters.
--   Line 7-8, we assigned the `Lion` prototype to `Animal`‘s prototype.
--   Line 11, we call the `speak` method from the parent class `Animal`.
+- Line 3, we explicitly call `Animal` constructor with the parameters.
+- Line 7-8, we assigned the `Lion` prototype to `Animal`‘s prototype.
+- Line 11, we call the `speak` method from the parent class `Animal`.
 
 In ES6, we have a new keywords `extends` and `super` <img src="/images/superman_shield.svg" alt="superman shield" width="25" height="25" />.
 
@@ -637,7 +629,7 @@ Looks how legible this ES6 code looks compared with ES5 and they do exactly the 
 
 > Best practices:
 
--   Use the built-in way for inherintance with `extends`.
+- Use the built-in way for inherintance with `extends`.
 
 ### <a href="#Native-Promises" class="headerlink" title="Native Promises"></a>Native Promises
 
@@ -665,12 +657,12 @@ ES5
 }
 
 printAfterTimeout(&#39;Hello &#39;, 2e3, function(result){
-  console.log(result);
+console.log(result);
 
-  // nested callback
-  printAfterTimeout(result + &#39;Reader&#39;, 2e3, function(result){
-    console.log(result);
-  });
+// nested callback
+printAfterTimeout(result + &#39;Reader&#39;, 2e3, function(result){
+console.log(result);
+});
 });</code></pre></td></tr></tbody></table>
 
 We have one function that receives a callback to execute when is `done`. We have to execute it twice one after another. That’s why we called the 2nd time `printAfterTimeout` in the callback.
@@ -702,11 +694,11 @@ ES6
 }
 
 printAfterTimeout(&#39;Hello &#39;, 2e3).then((result) =&gt; {
-  console.log(result);
-  return printAfterTimeout(result + &#39;Reader&#39;, 2e3);
+console.log(result);
+return printAfterTimeout(result + &#39;Reader&#39;, 2e3);
 
 }).then((result) =&gt; {
-  console.log(result);
+console.log(result);
 });</code></pre></td></tr></tbody></table>
 
 As you can see, with promises we can use `then` to do something after another function is done. No more need to keep nesting functions.
@@ -730,11 +722,11 @@ ES5
 9</code></pre></td><td><pre><code>var _this = this; // need to hold a reference
 
 $(&#39;.btn&#39;).click(function(event){
-  _this.sendData(); // reference outer this
+\_this.sendData(); // reference outer this
 });
 
 $(&#39;.input&#39;).on(&#39;change&#39;,function(event){
-  this.sendData(); // reference outer this
+this.sendData(); // reference outer this
 }.bind(this)); // bind to outer this</code></pre></td></tr></tbody></table>
 
 You need to use a temporary `this` to reference inside a function or use `bind`. In ES6, you can use the arrow function!
@@ -778,7 +770,7 @@ for (var i = 0; i &lt; array.length; i++) {
 
 // forEach
 array.forEach(function (element) {
-  console.log(element);
+console.log(element);
 });</code></pre></td></tr></tbody></table>
 
 The ES6 for…of also allow us to do iterations.
@@ -825,8 +817,8 @@ point() // 0 -1 true</code></pre></td></tr></tbody></table>
 
 Probably yes, it’s a common pattern to check is the variable has a value or assign a default. Yet, notice there are some issues:
 
--   Line 8, we pass `0, 0` and get `0, -1`
--   Line 9, we pass `false` but get `true`.
+- Line 8, we pass `0, 0` and get `0, -1`
+- Line 9, we pass `false` but get `true`.
 
 If you have a boolean as a default parameter or set the value to zero, it doesn’t work. Do you know why??? I’ll tell you after the ES6 example ;)
 
@@ -964,8 +956,7 @@ const array3 = [false, true, null, undefined];
 
 console.log([...array1, ...array2, ...array3]);</code></pre></td></tr></tbody></table>
 
-<a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion
---------------------------------------------------------------------------
+## <a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion
 
 JavaScript has gone through a lot of changes. This article covers most of the core features that every JavaScript developer should know. Also, we cover some best practices to make your code more concise and easier to reason about.
 
@@ -975,11 +966,9 @@ If you think there are some other MUST KNOW feature let me know in the comments 
 
 Thanks for reading this far. Here are some things you can do next:
 
--   Found a typo? [Edit this post](https://github.com/amejiarosario/amejiarosario.github.io/edit/source/source/_posts/2016-10-19-Overview-of-JavaScript-ES6-features-a-k-a-ECMAScript-6-and-ES2015.md).
--   Got questions? [comment](#comments-section) below.
--   Was it useful? Show your support and share it.
-
-
+- Found a typo? [Edit this post](https://github.com/amejiarosario/amejiarosario.github.io/edit/source/source/_posts/2016-10-19-Overview-of-JavaScript-ES6-features-a-k-a-ECMAScript-6-and-ES2015.md).
+- Got questions? [comment](#comments-section) below.
+- Was it useful? Show your support and share it.
 
 <a href="/how-you-can-change-the-world-learning-data-structures-algorithms-free-online-course-tutorial/" class="article-nav-newer"><strong><em></em> newer</strong></a>
 
@@ -990,14 +979,6 @@ How you can change the world by learning Data Structures and Algorithms
 Angular Tutorial: Create a CRUD App with Angular CLI and TypeScript
 
 Subscribe & stay up to date!
-
- 
-
-
-
-
-
-
 
 
 
@@ -1021,7 +1002,3 @@ Subscribe & stay up to date!
     11. <a href="#Rest-parameters" class="toc-link"><span class="toc-number">3.11.</span> <span class="toc-text">Rest parameters</span></a>
     12. <a href="#Spread-operator" class="toc-link"><span class="toc-number">3.12.</span> <span class="toc-text">Spread operator</span></a>
 4.  <a href="#Conclusion" class="toc-link"><span class="toc-number">4.</span> <span class="toc-text">Conclusion</span></a>
-
-
-
-

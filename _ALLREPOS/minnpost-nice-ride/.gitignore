@@ -1,0 +1,20 @@
+# data
+data/mpls-stpaul.osm
+data/mpls-stpaul.osm.bz2
+
+# routino
+data-processing/routino-2.2/src/*
+data-processing/routino-2.2/xml/*
+data-processing/routino-2.2/web/bin/*
+data-processing/routino-2.2/web/data/*
+data-processing/routino-2.2/web/results/*
+data-processing/routino-2.2/web/www/*
+
+# data-processing
+shortest-track.gpx
+
+# Tile exporting
+data-processing/tiles/*/tiles
+data-processing/tiles/*/tiles-tmp
+data-processing/tiles/*/exports
+data-processing/tiles/*/cache

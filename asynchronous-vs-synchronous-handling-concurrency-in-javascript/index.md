@@ -1,17 +1,12 @@
-
-
-
-
 <a href="/categories/coding/" class="category-link">Coding</a>
 
-What every programmer should know about Synchronous vs. Asynchronous Code
-=========================================================================
+# What every programmer should know about Synchronous vs. Asynchronous Code
 
 <span title="Last time this post was updated"> Last updated July 1st 2019 </span> <span class="m-x-2" title="Pageviews"> 11.1k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/asynchronous-vs-synchronous-handling-concurrency-in-javascript/">0</span>](#disqus_thread) </span>
 
--   <a href="/tags/javascript/" class="tag-list-link">javascript</a><span class="tag-list-count">5</span>
--   <a href="/tags/nodejs/" class="tag-list-link">nodejs</a><span class="tag-list-count">12</span>
--   <a href="/tags/tutorial-async-javascript/" class="tag-list-link">tutorial_async-javascript</a><span class="tag-list-count">3</span>
+- <a href="/tags/javascript/" class="tag-list-link">javascript</a><span class="tag-list-count">5</span>
+- <a href="/tags/nodejs/" class="tag-list-link">nodejs</a><span class="tag-list-count">12</span>
+- <a href="/tags/tutorial-async-javascript/" class="tag-list-link">tutorial_async-javascript</a><span class="tag-list-count">3</span>
 
 ![What every programmer should know about Synchronous vs. Asynchronous Code](/images/async-vs-sync-concurrency-in-javascript-large.png)
 
@@ -33,7 +28,7 @@ But not everything is lost! You can use that time to perform other tasks if you 
 
 **⚠️ NOTE**: Most programs on your operating system are non-blocking so a single CPU can perform many tasks while it waits for others to complete. Also, modern processors have multiple cores to increase the parallelism.
 
-------------------------------------------------------------------------
+---
 
 **Related Posts:**
 
@@ -41,10 +36,9 @@ But not everything is lost! You can use that time to perform other tasks if you 
 2.  [JavaScript Callbacks](/callbacks-concurrency-in-javascript-node/)
 3.  [JavaScript Promises](/promises-tutorial-concurrency-in-javascript-node/)
 
-------------------------------------------------------------------------
+---
 
-<a href="#Synchronous-vs-Asynchronous-in-Node-js" class="headerlink" title="Synchronous vs. Asynchronous in Node.js"></a>Synchronous vs. Asynchronous in Node.js
-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+## <a href="#Synchronous-vs-Asynchronous-in-Node-js" class="headerlink" title="Synchronous vs. Asynchronous in Node.js"></a>Synchronous vs. Asynchronous in Node.js
 
 Let’s see how we can develop non-blocking code that squeezes out the performance to the maximum. Synchronous code is also called “blocking” because it halts the program until all the resources are available. However, asynchronous code is also known as “non-blocking” because the program continues executing and doesn’t wait for external resources (I/O) to be available.
 
@@ -120,8 +114,8 @@ We can read from the file without blocking the rest of the code like this:
 console.log(&#39;start&#39;);
 
 fs.readFile(&#39;./file.txt&#39;, &#39;utf-8&#39;, (err, data) =&gt; {
-  if (err) throw err;
-  console.log(&#39;file.txt data: &#39;, data.trim());
+if (err) throw err;
+console.log(&#39;file.txt data: &#39;, data.trim());
 });
 
 console.log(&#39;end&#39;);</code></pre></td></tr></tbody></table>
@@ -163,8 +157,8 @@ For this benchmark, let’s read a big file. I just went to my downloads and too
 console.time(&#39;readFileSync&#39;);
 
 for (let x = 0; x &lt; 10; x++) {
-  const largeFile = fs.readFileSync(&#39;/users/admejiar/Downloads/Docker.dmg&#39;);
-  console.log(`File size#${x}: ${Math.round(largeFile.length / 1e6)} MB`);
+const largeFile = fs.readFileSync(&#39;/users/admejiar/Downloads/Docker.dmg&#39;);
+console.log(`File size#${x}: ${Math.round(largeFile.length / 1e6)} MB`);
 }
 
 const data = fs.readFileSync(&#39;./file.txt&#39;, &#39;utf-8&#39;); // blocks here until file is read
@@ -212,15 +206,15 @@ Let’s try now the same with non-blocking:
 console.time(&#39;readFile&#39;);
 
 for (let x = 0; x &lt; 10; x++) {
-  fs.readFile(&#39;/users/admejiar/Downloads/Docker.dmg&#39;, (err, data) =&gt; {
-    if (err) throw err;
-    console.log(`File size#${x}: ${Math.round(data.length / 1e6)} MB`);
-  });
+fs.readFile(&#39;/users/admejiar/Downloads/Docker.dmg&#39;, (err, data) =&gt; {
+if (err) throw err;
+console.log(`File size#${x}: ${Math.round(data.length / 1e6)} MB`);
+});
 }
 
 fs.readFile(&#39;./file.txt&#39;, &#39;utf-8&#39;, (err, data) =&gt; {
-  if (err) throw err;
-  console.log(&#39;file.txt data: &#39;, data.trim());
+if (err) throw err;
+console.log(&#39;file.txt data: &#39;, data.trim());
 });
 
 console.timeEnd(&#39;readFile&#39;);</code></pre></td></tr></tbody></table>
@@ -252,8 +246,7 @@ Take a look at this picture:
 
 That async programs will take as long the most time-consuming task. It executes tasks in parallel while the blocking model does it in sequence.
 
-<a href="#Advantages-of-non-blocking-code" class="headerlink" title="Advantages of non-blocking code"></a>Advantages of non-blocking code
------------------------------------------------------------------------------------------------------------------------------------------
+## <a href="#Advantages-of-non-blocking-code" class="headerlink" title="Advantages of non-blocking code"></a>Advantages of non-blocking code
 
 Non-blocking code is much more performant. Blocking code waste around 90% of CPU cycles waiting for the network or disk to get the data. Using non-blocking code is a more straightforward way to have concurrency without having to deal with multiple execution threads.
 
@@ -267,10 +260,10 @@ Now that you are (hopefully) convinced why writing non-blocking code is necessar
 
 In JavaScript, we can handle asynchronous code using:
 
--   [Callbacks](/callbacks-concurrency-in-javascript-node)
--   [Promises](/promises-tutorial-concurrency-in-javascript-node)
--   Async/Await functions
--   Generators
+- [Callbacks](/callbacks-concurrency-in-javascript-node)
+- [Promises](/promises-tutorial-concurrency-in-javascript-node)
+- Async/Await functions
+- Generators
 
 I’m going to cover each one in a separate post. Stay tuned!
 
@@ -278,11 +271,9 @@ I’m going to cover each one in a separate post. Stay tuned!
 
 Thanks for reading this far. Here are some things you can do next:
 
--   Found a typo? [Edit this post](https://github.com/amejiarosario/amejiarosario.github.io/edit/source/source/_posts/2019-06-28-asynchronous-vs-synchronous-handling-concurrency-in-javascript.md).
--   Got questions? [comment](#comments-section) below.
--   Was it useful? Show your support and share it.
-
-
+- Found a typo? [Edit this post](https://github.com/amejiarosario/amejiarosario.github.io/edit/source/source/_posts/2019-06-28-asynchronous-vs-synchronous-handling-concurrency-in-javascript.md).
+- Got questions? [comment](#comments-section) below.
+- Was it useful? Show your support and share it.
 
 <a href="/callbacks-concurrency-in-javascript-node/" class="article-nav-newer"><strong><em></em> newer</strong></a>
 
@@ -294,18 +285,9 @@ How to build a Node.js eCommerce website for free
 
 Subscribe & stay up to date!
 
- 
 
 
-
-
-
-
-
-
-
-tutorial async javascript Series
-================================
+# tutorial async javascript Series
 
 [<img src="/images/async-vs-sync-concurrency-in-javascript-small.png" width="300" height="250" />](/asynchronous-vs-synchronous-handling-concurrency-in-javascript/)
 
@@ -328,7 +310,3 @@ tutorial async javascript Series
     2.  <a href="#Asynchronous-code-for-reading-from-a-file-in-Node-js" class="toc-link"><span class="toc-number">1.2.</span> <span class="toc-text">Asynchronous code for reading from a file in Node.js</span></a>
     3.  <a href="#Blocking-vs-Non-Blocking-I-O-model-Benchmark" class="toc-link"><span class="toc-number">1.3.</span> <span class="toc-text">Blocking vs. Non-Blocking I/O model Benchmark</span></a>
 2.  <a href="#Advantages-of-non-blocking-code" class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">Advantages of non-blocking code</span></a>
-
-
-
-

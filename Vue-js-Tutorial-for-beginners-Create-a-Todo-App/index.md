@@ -1,17 +1,12 @@
-
-
-
-
 <a href="/categories/coding/" class="category-link">Coding</a> &gt; <a href="/categories/coding/web-development/" class="category-link">Web Development</a> &gt; <a href="/categories/coding/web-development/vue/" class="category-link">Vue</a>
 
-Vue.js Tutorial for beginners
-=============================
+# Vue.js Tutorial for beginners
 
 <span title="Last time this post was updated"> Last updated August 4th 2018 </span> <span class="m-x-2" title="Pageviews"> 17.9k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/Vue-js-Tutorial-for-beginners-Create-a-Todo-App/">0</span>](#disqus_thread) </span>
 
--   <a href="/tags/javascript/" class="tag-list-link">javascript</a><span class="tag-list-count">5</span>
--   <a href="/tags/todo-app/" class="tag-list-link">todo app</a><span class="tag-list-count">5</span>
--   <a href="/tags/vuejs/" class="tag-list-link">vuejs</a><span class="tag-list-count">1</span>
+- <a href="/tags/javascript/" class="tag-list-link">javascript</a><span class="tag-list-count">5</span>
+- <a href="/tags/todo-app/" class="tag-list-link">todo app</a><span class="tag-list-count">5</span>
+- <a href="/tags/vuejs/" class="tag-list-link">vuejs</a><span class="tag-list-count">1</span>
 
 ![Vue.js Tutorial for beginners](/images/vuejs-vuerouter-tutorial-todo-app-large.jpg)
 
@@ -23,8 +18,7 @@ A good way to learn a new framework, It’s by doing a Todo app. It’s an excel
 
 Let’s first setup the dev environment, so we can focus on Vue! 🖖
 
-<a href="#Setup" class="headerlink" title="Setup"></a>Setup
------------------------------------------------------------
+## <a href="#Setup" class="headerlink" title="Setup"></a>Setup
 
 We are going to start with essential HTML elements and CSS files and no JavaScript. You will learn how to add all the JavaScript functionality using Vue.js.
 
@@ -78,18 +72,17 @@ We installed `Vue` and `VueRouter` dependencies. Also, we have the nice CSS libr
 
 Open the `index.html` file. There we have the basic HTML structure for the Todo app that we are going to build upon:
 
--   Line 9: Loads the CSS from NPM module `node_modules/todomvc-app-css/index.css`.
--   Line 24: We have the `ul` and some hard-coded todo lists. We are going to change this in a bit.
--   Line 75: we have multiple script files that load Vue, VueRouter and an empty `app.js`.
+- Line 9: Loads the CSS from NPM module `node_modules/todomvc-app-css/index.css`.
+- Line 24: We have the `ul` and some hard-coded todo lists. We are going to change this in a bit.
+- Line 75: we have multiple script files that load Vue, VueRouter and an empty `app.js`.
 
 Now, you know the basic structure where we are going to work on. Let’s get started with Vue! 🖖
 
-<a href="#Getting-started-with-Vue" class="headerlink" title="Getting started with Vue"></a>Getting started with Vue
---------------------------------------------------------------------------------------------------------------------
+## <a href="#Getting-started-with-Vue" class="headerlink" title="Getting started with Vue"></a>Getting started with Vue
 
 As you might know…
 
-> Vue.js is a *reactive* JavaScript framework to build UI components.
+> Vue.js is a _reactive_ JavaScript framework to build UI components.
 
 It’s reactive because the data and the DOM are linked. That means, that when data changes, it automatically updates the DOM. Let’s try that!
 
@@ -121,7 +114,7 @@ index.html (fragment)
 2
 3</code></pre></td><td><pre><code>&lt;body&gt;
 
-  &lt;section class=&quot;todoapp&quot;&gt;</code></pre></td></tr></tbody></table>
+&lt;section class=&quot;todoapp&quot;&gt;</code></pre></td></tr></tbody></table>
 
 Going back to the `app.js` file, let’s now take a look into the `data` attribute, that binds the title. The `data` object is reactive. It keeps track of changes and re-render the DOM if needed. Go to the index.html page and change `<h1>todos</h1>` for `<h1>{{ title }}</h1>`. The rest remains the same:
 
@@ -217,10 +210,10 @@ We are going to implement the create functionality. We have a textbox, and when 
 
 In Vue, we can listen to an event using `v-on:EVENT_NAME`. E.g.:
 
--   v-on:click
--   v-on:dbclick
--   v-on:keyup
--   v-on:keyup.enter
+- v-on:click
+- v-on:dbclick
+- v-on:keyup
+- v-on:keyup.enter
 
 **Protip**: since `v-on:` is used a lot, there’s a shortcut `@`. E.g. Instead of `v-on:keyup.enter` it can be `@keyup.enter`.
 
@@ -388,8 +381,8 @@ First, we want the input textbox to have the `value` of the `todo.text` when we 
 
 Before, we implemented the `startEditing` function. Now, we need to complete the edit functionality with these two more methods:
 
--   `finishEditing`: applies changes to the `todo.text`. This is triggered by pressing enter or clicking elsewhere (blur).
--   `cancelEditing`: discard the changes and leave `todos` list untouched. This happens when you press the esc key.
+- `finishEditing`: applies changes to the `todo.text`. This is triggered by pressing enter or clicking elsewhere (blur).
+- `cancelEditing`: discard the changes and leave `todos` list untouched. This happens when you press the esc key.
 
 Let’s go to the `app.js` and define these two functions.
 
@@ -517,8 +510,7 @@ app.js (fragment)
 
 [review diff](https://github.com/amejiarosario/vue-todo-app/commit/dd7dd90)
 
-<a href="#Vue-Conditional-Rendering-v-show-vs-v-if" class="headerlink" title="Vue Conditional Rendering: v-show vs v-if"></a>Vue Conditional Rendering: `v-show` vs `v-if`
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## <a href="#Vue-Conditional-Rendering-v-show-vs-v-if" class="headerlink" title="Vue Conditional Rendering: v-show vs v-if"></a>Vue Conditional Rendering: `v-show` vs `v-if`
 
 `v-show` and `v-if` looks very similar, but they work differently. `v-if` removes the element from the DOM and disable events, while `v-show` hides it with the CSS `display: none;`. So, `v-if` is more expensive than `v-show`.
 
@@ -534,8 +526,7 @@ index.html (fragment)
 
 [review diff](https://github.com/amejiarosario/vue-todo-app/commit/790b241)
 
-<a href="#Local-Storage" class="headerlink" title="Local Storage"></a>Local Storage
------------------------------------------------------------------------------------
+## <a href="#Local-Storage" class="headerlink" title="Local Storage"></a>Local Storage
 
 On every refresh, our list gets reset. This is useful for dev but not for users. Let’s persist our Todos in the local storage.
 
@@ -543,10 +534,10 @@ On every refresh, our list gets reset. This is useful for dev but not for users.
 
 The way `localStorage` works is straightforward. It is global variable and has only 4 methods:
 
--   `localStorage.setItem(key, value)`: key/value storage. `key` and `value` are coerced into a string.
--   `localStorage.getItem(key)`: get the item by key.
--   `localStorage.removeItem(key)`: remove item matching the key.
--   `localStorage.clear()`: clear all items for the current hostname.
+- `localStorage.setItem(key, value)`: key/value storage. `key` and `value` are coerced into a string.
+- `localStorage.getItem(key)`: get the item by key.
+- `localStorage.removeItem(key)`: remove item matching the key.
+- `localStorage.clear()`: clear all items for the current hostname.
 
 We are going to use `getItem` and `setItem`. First we need to define a storage key:
 
@@ -580,8 +571,7 @@ We have to use `JSON.parse` because everything gets stored as a string and we ne
 
 `getItem` will retrieve the saved todos from the `localstorage`. However, we are saying it yet. Let’s see how we can do that.
 
-<a href="#Vue-Watchers" class="headerlink" title="Vue Watchers"></a>Vue Watchers
---------------------------------------------------------------------------------
+## <a href="#Vue-Watchers" class="headerlink" title="Vue Watchers"></a>Vue Watchers
 
 For saving, we are going to use the Vue watchers.
 
@@ -615,12 +605,11 @@ Once you change some todos, you will see they are stored in the local storage. Y
 
 The last part to implement is the routing! However, for that, we need to explain some more concepts and will do that in the next post.
 
-------------------------------------------------------------------------
+---
 
 In the next tutorial, we are going to switch gears a little bit and go deeper into Vue Components, Routing, and Local Storage. Stay tuned!
 
-<a href="#Summary-Vue-cheatsheet" class="headerlink" title="Summary: Vue cheatsheet"></a>Summary: Vue cheatsheet
-----------------------------------------------------------------------------------------------------------------
+## <a href="#Summary-Vue-cheatsheet" class="headerlink" title="Summary: Vue cheatsheet"></a>Summary: Vue cheatsheet
 
 We learned a lot! Here is a summary:
 
@@ -642,40 +631,36 @@ v-bind
 
 Bind to HTML attribute
 
-              
     <span v-bind:title="tooltip"></span>
     <div v-bind:id="dynamicId"></div>
     <button v-bind:disabled="isButtonDisabled">Button</button>
-              
-              
+
+
 
 :
 
 Shortcut for v-bind
 
-              
     <span :title="tooltip"></span>
     <li v-bind:class="{completed: todo.isDone }"></li>
-              
-              
+
+
 
 v-text
 
 Inject text into the element
 
-              
     <h1 v-text="title"></h1>
-              
-              
+
+
 
 v-html
 
 Inject raw HTML into the element
 
-              
     <blog-post v-html="content"></blog-post>
-              
-              
+
+
 
 List Rendering
 
@@ -689,54 +674,49 @@ v-for
 
 Iterate over elements
 
-              
     <li v-for="todo in todos"> {{todo.text}}</li>
-              
-              
+
+
 
 v-for
 
 Iterate with index
 
-              
     <li v-for="(item, index) in items">
       {{ parentMessage }} - {{ index }} - {{ item.message }}
     </li>
-              
-              
+
+
 
 v-for
 
 Iterate over object's values
 
-              
     <li v-for="value in object">
-      {{ value }}  
+      {{ value }}
     </li>
-              
-              
+
+
 
 v-for
 
 Iterate over object's keys/values
 
-              
     <li v-for="(value, key) in object">
-      {{ key }}: {{ value }}  
+      {{ key }}: {{ value }}
     </li>
-              
-              
+
+
 
 v-for
 
 Iterate with keys, values and index
 
-              
     <li v-for="(value, key, index) in object">
-      {{index}}.{{ key }}: {{ value }}  
+      {{index}}.{{ key }}: {{ value }}
     </li>
-              
-              
+
+
 
 Events
 
@@ -750,49 +730,44 @@ v-on:click
 
 Invoke callback on click
 
-              
     <button class="destroy" v-on:click="destroyTodo(todo)"></button>
-              
-              
+
+
 
 @
 
 \`@\` is shorcut for \`v-on:\`
 
-              
     <input class="edit"
         @keyup.esc="cancelEditing"
         @keyup.enter="finishEditing"
         @blur="finishEditing">
-              
-              
+
+
 
 v-on:dblclick
 
 Invoke callback on double-click
 
-              
     <label @dblclick="startEditing(todo)">{{todo.text}}</label>
-              
-              
+
+
 
 @keyup.enter
 
 Invoke callback on keyup enter
 
-              
     <input @keyup.enter="createTodo">
-              
-              
+
+
 
 @keyup.esc
 
 Invoke callback on keyup esc
 
-              
     <input @keyup.esc="cancelEditing">
-              
-              
+
+
 
 Conditional Rendering
 
@@ -806,19 +781,17 @@ v-show
 
 Show or hide the element if the expression evaluates to truthy
 
-              
     <button v-show="completedTodos.length">Clear completed</button>
-              
-              
+
+
 
 v-if
 
 Remove or add the element if the expression evaluates to truthy
 
-              
     <footer v-if="todos.length">...</footer>
-              
-              
+
+
 
 Automatic Data&lt;-&gt;DOM Sync
 
@@ -832,16 +805,14 @@ v-model
 
 Keep data and DOM in sync automatially
 
-              
     <input class="toggle" type="checkbox" v-model="todo.isDone">
-              
-              
+
+
 
 Vue instance
 
 Example with all attributes
 
-              
     // Vue Instance
     const todoApp = new Vue({
       // element matcher
@@ -879,18 +850,16 @@ Example with all attributes
         }
       },
     });
-              
-              
+
+
 
 ### Now, your turn!
 
 Thanks for reading this far. Here are some things you can do next:
 
--   Found a typo? [Edit this post](https://github.com/amejiarosario/amejiarosario.github.io/edit/source/source/_posts/2018-08-14-Vue-js-Tutorial-for-beginners-Create-a-Todo-App.md).
--   Got questions? [comment](#comments-section) below.
--   Was it useful? Show your support and share it.
-
-
+- Found a typo? [Edit this post](https://github.com/amejiarosario/amejiarosario.github.io/edit/source/source/_posts/2018-08-14-Vue-js-Tutorial-for-beginners-Create-a-Todo-App.md).
+- Got questions? [comment](#comments-section) below.
+- Was it useful? Show your support and share it.
 
 <a href="/How-can-developers-reduce-stress/" class="article-nav-newer"><strong><em></em> newer</strong></a>
 
@@ -901,14 +870,6 @@ How can developers reduce stress
 Self-balanced Binary Search Trees with AVL in JavaScript
 
 Subscribe & stay up to date!
-
- 
-
-
-
-
-
-
 
 
 
@@ -934,7 +895,3 @@ Subscribe & stay up to date!
 4.  <a href="#Local-Storage" class="toc-link"><span class="toc-number">4.</span> <span class="toc-text">Local Storage</span></a>
 5.  <a href="#Vue-Watchers" class="toc-link"><span class="toc-number">5.</span> <span class="toc-text">Vue Watchers</span></a>
 6.  <a href="#Summary-Vue-cheatsheet" class="toc-link"><span class="toc-number">6.</span> <span class="toc-text">Summary: Vue cheatsheet</span></a>
-
-
-
-

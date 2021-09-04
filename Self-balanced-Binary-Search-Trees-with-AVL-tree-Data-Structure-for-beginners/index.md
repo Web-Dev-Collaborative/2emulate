@@ -1,16 +1,11 @@
-
-
-
-
 <a href="/categories/coding/" class="category-link">Coding</a> &gt; <a href="/categories/coding/data-structures-and-algorithms-dsa/" class="category-link">Data Structures and Algorithms (DSA)</a>
 
-Self-balanced Binary Search Trees with AVL in JavaScript
-========================================================
+# Self-balanced Binary Search Trees with AVL in JavaScript
 
 <span title="Last time this post was updated"> Last updated May 30th 2019 </span> <span class="m-x-2" title="Pageviews"> 13.6k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/Self-balanced-Binary-Search-Trees-with-AVL-tree-Data-Structure-for-beginners/">0</span>](#disqus_thread) </span>
 
--   <a href="/tags/algorithms/" class="tag-list-link">algorithms</a><span class="tag-list-count">12</span>
--   <a href="/tags/tutorial-algorithms/" class="tag-list-link">tutorial_algorithms</a><span class="tag-list-count">10</span>
+- <a href="/tags/algorithms/" class="tag-list-link">algorithms</a><span class="tag-list-count">12</span>
+- <a href="/tags/tutorial-algorithms/" class="tag-list-link">tutorial_algorithms</a><span class="tag-list-count">10</span>
 
 ![Self-balanced Binary Search Trees with AVL in JavaScript](/images/data-structures-algorithms-avl-binary-search-trees-large.jpg)
 
@@ -22,7 +17,7 @@ In this post, we are going to explore different techniques to balance a tree. We
 
 You can find all these implementations and more in the Github repo: <https://github.com/amejiarosario/dsa.js>
 
-------------------------------------------------------------------------
+---
 
 This post is part of a tutorial series:
 
@@ -42,25 +37,23 @@ This post is part of a tutorial series:
 
 7.  [Appendix I: Analysis of Recursive Algorithms](/blog/2018/04/24/Analysis-of-Recursive-Algorithms/)
 
-------------------------------------------------------------------------
+---
 
 Let’s start by defining what is a “balanced tree” and the pitfalls of an “unbalanced tree”.
 
-<a href="#Balanced-vs-Unbalanced-Binary-Search-Tree" class="headerlink" title="Balanced vs. Unbalanced Binary Search Tree"></a>Balanced vs. Unbalanced Binary Search Tree
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## <a href="#Balanced-vs-Unbalanced-Binary-Search-Tree" class="headerlink" title="Balanced vs. Unbalanced Binary Search Tree"></a>Balanced vs. Unbalanced Binary Search Tree
 
 As discussed in the [previous post](/blog/2018/06/11/data-structures-for-beginners-trees-binary-search-tree-tutorial/) the worst nightmare for a BST is to be given numbers in order (e.g. 1, 2, 3, 4, 5, 6, 7, …).
 
 ![](/images/balanced-vs-non-balanced-tree.jpg "Balanced vs. unbalanced Tree")
 
-If we ended up with a tree like the one on the left, we are screwed because performance will go to the floor. To find out if a node is on the tree or not, you will have to visit every node when the tree is unbalanced. That takes *O(n)*, while if we keep the node balanced in every insertion or deletion, we could have *O(log n)*.
+If we ended up with a tree like the one on the left, we are screwed because performance will go to the floor. To find out if a node is on the tree or not, you will have to visit every node when the tree is unbalanced. That takes _O(n)_, while if we keep the node balanced in every insertion or deletion, we could have _O(log n)_.
 
 Again, this might not look like a big difference, but when you have a million nodes, the difference is huge! We are talking about visiting `1,000,000` nodes vs. visiting `20`!
 
 “Ok, I’m sold. How do I keep the tree balanced?” I’m glad you asked 😉. Well, let’s first learn when to tell that a tree is unbalanced.
 
-<a href="#When-a-tree-is-balanced-non-balanced" class="headerlink" title="When a tree is balanced/non-balanced?"></a>When a tree is balanced/non-balanced?
-----------------------------------------------------------------------------------------------------------------------------------------------------------
+## <a href="#When-a-tree-is-balanced-non-balanced" class="headerlink" title="When a tree is balanced/non-balanced?"></a>When a tree is balanced/non-balanced?
 
 Take a look at the following trees and tell which one is balanced and which one is not.
 
@@ -95,10 +88,10 @@ For instance, if you have a tree with seven nodes:
 
 If you check the subtrees’ [heights](/blog/2018/06/11/data-structures-for-beginners-trees-binary-search-tree-tutorial/#Trees-basic-concepts) (edge counts to farthest leaf node) recursively you will notice they never differ by more than one.
 
--   `10` descendants:
-    -   Left subtree `5` has a height of 1, while right subtree `20` has a height of `2`. The difference is one so: **Balanced**!
--   `20` descendants:
-    -   Left subtree`15` has a height of `1`, while right subtree `30` has a height of 0. So the diff is `1`: **Balanced**!
+- `10` descendants:
+  - Left subtree `5` has a height of 1, while right subtree `20` has a height of `2`. The difference is one so: **Balanced**!
+- `20` descendants:
+  - Left subtree`15` has a height of `1`, while right subtree `30` has a height of 0. So the diff is `1`: **Balanced**!
 
 On the other hand, take a look at this tree:
 
@@ -118,10 +111,10 @@ On the other hand, take a look at this tree:
 
 Let’s check the height of the subtree recursively:
 
--   `40` descendants:
-    -   Left subtree `35` has a height of 1, while right subtree `60` has a height of `2`. The difference is one so: **Balanced**!
--   `60` descendants:
-    -   Left subtree `50` has a height of `2`, while the right subtree (none) has a height of `0`. The difference between `2` and `0` is more than one, so: **NOT balanced**!
+- `40` descendants:
+  - Left subtree `35` has a height of 1, while right subtree `60` has a height of `2`. The difference is one so: **Balanced**!
+- `60` descendants:
+  - Left subtree `50` has a height of `2`, while the right subtree (none) has a height of `0`. The difference between `2` and `0` is more than one, so: **NOT balanced**!
 
 Hopefully, now you can calculate balanced and unbalanced trees.
 
@@ -141,8 +134,7 @@ If we take the same tree as before and move `50` to the place of `60` we get the
 
 After rotating `60` to the right, It’s balanced! Let’s learn all about it in the next section.
 
-<a href="#Tree-rotations" class="headerlink" title="Tree rotations"></a>Tree rotations
---------------------------------------------------------------------------------------
+## <a href="#Tree-rotations" class="headerlink" title="Tree rotations"></a>Tree rotations
 
 Before throwing any line of code, let’s spend some time thinking about how to balance small trees using rotations.
 
@@ -226,14 +218,14 @@ leftRotation[Code](https://github.com/amejiarosario/dsa.js/blob/master/src/data-
   const newParent = node.right; // e.g. 3
   const grandparent = node.parent; // e.g. 1
 
-  // make 1 the parent of 3 (previously was the parent of 2)
-  swapParentChild(node, newParent, grandparent);
+// make 1 the parent of 3 (previously was the parent of 2)
+swapParentChild(node, newParent, grandparent);
 
-  // do LL rotation
-  newParent.left = node; // makes 2 the left child of 3
-  node.right = undefined; // clean 2&#39;s right child
+// do LL rotation
+newParent.left = node; // makes 2 the left child of 3
+node.right = undefined; // clean 2&#39;s right child
 
-  return newParent; // 3 is the new parent (previously was 2)
+return newParent; // 3 is the new parent (previously was 2)
 }</code></pre></td></tr></tbody></table>
 
 Notice that we are using a utility function to swap parents called `swapParentChild`.
@@ -305,13 +297,13 @@ rightRotation[Code](https://github.com/amejiarosario/dsa.js/blob/master/src/data
   const newParent = node.left;
   const grandparent = node.parent;
 
-  swapParentChild(node, newParent, grandparent);
+swapParentChild(node, newParent, grandparent);
 
-  // do RR rotation
-  newParent.right = node;
-  node.left = undefined;
+// do RR rotation
+newParent.right = node;
+node.left = undefined;
 
-  return newParent;
+return newParent;
 }</code></pre></td></tr></tbody></table>
 
 The `rightRotation` does the following:
@@ -350,8 +342,8 @@ If we expand the `left-right-rotation` into the two single rotations we would ha
  \                        /                            1    3*
   2                      1</code></pre></td></tr></tbody></table>
 
--   left-rotation(1): We do a left rotation on the nodes’ left child. E.g. `1`.
--   right-rotation(3): right rotation on the same node. E.g. `3`.
+- left-rotation(1): We do a left rotation on the nodes’ left child. E.g. `1`.
+- right-rotation(3): right rotation on the same node. E.g. `3`.
 
 ![](/images/left-right-rotation.gif "Left-Right rotate on 2")
 
@@ -397,8 +389,7 @@ leftRightRotation[Code](https://github.com/amejiarosario/dsa.js/blob/master/src/
 
 We know all the rotations needed to balanced any binary tree. Let’s go ahead, use the AVL algorithm to keep it balanced on insertions/deletions.
 
-<a href="#AVL-Tree-Overview" class="headerlink" title="AVL Tree Overview"></a>AVL Tree Overview
------------------------------------------------------------------------------------------------
+## <a href="#AVL-Tree-Overview" class="headerlink" title="AVL Tree Overview"></a>AVL Tree Overview
 
 **AVL Tree** was the first self-balanced tree invented. It is named after the two inventors **A**delson-**V**elsky and **L**andis. In their self-balancing algorithm if one subtree differs from the other by at most one, then rebalancing is done using rotations.
 
@@ -475,15 +466,15 @@ height, leftSubtreeHeight and rightSubtreeHeight[Code](https://github.com/amejia
 }
 
 get leftSubtreeHeight() {
-  return this.left ? this.left.height + 1 : 0;
+return this.left ? this.left.height + 1 : 0;
 }
 
 get rightSubtreeHeight() {
-  return this.right ? this.right.height + 1 : 0;
+return this.right ? this.right.height + 1 : 0;
 }
 
 get balanceFactor() {
-  return this.leftSubtreeHeight - this.rightSubtreeHeight;
+return this.leftSubtreeHeight - this.rightSubtreeHeight;
 }</code></pre></td></tr></tbody></table>
 
 To understand better what’s going on, let’s do some examples.
@@ -496,9 +487,9 @@ Let’s start with a single root node:
 2</code></pre></td><td><pre><code>  40*
 /     \</code></pre></td></tr></tbody></table>
 
--   Since this node doesn’t have left nor right children then `leftSubtreeHeight` and `rightSubtreeHeight` will return `0`.
--   Height is `Math.max(this.leftSubtreeHeight, this.rightSubtreeHeight)` which is `Math.max(0, 0)`, so height is `0`.
--   Balance factor is also zero since `0 - 0 = 0`.
+- Since this node doesn’t have left nor right children then `leftSubtreeHeight` and `rightSubtreeHeight` will return `0`.
+- Height is `Math.max(this.leftSubtreeHeight, this.rightSubtreeHeight)` which is `Math.max(0, 0)`, so height is `0`.
+- Balance factor is also zero since `0 - 0 = 0`.
 
 ### <a href="#Tree-with-multiple-nodes" class="headerlink" title="Tree with multiple nodes"></a>Tree with multiple nodes
 
@@ -520,19 +511,19 @@ Let’s try with multiple nodes:
 
 **balanceFactor(45)**
 
--   As we saw leaf nodes doesn’t have left or right subtree, so their heights are 0, thus balance factor is 0.
+- As we saw leaf nodes doesn’t have left or right subtree, so their heights are 0, thus balance factor is 0.
 
 **balanceFactor(50)**
 
--   `leftSubtreeHeight = 1` and `rightSubtreeHeight = 0`.
--   `height = Math.max(1, 0)`, so it’s `1`.
--   Balance factor is `1 - 0`, so it’s `1` as well.
+- `leftSubtreeHeight = 1` and `rightSubtreeHeight = 0`.
+- `height = Math.max(1, 0)`, so it’s `1`.
+- Balance factor is `1 - 0`, so it’s `1` as well.
 
 **balanceFactor(60)**
 
--   `leftSubtreeHeight = 2` and `rightSubtreeHeight = 0`.
--   `height = Math.max(2, 0)`, so it’s `2`.
--   Balance factor is `2 - 0`, so it’s `2` and it’s UNBALANCED!
+- `leftSubtreeHeight = 2` and `rightSubtreeHeight = 0`.
+- `height = Math.max(2, 0)`, so it’s `2`.
+- Balance factor is `2 - 0`, so it’s `2` and it’s UNBALANCED!
 
 If we use our `balance` function on node `60` that we developed, then it would do a `rightRotation` on `60` and the tree will look like:
 
@@ -550,8 +541,7 @@ Before the height of the tree (from the root) was 3, now it’s only 2.
 
 Let’s put all together and explain how we can keep a binary search tree balanced on insertion and deletion.
 
-<a href="#AVL-Tree-Insertion-and-Deletion" class="headerlink" title="AVL Tree Insertion and Deletion"></a>AVL Tree Insertion and Deletion
------------------------------------------------------------------------------------------------------------------------------------------
+## <a href="#AVL-Tree-Insertion-and-Deletion" class="headerlink" title="AVL Tree Insertion and Deletion"></a>AVL Tree Insertion and Deletion
 
 AVL tree is just a layer on top of a regular Binary Search Tree (BST). The add/remove operations are the same as in the BST, the only difference is that we run the `balance` function after each change.
 
@@ -581,28 +571,29 @@ AvlTree[Code](https://github.com/amejiarosario/dsa.js/blob/master/src/data-struc
 20</code></pre></td><td><pre><code>const BinarySearchTree = require(&#39;./binary-search-tree&#39;);
 
 class AvlTree extends BinarySearchTree {
-  add(value) {
-    const node = super.add(value);
-    balanceUpstream(node);
-    return node;
-  }
+add(value) {
+const node = super.add(value);
+balanceUpstream(node);
+return node;
+}
 
-  remove(value) {
-    const node = super.find(value);
-    if (node) {
-      const found = super.remove(value);
-      balanceUpstream(node.parent);
-      return found;
-    }
+remove(value) {
+const node = super.find(value);
+if (node) {
+const found = super.remove(value);
+balanceUpstream(node.parent);
+return found;
+}
 
     return false;
-  }
+
+}
 }</code></pre></td></tr></tbody></table>
 
 If you need to review the dependencies here are the links to the implementations:
 
--   [binary-search-tree](https://github.com/amejiarosario/dsa.js/blob/master/src/data-structures/trees/binary-search-tree.js)
--   [balanceUpstream](https://github.com/amejiarosario/dsa.js-data-structures-algorithms-javascript/blob/master/src/data-structures/trees/avl-tree.js#L46)
+- [binary-search-tree](https://github.com/amejiarosario/dsa.js/blob/master/src/data-structures/trees/binary-search-tree.js)
+- [balanceUpstream](https://github.com/amejiarosario/dsa.js-data-structures-algorithms-javascript/blob/master/src/data-structures/trees/avl-tree.js#L46)
 
 The `balanceUpstream` function gets executed after an insertion or deletion.
 
@@ -636,20 +627,19 @@ You can also check the [test files](https://github.com/amejiarosario/dsa.js/blob
 
 That’s all folks!
 
-<a href="#Summary" class="headerlink" title="Summary"></a>Summary
------------------------------------------------------------------
+## <a href="#Summary" class="headerlink" title="Summary"></a>Summary
 
 In this post, we explored the AVL tree, which is a particular binary search tree that self-balance itself after insertions and deletions of nodes. The operations of balancing a tree involve rotations, and they can be single or double rotations.
 
 Single rotations:
 
--   Left rotation
--   Right rotation
+- Left rotation
+- Right rotation
 
 Double rotations:
 
--   Left-Right rotation
--   Right-Left rotation
+- Left-Right rotation
+- Right-Left rotation
 
 You can find all the code developed here in the [Github](https://github.com/amejiarosario/dsa.js/tree/master/src/data-structures/trees). You can `star` it to keep it handy.
 
@@ -657,11 +647,9 @@ You can find all the code developed here in the [Github](https://github.com/amej
 
 Thanks for reading this far. Here are some things you can do next:
 
--   Found a typo? [Edit this post](https://github.com/amejiarosario/amejiarosario.github.io/edit/source/source/_posts/2018-07-28-Self-balanced-Binary-Search-Trees-with-AVL-tree-Data-Structure-for-beginners.md).
--   Got questions? [comment](#comments-section) below.
--   Was it useful? Show your support and share it.
-
-
+- Found a typo? [Edit this post](https://github.com/amejiarosario/amejiarosario.github.io/edit/source/source/_posts/2018-07-28-Self-balanced-Binary-Search-Trees-with-AVL-tree-Data-Structure-for-beginners.md).
+- Got questions? [comment](#comments-section) below.
+- Was it useful? Show your support and share it.
 
 <a href="/Vue-js-Tutorial-for-beginners-Create-a-Todo-App/" class="article-nav-newer"><strong><em></em> newer</strong></a>
 
@@ -673,18 +661,9 @@ Tree Data Structures in JavaScript for Beginners
 
 Subscribe & stay up to date!
 
- 
 
 
-
-
-
-
-
-
-
-tutorial algorithms Series
-==========================
+# tutorial algorithms Series
 
 [<img src="/images/from-code-to-big-o-algorithms-small.png" width="300" height="250" />](/how-to-find-time-complexity-of-an-algorithm-code-big-o-notation/)
 
@@ -742,7 +721,3 @@ tutorial algorithms Series
     2.  <a href="#Tree-with-multiple-nodes" class="toc-link"><span class="toc-number">4.2.</span> <span class="toc-text">Tree with multiple nodes</span></a>
 5.  <a href="#AVL-Tree-Insertion-and-Deletion" class="toc-link"><span class="toc-number">5.</span> <span class="toc-text">AVL Tree Insertion and Deletion</span></a>
 6.  <a href="#Summary" class="toc-link"><span class="toc-number">6.</span> <span class="toc-text">Summary</span></a>
-
-
-
-

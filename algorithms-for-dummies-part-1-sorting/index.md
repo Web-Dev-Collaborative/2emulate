@@ -1,15 +1,10 @@
-
-
-
-
 <a href="/categories/coding/" class="category-link">Coding</a> &gt; <a href="/categories/coding/data-structures-and-algorithms-dsa/" class="category-link">Data Structures and Algorithms (DSA)</a>
 
-Algorithms for dummies (Part 1): Big-O Notation and Sorting
-===========================================================
+# Algorithms for dummies (Part 1): Big-O Notation and Sorting
 
 <span title="Last time this post was updated"> Last updated February 13th 2014 </span> <span class="m-x-2" title="Pageviews"> 98.9k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/algorithms-for-dummies-part-1-sorting/">0</span>](#disqus_thread) </span>
 
--   <a href="/tags/algorithms/" class="tag-list-link">algorithms</a><span class="tag-list-count">12</span>
+- <a href="/tags/algorithms/" class="tag-list-link">algorithms</a><span class="tag-list-count">12</span>
 
 ![Algorithms for dummies (Part 1): Big-O Notation and Sorting](/images/AlgorithmsForDummies_large.png)
 
@@ -21,8 +16,7 @@ How do you know a piece of code that you just wrote is good enough? When you mod
 
 How to measure them? We could count the number of seconds it takes to execute and compare it with other one. However, it’s not just troublesome to timers around code but if we run it in different hardware (e.g. supercomputer) it will seem like more efficient when indeed it’s exactly the same program. Let’s illustrate a better way with an example. Let’s say you want to sort an array of n integers.
 
-<a href="#Sorting-Algorithms" class="headerlink" title="Sorting Algorithms"></a>Sorting Algorithms
---------------------------------------------------------------------------------------------------
+## <a href="#Sorting-Algorithms" class="headerlink" title="Sorting Algorithms"></a>Sorting Algorithms
 
 <table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><pre><code>1
 2
@@ -54,10 +48,10 @@ A more efficient algorithm is the Merge sort. It uses the principle of divide an
 
 ![](/images/mergesort.gif)
 
--   Divide the array in half
--   Divide the halves by half until 2 or 3 elements are remaining
--   Sort each of these halves
--   Merge them back together
+- Divide the array in half
+- Divide the halves by half until 2 or 3 elements are remaining
+- Sort each of these halves
+- Merge them back together
 
 Can you determine the time complexity of mergesort?
 
@@ -99,32 +93,32 @@ Can you determine the time complexity of mergesort?
 }
 
 void mergesort(int[] arr, int[] helper, int low, int high){
-  if(low &lt; high){
-    int middle = (high+low)/2;
-    mergesort(arr, helper, low, middle);
-    mergesort(arr, helper, middle+1, high);
-    merge(arr, helper, low, middle, high);
-  }
+if(low &lt; high){
+int middle = (high+low)/2;
+mergesort(arr, helper, low, middle);
+mergesort(arr, helper, middle+1, high);
+merge(arr, helper, low, middle, high);
+}
 }
 
 void merge(int[] arr, int[] helper, int low, int middle, int high){
-  for (int x=low; x &lt;= high; x++) {
-    helper[x] = arr[x];
-  }
+for (int x=low; x &lt;= high; x++) {
+helper[x] = arr[x];
+}
 
-  int left = low;
-  int curr = low;
-  int right = middle+1;
+int left = low;
+int curr = low;
+int right = middle+1;
 
-  while(left &lt;= middle &amp;&amp; right &lt;= high) {
-    if(helper[right] &gt; helper[left])
-      arr[curr++] = helper[left++];
-    else
-      arr[curr++] = helper[right++];
-  }
+while(left &lt;= middle &amp;&amp; right &lt;= high) {
+if(helper[right] &gt; helper[left])
+arr[curr++] = helper[left++];
+else
+arr[curr++] = helper[right++];
+}
 
-  while(left &lt;= middle)
-    arr[curr++] = helper[left++];
+while(left &lt;= middle)
+arr[curr++] = helper[left++];
 }</code></pre></td></tr></tbody></table>
 
 Even though the code is much longer, the algorithm is much more efficient.
@@ -137,8 +131,7 @@ Algorithm | best | average | worst | space complexity Insertion Sort | O(n) | O(
 
 Notice that the table has also the space complexity. How much space does the algorithms take is also an important parameter to compare algorithms. The merge sort uses an additional array that’s way its space complexity is `O(n)`, however, the insertion sort uses `O(1)` because it does the sorting in-place.
 
-<a href="#Big-O-Notation" class="headerlink" title="Big O Notation"></a>Big O Notation
---------------------------------------------------------------------------------------
+## <a href="#Big-O-Notation" class="headerlink" title="Big O Notation"></a>Big O Notation
 
 Big O is defined as the asymptotic upper limit of a function. In plain english, it means that is a function that cover the maximum values a function could take. As we saw a little earlier this notation help us to predict performance and compare algorithms.
 
@@ -165,23 +158,21 @@ This is kinda abstract let’s see what it means in code:
 
 That’s all for this first part 1. I will continue publishing this tutorials every week or so. Stay tune!
 
-------------------------------------------------------------------------
+---
 
 \*\*Update\*\*
 
 Checkout out the next post clicking here: [Data Structures and Algorithms (DSA) for Beginners](/blog/2018/04/04/how-you-can-change-the-world-learning-data-structures-algorithms-free-online-course-tutorial/)
 
-------------------------------------------------------------------------
+---
 
 ### Now, your turn!
 
 Thanks for reading this far. Here are some things you can do next:
 
--   Found a typo? [Edit this post](https://github.com/amejiarosario/amejiarosario.github.io/edit/source/source/_posts/2014-02-13-algorithms-for-dummies-part-1-sorting.markdown).
--   Got questions? [comment](#comments-section) below.
--   Was it useful? Show your support and share it.
-
-
+- Found a typo? [Edit this post](https://github.com/amejiarosario/amejiarosario.github.io/edit/source/source/_posts/2014-02-13-algorithms-for-dummies-part-1-sorting.markdown).
+- Got questions? [comment](#comments-section) below.
+- Was it useful? Show your support and share it.
 
 <a href="/cheap-airplay-receiver-with-raspberry-pi/" class="article-nav-newer"><strong><em></em> newer</strong></a>
 
@@ -193,14 +184,6 @@ Backbone.js for absolute beginners - getting started (part 4: Routers)
 
 Subscribe & stay up to date!
 
- 
-
-
-
-
-
-
-
 
 
 [<span id="back-to-top" title="Go back to the top of this page"> Top </span>](#) <a href="#" class="p-x-3" title="Improve this post"><em></em> Edit this post</a>
@@ -210,7 +193,3 @@ Subscribe & stay up to date!
 1.  <a href="#Sorting-Algorithms" class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">Sorting Algorithms</span></a>
     1.  <a href="#Merge-Sort" class="toc-link"><span class="toc-number">1.1.</span> <span class="toc-text">Merge Sort</span></a>
 2.  <a href="#Big-O-Notation" class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">Big O Notation</span></a>
-
-
-
-

@@ -1,0 +1,10 @@
+*.pdfmarks
+/_*/
+/Gemfile.lock
+/apidoc/
+/pkg/
+/.bundle/
+/.idea/
+/.ruby-gemset
+/.ruby-version
+/.yardoc/

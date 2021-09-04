@@ -1,16 +1,11 @@
-
-
-
-
 <a href="/categories/coding/" class="category-link">Coding</a> &gt; <a href="/categories/coding/data-structures-and-algorithms-dsa/" class="category-link">Data Structures and Algorithms (DSA)</a>
 
-Data Structures in JavaScript: Arrays, HashMaps, and Lists
-==========================================================
+# Data Structures in JavaScript: Arrays, HashMaps, and Lists
 
 <span title="Last time this post was updated"> Last updated December 15th 2020 </span> <span class="m-x-2" title="Pageviews"> 101.6k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/Data-Structures-Time-Complexity-for-Beginners-Arrays-HashMaps-Linked-Lists-Stacks-Queues-tutorial/">0</span>](#disqus_thread) </span>
 
--   <a href="/tags/algorithms/" class="tag-list-link">algorithms</a><span class="tag-list-count">12</span>
--   <a href="/tags/tutorial-algorithms/" class="tag-list-link">tutorial_algorithms</a><span class="tag-list-count">10</span>
+- <a href="/tags/algorithms/" class="tag-list-link">algorithms</a><span class="tag-list-count">12</span>
+- <a href="/tags/tutorial-algorithms/" class="tag-list-link">tutorial_algorithms</a><span class="tag-list-count">10</span>
 
 ![Data Structures in JavaScript: Arrays, HashMaps, and Lists](/images/data-structures-time-complexity-lists-arrays-stacks-queues-hash-maps-sets-large.jpg)
 
@@ -22,7 +17,7 @@ This section will focus on linear data structures: Arrays, Lists, Sets, Stacks, 
 
 You can find all these implementations and more in the Github repo: <https://github.com/amejiarosario/dsa.js>
 
-------------------------------------------------------------------------
+---
 
 This post is part of a tutorial series:
 
@@ -42,16 +37,15 @@ This post is part of a tutorial series:
 
 7.  [Appendix I: Analysis of Recursive Algorithms](/blog/2018/04/24/Analysis-of-Recursive-Algorithms/)
 
-------------------------------------------------------------------------
+---
 
-<a href="#Data-Structures-Big-O-Cheatsheet" class="headerlink" title="Data Structures Big-O Cheatsheet"></a>Data Structures Big-O Cheatsheet
---------------------------------------------------------------------------------------------------------------------------------------------
+## <a href="#Data-Structures-Big-O-Cheatsheet" class="headerlink" title="Data Structures Big-O Cheatsheet"></a>Data Structures Big-O Cheatsheet
 
 The following table is a summary of everything that we are going to cover.
 
 > Bookmark it, pin it, or share it, so you have it at hand when you need it.
 
-*Click on the **name** to go to the section or click on the **runtime** to go to the implementation*
+_Click on the **name** to go to the section or click on the **runtime** to go to the implementation_
 
 `*` = Amortized runtime
 
@@ -59,27 +53,25 @@ The following table is a summary of everything that we are going to cover.
 
 Note: **Binary search trees** and trees, in general, will be cover in the next post. Also, graph data structures.
 
-<a href="#Primitive-Data-Types" class="headerlink" title="Primitive Data Types"></a>Primitive Data Types
---------------------------------------------------------------------------------------------------------
+## <a href="#Primitive-Data-Types" class="headerlink" title="Primitive Data Types"></a>Primitive Data Types
 
 Primitive data types are the most basic elements, where all the other data structures are built upon. Some primitives are:
 
--   Integers. E.g., `1`, `2`, `3`, …
--   Characters. E.g., `a`, `b`, `"1"`, `"*"`
--   Booleans. E.g., `true` or `false`.
--   Float (floating points) or doubles. E.g., `3.14159`, `1483e-2`.
--   Null values. E.g. `null`
+- Integers. E.g., `1`, `2`, `3`, …
+- Characters. E.g., `a`, `b`, `"1"`, `"*"`
+- Booleans. E.g., `true` or `false`.
+- Float (floating points) or doubles. E.g., `3.14159`, `1483e-2`.
+- Null values. E.g. `null`
 
 JavaScript specific primitives:
 
--   `undefined`
--   `Symbol`
--   `Number`
+- `undefined`
+- `Symbol`
+- `Number`
 
-*Note*: Objects are not primitive since they are composed of zero or more primitives and other objects.
+_Note_: Objects are not primitive since they are composed of zero or more primitives and other objects.
 
-<a href="#Array" class="headerlink" title="Array"></a>Array
------------------------------------------------------------
+## <a href="#Array" class="headerlink" title="Array"></a>Array
 
 Arrays are collections of zero or more elements. Arrays are one of the most used data structures because of their simplicity and fast way of retrieving information.
 
@@ -89,7 +81,7 @@ You can think of an array as a drawer where you can store things in the bins.
 
 ![](/images/array-drawer.jpg "Array is like a drawer that stores things on bins")
 
-When you want to search for something, you can go directly to the bin number. That’s a constant time operation (*`O(1)`*). However, if you forgot what cabinet had, you will have to open one by one (*`O(n)`*) to verify its content until you find what you are looking for. That same happens with an array.
+When you want to search for something, you can go directly to the bin number. That’s a constant time operation (_`O(1)`_). However, if you forgot what cabinet had, you will have to open one by one (_`O(n)`_) to verify its content until you find what you are looking for. That same happens with an array.
 
 Depending on the programming language, arrays have some differences. For some dynamic languages like JavaScript and Ruby, an array can contain different data types: numbers, strings, words, objects, and even functions. In typed languages like Java/C/C++, you have to predefine the Array size and the data type. In JavaScript, it would automatically increase the size of the Array when needed.
 
@@ -125,7 +117,7 @@ console.log(insertToTail(array, 4)); // =&gt; [ 1, 2, 3, 4 ]</code></pre></td></
 
 Based on the [language specification](https://tc39.github.io/ecma262/#sec-array.prototype.push), push just set the new value at the end of the Array. Thus,
 
-> The `Array.push` runtime is a *O(1)*
+> The `Array.push` runtime is a _O(1)_
 
 Let’s now try appending to head:
 
@@ -145,7 +137,7 @@ console.log(insertToHead(array, 0)); // =&gt; [ 0, 1, 2, 3 ]</code></pre></td></
 
 What do you think is the runtime of the `insertToHead` function? It looks the same as the previous one, except that we are using `unshift` instead of `push`. But there’s a catch! [unshift algorithm](https://tc39.github.io/ecma262/#sec-array.prototype.unshift) makes room for the new element by moving all existing ones to the next position in the Array. So, it will iterate through all the elements.
 
-> The `Array.unshift` runtime is an *O(n)*
+> The `Array.unshift` runtime is an _O(n)_
 
 ### <a href="#Access-an-element-in-an-array" class="headerlink" title="Access an element in an array"></a>Access an element in an array
 
@@ -167,9 +159,9 @@ access(array, 3); // =&gt; {a: 1}</code></pre></td></tr></tbody></table>
 
 As you can see in the code above, accessing an element on an array has a constant time:
 
-> Array access runtime is *O(1)*
+> Array access runtime is _O(1)_
 
-*Note: You can also change any value at a given index in constant time.*
+_Note: You can also change any value at a given index in constant time._
 
 ### <a href="#Search-an-element-in-an-array" class="headerlink" title="Search an element in an array"></a>Search an element in an array
 
@@ -199,7 +191,7 @@ console.log(search(array, 3.14)); // =&gt; 2</code></pre></td></tr></tbody></tab
 
 Given the for-loop, we have:
 
-> Array search runtime is *O(n)*
+> Array search runtime is _O(n)_
 
 ### <a href="#Deleting-elements-from-an-array" class="headerlink" title="Deleting elements from an array"></a>Deleting elements from an array
 
@@ -207,8 +199,8 @@ What do you think is the running time of deleting an element from an array?
 
 Well, let’s think about the different cases:
 
-1.  You can delete from the end of the Array, which might be constant time. *O(1)*
-2.  However, you can also remove it from the beginning or middle of the collection. In that case, you would have to move all the following elements to close the gap. *O(n)*
+1.  You can delete from the end of the Array, which might be constant time. _O(1)_
+2.  However, you can also remove it from the beginning or middle of the collection. In that case, you would have to move all the following elements to close the gap. _O(n)_
 
 Talk is cheap. Let’s do the code!
 
@@ -228,11 +220,11 @@ Talk is cheap. Let’s do the code!
 const array1 = [0, 1, 2, 3];
 console.log(remove(array1, 1)); // =&gt; [ 0, 2, 3 ]</code></pre></td></tr></tbody></table>
 
-So we are using our `search` function to find the elements’ index *O(n)*. Then we use the [JS built-in `splice`](https://tc39.github.io/ecma262/#sec-array.prototype.splice) function, which has a running time of *O(n)*. What’s the total *O(2n)*? Remember, we constants don’t matter as much.
+So we are using our `search` function to find the elements’ index _O(n)_. Then we use the [JS built-in `splice`](https://tc39.github.io/ecma262/#sec-array.prototype.splice) function, which has a running time of _O(n)_. What’s the total _O(2n)_? Remember, we constants don’t matter as much.
 
 We take the worst-case scenario:
 
-> Deleting an item from an array is *O(n)*.
+> Deleting an item from an array is _O(n)_.
 
 ### <a href="#Array-operations-time-complexity" class="headerlink" title="Array operations time complexity"></a>Array operations time complexity
 
@@ -242,8 +234,7 @@ We can sum up the arrays time complexity as follows:
 
 <table><thead><tr class="header"><th>Operation</th><th>Worst</th></tr></thead><tbody><tr class="odd"><td>Access (<code>Array.[]</code>)</td><td><em><code>O(1)</code></em></td></tr><tr class="even"><td>Insert head (<code>Array.unshift</code>)</td><td><em><code>O(n)</code></em></td></tr><tr class="odd"><td>Insert tail (<code>Array.push</code>)</td><td><em><code>O(1)</code></em></td></tr><tr class="even"><td>Search (for value)</td><td><em><code>O(n)</code></em></td></tr><tr class="odd"><td>Delete (<code>Array.splice</code>)</td><td><em><code>O(n)</code></em></td></tr></tbody></table>
 
-<a href="#HashMaps" class="headerlink" title="HashMaps"></a>HashMaps
---------------------------------------------------------------------
+## <a href="#HashMaps" class="headerlink" title="HashMaps"></a>HashMaps
 
 Maps, dictionaries, and associative arrays all describe the same abstract data type. But hash map implementations are distinct from treemap implementations in that one uses a hash table and one uses a binary search tree.
 
@@ -255,14 +246,14 @@ Going back to the drawer analogy, bins have a label rather than a number.
 
 ![](/images/hashmap-drawer.jpg "HashMap is like a drawer that stores things on bins and labels them")
 
-In this example, if you are looking for the book, you don’t have to open bin 1, 2, and 3. You go directly to the container labeled as “books”. That’s a huge gain! Search time goes from *O(n)* to *O(1)*.
+In this example, if you are looking for the book, you don’t have to open bin 1, 2, and 3. You go directly to the container labeled as “books”. That’s a huge gain! Search time goes from _O(n)_ to _O(1)_.
 
-In arrays, the data is referenced using a numeric index (relatively to the position). However, HashMaps uses labels that could be a string, number, Object, or anything. Internally, the HashMap uses an Array, and it maps the labels to array indexes using a *hash function*.
+In arrays, the data is referenced using a numeric index (relatively to the position). However, HashMaps uses labels that could be a string, number, Object, or anything. Internally, the HashMap uses an Array, and it maps the labels to array indexes using a _hash function_.
 
 There are at least two ways to implement hashmap:
 
 1.  **Array**: Using a hash function to map a key to the array index value. Worst: `O(n)`, Average: `O(1)`
-2.  **Binary Search Tree**: using a self-balancing binary search tree to look up for values (more on this later). Worst: *`O(log n)`*, Average: *`O(log n)`*.
+2.  **Binary Search Tree**: using a self-balancing binary search tree to look up for values (more on this later). Worst: _`O(log n)`_, Average: _`O(log n)`_.
 
 We will cover Trees & Binary Search Trees, so don’t worry about it for now. The most common implementation of Maps is using an **array** and `hash` function. So, that’s the one we are going to focus on.
 
@@ -281,17 +272,17 @@ Why go through the trouble of converting the key into an index and not using an 
 Let’s say you want to count how many times words are used in a text. How would you implement that?
 
 1.  You can use two arrays (let’s call it `A` and `B`). One for storing the word and another for storing how many times they have seen (frequency).
-2.  You can use a HashMap. They *`key`* is the word, and the *`value`* is the word’s frequency.
+2.  You can use a HashMap. They _`key`_ is the word, and the _`value`_ is the word’s frequency.
 
-What is the runtime of approach \#1 using **two arrays**? If we say, the number of words in the text is *`n`*. Then we have to `search` if the word in the array `A` and then increment the value on array `B` matching that index. For every word on `n`, we have to test if it’s already on array `A`. This double loop leave use with a runtime of `O(n2)`.
+What is the runtime of approach \#1 using **two arrays**? If we say, the number of words in the text is _`n`_. Then we have to `search` if the word in the array `A` and then increment the value on array `B` matching that index. For every word on `n`, we have to test if it’s already on array `A`. This double loop leave use with a runtime of `O(n2)`.
 
 What is the runtime of approach \#2 using a **HashMap**? We iterate through each word on the text once and increment the value if there is something there or set it to 1 if that word is seen for the first time. The runtime would be `O(n)`, which is much more performant than approach \#1.
 
 Differences between HashMap and Array
 
--   Search on an array is *O(n)* while on a HashMap is *O(1)*
--   Arrays can have duplicate values, while HashMap cannot have duplicated keys (but they can have identical values.)
--   The Array has a key (index) that is always a number from 0 to max value, while in a HashMap, you have control of the key, and it can be whatever you want: number, string, or symbol.
+- Search on an array is _O(n)_ while on a HashMap is _O(1)_
+- Arrays can have duplicate values, while HashMap cannot have duplicated keys (but they can have identical values.)
+- The Array has a key (index) that is always a number from 0 to max value, while in a HashMap, you have control of the key, and it can be whatever you want: number, string, or symbol.
 
 ### <a href="#Hash-Function" class="headerlink" title="Hash Function"></a>Hash Function
 
@@ -299,9 +290,9 @@ The first step to implement a HashMap is to have a hash function. This function 
 
 > The **perfect hash function** is the one that for every key, it assigns a unique index.
 
-Ideal hashing algorithms allow *constant time* access/lookup. However, it’s hard to achieve a perfect hashing function in practice. You might have the case where two different keys yields on the same index, causing a *collision*.
+Ideal hashing algorithms allow _constant time_ access/lookup. However, it’s hard to achieve a perfect hashing function in practice. You might have the case where two different keys yields on the same index, causing a _collision_.
 
-Collisions in HashMaps are unavoidable when using an array-like underlying data structure. At some point, data that can’t fit in a HashMap will reuse data slots. One way to deal with collisions is to store multiple values in the same bucket using a linked list or another array (more on this later). When we try to access the key’s value and found various values, we iterate over the values *O(n)*. However, in most implementations, the hash adjusts the size dynamically to avoid too many collisions. We can say that the **amortized** lookup time is *O(1)*. We are going to explain what we mean by amortized runtime later in this post with an example.
+Collisions in HashMaps are unavoidable when using an array-like underlying data structure. At some point, data that can’t fit in a HashMap will reuse data slots. One way to deal with collisions is to store multiple values in the same bucket using a linked list or another array (more on this later). When we try to access the key’s value and found various values, we iterate over the values _O(n)_. However, in most implementations, the hash adjusts the size dynamically to avoid too many collisions. We can say that the **amortized** lookup time is _O(1)_. We are going to explain what we mean by amortized runtime later in this post with an example.
 
 ### <a href="#Naive-HashMap-implementation" class="headerlink" title="Naïve HashMap implementation"></a>Naïve HashMap implementation
 
@@ -336,29 +327,29 @@ Naive HashMap Implementation[full code](https://github.com/amejiarosario/dsa.js/
 25
 26</code></pre></td><td><pre><code>class NaiveHashMap {
 
-  constructor(initialCapacity = 2) {
-    this.buckets = new Array(initialCapacity);
-  }
+constructor(initialCapacity = 2) {
+this.buckets = new Array(initialCapacity);
+}
 
-  set(key, value) {
-    const index = this.getIndex(key);
-    this.buckets[index] = value;
-  }
+set(key, value) {
+const index = this.getIndex(key);
+this.buckets[index] = value;
+}
 
-  get(key) {
-    const index = this.getIndex(key);
-    return this.buckets[index];
-  }
+get(key) {
+const index = this.getIndex(key);
+return this.buckets[index];
+}
 
-  hash(key) {
-    return key.toString().length;
-  }
+hash(key) {
+return key.toString().length;
+}
 
-  getIndex(key) {
-    const indexHash = this.hash(key);
-    const index = indexHash % this.buckets.length;
-    return index;
-  }
+getIndex(key) {
+const indexHash = this.hash(key);
+const index = indexHash % this.buckets.length;
+return index;
+}
 }</code></pre></td></tr></tbody></table>
 
 We are using `buckets` rather than drawer/bins, but you get the idea :)
@@ -395,10 +386,10 @@ hashMap.set(&#39;dog&#39;, 1);
 hashMap.set(&#39;art&#39;, 8);
 
 console.log(hashMap.buckets);
-/*
-  bucket #0: &lt;1 empty item&gt;,
-  bucket #1: 8
-*/
+/_
+bucket #0: &lt;1 empty item&gt;,
+bucket #1: 8
+_/
 
 assert.equal(hashMap.get(&#39;art&#39;), 8); // this one is ok
 assert.equal(hashMap.get(&#39;cat&#39;), 8); // got overwritten by art 😱
@@ -411,8 +402,6 @@ Can you tell what’s wrong with `NaiveHashMap` before expanding the answer belo
 
 What is wrong with \`NaiveHashMap\` is that...
 
-  
-  
 **1)** **Hash function** generates many duplicates. E.g.
 
 <table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><pre><code>1
@@ -421,19 +410,15 @@ hash(&#39;dog&#39;) // 3</code></pre></td></tr></tbody></table>
 
 This hash implementation will cause a lot of collisions.
 
-  
-  
 **2)** **Collisions** are not handled at all. Both `cat` and `dog` will overwrite each other on position 3 of the Array (bucket\#1).
 
-  
-  
 **3)** **Size of the Array** even if we get a better hash function, we will get duplicates because the Array has a size of 3, which less than the number of elements that we want to fit. We want to have an initial capacity that is well beyond what we need to fit.
 
 Did you guess any? ☝️
 
 ### <a href="#Improving-Hash-Function" class="headerlink" title="Improving Hash Function"></a>Improving Hash Function
 
-> The primary purpose of a HashMap is to reduce the search/access time of an Array from *`O(n)`* to *`O(1)`*.
+> The primary purpose of a HashMap is to reduce the search/access time of an Array from _`O(n)`_ to _`O(1)`_.
 
 For that, we need:
 
@@ -456,12 +441,12 @@ Let’s give it another shot at our hash function. Instead of using the string�
   let hashValue = 0;
   const stringKey = key.toString();
 
-  for (let index = 0; index &lt; stringKey.length; index++) {
-    const charCode = stringKey.charCodeAt(index);
-    hashValue += charCode;
-  }
+for (let index = 0; index &lt; stringKey.length; index++) {
+const charCode = stringKey.charCodeAt(index);
+hashValue += charCode;
+}
 
-  return hashValue;
+return hashValue;
 }</code></pre></td></tr></tbody></table>
 
 Let’s try again:
@@ -490,12 +475,12 @@ We can fix that by offsetting the sum with the position:
   let hashValue = 0;
   const stringKey = `${key}`;
 
-  for (let index = 0; index &lt; stringKey.length; index++) {
-    const charCode = stringKey.charCodeAt(index);
-    hashValue += charCode &lt;&lt; (index * 8);
-  }
+for (let index = 0; index &lt; stringKey.length; index++) {
+const charCode = stringKey.charCodeAt(index);
+hashValue += charCode &lt;&lt; (index \* 8);
+}
 
-  return hashValue;
+return hashValue;
 }</code></pre></td></tr></tbody></table>
 
 Now let’s try again, this time with hex numbers so we can see the offset.
@@ -544,12 +529,12 @@ One way is taking into account the key `type` into the hash function.
   let hashValue = 0;
   const stringTypeKey = `${key}${typeof key}`;
 
-  for (let index = 0; index &lt; stringTypeKey.length; index++) {
-    const charCode = stringTypeKey.charCodeAt(index);
-    hashValue += charCode &lt;&lt; (index * 8);
-  }
+for (let index = 0; index &lt; stringTypeKey.length; index++) {
+const charCode = stringTypeKey.charCodeAt(index);
+hashValue += charCode &lt;&lt; (index \* 8);
+}
 
-  return hashValue;
+return hashValue;
 }</code></pre></td></tr></tbody></table>
 
 Let’s test that again:
@@ -582,8 +567,8 @@ We could still have collisions, so let’s implement something to handle them.
 
 Let’s make the following improvements to our HashMap implementation:
 
--   **Hash function** that checks types and character orders to minimize collisions.
--   **Handle collisions** by appending values to a list. We also added a counter to keep track of them.
+- **Hash function** that checks types and character orders to minimize collisions.
+- **Handle collisions** by appending values to a list. We also added a counter to keep track of them.
 
 Decent HashMap Implementation[full code](https://github.com/amejiarosario/dsa.js/blob/master/src/data-structures/maps/hash-maps/hash-map-2.js)
 
@@ -634,35 +619,35 @@ Decent HashMap Implementation[full code](https://github.com/amejiarosario/dsa.js
 45
 46</code></pre></td><td><pre><code>class DecentHashMap {
 
-  constructor(initialCapacity = 2) {
-    this.buckets = new Array(initialCapacity);
-    this.collisions = 0;
-  }
+constructor(initialCapacity = 2) {
+this.buckets = new Array(initialCapacity);
+this.collisions = 0;
+}
 
-  set(key, value) {
-    const bucketIndex = this.getIndex(key);
-    if(this.buckets[bucketIndex]) {
-      this.buckets[bucketIndex].push({key, value});
-      if(this.buckets[bucketIndex].length &gt; 1) { this.collisions++; }
-    } else {
-      this.buckets[bucketIndex] = [{key, value}];
-    }
-    return this;
-  }
+set(key, value) {
+const bucketIndex = this.getIndex(key);
+if(this.buckets[bucketIndex]) {
+this.buckets[bucketIndex].push({key, value});
+if(this.buckets[bucketIndex].length &gt; 1) { this.collisions++; }
+} else {
+this.buckets[bucketIndex] = [{key, value}];
+}
+return this;
+}
 
-  get(key) {
-    const bucketIndex = this.getIndex(key);
-    for (let arrayIndex = 0; arrayIndex &lt; this.buckets[bucketIndex].length; arrayIndex++) {
-      const entry = this.buckets[bucketIndex][arrayIndex];
-      if(entry.key === key) {
-        return entry.value
-      }
-    }
-  }
+get(key) {
+const bucketIndex = this.getIndex(key);
+for (let arrayIndex = 0; arrayIndex &lt; this.buckets[bucketIndex].length; arrayIndex++) {
+const entry = this.buckets[bucketIndex][arrayindex];
+if(entry.key === key) {
+return entry.value
+}
+}
+}
 
-  hash(key) {
-    let hashValue = 0;
-    const stringTypeKey = `${key}${typeof key}`;
+hash(key) {
+let hashValue = 0;
+const stringTypeKey = `${key}${typeof key}`;
 
     for (let index = 0; index &lt; stringTypeKey.length; index++) {
       const charCode = stringTypeKey.charCodeAt(index);
@@ -670,13 +655,14 @@ Decent HashMap Implementation[full code](https://github.com/amejiarosario/dsa.js
     }
 
     return hashValue;
-  }
 
-  getIndex(key) {
-    const indexHash = this.hash(key);
-    const index = indexHash % this.buckets.length;
-    return index;
-  }
+}
+
+getIndex(key) {
+const indexHash = this.hash(key);
+const index = indexHash % this.buckets.length;
+return index;
+}
 }</code></pre></td></tr></tbody></table>
 
 Let’s use it and see how it perform:
@@ -711,10 +697,10 @@ hashMap.set(&#39;art&#39;, 8);
 
 console.log(&#39;collisions: &#39;, hashMap.collisions); // 2
 console.log(hashMap.buckets);
-/*
-  bucket #0: [ { key: &#39;cat&#39;, value: 2 }, { key: &#39;art&#39;, value: 8 } ]
-  bucket #1: [ { key: &#39;rat&#39;, value: 7 }, { key: &#39;dog&#39;, value: 1 } ]
-*/
+/_
+bucket #0: [ { key: &#39;cat&#39;, value: 2 }, { key: &#39;art&#39;, value: 8 } ]
+bucket #1: [ { key: &#39;rat&#39;, value: 7 }, { key: &#39;dog&#39;, value: 1 } ]
+_/
 
 assert.equal(hashMap.get(&#39;art&#39;), 8); // this one is ok
 assert.equal(hashMap.get(&#39;cat&#39;), 2); // Good. Didn&#39;t got overwritten by art
@@ -735,7 +721,7 @@ hash(&#39;rat&#39;) =&gt; 3789411405; bucketIndex =&gt; 3789411405 % 2 = 1</code
 
 So naturally, we have increased the initial capacity, but by how much? Let’s see how the initial size affects the hash map performance.
 
-If we have an initial capacity of `1`. All the values will go into one bucket (`bucket#0`), and it won’t be any better than searching a deal in a simple array *`O(n)`*.
+If we have an initial capacity of `1`. All the values will go into one bucket (`bucket#0`), and it won’t be any better than searching a deal in a simple array _`O(n)`_.
 
 Let’s say that we start with an initial capacity set to 10:
 
@@ -764,14 +750,14 @@ hashMapSize10.set(&#39;art&#39;, 8);
 
 console.log(&#39;collisions: &#39;, hashMapSize10.collisions); // 1
 console.log(&#39;hashMapSize10\n&#39;, hashMapSize10.buckets);
-/*
-  bucket#0: [ { key: &#39;cat&#39;, value: 2 }, { key: &#39;art&#39;, value: 8 } ],
-            &lt;4 empty items&gt;,
-  bucket#5: [ { key: &#39;rat&#39;, value: 7 } ],
-            &lt;1 empty item&gt;,
-  bucket#7: [ { key: &#39;dog&#39;, value: 1 } ],
-            &lt;2 empty items&gt;
-*/</code></pre></td></tr></tbody></table>
+/_
+bucket#0: [ { key: &#39;cat&#39;, value: 2 }, { key: &#39;art&#39;, value: 8 } ],
+&lt;4 empty items&gt;,
+bucket#5: [ { key: &#39;rat&#39;, value: 7 } ],
+&lt;1 empty item&gt;,
+bucket#7: [ { key: &#39;dog&#39;, value: 1 } ],
+&lt;2 empty items&gt;
+_/</code></pre></td></tr></tbody></table>
 
 Another way to see this
 
@@ -809,17 +795,17 @@ hashMapSize100.set(&#39;art&#39;, 8);
 
 console.log(&#39;collisions: &#39;, hashMapSize100.collisions); // 0
 console.log(&#39;hashMapSize100\n&#39;, hashMapSize100.buckets);
-/*
-            &lt;5 empty items&gt;,
-  bucket#5: [ { key: &#39;rat&#39;, value: 7 } ],
-            &lt;1 empty item&gt;,
-  bucket#7: [ { key: &#39;dog&#39;, value: 1 } ],
-            &lt;32 empty items&gt;,
-  bucket#41: [ { key: &#39;art&#39;, value: 8 } ],
-            &lt;49 empty items&gt;,
-  bucket#90: [ { key: &#39;cat&#39;, value: 2 } ],
-            &lt;9 empty items&gt;
-*/</code></pre></td></tr></tbody></table>
+/_
+&lt;5 empty items&gt;,
+bucket#5: [ { key: &#39;rat&#39;, value: 7 } ],
+&lt;1 empty item&gt;,
+bucket#7: [ { key: &#39;dog&#39;, value: 1 } ],
+&lt;32 empty items&gt;,
+bucket#41: [ { key: &#39;art&#39;, value: 8 } ],
+&lt;49 empty items&gt;,
+bucket#90: [ { key: &#39;cat&#39;, value: 2 } ],
+&lt;9 empty items&gt;
+_/</code></pre></td></tr></tbody></table>
 
 Yay! 🎊 no collision!
 
@@ -829,7 +815,7 @@ Wouldn’t it be great if we can have a HashMap that automatically increases its
 
 ### <a href="#Optimal-HashMap-Implementation" class="headerlink" title="Optimal HashMap Implementation"></a>Optimal HashMap Implementation
 
-If we have a big enough bucket, we won’t have collisions; thus, the search time would be *`O(1)`*. However, how do we know how big a hash map capacity should big? 100? 1,000? A million?
+If we have a big enough bucket, we won’t have collisions; thus, the search time would be _`O(1)`_. However, how do we know how big a hash map capacity should big? 100? 1,000? A million?
 
 Having allocated massive amounts of memory is impractical. So, we can automatically have the hash map resize itself based on a load factor. This operation is called \*\* rehash\*\*.
 
@@ -966,9 +952,9 @@ Optimal HashMap Implementation[documented code](https://github.com/amejiarosario
     this.keys = [];
   }
 
-  hash(key) {
-    let hashValue = 0;
-    const stringTypeKey = `${key}${typeof key}`;
+hash(key) {
+let hashValue = 0;
+const stringTypeKey = `${key}${typeof key}`;
 
     for (let index = 0; index &lt; stringTypeKey.length; index++) {
       const charCode = stringTypeKey.charCodeAt(index);
@@ -976,17 +962,17 @@ Optimal HashMap Implementation[documented code](https://github.com/amejiarosario
     }
 
     return hashValue;
-  }
 
+}
 
-  _getBucketIndex(key) {
-    const hashValue = this.hash(key);
-    const bucketIndex = hashValue % this.buckets.length;
-    return bucketIndex;
-  }
+\_getBucketIndex(key) {
+const hashValue = this.hash(key);
+const bucketIndex = hashValue % this.buckets.length;
+return bucketIndex;
+}
 
-  set(key, value) {
-    const {bucketIndex, entryIndex} = this._getIndexes(key);
+set(key, value) {
+const {bucketIndex, entryIndex} = this.\_getIndexes(key);
 
     if(entryIndex === undefined) {
       // initialize array and save key/value
@@ -1007,25 +993,27 @@ Optimal HashMap Implementation[documented code](https://github.com/amejiarosario
     }
 
     return this;
-  }
 
-  get(key) {
-    const {bucketIndex, entryIndex} = this._getIndexes(key);
+}
+
+get(key) {
+const {bucketIndex, entryIndex} = this.\_getIndexes(key);
 
     if(entryIndex === undefined) {
       return;
     }
 
     return this.buckets[bucketIndex][entryIndex].value;
-  }
 
-  has(key) {
-    return !!this.get(key);
-  }
+}
 
-  _getIndexes(key) {
-    const bucketIndex = this._getBucketIndex(key);
-    const values = this.buckets[bucketIndex] || [];
+has(key) {
+return !!this.get(key);
+}
+
+\_getIndexes(key) {
+const bucketIndex = this.\_getBucketIndex(key);
+const values = this.buckets[bucketIndex] || [];
 
     for (let entryIndex = 0; entryIndex &lt; values.length; entryIndex++) {
       const entry = values[entryIndex];
@@ -1035,10 +1023,11 @@ Optimal HashMap Implementation[documented code](https://github.com/amejiarosario
     }
 
     return {bucketIndex};
-  }
 
-  delete(key) {
-    const {bucketIndex, entryIndex, keyIndex} = this._getIndexes(key);
+}
+
+delete(key) {
+const {bucketIndex, entryIndex, keyIndex} = this.\_getIndexes(key);
 
     if(entryIndex === undefined) {
       return false;
@@ -1049,10 +1038,11 @@ Optimal HashMap Implementation[documented code](https://github.com/amejiarosario
     this.size--;
 
     return true;
-  }
 
-  rehash(newCapacity) {
-    const newMap = new HashMap(newCapacity);
+}
+
+rehash(newCapacity) {
+const newMap = new HashMap(newCapacity);
 
     this.keys.forEach(key =&gt; {
       if(key) {
@@ -1065,11 +1055,12 @@ Optimal HashMap Implementation[documented code](https://github.com/amejiarosario
     this.collisions = newMap.collisions;
     // Optional: both `keys` has the same content except that the new one doesn&#39;t have empty spaces from deletions
     this.keys = newMap.keys;
-  }
 
-  getLoadFactor() {
-    return this.size / this.buckets.length;
-  }
+}
+
+getLoadFactor() {
+return this.size / this.buckets.length;
+}
 }</code></pre></td></tr></tbody></table>
 
 Pay special attention to lines 96 to 114. That’s where the rehash magic happens. We create a new HashMap with doubled capacity.
@@ -1183,9 +1174,9 @@ console.log(insertMap(map, &#39;word&#39;, 1)); // Map { &#39;word&#39; =&gt; 1 
 
 Behind the scenes, the `Map.set` just insert elements into an array (take a look at [`DecentHashMap.set`](#DecentHashMap)). So, similar to `Array.push` we have that:
 
-> Insert an element in HashMap runtime is *O(1)*. If rehash is needed, then it will take *O(n)*
+> Insert an element in HashMap runtime is _O(1)_. If rehash is needed, then it will take _O(n)_
 
-Our implementation with [rehash](#HashMapWithRehash) functionality will keep collisions to the minimum. The rehash operation takes *`O(n)`*, but it doesn’t happen all the time, only when it is needed.
+Our implementation with [rehash](#HashMapWithRehash) functionality will keep collisions to the minimum. The rehash operation takes _`O(n)`_, but it doesn’t happen all the time, only when it is needed.
 
 ### <a href="#Search-Access-an-element-on-a-HashMap-runtime" class="headerlink" title="Search/Access an element on a HashMap runtime"></a>Search/Access an element on a HashMap runtime
 
@@ -1211,17 +1202,17 @@ This is the `HashMap.get` function that we use to get the value associated with 
   }
 }</code></pre></td></tr></tbody></table>
 
-If there’s no collision, then `values` will only have one value, and the access time would be *`O(1)`*. But, we know there will be collisions. If the initial capacity is too small and the hash function is terrible like [NaiveHashMap.hash](#NaiveHashMap), then most of the elements will end up in a few buckets *`O(n)`*.
+If there’s no collision, then `values` will only have one value, and the access time would be _`O(1)`_. But, we know there will be collisions. If the initial capacity is too small and the hash function is terrible like [NaiveHashMap.hash](#NaiveHashMap), then most of the elements will end up in a few buckets _`O(n)`_.
 
-> HashMap access operation has a runtime of *`O(1)`* on average and worst-case of *`O(n)`*.
+> HashMap access operation has a runtime of _`O(1)`_ on average and worst-case of _`O(n)`_.
 
-**Advanced Note:** Another idea to reduce the time to get elements from *O(n)* to *O(log n)* is to use a *binary search tree* instead of an array. Actually, [Java’s HashMap implementation](http://hg.openjdk.java.net/jdk9/jdk9/jdk/file/f08705540498/src/java.base/share/classes/java/util/HashMap.java#l145) switches from an array to a tree when a bucket has more than [8 elements](http://hg.openjdk.java.net/jdk9/jdk9/jdk/file/f08705540498/src/java.base/share/classes/java/util/HashMap.java#l257).
+**Advanced Note:** Another idea to reduce the time to get elements from _O(n)_ to _O(log n)_ is to use a _binary search tree_ instead of an array. Actually, [Java’s HashMap implementation](http://hg.openjdk.java.net/jdk9/jdk9/jdk/file/f08705540498/src/java.base/share/classes/java/util/HashMap.java#l145) switches from an array to a tree when a bucket has more than [8 elements](http://hg.openjdk.java.net/jdk9/jdk9/jdk/file/f08705540498/src/java.base/share/classes/java/util/HashMap.java#l257).
 
 ### <a href="#Edit-Delete-element-on-a-HashMap-runtime" class="headerlink" title="Edit/Delete element on a HashMap runtime"></a>Edit/Delete element on a HashMap runtime
 
-Editing (`HashMap.set`) and deleting (`HashMap.delete`) key/value pairs have an **amortized** runtime of *`O(1)`*. In the case of many collisions, we could face an *`O(n)`* as a worst-case. However, with our rehash operation, we can mitigate that risk.
+Editing (`HashMap.set`) and deleting (`HashMap.delete`) key/value pairs have an **amortized** runtime of _`O(1)`_. In the case of many collisions, we could face an _`O(n)`_ as a worst-case. However, with our rehash operation, we can mitigate that risk.
 
-> HashMap edits and delete operations has a runtime of *`O(1)`* on average and worst-case of *`O(n)`*.
+> HashMap edits and delete operations has a runtime of _`O(1)`_ on average and worst-case of _`O(n)`_.
 
 ### <a href="#HashMap-operations-time-complexity" class="headerlink" title="HashMap operations time complexity"></a>HashMap operations time complexity
 
@@ -1231,12 +1222,11 @@ We can sum up the arrays time complexity as follows:
 
 <table><thead><tr class="header"><th>Operation</th><th>Worst</th><th>Amortized</th><th>Comments</th></tr></thead><tbody><tr class="odd"><td>Access/Search (<code>HashMap.get</code>)</td><td><em><code>O(n)</code></em></td><td><em><code>O(1)</code></em></td><td><em><code>O(n)</code></em> is an extreme case when there are too many collisions</td></tr><tr class="even"><td>Insert/Edit (<code>HashMap.set</code>)</td><td><em><code>O(n)</code></em></td><td><em><code>O(1)</code></em></td><td><em><code>O(n)</code></em> only happens with rehash when the Hash is 0.75 full</td></tr><tr class="odd"><td>Delete (<code>HashMap.delete</code>)</td><td><em><code>O(n)</code></em></td><td><em><code>O(1)</code></em></td><td><em><code>O(n)</code></em> is an extreme case when there are too many collisions</td></tr></tbody></table>
 
-<a href="#Sets" class="headerlink" title="Sets"></a>Sets
---------------------------------------------------------
+## <a href="#Sets" class="headerlink" title="Sets"></a>Sets
 
 Sets are very similar to arrays. The difference is that they don’t allow duplicates.
 
-How can we implement a Set (Array without duplicates)? We could use an array and check if an element is there before inserting a new one. But the running time of checking if a value is already there is *`O(n)`*. Can we do better than that? We develop the `Map` with an amortized run time of *`O(1)`*!
+How can we implement a Set (Array without duplicates)? We could use an array and check if an element is there before inserting a new one. But the running time of checking if a value is already there is _`O(n)`_. Can we do better than that? We develop the `Map` with an amortized run time of _`O(1)`_!
 
 ### <a href="#Set-Implementation" class="headerlink" title="Set Implementation"></a>Set Implementation
 
@@ -1276,41 +1266,41 @@ We could use the JavaScript built-in `Set`. However, if we implement it by ourse
 32</code></pre></td><td><pre><code>const HashMap = require(&#39;../hash-maps/hash-map&#39;);
 
 class MySet {
-  constructor() {
-    this.hashMap = new HashMap();
-  }
+constructor() {
+this.hashMap = new HashMap();
+}
 
-  add(value) {
-    this.hashMap.set(value);
-  }
+add(value) {
+this.hashMap.set(value);
+}
 
-  has(value) {
-    return this.hashMap.has(value);
-  }
+has(value) {
+return this.hashMap.has(value);
+}
 
-  get size() {
-    return this.hashMap.size;
-  }
+get size() {
+return this.hashMap.size;
+}
 
-  delete(value) {
-    return this.hashMap.delete(value);
-  }
+delete(value) {
+return this.hashMap.delete(value);
+}
 
-  entries() {
-    return this.hashMap.keys.reduce((acc, key) =&gt; {
-      if(key !== undefined) {
-        acc.push(key.content);
-      }
-      return acc
-    }, []);
-  }
+entries() {
+return this.hashMap.keys.reduce((acc, key) =&gt; {
+if(key !== undefined) {
+acc.push(key.content);
+}
+return acc
+}, []);
+}
 }</code></pre></td></tr></tbody></table>
 
 We used `HashMap.set` to add the set elements without duplicates. We use the key as the value, and since the hash map’s keys are unique, we are all set.
 
-Checking if an element is already there can be done using the `hashMap.has`, which has an amortized runtime of *`O(1)`*. Most operations would be an amortized constant time except for getting the `entries`, *`O(n)`*.
+Checking if an element is already there can be done using the `hashMap.has`, which has an amortized runtime of _`O(1)`_. Most operations would be an amortized constant time except for getting the `entries`, _`O(n)`_.
 
-Note: The JS built-in `Set.has` has a runtime of *O(n)* since it uses a regular list of elements and checks each one at a time. You can see the `Set.has` algorithm [here](https://www.ecma-international.org/ecma-262/6.0/#sec-set.prototype.has)
+Note: The JS built-in `Set.has` has a runtime of _O(n)_ since it uses a regular list of elements and checks each one at a time. You can see the `Set.has` algorithm [here](https://www.ecma-international.org/ecma-262/6.0/#sec-set.prototype.has)
 
 Here some examples how to use it:
 
@@ -1360,8 +1350,7 @@ From our Set implementation using a HashMap, we can sum up the time complexity a
 
 <table><thead><tr class="header"><th>Operation</th><th>Worst</th><th>Amortized</th><th>Comments</th></tr></thead><tbody><tr class="odd"><td>Access/Search (<code>Set.has</code>)</td><td><em><code>O(n)</code></em></td><td><em><code>O(1)</code></em></td><td><em><code>O(n)</code></em> is an extreme case when there are too many collisions</td></tr><tr class="even"><td>Insert/Edit (<code>Set.add</code>)</td><td><em><code>O(n)</code></em></td><td><em><code>O(1)</code></em></td><td><em><code>O(n)</code></em> only happens with <em>rehash</em> when the Hash is 0.75 full</td></tr><tr class="odd"><td>Delete (<code>Set.delete</code>)</td><td><em><code>O(n)</code></em></td><td><em><code>O(1)</code></em></td><td><em><code>O(n)</code></em> is an extreme case when there are too many collisions</td></tr></tbody></table>
 
-<a href="#Linked-Lists" class="headerlink" title="Linked Lists"></a>Linked Lists
---------------------------------------------------------------------------------
+## <a href="#Linked-Lists" class="headerlink" title="Linked Lists"></a>Linked Lists
 
 A linked list is a data structure where every element is connected to the next one.
 
@@ -1406,7 +1395,7 @@ linked-list.js
     this.size = 0; // total number of elements in the list
   }
 
-  // ...
+// ...
 }</code></pre></td></tr></tbody></table>
 
 There are four basic operations that we can do in every Linked List:
@@ -1442,18 +1431,18 @@ LinkedList.prototype.addLast
 13</code></pre></td><td><pre><code>addLast(value) { // similar Array.push
   const node = new Node(value);
 
-  if(this.root) {
-    let currentNode = this.root;
-    while(currentNode &amp;&amp; currentNode.next) {
-      currentNode = currentNode.next;
-    }
-    currentNode.next = node;
-  } else {
-    this.root = node;
-  }
+if(this.root) {
+let currentNode = this.root;
+while(currentNode &amp;&amp; currentNode.next) {
+currentNode = currentNode.next;
+}
+currentNode.next = node;
+} else {
+this.root = node;
+}
 }</code></pre></td></tr></tbody></table>
 
-What’s the runtime of this code? If it is the first element, then adding to the root is *O(1)*. However, finding the last item is *O(n)*.
+What’s the runtime of this code? If it is the first element, then adding to the root is _O(1)_. However, finding the last item is _O(n)_.
 
 Now, removing an element from the end of the list has a similar code. We have to find the current before last and make its `next` reference `null`.
 
@@ -1483,23 +1472,23 @@ LinkedList.prototype.removeLast
   let current = this.root;
   let target;
 
-  if(current &amp;&amp; current.next) {
-    while(current &amp;&amp; current.next &amp;&amp; current.next.next) {
-      current = current.next;
-    }
-    target = current.next;
-    current.next = null;
-  } else {
-    this.root = null;
-    target = current;
-  }
+if(current &amp;&amp; current.next) {
+while(current &amp;&amp; current.next &amp;&amp; current.next.next) {
+current = current.next;
+}
+target = current.next;
+current.next = null;
+} else {
+this.root = null;
+target = current;
+}
 
-  if(target) {
-    return target.value;
-  }
+if(target) {
+return target.value;
+}
 }</code></pre></td></tr></tbody></table>
 
-The runtime again is *O(n)* because we have to iterate until the second-last element and remove the reference to the last (line 10).
+The runtime again is _O(n)_ because we have to iterate until the second-last element and remove the reference to the last (line 10).
 
 **Adding/Removing an element from the beginning of a linked list**
 
@@ -1551,13 +1540,13 @@ LinkedList.removeFirst
 removeFirst() {
   const first = this.root;
 
-  if (first) {
-    this.root = first.next;
-    return first.value;
-  }
+if (first) {
+this.root = first.next;
+return first.value;
+}
 }</code></pre></td></tr></tbody></table>
 
-As expected, the runtime for removing/adding to the first element from a linked List is always constant *O(1)*
+As expected, the runtime for removing/adding to the first element from a linked List is always constant _O(1)_
 
 <span id="LinkedList.remove"></span>
 
@@ -1587,21 +1576,21 @@ LinkedList.remove
     return this.removeFirst();
   }
 
-  for (let current = this.first, i = 0; current;  i++, current = current.next) {
-    if(i === index) {
-      if(!current.next) { // if it doesn&#39;t have next it means that it is the last
-        return this.removeLast();
-      }
-      current.previous.next = current.next;
-      this.size--;
-      return current.value;
-    }
-  }
+for (let current = this.first, i = 0; current; i++, current = current.next) {
+if(i === index) {
+if(!current.next) { // if it doesn&#39;t have next it means that it is the last
+return this.removeLast();
+}
+current.previous.next = current.next;
+this.size--;
+return current.value;
+}
+}
 }</code></pre></td></tr></tbody></table>
 
 Note that `index` is a zero-based index: 0 will be the first element, 1 second, and so on.
 
-> Removing an element anywhere within the list is *O(n)*.
+> Removing an element anywhere within the list is _O(n)_.
 
 <span id="LinkedList.contains"></span>
 
@@ -1627,7 +1616,7 @@ LinkedList.contains
 
 This function finds the first element with the given value.
 
-> The runtime for searching an element in a linked list is *O(n)*
+> The runtime for searching an element in a linked list is _O(n)_
 
 ### <a href="#Singly-Linked-Lists-time-complexity" class="headerlink" title="Singly Linked Lists time complexity"></a>Singly Linked Lists time complexity
 
@@ -1635,9 +1624,9 @@ Singly Linked List time complexity per function is as follows.
 
 <table><thead><tr class="header"><th>Operation</th><th>Runtime</th><th>Comment</th></tr></thead><tbody><tr class="odd"><td><a href="#DoublyLinkedList.addFirst"><code>addFirst</code></a></td><td><em>O(1)</em></td><td>Insert element to the beginning of the list</td></tr><tr class="even"><td><a href="#SinglyLinkedList.addLast"><code>addLast</code></a></td><td><em>O(n)</em></td><td>Insert element to the end of the list</td></tr><tr class="odd"><td><a href="#DoublyLinkedList.add"><code>add</code></a></td><td><em>O(n)</em></td><td>Insert element anywhere in the list.</td></tr><tr class="even"><td><a href="#DoublyLinkedList.removeFirst"><code>removeFirst</code></a></td><td><em>O(1)</em></td><td>Remove element to the beginning of the list</td></tr><tr class="odd"><td><a href="#SinglyLinkedList.removeLast"><code>removeLast</code></a></td><td><em>O(n)</em></td><td>Remove element to the end of the list</td></tr><tr class="even"><td><a href="#LinkedList.remove"><code>remove</code></a></td><td><em>O(n)</em></td><td>Remove any element from the list</td></tr><tr class="odd"><td><a href="#LinkedList.contains"><code>contains</code></a></td><td><em>O(n)</em></td><td>Search for an element from the list</td></tr></tbody></table>
 
-Notice that every time we add/remove from the last position, the operation takes *O(n)*.
+Notice that every time we add/remove from the last position, the operation takes _O(n)_.
 
-> But we could reduce the `addLast`/`removeLast` from *O(n)* to a flat *O(1)* if we keep a reference of the last element!
+> But we could reduce the `addLast`/`removeLast` from _O(n)_ to a flat _O(1)_ if we keep a reference of the last element!
 
 We are going to add the last reference in the next section!
 
@@ -1676,13 +1665,13 @@ Doubly Linked List[full code](https://github.com/amejiarosario/dsa.js/blob/maste
 }
 
 class LinkedList {
-  constructor() {
-    this.first = null; // head/root element
-    this.last = null; // last element of the list
-    this.size = 0; // total number of elements in the list
-  }
+constructor() {
+this.first = null; // head/root element
+this.last = null; // last element of the list
+this.size = 0; // total number of elements in the list
+}
 
-  // ...
+// ...
 }</code></pre></td></tr></tbody></table>
 
 **Adding and Removing from the start of a list**
@@ -1711,18 +1700,18 @@ LinkedList.prototype.addFirst[full code](https://github.com/amejiarosario/dsa.js
 16</code></pre></td><td><pre><code>addFirst(value) {
   const node = new Node(value);
 
-  node.next = this.first;
+node.next = this.first;
 
-  if(this.first) {
-    this.first.previous = node;
-  } else {
-    this.last = node;
-  }
+if(this.first) {
+this.first.previous = node;
+} else {
+this.last = node;
+}
 
-  this.first = node; // update head
-  this.size++;
+this.first = node; // update head
+this.size++;
 
-  return node;
+return node;
 }</code></pre></td></tr></tbody></table>
 
 Notice that we have to be very careful and update the previous and last reference.
@@ -1749,27 +1738,28 @@ LinkedList.prototype.removeFirst[full code](https://github.com/amejiarosario/dsa
 16</code></pre></td><td><pre><code>removeFirst() {
   const first = this.first;
 
-  if(first) {
-    this.first = first.next;
-    if(this.first) {
-      this.first.previous = null;
-    }
+if(first) {
+this.first = first.next;
+if(this.first) {
+this.first.previous = null;
+}
 
     this.size--;
 
     return first.value;
-  } else {
-    this.last = null;
-  }
+
+} else {
+this.last = null;
+}
 }</code></pre></td></tr></tbody></table>
 
 What’s the runtime?
 
-> Adding and removing elements from a (singly/doubly) LinkedList has a constant runtime *O(1)*
+> Adding and removing elements from a (singly/doubly) LinkedList has a constant runtime _O(1)_
 
 **Adding and removing from the end of a list**
 
-Adding and removing *from the end* of the list is a little tricky. If you checked in the Singly Linked List, both operations took *O(n)* since we had to loop through the list to find the last element. Now, we have the `last` reference:
+Adding and removing _from the end_ of the list is a little tricky. If you checked in the Singly Linked List, both operations took _O(n)_ since we had to loop through the list to find the last element. Now, we have the `last` reference:
 
 <span id="DoublyLinkedList.addLast"></span>
 
@@ -1794,19 +1784,19 @@ LinkedList.prototype.addLast[full code](https://github.com/amejiarosario/dsa.js/
 17</code></pre></td><td><pre><code>addLast(value) {
   const node = new Node(value);
 
-  if(this.first) {
-    let currentNode = this.first;
-    node.previous = this.last;
-    this.last.next = node;
-    this.last = node;
-  } else {
-    this.first = node;
-    this.last = node;
-  }
+if(this.first) {
+let currentNode = this.first;
+node.previous = this.last;
+this.last.next = node;
+this.last = node;
+} else {
+this.first = node;
+this.last = node;
+}
 
-  this.size++;
+this.size++;
 
-  return node;
+return node;
 }</code></pre></td></tr></tbody></table>
 
 Again, we have to be careful about updating the references and handling exceptional cases such as only one element.
@@ -1838,26 +1828,26 @@ LinkedList.prototype.removeLast[full code](https://github.com/amejiarosario/dsa.
   let current = this.first;
   let target;
 
-  if(current &amp;&amp; current.next) {
-    current = this.last.previous;
-    this.last = current;
-    target = current.next;
-    current.next = null;
-  } else {
-    this.first = null;
-    this.last = null;
-    target = current;
-  }
+if(current &amp;&amp; current.next) {
+current = this.last.previous;
+this.last = current;
+target = current.next;
+current.next = null;
+} else {
+this.first = null;
+this.last = null;
+target = current;
+}
 
-  if(target) {
-    this.size--;
-    return target.value;
-  }
+if(target) {
+this.size--;
+return target.value;
+}
 }</code></pre></td></tr></tbody></table>
 
 Using a doubly-linked list, we no longer have to iterate through the whole list to get the 2nd last element. We can use directly `this.last.previous` and is `O(1)`.
 
-Did you remember that for the Queue, we had to use two arrays? We can now change that implementation and use a doubly-linked list instead. The runtime will be *O(1)* for insert at the start and deleting at the end.
+Did you remember that for the Queue, we had to use two arrays? We can now change that implementation and use a doubly-linked list instead. The runtime will be _O(1)_ for insert at the start and deleting at the end.
 
 <span id="DoublyLinkedList.add"></span>
 
@@ -1892,26 +1882,27 @@ LinkedList.add[FullCode](https://github.com/amejiarosario/dsa.js/blob/master/src
     return this.addFirst(value);
   }
 
-  for (let current = this.first, i = 0; i &lt;= this.size;  i++, current = (current &amp;&amp; current.next)) {
-    if(i === index) {
-      if(i === this.size) { // if it doesn&#39;t have next it means that it is the last
-        return this.addLast(value);
-      }
-      const newNode = new Node(value);
-      newNode.previous = current.previous;
-      newNode.next = current;
+for (let current = this.first, i = 0; i &lt;= this.size; i++, current = (current &amp;&amp; current.next)) {
+if(i === index) {
+if(i === this.size) { // if it doesn&#39;t have next it means that it is the last
+return this.addLast(value);
+}
+const newNode = new Node(value);
+newNode.previous = current.previous;
+newNode.next = current;
 
       current.previous.next = newNode;
       if(current.next) { current.next.previous = newNode; }
       this.size++;
       return newNode;
     }
-  }
+
+}
 }</code></pre></td></tr></tbody></table>
 
 If we have an insertion in the middle of the Array, then we have to update the `next` and `previous` reference of the surrounding elements.
 
-> Adding an element anywhere within the list is *O(n)*.
+> Adding an element anywhere within the list is _O(n)_.
 
 ### <a href="#Doubly-Linked-Lists-time-complexity" class="headerlink" title="Doubly Linked Lists time complexity"></a>Doubly Linked Lists time complexity
 
@@ -1919,15 +1910,14 @@ Doubly Linked List time complexity per function is as follows:
 
 <table><thead><tr class="header"><th>Operation</th><th>Runtime</th><th>Comment</th></tr></thead><tbody><tr class="odd"><td><a href="#DoublyLinkedList.addFirst"><code>addFirst</code></a></td><td><em>O(1)</em></td><td>Insert element to the beginning of the list.</td></tr><tr class="even"><td><a href="#DoublyLinkedList.addLast"><code>addLast</code></a></td><td><em>O(1)</em></td><td>Insert element to the end of the list.</td></tr><tr class="odd"><td><a href="#DoublyLinkedList.add"><code>add</code></a></td><td><em>O(n)</em></td><td>Insert element anywhere in the list.</td></tr><tr class="even"><td><a href="#DoublyLinkedList.removeFirst"><code>removeFirst</code></a></td><td><em>O(1)</em></td><td>Remove element to the beginning of the list.</td></tr><tr class="odd"><td><a href="#DoublyLinkedList.removeLast"><code>removeLast</code></a></td><td><em>O(1)</em></td><td>Remove element to the end of the list.</td></tr><tr class="even"><td><a href="#LinkedList.remove"><code>remove</code></a></td><td><em>O(n)</em></td><td>Remove any element from the list</td></tr><tr class="odd"><td><a href="#LinkedList.contains"><code>contains</code></a></td><td><em>O(n)</em></td><td>Search for any element from the list</td></tr></tbody></table>
 
-Doubly linked lists are a significant improvement compared to the singly linked list! We improved from *O(n)* to *O(1)* by:
+Doubly linked lists are a significant improvement compared to the singly linked list! We improved from _O(n)_ to _O(1)_ by:
 
--   Adding a reference to the previous element.
--   Holding a reference to the last item in the list.
+- Adding a reference to the previous element.
+- Holding a reference to the last item in the list.
 
-Removing first/last can be done in constant time; however, eliminating in the middle of the Array is still *O(n)*.
+Removing first/last can be done in constant time; however, eliminating in the middle of the Array is still _O(n)_.
 
-<a href="#Stacks" class="headerlink" title="Stacks"></a>Stacks
---------------------------------------------------------------
+## <a href="#Stacks" class="headerlink" title="Stacks"></a>Stacks
 
 Stacks is a data structure where the last entered data is the first to come out. Also know as Last-in, First-out (LIFO).
 
@@ -1953,17 +1943,17 @@ Let’s implement a stack from scratch!
     this.input = [];
   }
 
-  push(element) {
-    this.input.push(element);
-    return this;
-  }
+push(element) {
+this.input.push(element);
+return this;
+}
 
-  pop() {
-    return this.input.pop();
-  }
+pop() {
+return this.input.pop();
+}
 }</code></pre></td></tr></tbody></table>
 
-As you can see, it is easy since we are using the built-in `Array.push` and `Array.pop`. Both have a runtime of *`O(1)`*.
+As you can see, it is easy since we are using the built-in `Array.push` and `Array.pop`. Both have a runtime of _`O(1)`_.
 
 Let’s see some examples of its usage:
 
@@ -1989,8 +1979,7 @@ The first element in (`a`) is the last to get out. We can also implement Stack u
 
 That’s all!
 
-<a href="#Queues" class="headerlink" title="Queues"></a>Queues
---------------------------------------------------------------
+## <a href="#Queues" class="headerlink" title="Queues"></a>Queues
 
 Queues are a data structure where the first data to get in is also the first to go out. A.k.a First-in, First-out (FIFO). It’s like a line of people at the movies, the first to come in is the first to come out.
 
@@ -2021,19 +2010,19 @@ A naive implementation would be this one using `Array.push` and `Array.shift`:
     this.input = [];
   }
 
-  add(element) {
-    this.input.push(element);
-  }
+add(element) {
+this.input.push(element);
+}
 
-  remove() {
-    return this.input.shift();
-  }
+remove() {
+return this.input.shift();
+}
 }</code></pre></td></tr></tbody></table>
 
 What’s the time complexity of `Queue.add` and `Queue.remove`?
 
--   `Queue.add` uses `array.push` which has a constant runtime. Win!
--   `Queue.remove` uses `array.shift` which has a linear runtime. Can we do better than *`O(n)`*?
+- `Queue.add` uses `array.push` which has a constant runtime. Win!
+- `Queue.remove` uses `array.shift` which has a linear runtime. Can we do better than _`O(n)`_?
 
 Think of how you can implement a Queue only using `Array.push` and `Array.pop`.
 
@@ -2063,18 +2052,18 @@ Think of how you can implement a Queue only using `Array.push` and `Array.pop`.
     this.output = [];
   }
 
-  add(element) {
-    this.input.push(element);
-  }
+add(element) {
+this.input.push(element);
+}
 
-  remove() {
-    if(!this.output.length) {
-      while(this.input.length) {
-        this.output.push(this.input.pop());
-      }
-    }
-    return this.output.pop();
-  }
+remove() {
+if(!this.output.length) {
+while(this.input.length) {
+this.output.push(this.input.pop());
+}
+}
+return this.output.pop();
+}
 }</code></pre></td></tr></tbody></table>
 
 Now we are using two arrays rather than one.
@@ -2101,7 +2090,7 @@ When we remove something for the first time, the `output` array is empty. So, we
 
 What’s the runtime?
 
-If the output already has some elements, then the remove operation is constant *`O(1)`*. When the output arrays need to get refilled, it takes *`O(n)`* to do so. After the refilled, every operation would be constant again. The amortized time is *`O(1)`*.
+If the output already has some elements, then the remove operation is constant _`O(1)`_. When the output arrays need to get refilled, it takes _`O(n)`_ to do so. After the refilled, every operation would be constant again. The amortized time is _`O(1)`_.
 
 We can achieve a `Queue` with a pure constant if we use LinkedList. Let’s see what it is in the next section!
 
@@ -2132,27 +2121,26 @@ We can achieve the best performance for a `queue` using a linked list rather tha
 19</code></pre></td><td><pre><code>const LinkedList = require(&#39;../linked-lists/linked-list&#39;);
 
 class Queue {
-  constructor() {
-    this.input = new LinkedList();
-  }
+constructor() {
+this.input = new LinkedList();
+}
 
-  add(element) {
-    this.input.addFirst(element);
-  }
+add(element) {
+this.input.addFirst(element);
+}
 
-  remove() {
-    return this.input.removeLast();
-  }
+remove() {
+return this.input.removeLast();
+}
 
-  get size() {
-    return this.input.size;
-  }
+get size() {
+return this.input.size;
+}
 }</code></pre></td></tr></tbody></table>
 
-Using a doubly-linked list with the last element reference, we achieve an `add` of *O(1)*. That’s the importance of using the right tool for the right job. 💪
+Using a doubly-linked list with the last element reference, we achieve an `add` of _O(1)_. That’s the importance of using the right tool for the right job. 💪
 
-<a href="#Summary" class="headerlink" title="Summary"></a>Summary
------------------------------------------------------------------
+## <a href="#Summary" class="headerlink" title="Summary"></a>Summary
 
 We explored most of the linear data structures. We saw that depending on how we implement the data structures. There are different runtimes.
 
@@ -2160,7 +2148,7 @@ Here’s a summary of everything that we explored. You can click on each runtime
 
 **Time complexity**
 
-*Click on the **name** to go to the section or click on the **runtime** to go to the implementation*
+_Click on the **name** to go to the section or click on the **runtime** to go to the implementation_
 
 `*` = Amortized runtime
 
@@ -2172,11 +2160,9 @@ Note: **Binary search trees** and trees, in general, will be cover in the next p
 
 Thanks for reading this far. Here are some things you can do next:
 
--   Found a typo? [Edit this post](https://github.com/amejiarosario/amejiarosario.github.io/edit/source/source/_posts/2018-05-25-Data-Structures-Time-Complexity-for-Beginners-Arrays-HashMaps-Linked-Lists-Stacks-Queues-tutorial.md).
--   Got questions? [comment](#comments-section) below.
--   Was it useful? Show your support and share it.
-
-
+- Found a typo? [Edit this post](https://github.com/amejiarosario/amejiarosario.github.io/edit/source/source/_posts/2018-05-25-Data-Structures-Time-Complexity-for-Beginners-Arrays-HashMaps-Linked-Lists-Stacks-Queues-tutorial.md).
+- Got questions? [comment](#comments-section) below.
+- Was it useful? Show your support and share it.
 
 <a href="/Data-Structures-for-Beginners-Graphs-Time-Complexity-tutorial/" class="article-nav-newer"><strong><em></em> newer</strong></a>
 
@@ -2188,18 +2174,9 @@ Analysis of Recursive Algorithms
 
 Subscribe & stay up to date!
 
- 
 
 
-
-
-
-
-
-
-
-tutorial algorithms Series
-==========================
+# tutorial algorithms Series
 
 [<img src="/images/from-code-to-big-o-algorithms-small.png" width="300" height="250" />](/how-to-find-time-complexity-of-an-algorithm-code-big-o-notation/)
 
@@ -2278,7 +2255,3 @@ tutorial algorithms Series
     1.  <a href="#Queue-implemented-with-Array-s" class="toc-link"><span class="toc-number">8.1.</span> <span class="toc-text">Queue implemented with Array(s)</span></a>
     2.  <a href="#Queue-implemented-with-a-Doubly-Linked-List" class="toc-link"><span class="toc-number">8.2.</span> <span class="toc-text">Queue implemented with a Doubly Linked List</span></a>
 9.  <a href="#Summary" class="toc-link"><span class="toc-number">9.</span> <span class="toc-text">Summary</span></a>
-
-
-
-

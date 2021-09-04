@@ -1,15 +1,10 @@
-
-
-
-
 <a href="/categories/coding/" class="category-link">Coding</a>
 
-How to build a Node.js eCommerce website for free
-=================================================
+# How to build a Node.js eCommerce website for free
 
 <span title="Last time this post was updated"> Last updated May 14th 2019 </span> <span class="m-x-2" title="Pageviews"> 19.5k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/How-to-build-a-Node-js-eCommerce-website-for-free/">0</span>](#disqus_thread) </span>
 
--   <a href="/tags/nodejs/" class="tag-list-link">nodejs</a><span class="tag-list-count">12</span>
+- <a href="/tags/nodejs/" class="tag-list-link">nodejs</a><span class="tag-list-count">12</span>
 
 ![How to build a Node.js eCommerce website for free](/images/ecommerce-app-nodejs-large.png)
 
@@ -25,18 +20,17 @@ A 10,000-feet view description would be something like this:
 
 **TL; DR:** The e-Commerce site final stack is the following:
 
--   Node.js (Backend processing: payment webhooks)
--   Stripe (Payment gateway)
--   Heroku (Run server code)
--   Netlify (Host static files)
--   Amazon S3 (Host assets)
--   CircleCI (Test code and generate assets)
--   Mailgun (emails platform)
+- Node.js (Backend processing: payment webhooks)
+- Stripe (Payment gateway)
+- Heroku (Run server code)
+- Netlify (Host static files)
+- Amazon S3 (Host assets)
+- CircleCI (Test code and generate assets)
+- Mailgun (emails platform)
 
 This diagram shows how each part interacts with each other: ![nodejs e-commerce app](/images/e-commerce-app-nodejs3.png)
 
-<a href="#Automating-the-generation-of-the-assets-PDF" class="headerlink" title="Automating the generation of the assets (PDF)"></a>Automating the generation of the assets (PDF)
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## <a href="#Automating-the-generation-of-the-assets-PDF" class="headerlink" title="Automating the generation of the assets (PDF)"></a>Automating the generation of the assets (PDF)
 
 I have Github repository where the book docs and code live:
 
@@ -46,15 +40,13 @@ Every time I made a change (or somebody in the community), it triggers some proc
 
 Generating assets automatically is useful because I want every buyer to get the latest copy.
 
-<a href="#Hosting-e-Commerce-site" class="headerlink" title="Hosting e-Commerce site"></a>Hosting e-Commerce site
------------------------------------------------------------------------------------------------------------------
+## <a href="#Hosting-e-Commerce-site" class="headerlink" title="Hosting e-Commerce site"></a>Hosting e-Commerce site
 
 I always want to try out new JavaScript/CSS frameworks. However, I resisted the temptation and asked my self: Does a page for selling a book need to be dynamic? Nope. So, it will be more performant if I use plain old CSS and HTML. That’s what I did. Static pages also have the advantage that can be cached and served from a CDN.
 
 I used Netlify to host the static website for free. One single `git push` will update the site on the domain name of choice (e.g. [books.adrianmejia.com](https://books.adrianmejia.com/)). It also uses a global CDN so your page loads faster from anywhere in the world!
 
-<a href="#Processing-Payments" class="headerlink" title="Processing Payments"></a>Processing Payments
------------------------------------------------------------------------------------------------------
+## <a href="#Processing-Payments" class="headerlink" title="Processing Payments"></a>Processing Payments
 
 The next part is to add a `Buy` button. Stripe provides a helpful checkout page that they host themselves and take care of the PCI compliance when dealing with credit cards. So, I used that, and they process the payment for me.
 
@@ -99,31 +91,30 @@ const port = process.env.PORT || 5000;
 app.use(bodyParser.json());
 
 app.listen(port, () =&gt; {
-  console.log(`Listening for webhooks: http://localhost:${port}`);
+console.log(`Listening for webhooks: http://localhost:${port}`);
 });
 
 app.post(&#39;/webhook&#39;, async (req, res) =&gt; {
-  const event = req.body;
+const event = req.body;
 
-  res.sendStatus(200);
+res.sendStatus(200);
 
-  if (event.type === &#39;payment_intent.succeeded&#39;) {
-    // TODO: send event to RabbitMQ instead of generating the PDF here.
-    // It&#39;s not good practice to block a request handler with long processes
-    const { sendPdfToBuyer } = require(&#39;./process-pdf&#39;);
-    sendPdfToBuyer(event);
-  }
+if (event.type === &#39;payment_intent.succeeded&#39;) {
+// TODO: send event to RabbitMQ instead of generating the PDF here.
+// It&#39;s not good practice to block a request handler with long processes
+const { sendPdfToBuyer } = require(&#39;./process-pdf&#39;);
+sendPdfToBuyer(event);
+}
 });
 
 // all other routes, prevent node crashing for undefined routes
-app.route(&#39;*&#39;, async (req, res) =&gt; {
-  res.json({ ok: 1 });
+app.route(&#39;\*&#39;, async (req, res) =&gt; {
+res.json({ ok: 1 });
 });</code></pre></td></tr></tbody></table>
 
 And that brings us to the next part, the Node.js server to take care of the rest.
 
-<a href="#Backend-processing" class="headerlink" title="Backend processing"></a>Backend processing
---------------------------------------------------------------------------------------------------
+## <a href="#Backend-processing" class="headerlink" title="Backend processing"></a>Backend processing
 
 I created a Node.js server that listened for webhook requests. When a customer paid for the book an event with the details is sent to this server, and the document pipeline is kicked off.
 
@@ -145,8 +136,7 @@ The server first downloads the book from AWS S3 bucket, where the latest raw doc
   await sendEmail({ stampedPdfPath, email, fileName });
 }</code></pre></td></tr></tbody></table>
 
-<a href="#Sending-emails" class="headerlink" title="Sending emails"></a>Sending emails
---------------------------------------------------------------------------------------
+## <a href="#Sending-emails" class="headerlink" title="Sending emails"></a>Sending emails
 
 Sending emails was a little trickier than I thought.
 
@@ -164,15 +154,14 @@ The final part related to emails is doing a template. I have never done it befor
 
 Well, there you have it: an e-commerce store that collects the payments and sends digital goods to buyers. Let’s close talking about the cost of maintenance.
 
-<a href="#Cost-of-running-the-e-Commerce-store" class="headerlink" title="Cost of running the e-Commerce store"></a>Cost of running the e-Commerce store
---------------------------------------------------------------------------------------------------------------------------------------------------------
+## <a href="#Cost-of-running-the-e-Commerce-store" class="headerlink" title="Cost of running the e-Commerce store"></a>Cost of running the e-Commerce store
 
 This is the breakdown of the monthly costs:
 
--   Hosting static websites: **$0** (if you use Netlify or Github pages)
--   Payment Gateway: **$0** (Stripe will only a 2.9% charge if you sell something otherwise $0)
--   Node.js server: **$0** (Heroku, AWS, Google Cloud and many others have a free plan for developers)
--   Email Service: **$0** (Mailgun and Sendgrid both have free plans. The former allows you to send 10K emails per month)
+- Hosting static websites: **$0** (if you use Netlify or Github pages)
+- Payment Gateway: **$0** (Stripe will only a 2.9% charge if you sell something otherwise $0)
+- Node.js server: **$0** (Heroku, AWS, Google Cloud and many others have a free plan for developers)
+- Email Service: **$0** (Mailgun and Sendgrid both have free plans. The former allows you to send 10K emails per month)
 
 The total is: **$0** / mo.
 
@@ -182,11 +171,9 @@ Note: Like any website, If you want to use a custom domain as I do, you have to 
 
 Thanks for reading this far. Here are some things you can do next:
 
--   Found a typo? [Edit this post](https://github.com/amejiarosario/amejiarosario.github.io/edit/source/source/_posts/2019-05-14-How-to-build-a-Node-js-eCommerce-website-for-free.md).
--   Got questions? [comment](#comments-section) below.
--   Was it useful? Show your support and share it.
-
-
+- Found a typo? [Edit this post](https://github.com/amejiarosario/amejiarosario.github.io/edit/source/source/_posts/2019-05-14-How-to-build-a-Node-js-eCommerce-website-for-free.md).
+- Got questions? [comment](#comments-section) below.
+- Was it useful? Show your support and share it.
 
 <a href="/asynchronous-vs-synchronous-handling-concurrency-in-javascript/" class="article-nav-newer"><strong><em></em> newer</strong></a>
 
@@ -197,14 +184,6 @@ What every programmer should know about Synchronous vs. Asynchronous Code
 How to perform Atomic Operations on MongoDB?
 
 Subscribe & stay up to date!
-
- 
-
-
-
-
-
-
 
 
 
@@ -220,7 +199,3 @@ Subscribe & stay up to date!
     1.  <a href="#DNS-settings-and-authentication" class="toc-link"><span class="toc-number">5.1.</span> <span class="toc-text">DNS settings and authentication</span></a>
     2.  <a href="#Email-Templates" class="toc-link"><span class="toc-number">5.2.</span> <span class="toc-text">Email Templates</span></a>
 6.  <a href="#Cost-of-running-the-e-Commerce-store" class="toc-link"><span class="toc-number">6.</span> <span class="toc-text">Cost of running the e-Commerce store</span></a>
-
-
-
-

@@ -1,0 +1,8 @@
+.DS_Store
+node_modules
+*.sock
+build
+yarn.lock
+npm-debug.log
+dist
+coverage

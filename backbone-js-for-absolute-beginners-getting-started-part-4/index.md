@@ -1,17 +1,12 @@
-
-
-
-
 <a href="/categories/coding/" class="category-link">Coding</a> &gt; <a href="/categories/coding/web-development/" class="category-link">Web Development</a> &gt; <a href="/categories/coding/web-development/backbone/" class="category-link">Backbone</a>
 
-Backbone.js for absolute beginners - getting started (part 4: Routers)
-======================================================================
+# Backbone.js for absolute beginners - getting started (part 4: Routers)
 
 <span title="Last time this post was updated"> Last updated September 13th 2012 </span> <span class="m-x-2" title="Pageviews"> 71.6k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/backbone-js-for-absolute-beginners-getting-started-part-4/">0</span>](#disqus_thread) </span>
 
--   <a href="/tags/backbonejs/" class="tag-list-link">backbonejs</a><span class="tag-list-count">4</span>
--   <a href="/tags/todo-app/" class="tag-list-link">todo app</a><span class="tag-list-count">5</span>
--   <a href="/tags/tutorial-backbonejs/" class="tag-list-link">tutorial_backbonejs</a><span class="tag-list-count">4</span>
+- <a href="/tags/backbonejs/" class="tag-list-link">backbonejs</a><span class="tag-list-count">4</span>
+- <a href="/tags/todo-app/" class="tag-list-link">todo app</a><span class="tag-list-count">5</span>
+- <a href="/tags/tutorial-backbonejs/" class="tag-list-link">tutorial_backbonejs</a><span class="tag-list-count">4</span>
 
 ![Backbone.js for absolute beginners - getting started (part 4: Routers)](/images/BackbonesforBeginners_large.png)
 
@@ -26,8 +21,7 @@ BackboneJS Tutorial series:
 3.  [Backbone.js for absolute beginners - getting started (part 3: CRUD)](/backbonejs-for-absolute-beginners-getting-started-part-3/)
 4.  Backbone.js for absolute beginners - getting started (part 4: Routers) **👈 you are here**
 
-<a href="#Backbone-Router" class="headerlink" title="Backbone.Router"></a>Backbone.Router
------------------------------------------------------------------------------------------
+## <a href="#Backbone-Router" class="headerlink" title="Backbone.Router"></a>Backbone.Router
 
 You could build web application without using the routers. However, if you want to make reference to certain ‘state’ or location of the web application, you need a reference (link/URL) to it. This is where routers come to rescue.
 
@@ -84,10 +78,10 @@ Initialize router[Full Code](https://raw.github.com/amejiarosario/Backbone-tutor
      // Initializers
      //--------------
 
-+    app.router = new app.Router();
-+    Backbone.history.start();
-     app.appView = new app.AppView();
-</code></pre></td></tr></tbody></table>
+- app.router = new app.Router();
+- Backbone.history.start();
+  app.appView = new app.AppView();
+  </code></pre></td></tr></tbody></table>
 
 You can test that you router is working just typing `#anything/that/you/want` and seeing the parameter in you browser’s console.
 
@@ -214,19 +208,18 @@ Show routes' links[Full Code](https://raw.github.com/amejiarosario/Backbone-tuto
 
 Well, that’s all! If completed these 4 parts tutorial you will be familiar with the main Backbone modules (Models, Collections, Views, Events, and Routes). To increase you knowledge you can follow the following resources:
 
--   [Backbone’s Source code - it’s the ultimate source of true](https://github.com/documentcloud/backbone/blob/master/backbone.js)
--   [Official documentation](http://backbonejs.org/?utm_source=adrianmejia.com)
+- [Backbone’s Source code - it’s the ultimate source of true](https://github.com/documentcloud/backbone/blob/master/backbone.js)
+- [Official documentation](http://backbonejs.org/?utm_source=adrianmejia.com)
 
-<a href="#What’s-next" class="headerlink" title="What’s next?"></a>What’s next?
--------------------------------------------------------------------------------
+## <a href="#What’s-next" class="headerlink" title="What’s next?"></a>What’s next?
 
 Write a server API in NodeJS to apply the learned here:
 
--   [Creating a RESTful API with NodeJS and MongoDB](/blog/2014/10/01/creating-a-restful-api-tutorial-with-nodejs-and-mongodb/)
+- [Creating a RESTful API with NodeJS and MongoDB](/blog/2014/10/01/creating-a-restful-api-tutorial-with-nodejs-and-mongodb/)
 
 Now, do a Todo app in AngularJS:
 
--   [AngularJS tutorial for beginners with NodeJS ExpressJS and MongoDB](/blog/2014/09/28/angularjs-tutorial-for-beginners-with-nodejs-expressjs-and-mongodb/)
+- [AngularJS tutorial for beginners with NodeJS ExpressJS and MongoDB](/blog/2014/09/28/angularjs-tutorial-for-beginners-with-nodejs-expressjs-and-mongodb/)
 
 Hope it was helpful!
 
@@ -234,11 +227,9 @@ Hope it was helpful!
 
 Thanks for reading this far. Here are some things you can do next:
 
--   Found a typo? [Edit this post](https://github.com/amejiarosario/amejiarosario.github.io/edit/source/source/_posts/2012-09-13-backbone-js-for-absolute-beginners-getting-started-part-4.markdown).
--   Got questions? [comment](#comments-section) below.
--   Was it useful? Show your support and share it.
-
-
+- Found a typo? [Edit this post](https://github.com/amejiarosario/amejiarosario.github.io/edit/source/source/_posts/2012-09-13-backbone-js-for-absolute-beginners-getting-started-part-4.markdown).
+- Got questions? [comment](#comments-section) below.
+- Was it useful? Show your support and share it.
 
 <a href="/algorithms-for-dummies-part-1-sorting/" class="article-nav-newer"><strong><em></em> newer</strong></a>
 
@@ -250,18 +241,9 @@ Backbone.js for absolute beginners - getting started (part 3: CRUD)
 
 Subscribe & stay up to date!
 
- 
 
 
-
-
-
-
-
-
-
-tutorial backbonejs Series
-==========================
+# tutorial backbonejs Series
 
 [<img src="/images/Backbonesforbeginners_small.png" width="300" height="250" />](/backbone-dot-js-for-absolute-beginners-getting-started/)
 
@@ -287,7 +269,3 @@ tutorial backbonejs Series
     1.  <a href="#Initializing-the-Router" class="toc-link"><span class="toc-number">1.1.</span> <span class="toc-text">Initializing the Router</span></a>
     2.  <a href="#2-6-1-Processing-the-routes" class="toc-link"><span class="toc-number">1.2.</span> <span class="toc-text">2.6.1 Processing the routes</span></a>
 2.  <a href="#What%E2%80%99s-next" class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">What’s next?</span></a>
-
-
-
-

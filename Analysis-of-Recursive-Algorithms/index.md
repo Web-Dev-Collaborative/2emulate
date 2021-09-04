@@ -1,16 +1,11 @@
-
-
-
-
 <a href="/categories/coding/" class="category-link">Coding</a> &gt; <a href="/categories/coding/data-structures-and-algorithms-dsa/" class="category-link">Data Structures and Algorithms (DSA)</a>
 
-Analysis of Recursive Algorithms
-================================
+# Analysis of Recursive Algorithms
 
 <span title="Last time this post was updated"> Last updated April 24th 2018 </span> <span class="m-x-2" title="Pageviews"> 19.5k </span> <span class="m-x-2" title="Click to go to the comments section"> [ <span class="disqus-comment-count" data-disqus-url="https://master--bgoonz-blog.netlify.app/Analysis-of-Recursive-Algorithms/">0</span>](#disqus_thread) </span>
 
--   <a href="/tags/algorithms/" class="tag-list-link">algorithms</a><span class="tag-list-count">12</span>
--   <a href="/tags/tutorial-algorithms/" class="tag-list-link">tutorial_algorithms</a><span class="tag-list-count">10</span>
+- <a href="/tags/algorithms/" class="tag-list-link">algorithms</a><span class="tag-list-count">12</span>
+- <a href="/tags/tutorial-algorithms/" class="tag-list-link">tutorial_algorithms</a><span class="tag-list-count">10</span>
 
 ![Analysis of Recursive Algorithms](/images/data-structures-analysis-of-recursive-algorithms-large.jpg)
 
@@ -20,7 +15,7 @@ Analyzing the running time of non-recursive algorithms is pretty straightforward
 
 We are going to explore how to obtain the time complexity of recursive algorithms. For that, we are going to use the **Master Theorem** (or master method).
 
-------------------------------------------------------------------------
+---
 
 This post is part of a tutorial series:
 
@@ -40,16 +35,15 @@ This post is part of a tutorial series:
 
 7.  Appendix I: Analysis of Recursive Algorithms **👈 you are here**
 
-------------------------------------------------------------------------
+---
 
-<a href="#Master-Theorem" class="headerlink" title="Master Theorem"></a>Master Theorem
---------------------------------------------------------------------------------------
+## <a href="#Master-Theorem" class="headerlink" title="Master Theorem"></a>Master Theorem
 
 The Master Theorem is the easiest way of obtaining runtime of recursive algorithms. First, you need to identify three elements:
 
--   *`a`*: Subproblems. How many recursion (split) functions are there? E.g., the Binary search has 1 split, Merge Sort has 2 split, etc.
--   *`b`*: Relative subproblem size. What rate is the input reduced? E.g., Binary search and Merge sort cut input in half.
--   *`f(n)`* Runtime of the work done outside the recursion? E.g. \`O(n)\` or \`O(1)\`
+- _`a`_: Subproblems. How many recursion (split) functions are there? E.g., the Binary search has 1 split, Merge Sort has 2 split, etc.
+- _`b`_: Relative subproblem size. What rate is the input reduced? E.g., Binary search and Merge sort cut input in half.
+- _`f(n)`_ Runtime of the work done outside the recursion? E.g. \`O(n)\` or \`O(1)\`
 
 The general formula for the Master Theorem is:
 
@@ -57,26 +51,25 @@ The general formula for the Master Theorem is:
 
 Once, we have `a`, `b` and `f(n)` we can determine the runtime of the work done by the recursion. That is given by:
 
-> \` O(n^(log\_b a)) \`
+> \` O(n^(log_b a)) \`
 
-Finally, we compare the runtime of the split/recursion functions and *`f(n)`*. There are 3 possible cases:
+Finally, we compare the runtime of the split/recursion functions and _`f(n)`_. There are 3 possible cases:
 
-**Case 1** Recursion/split runtime is higher: \`n^(log\_b a) &gt; f(n)\`
+**Case 1** Recursion/split runtime is higher: \`n^(log_b a) &gt; f(n)\`
 
-> Final runtime: \`O(n^(log\_b a))\`
+> Final runtime: \`O(n^(log_b a))\`
 
-**Case 2** Same runtime inside and outside recursion: \`n^(log\_b a) ~~ f(n)\`
+**Case 2** Same runtime inside and outside recursion: \`n^(log_b a) ~~ f(n)\`
 
-> Final runtime: \`O(n^(log\_b a) log n)\`
+> Final runtime: \`O(n^(log_b a) log n)\`
 
-**Case 3:** Recursion/split runtime is lower: \`n^(log\_b a) &lt; f(n)\`
+**Case 3:** Recursion/split runtime is lower: \`n^(log_b a) &lt; f(n)\`
 
 > Final runtime: \`O(f(n))\`
 
 These 3 cases might see a little abstract at first, but after a few examples, it will be more evident.
 
-<a href="#Master-Theorem-Examples" class="headerlink" title="Master Theorem Examples"></a>Master Theorem Examples
------------------------------------------------------------------------------------------------------------------
+## <a href="#Master-Theorem-Examples" class="headerlink" title="Master Theorem Examples"></a>Master Theorem Examples
 
 In the \[previous post\])(/blog/2018/04/05/most-popular-algorithms-time-complexity-every-programmer-should-know-free-online-tutorial-course/) we used Master Method to get the time complexity for the [binary search](/blog/2018/04/05/most-popular-algorithms-time-complexity-every-programmer-should-know-free-online-tutorial-course/#Binary-search) and [merge sort](/blog/2018/04/05/most-popular-algorithms-time-complexity-every-programmer-should-know-free-online-tutorial-course/#Mergesort). Both of them fall into the case 2. Let’s explore some other examples.
 
@@ -98,9 +91,9 @@ What’s the runtime of this recursion?
 
 **1)** Let’s identify `a`, `b` and `f(n)` from the Master Theorem
 
--   Sub-problems? 2, so `a=2`
--   Sub-problems size? it’s 1/4 of the original `n` size, thus `b=4`
--   Runtime without recursion? Constant, therefore `f(n) = 1`.
+- Sub-problems? 2, so `a=2`
+- Sub-problems size? it’s 1/4 of the original `n` size, thus `b=4`
+- Runtime without recursion? Constant, therefore `f(n) = 1`.
 
 Substituting the values we get:
 
@@ -110,17 +103,17 @@ Substituting the values we get:
 
 **2)** What’s the runtime of the recursion by itself? Using the formula, we get:
 
-\` n^(log\_b a) \`
+\` n^(log_b a) \`
 
-\` n^(log\_4 2) = n^0.5 = sqrt(n)\`
+\` n^(log_4 2) = n^0.5 = sqrt(n)\`
 
 **3)** Comparing `f(n)` with the result in step 2, we see that it matches case 1.
 
 Since \`O(n^0.5) &gt; O(1)\` then the runtime is:
 
-\` O(n^(log\_b a)) \`
+\` O(n^(log_b a)) \`
 
-\` O(n^(log\_4 2)) \`
+\` O(n^(log_4 2)) \`
 
 > \` O(sqrt(n)) \`
 
@@ -182,22 +175,22 @@ What would be the runtime of the mergesort if instead of splitting the array in 
 }
 
 function merge(a = [], b = [], c = []) {
- const merged = [];
+const merged = [];
 
- for (let ai = 0, bi = 0, ci = 0; ai &lt; a.length || bi &lt; b.length || ci &lt; c.length;) {
- const nonNullValues = [a[ai], b[bi], c[ci]].filter(x =&gt; x === 0 || x );
- const min = Math.min.apply(null, nonNullValues);
+for (let ai = 0, bi = 0, ci = 0; ai &lt; a.length || bi &lt; b.length || ci &lt; c.length;) {
+const nonNullValues = [a[ai], b[bi], c[ci]].filter(x =&gt; x === 0 || x );
+const min = Math.min.apply(null, nonNullValues);
 
- if(min === a[ai]) {
- merged.push(a[ai++]);
-    } else if(min === b[bi]) {
- merged.push(b[bi++]);
-    } else {
- merged.push(c[ci++]);
-    }
-  }
+if(min === a[ai]) {
+merged.push(a[ai++]);
+} else if(min === b[bi]) {
+merged.push(b[bi++]);
+} else {
+merged.push(c[ci++]);
+}
+}
 
- return merged;
+return merged;
 }</code></pre></td></tr></tbody></table>
 
 So, this new implementation divides the input into 3 subproblems (`a = 3`). The input size is divided by 3 (`b=3`). The work to `merge` the 3 sub-problems is still `O(n)`.
@@ -210,15 +203,15 @@ So, this new implementation divides the input into 3 subproblems (`a = 3`). The 
 
 **2)** Let’s compute the amount of work done in the recursion:
 
-\` n^(log\_b a) \`
+\` n^(log_b a) \`
 
-\` n^(log\_3 3) = n \`
+\` n^(log_3 3) = n \`
 
-**3)** Since `f(n)` and the recursive work is the same: `n`, we are looking at the *case 2*. Thus, the runtime is:
+**3)** Since `f(n)` and the recursive work is the same: `n`, we are looking at the _case 2_. Thus, the runtime is:
 
-\`O(n^(log\_b a) log n)\`
+\`O(n^(log_b a) log n)\`
 
-\`O(n^(log\_3 3) log n)\`
+\`O(n^(log_3 3) log n)\`
 
 > \`O(n log n)\`
 
@@ -232,33 +225,31 @@ Anyways, let’s solve this example:
 
 **1)** \` T(n) = 3 \* T(n / 2) + n^2 \`
 
--   a=3
--   b=2
--   f(n) = n^2
+- a=3
+- b=2
+- f(n) = n^2
 
 **2)** Calculate recursive work:
 
-\` n^(log\_2 3) \`
+\` n^(log_2 3) \`
 
 \` n^(1.48) \`
 
-**3)** Since *`f(n)`* is bigger than the recursive work we have:
+**3)** Since _`f(n)`_ is bigger than the recursive work we have:
 
 > \` O(n^2) \`
 
-<a href="#Master-Method-Exceptions" class="headerlink" title="Master Method Exceptions"></a>Master Method Exceptions
---------------------------------------------------------------------------------------------------------------------
+## <a href="#Master-Method-Exceptions" class="headerlink" title="Master Method Exceptions"></a>Master Method Exceptions
 
 The master method is handy but there are certain cases when you cannot use it.
 
--   *`T(n)`* is not monotone. E.g. \` T(n) = sin n\`.
--   *`f(n)`* is not polynomial. E.g. \` T(n) = 2 \* T(n/2) + 2^n \`.
--   *`b`* cannot be expressed as a constant. E.g. \` T(n) = 2 \* T(sqrt(n)) + n \`.
+- _`T(n)`_ is not monotone. E.g. \` T(n) = sin n\`.
+- _`f(n)`_ is not polynomial. E.g. \` T(n) = 2 \* T(n/2) + 2^n \`.
+- _`b`_ cannot be expressed as a constant. E.g. \` T(n) = 2 \* T(sqrt(n)) + n \`.
 
 For these cases, you would have to recursion tree method or substitution method. We are going to explore these methods in future posts after covering the fundamentals.
 
-<a href="#Summary" class="headerlink" title="Summary"></a>Summary
------------------------------------------------------------------
+## <a href="#Summary" class="headerlink" title="Summary"></a>Summary
 
 On this post, we provided the tools to quickly obtain the runtime of recursive algorithms that split input by a constant factor. We covered the Master Method and provided examples for each one of its possible cases.
 
@@ -266,11 +257,9 @@ On this post, we provided the tools to quickly obtain the runtime of recursive a
 
 Thanks for reading this far. Here are some things you can do next:
 
--   Found a typo? [Edit this post](https://github.com/amejiarosario/amejiarosario.github.io/edit/source/source/_posts/2018-04-28-Analysis-of-Recursive-Algorithms.md).
--   Got questions? [comment](#comments-section) below.
--   Was it useful? Show your support and share it.
-
-
+- Found a typo? [Edit this post](https://github.com/amejiarosario/amejiarosario.github.io/edit/source/source/_posts/2018-04-28-Analysis-of-Recursive-Algorithms.md).
+- Got questions? [comment](#comments-section) below.
+- Was it useful? Show your support and share it.
 
 <a href="/Data-Structures-Time-Complexity-for-Beginners-Arrays-HashMaps-Linked-Lists-Stacks-Queues-tutorial/" class="article-nav-newer"><strong><em></em> newer</strong></a>
 
@@ -282,18 +271,9 @@ Data Structures in JavaScript: Arrays, HashMaps, and Lists
 
 Subscribe & stay up to date!
 
- 
 
 
-
-
-
-
-
-
-
-tutorial algorithms Series
-==========================
+# tutorial algorithms Series
 
 [<img src="/images/from-code-to-big-o-algorithms-small.png" width="300" height="250" />](/how-to-find-time-complexity-of-an-algorithm-code-big-o-notation/)
 
@@ -346,7 +326,3 @@ tutorial algorithms Series
     3.  <a href="#Case-3-Example" class="toc-link"><span class="toc-number">2.3.</span> <span class="toc-text">Case 3 Example</span></a>
 3.  <a href="#Master-Method-Exceptions" class="toc-link"><span class="toc-number">3.</span> <span class="toc-text">Master Method Exceptions</span></a>
 4.  <a href="#Summary" class="toc-link"><span class="toc-number">4.</span> <span class="toc-text">Summary</span></a>
-
-
-
-

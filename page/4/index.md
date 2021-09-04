@@ -1,17 +1,10 @@
+# Software is eating the world
 
-
-
-
-Software is eating the world
-============================
-
-Let's eat it together!
-----------------------
+## Let's eat it together!
 
 ![ blog cover image](/images/occupations.png)
 
-Latest
-======
+# Latest
 
 [<img src="/images/priority-queue-pq-heaps-small.png" width="300" height="250" />](/priority-queue-data-structure-and-heaps-time-complexity-javascript-implementation/)
 
@@ -29,8 +22,7 @@ Latest
 
 ### How to solve any graph/Maze interview questions in JavaScript? DFS vs. BFS
 
-Trending
-========
+# Trending
 
 [<img src="/images/data-structures-must-know-algorithms-running-time-complexity-small.jpg" width="300" height="250" />](/most-popular-algorithms-time-complexity-every-programmer-should-know-free-online-tutorial-course/)
 
@@ -48,8 +40,7 @@ Trending
 
 ### Data Structures in JavaScript: Arrays, HashMaps, and Lists
 
-Popular
-=======
+# Popular
 
 [<img src="/images/AngularJSTutorial_small.png" width="300" height="250" />](/angularjs-tutorial-for-beginners-with-nodejs-expressjs-and-mongodb/)
 
@@ -67,11 +58,9 @@ Popular
 
 ### Getting started with Node.js modules: require, exports, imports and beyond
 
-About
-=====
+# About
 
-Hello, my name is Adrian
-------------------------
+## Hello, my name is Adrian
 
 <img src="/images/adrian-mejia-halfbody.png" class="img-responsive" />
 
@@ -83,18 +72,16 @@ During my 12 years of professional experience, my journey has had some turns. It
 
 I'd love to hear from you, drop me a line <span class="animation--bounce-in">here!</span>
 
- <a href="https://github.com/amejiarosario" id="github-follow-button" class="github-button">Follow @amejiarosario</a> 
+<a href="https://github.com/amejiarosario" id="github-follow-button" class="github-button">Follow @amejiarosario</a>
 
-Want to learn more?
-===================
+# Want to learn more?
 
 Get a free sample of my books, video tutorials and post updates as they come out
 
 Subscribe & stay up to date!
 
- 
+
 
 Technology is always changing, so keep up to date with latest posts, video tutorials and books as they become available. Sign up now!
 
 <a href="https://books.adrianmejia.com" id="dsajs-book"><img src="/images/data-structure-algorithms-javascript-book.png" alt="data structure and algorithms in javascript book" /></a>
-
